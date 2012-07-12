@@ -7,11 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "imob_app.business", "imob_a
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ibba_app.dao", "ibba_app.dao\ibba_app.dao.csproj", "{AD4610F4-7F64-4233-919A-2E6E78E1B223}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MySQL_Scripts", "MySQL_Scripts", "{B7E82C09-8E36-47B4-A202-B0E664C9BC1B}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Desktop\DDL.sql = ..\..\..\..\Desktop\DDL.sql
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
