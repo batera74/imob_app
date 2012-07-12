@@ -1,0 +1,5 @@
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\ibba_app.dao\bin\Debug\ibba_app.dao.dll
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\ibba_app.dao\bin\Debug\ibba_app.dao.pdb
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\ibba_app.dao\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\ibba_app.dao\obj\Debug\ibba_app.dao.dll
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\ibba_app.dao\obj\Debug\ibba_app.dao.pdb

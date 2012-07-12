@@ -1,0 +1,5 @@
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\imob_app.client.dll
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\imob_app.client.pdb
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\obj\Debug\imob_app.client.dll
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\obj\Debug\imob_app.client.pdb
