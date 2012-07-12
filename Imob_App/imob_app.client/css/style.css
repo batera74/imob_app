@@ -4,7 +4,7 @@
 @import"prettyPhoto.css";
 @import"jquery.snippet.min.css";
 @import"../skin/blue.monday/jplayer.blue.monday.css";
-@import"../css/smoothness/jquery-ui-1.8.17.custom.css";
+@import url('smoothness/jquery-ui-1.8.17.custom.css');
 @import"pro_pages_style.css";
 
 body{
@@ -12,7 +12,7 @@ body{
 	font:12px/18px Arial, Helvetica, sans-serif;
 	color:#91908f;
 	position:relative;
-	min-width:810px;
+	min-width:760px;
 }
 html,body{height:100%;}
 
@@ -60,7 +60,16 @@ h6{font-size:21px; line-height:26px;}
 .main{
 	margin:0 auto;
 	position:relative;
-	width:810px; 
+	width:760px; 
+}
+
+.tabs_pesquisa{
+	margin:0 auto;
+	margin-bottom: 4px;
+	position:relative;
+	width:750px; 
+	text-transform:uppercase;
+	z-index: 200;
 }
 /*----- alignment & clearing -----*/
 .fleft{float:left}
@@ -117,7 +126,7 @@ strong.str-1 {color:#f45c40;}
 	background:url(../images/vr-separator-large-1.gif) no-repeat right center;
 }
 .border-bot-1 {
-	margin:0 5px 28px 5px;
+	margin:0 5px 10px 5px;
 	height:1px;
 	padding:50px 0 0 0;
 	background:url(../images/border-tail.gif) repeat-x 0 bottom;
@@ -129,7 +138,7 @@ strong.str-1 {color:#f45c40;}
 	background:url(../images/border-tail.gif) repeat-x 0 bottom;
 }
 .vr-border-1 {
-	background:url(../images/border-tail.gif) repeat-y 505px 0;
+	background:url(../images/border-tail.gif) repeat-y 453px 0;
 }
 .vr-border-2 {
 	background:url(../images/border-tail.gif) repeat-y 300px 0;
@@ -425,10 +434,10 @@ header nav {
 }
 #mp_slider .mp_slider {
 	position:relative;
-	width:799px;
-	height:256px;
+	width:800px;
+	height:220px;
 	left:50%;
-	margin:0 0 0 -399px;	
+	margin:0 0 0 -375px;	
 }
 #mp_slider .banner {
 	background:none;
@@ -499,7 +508,7 @@ header nav {
 	position:absolute;
 	left:0;
 	right:0;
-	bottom:13px;
+	bottom:0;
 	text-align:center;
 	z-index:999;
 }
@@ -542,6 +551,7 @@ section#content	{
 	display:inline-block;
 	margin:0 6px 0 0;
 }
+
 #rate-form .row-3 {
 	overflow:hidden;
 	padding:10px 0 0 0;

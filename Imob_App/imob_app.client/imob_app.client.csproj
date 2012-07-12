@@ -51,7 +51,7 @@
     <Content Include="css\forms.css" />
     <Content Include="css\grid.css" />
     <Content Include="css\ie.css" />
-    <Content Include="css\jquery-ui-1.8.17.custom.css" />
+    <Content Include="css\smoothness\jquery-ui-1.8.17.custom.css" />
     <Content Include="css\jquery.snippet.min.css" />
     <Content Include="css\prettyPhoto.css" />
     <Content Include="css\pro_pages_style.css" />
