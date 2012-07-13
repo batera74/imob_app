@@ -46,12 +46,12 @@
                 	+11 43211234
                 </div>
             </div>
-        	<a href="index.html" class="logo">ImobApp Facebook</a>
+        	<a href="index.html" class="logo">TheDealers Facebook</a>
         </div>
         <nav>
         	<ul class="sf-menu">
             	<li class="current"><a href="index.html">Home</a></li>
-                <li><a href="index-1.html">ImobApp</a>
+                <li><a href="index-1.html">TheDealers</a>
                 	<ul>
                     	<li><a href="more.html">Link 1</a></li>
                         <li><a href="more.html">Link 2</a></li>
@@ -258,14 +258,14 @@
     <!-- Footer -->
     <footer>
 	<div class="fright">
-    	ImobApp  &copy; 2012 <a href="index-7.html">Politca de Privacidade</a>
+    	TheDealers  &copy; 2012 <a href="index-7.html">Politca de Privacidade</a>
         <div class="alignright">
         	<!-- {%FOOTER_LINK} -->
         </div>
     </div>
     <ul class="footer-nav">
     	<li><a class="current" href="index.html">Home</a></li>
-        <li><a href="index-1.html">ImobApp</a></li>     
+        <li><a href="index-1.html">TheDealers</a></li>     
         <li><a href="index-2.html">Comprar</a></li>     
         <li><a href="index-3.html">Anunciar</a></li>   
         <li><a href="index-4.html">Servicos</a></li>   

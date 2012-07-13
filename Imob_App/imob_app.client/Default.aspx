@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Imob App - Facebook</title>
+    <title>TheDealers - O jeito mais eficaz de negociar imóveis</title>
     <meta charset="utf-8">
     <meta name="description" content="Your description">
     <meta name="keywords" content="Your keywords">
@@ -48,22 +48,22 @@
                 	+11 43211234
                 </div>
             </div>
-        	<a href="index.html" class="logo">ImobApp Facebook</a>
+        	<a href="index.html" class="logo">TheDealers Facebook</a>
         </div>
         <nav>
         	<ul class="sf-menu">
             	<li class="current"><a href="index.html">Home</a></li>
-                <li><a href="index-1.html">ImobApp</a>
+                <li><a href="index-1.html">TheDealers</a>
                 	<ul>
                     	<li><a href="more.html">Link 1</a></li>
                         <li><a href="more.html">Link 2</a></li>
                         <li><a href="more.html">Linke 3</a></li>
                     </ul>
                 </li>
-                <li><a href="index-2.html">Comprar</a></li>
-                <li><a href="index-3.html">Anunciar</a></li>
-                <li><a href="index-4.html">Servicos</a></li>
-                <li><a href="index-6.html">Atendimento</a></li>
+                <li><a href="index-2.html">Meus Imóveis</a></li>
+                <li><a href="index-3.html">Notícias</a></li>
+                <li><a href="index-4.html">Salão Virtual</a></li>
+                <li><a href="index-6.html">Galeria</a></li>
             </ul>
         </nav>
     </header>
@@ -314,18 +314,18 @@
     <!-- Footer -->
     <footer>
 	<div class="fright">
-    	ImobApp  &copy; 2012 <a href="index-7.html">Politca de Privacidade</a>
+    	TheDealers  &copy; 2012 <a href="index-7.html">Politca de Privacidade</a>
         <div class="alignright">
         	<!-- {%FOOTER_LINK} -->
         </div>
     </div>
     <ul class="footer-nav">
     	<li><a class="current" href="index.html">Home</a></li>
-        <li><a href="index-1.html">ImobApp</a></li>     
-        <li><a href="index-2.html">Comprar</a></li>     
-        <li><a href="index-3.html">Anunciar</a></li>   
-        <li><a href="index-4.html">Servicos</a></li>   
-        <li><a href="index-5.html">Central de Atendimento</a></li>  
+        <li><a href="index-1.html">TheDealers</a></li>     
+        <li><a href="index-2.html">Meus Imóveis</a></li>     
+        <li><a href="index-3.html">Notícias</a></li>   
+        <li><a href="index-4.html">Salão Virtual</a></li>   
+        <li><a href="index-5.html">Galeria</a></li>  
     </ul>
 </footer>
     <script>

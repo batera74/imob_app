@@ -59,6 +59,7 @@
     <Content Include="controls\images\slider\next.png" />
     <Content Include="controls\images\slider\prev.png" />
     <Content Include="controls\Imoveis.ascx" />
+    <Content Include="controls\js\slider\jquery.flexslider-min.js" />
     <Content Include="controls\slider.ascx" />
     <Content Include="css\forms.css" />
     <Content Include="css\grid.css" />
@@ -138,6 +139,7 @@
     <Content Include="images\slide1.jpg" />
     <Content Include="images\slide2.jpg" />
     <Content Include="images\slide3.jpg" />
+    <Content Include="images\slide4.jpg" />
     <Content Include="images\stock_images\120x120_1.jpg" />
     <Content Include="images\stock_images\120x120_2.jpg" />
     <Content Include="images\stock_images\120x120_3.jpg" />
@@ -165,7 +167,6 @@
     <Content Include="js\jquery.countdown.js" />
     <Content Include="js\jquery.cycle.all.min.js" />
     <Content Include="js\jquery.easing.1.3.js" />
-    <Content Include="controls\js\jquery.flexslider-min.js" />
     <Content Include="js\jquery.jqtransform.js" />
     <Content Include="js\jquery.prettyPhoto.js" />
     <Content Include="js\jquery.quicksand.js" />
