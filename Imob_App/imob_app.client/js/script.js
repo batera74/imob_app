@@ -11,6 +11,7 @@ $.include('js/jquery.snippet.min.js')
 $.include('js/jquery-ui-1.8.17.custom.min.js')
 $.include('js/jquery.cycle.all.min.js')
 $.include('js/jquery.cookie.js')
+
 $(function(){
 	if($('.tweet').length)$.include('js/jquery.tweet.js');
 	if($('.lightbox-image').length)$.include('js/jquery.prettyPhoto.js');

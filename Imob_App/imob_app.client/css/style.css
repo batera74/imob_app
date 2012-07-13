@@ -426,112 +426,15 @@ header nav {
 .sf-menu li li:hover ul,ul.sf-menu li li.sfHover ul{left:205px;top:0;}
 
 /********************** Slider ************************/
-#mp_slider {
-	width:100%;
-	overflow:hidden;
+.flex_slider_home
+{    
 	position:relative;
-	padding:0 0 20px 0;	
-}
-#mp_slider .mp_slider {
-	position:relative;
-	width:730px;
-	height:260px;
+	width:725px;
 	left:50%;
-	margin:0 0 0 -365px;	
+	margin:0 0 10px -365px;	
+	border:3px solid #eee;	
 }
-#mp_slider .banner {
-	background:none;
-	position:absolute;
-	padding:0;
-	margin:0;
-	width:auto;
-	height:auto;
-}
-	#mp_slider .banner.b-1 {
-		right:127px !important;
-		bottom:41px !important;
-		left:auto !important;
-		top:auto !important;
-	}
-	#mp_slider .banner.b-1 {
-		right:127px !important;
-		bottom:41px !important;
-		left:auto !important;
-		top:auto !important;
-	}
-	#mp_slider .banner.b-1 {
-		right:127px !important;
-		bottom:41px !important;
-		left:auto !important;
-		top:auto !important;
-	}
-.banner-button-1 {
-	background:url(../images/banner-button-1-right.png) no-repeat right 0;
-	display:inline-block;
-	padding:0 89px 0 0;
-	height:59px;
-	overflow:hidden;
-	text-decoration:none;
-}
-	.banner-button-1 strong {
-		display:block;
-		background:url(../images/banner-button-1-left.png) no-repeat 0 8px;
-		font-size:48px;
-		line-height:58px;
-		padding:0 10px 9px 38px;
-		color:#f45c40;
-		letter-spacing:-2px;
-		margin:-8px 0 0 0;
-	}
-	.banner-button-1:hover strong {color:#404040;}
-.banner-button-2 {
-	background:url(../images/banner-button-2-right.png) no-repeat right 0;
-	display:inline-block;
-	padding:0 89px 0 0;
-	height:59px;
-	overflow:hidden;
-	text-decoration:none;
-}
-	.banner-button-2 strong {
-		display:block;
-		background:url(../images/banner-button-2-left.png) no-repeat 0 8px;
-		font-size:48px;
-		line-height:58px;
-		padding:0 10px 9px 38px;
-		color:#fff;
-		letter-spacing:-2px;
-		margin:-8px 0 0 0;
-	}
-	.banner-button-2:hover strong {color:#404040;}
 
-#mp_slider .pagination {
-	position:absolute;
-	left:0;
-	right:0;
-	bottom:13px;
-	text-align:center;
-	z-index:999;
-}
-	#mp_slider .pagination li {
-		display:inline-block;
-		margin:0 1px;
-	}
-		#mp_slider .pagination li {
-			width:12px;
-			height:12px;
-			background:#efedee;
-			border-radius:6px;
-			-moz-border-radius:6px;
-			-webkit-border-radius:6px;
-		}
-		#mp_slider .pagination li a {
-			display:block;
-			width:12px;
-			height:12px;
-		}
-			#mp_slider .pagination li:hover, #mp_slider .pagination li.current {
-				background:#404040;
-			}
 /********************** Content ************************/
 section#content	{
 	position:relative; 

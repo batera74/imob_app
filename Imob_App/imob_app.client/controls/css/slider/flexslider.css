@@ -1,0 +1,176 @@
+﻿#container
+{
+    position: relative;
+    margin-bottom: 7px;
+}
+.flexslider .slides > li
+{
+    display: none;
+}
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flex-pauseplay span
+{
+    text-transform: capitalize;
+}
+/* Clearfix for the .slides element */
+.slides:after
+{
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+html[xmlns] .slides
+{
+    display: block;
+}
+* html .slides
+{
+    height: 1%;
+}
+
+
+.flexslider
+{
+    width: 730px;
+    margin: 0;
+    position: relative;
+}
+.flexslider .slides img
+{
+    max-width: 100%;
+    display: block;
+}
+.flex-caption
+{
+    position: absolute;
+    bottom: 14px;
+    left: 0;
+    z-index: 1;
+}
+.flex-text-1
+{
+    margin-top: -45px;
+    font-family: Calibri;
+    font-size: 34px;
+    color: #FFF;
+    background: url('../../images/slider/flex-text-1.png');
+    padding: 10px;
+    display: inline-block;
+}
+.flex-text-2
+{
+    color: #FFF;
+    font-family: Calibri;
+    font-size: 14px;
+    width: 450px;
+    background: url('../../images/slider/flex-text-2.png');
+    padding: 10px;
+    display: inline-block;
+}
+
+/* Control Nav */
+
+/* Direction nav styles (e.g. Next & Prev) */
+.flex-direction-nav .prev, .flex-direction-nav .next
+{
+	position:absolute;
+	bottom:13px;
+	z-index:99;
+	cursor:pointer;
+}
+.flex-direction-nav .prev {
+	right:142px;	
+	background:url('../../images/slider/prev.png') 0 0px no-repeat;
+	width:30px; 
+	height:30px;
+	overflow:hidden; 
+	text-indent: -5000px;
+}
+.flex-direction-nav .next {
+	right:9px;
+	background:url('../../images/slider/next.png') 0 0px no-repeat;
+	width:30px; 
+	height:30px;
+	overflow:hidden; 
+	text-indent: -5000px;
+}
+
+.flex-control-nav
+{
+    position: absolute;
+    right: 44px;
+    bottom: 18px;
+    list-style: none;
+}
+.flex-control-nav li
+{
+    float: left;
+    margin-right: 2px;
+}
+
+.flex-control-nav li a {
+	position:relative;
+	z-index:99;
+	cursor:pointer;
+	width:19px; background:url('../../images/slider/bull.png') 0 0 no-repeat; overflow:hidden; height:19px; display:inline-block; font-size:0px; line-height:0px;
+	margin-right:2px;
+}
+.flex-control-nav li a:hover, .flex-control-nav li a.active {
+	font-weight:bold;
+	background:url('../../images/slider/bull-h.png') 0 0 no-repeat;
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px)
+{
+    .flex-text-1
+    {
+        font: 400 36px/40px 'Ubuntu' , sans-serif;
+    }
+    .flex-text-2
+    {
+        font: 400 36px/40px 'Ubuntu' , sans-serif;
+    }
+}
+@media only screen and (max-width: 767px)
+{
+    .flex-caption
+    {
+        display: none;
+    }
+
+    .flex-direction-nav .prev, .flex-direction-nav .next
+    {
+        display: block;
+        width: 30px;
+        height: 30px;
+        text-indent: -999em;
+        overflow: hidden;
+        float: left;
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        z-index: 2;
+    }
+    .flex-direction-nav .prev
+    {
+        left: 5px;
+    }
+    .flex-direction-nav .next
+    {
+        right: 5px;
+    }
+    .flex-control-nav
+    {
+        left: 50%;
+        bottom: 5px;
+        margin-left: -42px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px)
+{
+
+}

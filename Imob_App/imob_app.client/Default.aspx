@@ -1,5 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="imob_app.client._Default" %>
 
+<%@ Register TagPrefix="slider" TagName="Slider" Src="~/controls/slider.ascx" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -97,7 +98,7 @@
                         <option>Alphaville e Região</option>
                         <option>Litoral</option>
                     </select>
-                    <select style="width: 195px">                    
+                    <select style="width: 195px">
                         <option>Cidade *</option>
                         <option>São Paulo</option>
                         <option>Osasco</option>
@@ -147,23 +148,8 @@
         </div>
     </div>
     <!-- Main PAge Slider -->
-    <div id="mp_slider">
-        <div class="mp_slider">
-            <ul class="items">
-                <li>
-                    <img src="images/slide1.jpg" alt="">
-                    <!--<div class="banner b-1"><a href="more.html" class="banner-button-1"><strong>Comprar</strong></a></div>-->
-                </li>
-                <li>
-                    <img src="images/slide2.jpg" alt="">
-                    <!--<div class="banner b-2"><a href="more.html" class="banner-button-2"><strong>Comprar</strong></a></div>-->
-                </li>
-                <li>
-                    <img src="images/slide3.jpg" alt="">
-                    <!--<div class="banner b-2"><a href="more.html" class="banner-button-2"><strong>Comprar</strong></a></div>-->
-                </li>
-            </ul>
-        </div>
+    <div class="flex_slider_home">
+        <slider:Slider runat="server" ID="slider" />
     </div>
     <!-- Content -->
     <section id="content">
