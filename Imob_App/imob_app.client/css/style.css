@@ -12,7 +12,7 @@ body{
 	font:12px/18px Arial, Helvetica, sans-serif;
 	color:#91908f;
 	position:relative;
-	min-width:760px;
+	min-width:740px;
 }
 html,body{height:100%;}
 
@@ -60,16 +60,16 @@ h6{font-size:21px; line-height:26px;}
 .main{
 	margin:0 auto;
 	position:relative;
-	width:760px; 
+	width:740px; 	
 }
 
 .tabs_pesquisa{
 	margin:0 auto;
 	margin-bottom: 4px;
 	position:relative;
-	width:750px; 
+	width:730px; 
 	text-transform:uppercase;
-	z-index: 200;
+	z-index: 1000;
 }
 /*----- alignment & clearing -----*/
 .fleft{float:left}
@@ -434,10 +434,10 @@ header nav {
 }
 #mp_slider .mp_slider {
 	position:relative;
-	width:800px;
-	height:220px;
+	width:730px;
+	height:260px;
 	left:50%;
-	margin:0 0 0 -375px;	
+	margin:0 0 0 -365px;	
 }
 #mp_slider .banner {
 	background:none;
@@ -508,7 +508,7 @@ header nav {
 	position:absolute;
 	left:0;
 	right:0;
-	bottom:0;
+	bottom:13px;
 	text-align:center;
 	z-index:999;
 }
@@ -639,7 +639,7 @@ section#content	{
 	}
 /******************** Footer ******************/
 footer{
-	width:950px;
+	width:740px;
 	margin:0 auto;
 	border-top:1px solid #efedee;
 	padding:30px 0;

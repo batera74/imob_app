@@ -48,6 +48,8 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="controls\css\imoveis_rpt.css" />
+    <Content Include="controls\Imoveis.ascx" />
     <Content Include="css\forms.css" />
     <Content Include="css\grid.css" />
     <Content Include="css\ie.css" />
@@ -182,6 +184,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controls\Imoveis.ascx.cs">
+      <DependentUpon>Imoveis.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\Imoveis.ascx.designer.cs">
+      <DependentUpon>Imoveis.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>

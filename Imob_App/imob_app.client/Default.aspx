@@ -41,7 +41,7 @@
     	<div class="inner">
         	<div class="fright">
             	<strong class="header-text">
-                	Fale com um de nossos atendentes:
+                	Fale com um de nossos corretores:
                 </strong>
                 <div class="header-phone">
                 	+11 43211234
@@ -62,7 +62,7 @@
                 <li><a href="index-2.html">Comprar</a></li>
                 <li><a href="index-3.html">Anunciar</a></li>
                 <li><a href="index-4.html">Servicos</a></li>
-                <li><a href="index-6.html">Central de Atendimento</a></li>
+                <li><a href="index-6.html">Atendimento</a></li>
             </ul>
         </nav>
     </header>
@@ -83,61 +83,65 @@
                 <a class="btn">Pesquisar</a>
                 </form>
             </div>
-            <div class="tab-content" style="height: 100px;">
-                <form id="form2">
+            <div class="tab-content" style="height: 255px;">
+                <form id="form2" runat="server">
                 <label>
-                    <span class="text-form fleft">Estado:</span>
                     <select style="width: 50px">
+                        <option>UF *</option>
                         <option>SP</option>
                         <option>RJ</option>
                     </select>
-                    <span class="text-form fleft">Região:</span>
-                    <select style="width: 170px">
+                    <select style="width: 195px;">
+                        <option>Região *</option>
                         <option>Grande São Paulo</option>
                         <option>Alphaville e Região</option>
                         <option>Litoral</option>
                     </select>
-                    <span class="text-form fleft">Cidade:</span>
-                    <select style="width: 180px">
+                    <select style="width: 195px">                    
+                        <option>Cidade *</option>
                         <option>São Paulo</option>
                         <option>Osasco</option>
                         <option>Santos</option>
                     </select>
-                    <br />
-                    <br />
-                    <span class="text-form fleft">Bairro:</span>
-                    <select style="width: 130px">
+                    <select style="width: 170px">
+                        <option>Bairro *</option>
                         <option>Vila Mariana</option>
                         <option>Vila Olímpia</option>
                         <option>Itaim Bibi</option>
                     </select>
-                    <span class="text-form fleft">Dormitórios:</span>
-                    <select style="width: 50px">
+                </label>
+                <label>
+                    <select style="width: 130px">
+                        <option>Dormitórios *</option>
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
                     </select>
-                    <span class="text-form fleft">Tipo:</span>
-                    <select style="width: 120px">
+                    <select style="width: 130px">
+                        <option>Tipo *</option>
                         <option>Casa</option>
                         <option>Apartamento</option>
                         <option>Comercial</option>
                     </select>
-                    <br />
-                    <br />
-                    <span class="text-form fleft">Valor:</span>
-                    <select style="width: 145px">
-                        <option>Até R$80.000,00</option>
-                        <option>Até R$100.000,00</option>
-                        <option>Até R$150.000,00</option>
-                        <option>Até R$200.000,00</option>
-                        <option>Até R$300.000,00</option>
-                        <option>Acima de R$300.000,00</option>
-                    </select>
                 </label>
-                <div class="fright">
-                    <a class="btn">Pesquisar</a>
-                </div>
+                <label>
+                    <span class="text-form fleft">Valores:</span>
+                </label>
+                <label>
+                    <input type="text" onblur="if(this.value==''){this.value='DE: Ex 150000 *'}" onfocus="if(this.value='DE: Ex 150000 *'){this.value=''}"
+                        value="DE: Ex 150000 *" name="valor1" />
+                </label>
+                <label>
+                    <input type="text" onblur="if(this.value==''){this.value='ATÉ: Ex 250000 *'}" onfocus="if(this.value='ATÉ: Ex 250000 *'){this.value=''}"
+                        value="ATÉ: Ex 250000 *" name="valor2" />
+                </label>
+                <label>
+                    <div class="fright" style="margin-top: 15px;">
+                        <a class="btn">Pesquisar</a>
+                    </div>
+                </label>
                 </form>
             </div>
         </div>
