@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace imob_app.client.controls {
+namespace imob_app.client {
     
     
-    public partial class Imoveis {
+    public partial class ResultadoPesquisa {
         
         /// <summary>
-        /// DataList1 control.
+        /// form2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form2;
     }
 }

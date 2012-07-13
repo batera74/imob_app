@@ -48,7 +48,9 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="controls\css\imoveis_rpt.css" />
+    <Content Include="controls\css\dataList.css" />
+    <Content Include="controls\css\imoves_rpt.css" />
+    <Content Include="controls\CustomDataList.ascx" />
     <Content Include="controls\Imoveis.ascx" />
     <Content Include="css\forms.css" />
     <Content Include="css\grid.css" />
@@ -174,6 +176,7 @@
     <Content Include="js\superfish.js" />
     <Content Include="js\tms-0.4.x.js" />
     <Content Include="js\uCarausel.js" />
+    <Content Include="ResultadoPesquisa.aspx" />
     <Content Include="skin\blue.monday\jplayer.blue.monday.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -184,6 +187,13 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controls\CustomDataList.ascx.cs">
+      <DependentUpon>CustomDataList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\CustomDataList.ascx.designer.cs">
+      <DependentUpon>CustomDataList.ascx</DependentUpon>
+    </Compile>
     <Compile Include="controls\Imoveis.ascx.cs">
       <DependentUpon>Imoveis.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -199,6 +209,13 @@
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultadoPesquisa.aspx.cs">
+      <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResultadoPesquisa.aspx.designer.cs">
+      <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -219,7 +236,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>56305</DevelopmentServerPort>
+          <DevelopmentServerPort>35141</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>
