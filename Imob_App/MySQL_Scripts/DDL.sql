@@ -1,4 +1,6 @@
-CREATE DATABASE `ImobApp`;
+DROP DATABASE IF EXISTS `ImobApp`;
+CREATE DATABASE IF NOT EXISTS `ImobApp`;
+
 USE `ImobApp`;
 
 DROP TABLE IF EXISTS `Usuario`;
@@ -7,7 +9,9 @@ CREATE TABLE IF NOT EXISTS `Usuario` (
  `nm_usuario` VARCHAR(70) NOT NULL,
  `cd_cpf` CHAR(11) NULL,
  `cd_creci` VARCHAR(7) NOT NULL,
+ `ds_login_facebook` VARCHAR(50) NULL,
  `ds_email` VARCHAR(50) NULL,
+ `ds_password` VARCHAR(500),
  `ds_telefone1` VARCHAR(20) NULL,
  `ds_tipo_telefone_1` VARCHAR(40) NULL,
  `ds_telefone2` VARCHAR(20) NULL,
@@ -28,7 +32,6 @@ CREATE TABLE IF NOT EXISTS `Estado` (
  `cd_estado` CHAR(2) NOT NULL ,
  `nm_estado` VARCHAR(45) NOT NULL,
  FOREIGN KEY (id_pais) REFERENCES Pais(id_pais)
-    ON DELETE CASCADE
 );
 
 DROP TABLE IF EXISTS `Municipio`;
@@ -37,7 +40,6 @@ CREATE TABLE IF NOT EXISTS `Municipio` (
  `id_estado` SMALLINT NOT NULL,
  `nm_municipio` VARCHAR(45) NOT NULL,
  FOREIGN KEY (id_estado) REFERENCES Estado(id_estado)   
-    ON DELETE CASCADE
 );
  
 DROP TABLE IF EXISTS `Bairro`;
@@ -46,38 +48,37 @@ CREATE TABLE IF NOT EXISTS `Bairro` (
  `id_municipio` SMALLINT NOT NULL,
  `nm_bairro` VARCHAR(45) NOT NULL,
  FOREIGN KEY (id_municipio) REFERENCES Municipio(id_municipio)
-     ON DELETE CASCADE
 );
 
 
 DROP TABLE IF EXISTS `Categoria`;
 CREATE TABLE IF NOT EXISTS `Categoria` (
  `id_categoria` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `nm_categoria` VARCHAR(40) NOT NULL
+ `ds_item` VARCHAR(40) NOT NULL
 );
   
 DROP TABLE IF EXISTS `Dormitorio`;
 CREATE TABLE `Dormitorio` (
  `id_dormitorio` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `nm_dormitorio` SMALLINT NOT NULL
+ `ds_item` SMALLINT NOT NULL
 );
 
 DROP TABLE IF EXISTS `Finalidade`;
 CREATE TABLE IF NOT EXISTS `Finalidade` (
  `id_finalidade` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `nm_finalidade` VARCHAR(40) NOT NULL
+ `ds_item` VARCHAR(40) NOT NULL
 );
 
 DROP TABLE IF EXISTS `EstadoImovel`;
 CREATE TABLE IF NOT EXISTS `EstadoImovel` (
  `id_estado_imovel` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `nm_id_estado_imovel` VARCHAR(40) NOT NULL 
+ `ds_item` VARCHAR(40) NOT NULL 
 );
 
 DROP TABLE IF EXISTS `PosicaoImovel`;
 CREATE TABLE IF NOT EXISTS `PosicaoImovel` (
  id_posicao_imovel SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- ds_posicao VARCHAR(20) NOT NULL
+ ds_item VARCHAR(20) NOT NULL
 );
 
 DROP TABLE IF EXISTS `Social`;
@@ -126,13 +127,15 @@ CREATE TABLE IF NOT EXISTS `Imovel` (
  `ds_padrao` VARCHAR(50) NULL,
  `ds_endereco` VARCHAR(60) NOT NULL,
  `ds_numero_endereco` VARCHAR(10) NOT NULL,
+ `ds_cep` CHAR(8) NULL,
  `ds_complemento` VARCHAR(20) NOT NULL,
  `id_bairro` SMALLINT NOT NULL,
  `ds_garagem` VARCHAR(30) NULL,
  `ds_portaria` VARCHAR(30) NULL,
  `ds_situacao` VARCHAR(60) NULL, 
  `id_estado_imovel` SMALLINT NOT NULL,
- `id_dormitorio` SMALLINT NOT NULL,
+ `id_dormitorio` SMALLINT NULL,
+ `qt_suite` SMALLINT NULL,
  `id_posicao_imovel` SMALLINT NULL,
  `ds_banheiro` VARCHAR(80) NULL,
  `nm_edificio` VARCHAR(40) NULL,
@@ -150,6 +153,7 @@ CREATE TABLE IF NOT EXISTS `Imovel` (
  `vl_area_total` DECIMAL NULL,
  `ic_destaque` bit NULL,
  `ic_ativo` bit NULL,
+ `dt_post` date NOT NULL,
  FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario),    
  FOREIGN KEY (id_finalidade) REFERENCES Finalidade(id_finalidade),
  FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria),
@@ -163,9 +167,9 @@ CREATE TABLE IF NOT EXISTS `Imovel` (
 DROP TABLE IF EXISTS `Imagem`;
 CREATE TABLE IF NOT EXISTS `Imagem` (
   `id_imagem` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `ds_imagem_cripto` TEXT NOT NULL,
+  `ds_imagem_cripto` TEXT COLLATE latin1_general_ci NOT NULL,
   `ds_imagem` VARCHAR(150) NOT NULL,
-  `id_imovel` SMALLINT NOT NULL,  
+  `id_imovel` SMALLINT NOT NULL,    
   FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel)
 );
 

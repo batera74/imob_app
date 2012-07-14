@@ -110,6 +110,7 @@ input[type="text"],input[type=password],textarea{font-family:Arial, Helvetica, s
 	border-radius:5px;
 	-moz-border-radius:5px; 
 	-webkit-border-radius:5px;  
+	
 }
 #application-form .jqTransformSelectWrapper {
 	position:relative; 

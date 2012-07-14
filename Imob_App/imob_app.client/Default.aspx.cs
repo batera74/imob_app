@@ -17,14 +17,9 @@ namespace imob_app.client
 
         private void CarregarCombosPesquisa()
         {
-            business.Estado estados = new business.Estado();
-            ddlUF.Items.Clear();
-            ddlUF.Items.Add(new ListItem("UF *", ""));
-            ddlUF.AppendDataBoundItems = true;
-            ddlUF.DataSource = estados.SelecionarTodos();
-            ddlUF.DataTextField = "cd_estado";
-            ddlUF.DataValueField = "id_estado";
-            ddlUF.DataBind();
+            business.Combo combo = new business.Combo();
+            combo.CarregarCombo(ref ddlUF, new business.Estado(), "cd_estado", "id_estado", "UF *");
+            combo.CarregarCombo(ref ddlBairro, new business.Bairro(), "nm_bairro", "id_bairro", "Bairro *");
         }
     }
 }
