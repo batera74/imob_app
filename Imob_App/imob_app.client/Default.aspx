@@ -69,6 +69,7 @@
     </header>
     </div>
     <!-- Tabs Pesquisa -->
+    
     <div class="tabs_pesquisa">
         <div class="tabs-horz-top">
             <ul class="tabs-nav">
@@ -87,66 +88,42 @@
             <div class="tab-content" style="height: 255px;">
                 <form id="form2" runat="server">
                 <label>
-                    <select style="width: 50px">
-                        <option>UF *</option>
-                        <option>SP</option>
-                        <option>RJ</option>
-                    </select>
-                    <select style="width: 195px;">
-                        <option>Região *</option>
-                        <option>Grande São Paulo</option>
-                        <option>Alphaville e Região</option>
-                        <option>Litoral</option>
-                    </select>
-                    <select style="width: 195px">
-                        <option>Cidade *</option>
-                        <option>São Paulo</option>
-                        <option>Osasco</option>
-                        <option>Santos</option>
-                    </select>
-                    <select style="width: 170px">
-                        <option>Bairro *</option>
-                        <option>Vila Mariana</option>
-                        <option>Vila Olímpia</option>
-                        <option>Itaim Bibi</option>
-                    </select>
+                    <span class="text-form fleft">Localização:</span>
+                    <asp:DropDownList ID="ddlUF" runat="server" style="width: 50px">
+                    </asp:DropDownList>
+                    <asp:DropDownList ID="ddlCidade" runat="server" style="width: 195px">
+                    </asp:DropDownList>
+                    <asp:DropDownList ID="ddlBairro" runat="server" style="width: 170px">
+                    </asp:DropDownList>
                 </label>
-                <label>
-                    <select style="width: 130px">
-                        <option>Dormitórios *</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    <select style="width: 130px">
-                        <option>Tipo *</option>
-                        <option>Casa</option>
-                        <option>Apartamento</option>
-                        <option>Comercial</option>
-                    </select>
+                <label>                    
+                    <span class="text-form fleft">Características:</span>
+                    <asp:DropDownList ID="ddlDormitorios" runat="server" style="width: 130px">
+                    </asp:DropDownList>                                           
+                    <asp:DropDownList ID="ddlTipo" runat="server" style="width: 130px">
+                    </asp:DropDownList>                     
                 </label>
-                <label>
+                <label>                    
                     <span class="text-form fleft">Valores:</span>
                 </label>
                 <label>
-                    <input type="text" onblur="if(this.value==''){this.value='DE: Ex 150000 *'}" onfocus="if(this.value='DE: Ex 150000 *'){this.value=''}"
-                        value="DE: Ex 150000 *" name="valor1" />
+                    <asp:TextBox ID="txtValorDe" runat="server" onblur="if(this.value==''){this.value='DE: Ex 150000 *'}" onfocus="if(this.value='DE: Ex 150000 *'){this.value=''}"
+                        value="DE: Ex 150000 *" name="valor1" ></asp:TextBox>
                 </label>
                 <label>
-                    <input type="text" onblur="if(this.value==''){this.value='ATÉ: Ex 250000 *'}" onfocus="if(this.value='ATÉ: Ex 250000 *'){this.value=''}"
-                        value="ATÉ: Ex 250000 *" name="valor2" />
+                    <asp:TextBox ID="txtValorAte" runat="server" onblur="if(this.value==''){this.value='ATÉ: Ex 250000 *'}" onfocus="if(this.value='ATÉ: Ex 250000 *'){this.value=''}"
+                        value="ATÉ: Ex 250000 *" name="valor2"></asp:TextBox>                    
                 </label>
                 <label>
                     <div class="fright" style="margin-top: 15px;">
-                        <a class="btn">Pesquisar</a>
+                        <asp:HyperLink class="btn" ID="hlkPesquisar" runat="server">Pesquisar</asp:HyperLink>                        
                     </div>
                 </label>
                 </form>
             </div>
         </div>
-    </div>
+    </div
+    
     <!-- Main PAge Slider -->
     <div class="flex_slider_home">
         <slider:Slider runat="server" ID="slider" />

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace imob_app.business
 {
-    public class Class1
+    class Bairro
     {
     }
 }

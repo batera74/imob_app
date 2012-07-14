@@ -3,3 +3,5 @@ C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.business\bin\Debu
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.business\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.business\obj\Debug\imob_app.business.dll
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.business\obj\Debug\imob_app.business.pdb
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.business\bin\Debug\imob_app.dao.dll
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.business\bin\Debug\imob_app.dao.pdb

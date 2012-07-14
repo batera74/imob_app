@@ -242,6 +242,16 @@
     <None Include="fonts\icomoonsocial-webfont.ttf" />
     <None Include="fonts\icomoonsocial-webfont.woff" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\imob_app.business\imob_app.business.csproj">
+      <Project>{E538395A-6CFD-4EF4-9BBE-8AD2826A9329}</Project>
+      <Name>imob_app.business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\imob_app.dao\imob_app.dao.csproj">
+      <Project>{A1700615-2846-4D20-A557-3B84415C7C02}</Project>
+      <Name>imob_app.dao</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <ProjectExtensions>

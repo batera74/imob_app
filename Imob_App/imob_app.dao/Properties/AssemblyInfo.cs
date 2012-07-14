@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ibba_app.dao")]
+[assembly: AssemblyTitle("imob_app.dao")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("ITGROUP")]
-[assembly: AssemblyProduct("ibba_app.dao")]
-[assembly: AssemblyCopyright("Copyright © ITGROUP 2012")]
+[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyProduct("imob_app.dao")]
+[assembly: AssemblyCopyright("Copyright © Microsoft 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("999811a4-5a6e-4fbb-b142-8e599ec17963")]
+[assembly: Guid("ebaa0e72-2d5c-48e9-a0e0-493298983d1d")]
 
 // Version information for an assembly consists of the following four values:
 //

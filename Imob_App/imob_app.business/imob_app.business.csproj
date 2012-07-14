@@ -33,14 +33,25 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Bairro.cs" />
+    <Compile Include="Dormitorio.cs" />
+    <Compile Include="Estado.cs" />
+    <Compile Include="Municipio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tipo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\imob_app.dao\imob_app.dao.csproj">
+      <Project>{A1700615-2846-4D20-A557-3B84415C7C02}</Project>
+      <Name>imob_app.dao</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

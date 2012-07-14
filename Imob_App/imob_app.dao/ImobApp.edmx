@@ -1,0 +1,1415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="imobappModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="imobappModelStoreContainer">
+          <EntitySet Name="acabamento" EntityType="imobappModel.Store.acabamento" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="armario" EntityType="imobappModel.Store.armario" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="bairro" EntityType="imobappModel.Store.bairro" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="categoria" EntityType="imobappModel.Store.categoria" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="dormitorio" EntityType="imobappModel.Store.dormitorio" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="errolog" EntityType="imobappModel.Store.errolog" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="estado" EntityType="imobappModel.Store.estado" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="estadoimovel" EntityType="imobappModel.Store.estadoimovel" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="finalidade" EntityType="imobappModel.Store.finalidade" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="imagem" EntityType="imobappModel.Store.imagem" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="imovel" EntityType="imobappModel.Store.imovel" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="imovelacabamento" EntityType="imobappModel.Store.imovelacabamento" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="imovelarmario" EntityType="imobappModel.Store.imovelarmario" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="imovelintima" EntityType="imobappModel.Store.imovelintima" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="imovellazer" EntityType="imobappModel.Store.imovellazer" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="imovelservico" EntityType="imobappModel.Store.imovelservico" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="imovelsocial" EntityType="imobappModel.Store.imovelsocial" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="intima" EntityType="imobappModel.Store.intima" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="lazer" EntityType="imobappModel.Store.lazer" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="municipio" EntityType="imobappModel.Store.municipio" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="pais" EntityType="imobappModel.Store.pais" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="posicaoimovel" EntityType="imobappModel.Store.posicaoimovel" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="servico" EntityType="imobappModel.Store.servico" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="slider" EntityType="imobappModel.Store.slider" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="social" EntityType="imobappModel.Store.social" store:Type="Tables" Schema="imobapp" />
+          <EntitySet Name="usuario" EntityType="imobappModel.Store.usuario" store:Type="Tables" Schema="imobapp" />
+          <AssociationSet Name="bairro_ibfk_1" Association="imobappModel.Store.bairro_ibfk_1">
+            <End Role="municipio" EntitySet="municipio" />
+            <End Role="bairro" EntitySet="bairro" />
+          </AssociationSet>
+          <AssociationSet Name="estado_ibfk_1" Association="imobappModel.Store.estado_ibfk_1">
+            <End Role="pais" EntitySet="pais" />
+            <End Role="estado" EntitySet="estado" />
+          </AssociationSet>
+          <AssociationSet Name="imagem_ibfk_1" Association="imobappModel.Store.imagem_ibfk_1">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="imagem" EntitySet="imagem" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_1" Association="imobappModel.Store.imovel_ibfk_1">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_2" Association="imobappModel.Store.imovel_ibfk_2">
+            <End Role="finalidade" EntitySet="finalidade" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_3" Association="imobappModel.Store.imovel_ibfk_3">
+            <End Role="categoria" EntitySet="categoria" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_4" Association="imobappModel.Store.imovel_ibfk_4">
+            <End Role="bairro" EntitySet="bairro" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_5" Association="imobappModel.Store.imovel_ibfk_5">
+            <End Role="estadoimovel" EntitySet="estadoimovel" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_6" Association="imobappModel.Store.imovel_ibfk_6">
+            <End Role="dormitorio" EntitySet="dormitorio" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_7" Association="imobappModel.Store.imovel_ibfk_7">
+            <End Role="posicaoimovel" EntitySet="posicaoimovel" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovelacabamento_ibfk_1" Association="imobappModel.Store.imovelacabamento_ibfk_1">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="imovelacabamento" EntitySet="imovelacabamento" />
+          </AssociationSet>
+          <AssociationSet Name="imovelacabamento_ibfk_2" Association="imobappModel.Store.imovelacabamento_ibfk_2">
+            <End Role="acabamento" EntitySet="acabamento" />
+            <End Role="imovelacabamento" EntitySet="imovelacabamento" />
+          </AssociationSet>
+          <AssociationSet Name="imovelarmario_ibfk_1" Association="imobappModel.Store.imovelarmario_ibfk_1">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="imovelarmario" EntitySet="imovelarmario" />
+          </AssociationSet>
+          <AssociationSet Name="imovelarmario_ibfk_2" Association="imobappModel.Store.imovelarmario_ibfk_2">
+            <End Role="armario" EntitySet="armario" />
+            <End Role="imovelarmario" EntitySet="imovelarmario" />
+          </AssociationSet>
+          <AssociationSet Name="imovelintima_ibfk_1" Association="imobappModel.Store.imovelintima_ibfk_1">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="imovelintima" EntitySet="imovelintima" />
+          </AssociationSet>
+          <AssociationSet Name="imovelintima_ibfk_2" Association="imobappModel.Store.imovelintima_ibfk_2">
+            <End Role="intima" EntitySet="intima" />
+            <End Role="imovelintima" EntitySet="imovelintima" />
+          </AssociationSet>
+          <AssociationSet Name="imovellazer_ibfk_1" Association="imobappModel.Store.imovellazer_ibfk_1">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="imovellazer" EntitySet="imovellazer" />
+          </AssociationSet>
+          <AssociationSet Name="imovellazer_ibfk_2" Association="imobappModel.Store.imovellazer_ibfk_2">
+            <End Role="lazer" EntitySet="lazer" />
+            <End Role="imovellazer" EntitySet="imovellazer" />
+          </AssociationSet>
+          <AssociationSet Name="imovelservico_ibfk_1" Association="imobappModel.Store.imovelservico_ibfk_1">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="imovelservico" EntitySet="imovelservico" />
+          </AssociationSet>
+          <AssociationSet Name="imovelservico_ibfk_2" Association="imobappModel.Store.imovelservico_ibfk_2">
+            <End Role="servico" EntitySet="servico" />
+            <End Role="imovelservico" EntitySet="imovelservico" />
+          </AssociationSet>
+          <AssociationSet Name="imovelsocial_ibfk_1" Association="imobappModel.Store.imovelsocial_ibfk_1">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="imovelsocial" EntitySet="imovelsocial" />
+          </AssociationSet>
+          <AssociationSet Name="imovelsocial_ibfk_2" Association="imobappModel.Store.imovelsocial_ibfk_2">
+            <End Role="social" EntitySet="social" />
+            <End Role="imovelsocial" EntitySet="imovelsocial" />
+          </AssociationSet>
+          <AssociationSet Name="municipio_ibfk_1" Association="imobappModel.Store.municipio_ibfk_1">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="municipio" EntitySet="municipio" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="acabamento">
+          <Key>
+            <PropertyRef Name="id_acabamento" />
+          </Key>
+          <Property Name="id_acabamento" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="armario">
+          <Key>
+            <PropertyRef Name="id_armario" />
+          </Key>
+          <Property Name="id_armario" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="bairro">
+          <Key>
+            <PropertyRef Name="id_bairro" />
+          </Key>
+          <Property Name="id_bairro" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_municipio" Type="smallint" Nullable="false" />
+          <Property Name="nm_bairro" Type="varchar" Nullable="false" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="categoria">
+          <Key>
+            <PropertyRef Name="id_categoria" />
+          </Key>
+          <Property Name="id_categoria" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="dormitorio">
+          <Key>
+            <PropertyRef Name="id_dormitorio" />
+          </Key>
+          <Property Name="id_dormitorio" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="errolog">
+          <Key>
+            <PropertyRef Name="id_erro" />
+          </Key>
+          <Property Name="id_erro" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_erro" Type="varchar" MaxLength="500" />
+          <Property Name="dt_erro" Type="datetime" />
+          <Property Name="ds_stack" Type="varchar" MaxLength="255" />
+          <Property Name="ds_metodo" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="estado">
+          <Key>
+            <PropertyRef Name="id_estado" />
+          </Key>
+          <Property Name="id_estado" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_pais" Type="smallint" Nullable="false" />
+          <Property Name="cd_estado" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="nm_estado" Type="varchar" Nullable="false" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="estadoimovel">
+          <Key>
+            <PropertyRef Name="id_estado_imovel" />
+          </Key>
+          <Property Name="id_estado_imovel" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="finalidade">
+          <Key>
+            <PropertyRef Name="id_finalidade" />
+          </Key>
+          <Property Name="id_finalidade" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="imagem">
+          <Key>
+            <PropertyRef Name="id_imagem" />
+          </Key>
+          <Property Name="id_imagem" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_imagem_cripto" Type="text" Nullable="false" />
+          <Property Name="ds_imagem" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="id_imovel" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="imovel">
+          <Key>
+            <PropertyRef Name="id_imovel" />
+          </Key>
+          <Property Name="id_imovel" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_usuario" Type="smallint" Nullable="false" />
+          <Property Name="id_finalidade" Type="smallint" Nullable="false" />
+          <Property Name="id_categoria" Type="smallint" Nullable="false" />
+          <Property Name="ds_padrao" Type="varchar" MaxLength="50" />
+          <Property Name="ds_endereco" Type="varchar" Nullable="false" MaxLength="60" />
+          <Property Name="ds_numero_endereco" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="ds_cep" Type="char" MaxLength="8" />
+          <Property Name="ds_complemento" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="id_bairro" Type="smallint" Nullable="false" />
+          <Property Name="ds_garagem" Type="varchar" MaxLength="30" />
+          <Property Name="ds_portaria" Type="varchar" MaxLength="30" />
+          <Property Name="ds_situacao" Type="varchar" MaxLength="60" />
+          <Property Name="id_estado_imovel" Type="smallint" Nullable="false" />
+          <Property Name="id_dormitorio" Type="smallint" />
+          <Property Name="qt_suite" Type="smallint" />
+          <Property Name="id_posicao_imovel" Type="smallint" />
+          <Property Name="ds_banheiro" Type="varchar" MaxLength="80" />
+          <Property Name="nm_edificio" Type="varchar" MaxLength="40" />
+          <Property Name="ic_financiamento" Type="bit" />
+          <Property Name="vl_imovel" Type="decimal" Nullable="false" />
+          <Property Name="vl_sem_comissao" Type="decimal" Nullable="false" />
+          <Property Name="vl_iptu" Type="decimal" />
+          <Property Name="vl_condominio" Type="decimal" />
+          <Property Name="ic_vazio" Type="bit" />
+          <Property Name="cd_registro" Type="varchar" MaxLength="20" />
+          <Property Name="ic_documentacao" Type="bit" />
+          <Property Name="ic_elevador" Type="bit" />
+          <Property Name="ds_local_chaves" Type="varchar" MaxLength="40" />
+          <Property Name="vl_area_util" Type="decimal" />
+          <Property Name="vl_area_total" Type="decimal" />
+          <Property Name="ic_destaque" Type="bit" />
+          <Property Name="ic_ativo" Type="bit" />
+          <Property Name="dt_post" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="imovelacabamento">
+          <Key>
+            <PropertyRef Name="id_imovel" />
+            <PropertyRef Name="id_acabamento" />
+          </Key>
+          <Property Name="id_imovel" Type="smallint" Nullable="false" />
+          <Property Name="id_acabamento" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="imovelarmario">
+          <Key>
+            <PropertyRef Name="id_imovel" />
+            <PropertyRef Name="id_armario" />
+          </Key>
+          <Property Name="id_imovel" Type="smallint" Nullable="false" />
+          <Property Name="id_armario" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="imovelintima">
+          <Key>
+            <PropertyRef Name="id_imovel" />
+            <PropertyRef Name="id_intima" />
+          </Key>
+          <Property Name="id_imovel" Type="smallint" Nullable="false" />
+          <Property Name="id_intima" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="imovellazer">
+          <Key>
+            <PropertyRef Name="id_imovel" />
+            <PropertyRef Name="id_lazer" />
+          </Key>
+          <Property Name="id_imovel" Type="smallint" Nullable="false" />
+          <Property Name="id_lazer" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="imovelservico">
+          <Key>
+            <PropertyRef Name="id_imovel" />
+            <PropertyRef Name="id_servico" />
+          </Key>
+          <Property Name="id_imovel" Type="smallint" Nullable="false" />
+          <Property Name="id_servico" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="imovelsocial">
+          <Key>
+            <PropertyRef Name="id_imovel" />
+            <PropertyRef Name="id_social" />
+          </Key>
+          <Property Name="id_imovel" Type="smallint" Nullable="false" />
+          <Property Name="id_social" Type="smallint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="intima">
+          <Key>
+            <PropertyRef Name="id_intima" />
+          </Key>
+          <Property Name="id_intima" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="lazer">
+          <Key>
+            <PropertyRef Name="id_lazer" />
+          </Key>
+          <Property Name="id_lazer" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="municipio">
+          <Key>
+            <PropertyRef Name="id_municipio" />
+          </Key>
+          <Property Name="id_municipio" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id_estado" Type="smallint" Nullable="false" />
+          <Property Name="nm_municipio" Type="varchar" Nullable="false" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="pais">
+          <Key>
+            <PropertyRef Name="id_pais" />
+          </Key>
+          <Property Name="id_pais" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="cd_pais" Type="char" Nullable="false" MaxLength="2" />
+          <Property Name="nm_pais" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="posicaoimovel">
+          <Key>
+            <PropertyRef Name="id_posicao_imovel" />
+          </Key>
+          <Property Name="id_posicao_imovel" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="servico">
+          <Key>
+            <PropertyRef Name="id_servico" />
+          </Key>
+          <Property Name="id_servico" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="slider">
+          <Key>
+            <PropertyRef Name="id_slider" />
+          </Key>
+          <Property Name="id_slider" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_path_imagem" Type="varchar" Nullable="false" MaxLength="255" />
+          <Property Name="ds_texto1" Type="varchar" Nullable="false" MaxLength="29" />
+          <Property Name="ds_texto2" Type="varchar" Nullable="false" MaxLength="24" />
+          <Property Name="ic_ativo" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="social">
+          <Key>
+            <PropertyRef Name="id_social" />
+          </Key>
+          <Property Name="id_social" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nm_usuario" Type="varchar" Nullable="false" MaxLength="70" />
+          <Property Name="cd_cpf" Type="char" MaxLength="11" />
+          <Property Name="cd_creci" Type="varchar" Nullable="false" MaxLength="7" />
+          <Property Name="ds_login_facebook" Type="varchar" MaxLength="50" />
+          <Property Name="ds_email" Type="varchar" MaxLength="50" />
+          <Property Name="ds_password" Type="varchar" MaxLength="500" />
+          <Property Name="ds_telefone1" Type="varchar" MaxLength="20" />
+          <Property Name="ds_tipo_telefone_1" Type="varchar" MaxLength="40" />
+          <Property Name="ds_telefone2" Type="varchar" MaxLength="20" />
+          <Property Name="ds_tipo_telefone_2" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <Association Name="bairro_ibfk_1">
+          <End Role="municipio" Type="imobappModel.Store.municipio" Multiplicity="1" />
+          <End Role="bairro" Type="imobappModel.Store.bairro" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="municipio">
+              <PropertyRef Name="id_municipio" />
+            </Principal>
+            <Dependent Role="bairro">
+              <PropertyRef Name="id_municipio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="estado_ibfk_1">
+          <End Role="pais" Type="imobappModel.Store.pais" Multiplicity="1" />
+          <End Role="estado" Type="imobappModel.Store.estado" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="pais">
+              <PropertyRef Name="id_pais" />
+            </Principal>
+            <Dependent Role="estado">
+              <PropertyRef Name="id_pais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imagem_ibfk_1">
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="1" />
+          <End Role="imagem" Type="imobappModel.Store.imagem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id_imovel" />
+            </Principal>
+            <Dependent Role="imagem">
+              <PropertyRef Name="id_imovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovel_ibfk_1">
+          <End Role="usuario" Type="imobappModel.Store.usuario" Multiplicity="1" />
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="usuario">
+              <PropertyRef Name="id_usuario" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovel_ibfk_2">
+          <End Role="finalidade" Type="imobappModel.Store.finalidade" Multiplicity="1" />
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="finalidade">
+              <PropertyRef Name="id_finalidade" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="id_finalidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovel_ibfk_3">
+          <End Role="categoria" Type="imobappModel.Store.categoria" Multiplicity="1" />
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="categoria">
+              <PropertyRef Name="id_categoria" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="id_categoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovel_ibfk_4">
+          <End Role="bairro" Type="imobappModel.Store.bairro" Multiplicity="1" />
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="bairro">
+              <PropertyRef Name="id_bairro" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="id_bairro" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovel_ibfk_5">
+          <End Role="estadoimovel" Type="imobappModel.Store.estadoimovel" Multiplicity="1" />
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estadoimovel">
+              <PropertyRef Name="id_estado_imovel" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="id_estado_imovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovel_ibfk_6">
+          <End Role="dormitorio" Type="imobappModel.Store.dormitorio" Multiplicity="0..1" />
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="dormitorio">
+              <PropertyRef Name="id_dormitorio" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="id_dormitorio" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovel_ibfk_7">
+          <End Role="posicaoimovel" Type="imobappModel.Store.posicaoimovel" Multiplicity="0..1" />
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="posicaoimovel">
+              <PropertyRef Name="id_posicao_imovel" />
+            </Principal>
+            <Dependent Role="imovel">
+              <PropertyRef Name="id_posicao_imovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovelacabamento_ibfk_1">
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="1" />
+          <End Role="imovelacabamento" Type="imobappModel.Store.imovelacabamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id_imovel" />
+            </Principal>
+            <Dependent Role="imovelacabamento">
+              <PropertyRef Name="id_imovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovelacabamento_ibfk_2">
+          <End Role="acabamento" Type="imobappModel.Store.acabamento" Multiplicity="1" />
+          <End Role="imovelacabamento" Type="imobappModel.Store.imovelacabamento" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="acabamento">
+              <PropertyRef Name="id_acabamento" />
+            </Principal>
+            <Dependent Role="imovelacabamento">
+              <PropertyRef Name="id_acabamento" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovelarmario_ibfk_1">
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="1" />
+          <End Role="imovelarmario" Type="imobappModel.Store.imovelarmario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id_imovel" />
+            </Principal>
+            <Dependent Role="imovelarmario">
+              <PropertyRef Name="id_imovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovelarmario_ibfk_2">
+          <End Role="armario" Type="imobappModel.Store.armario" Multiplicity="1" />
+          <End Role="imovelarmario" Type="imobappModel.Store.imovelarmario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="armario">
+              <PropertyRef Name="id_armario" />
+            </Principal>
+            <Dependent Role="imovelarmario">
+              <PropertyRef Name="id_armario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovelintima_ibfk_1">
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="1" />
+          <End Role="imovelintima" Type="imobappModel.Store.imovelintima" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id_imovel" />
+            </Principal>
+            <Dependent Role="imovelintima">
+              <PropertyRef Name="id_imovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovelintima_ibfk_2">
+          <End Role="intima" Type="imobappModel.Store.intima" Multiplicity="1" />
+          <End Role="imovelintima" Type="imobappModel.Store.imovelintima" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="intima">
+              <PropertyRef Name="id_intima" />
+            </Principal>
+            <Dependent Role="imovelintima">
+              <PropertyRef Name="id_intima" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovellazer_ibfk_1">
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="1" />
+          <End Role="imovellazer" Type="imobappModel.Store.imovellazer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id_imovel" />
+            </Principal>
+            <Dependent Role="imovellazer">
+              <PropertyRef Name="id_imovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovellazer_ibfk_2">
+          <End Role="lazer" Type="imobappModel.Store.lazer" Multiplicity="1" />
+          <End Role="imovellazer" Type="imobappModel.Store.imovellazer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lazer">
+              <PropertyRef Name="id_lazer" />
+            </Principal>
+            <Dependent Role="imovellazer">
+              <PropertyRef Name="id_lazer" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovelservico_ibfk_1">
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="1" />
+          <End Role="imovelservico" Type="imobappModel.Store.imovelservico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id_imovel" />
+            </Principal>
+            <Dependent Role="imovelservico">
+              <PropertyRef Name="id_imovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovelservico_ibfk_2">
+          <End Role="servico" Type="imobappModel.Store.servico" Multiplicity="1" />
+          <End Role="imovelservico" Type="imobappModel.Store.imovelservico" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="servico">
+              <PropertyRef Name="id_servico" />
+            </Principal>
+            <Dependent Role="imovelservico">
+              <PropertyRef Name="id_servico" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovelsocial_ibfk_1">
+          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="1" />
+          <End Role="imovelsocial" Type="imobappModel.Store.imovelsocial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="imovel">
+              <PropertyRef Name="id_imovel" />
+            </Principal>
+            <Dependent Role="imovelsocial">
+              <PropertyRef Name="id_imovel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="imovelsocial_ibfk_2">
+          <End Role="social" Type="imobappModel.Store.social" Multiplicity="1" />
+          <End Role="imovelsocial" Type="imobappModel.Store.imovelsocial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="social">
+              <PropertyRef Name="id_social" />
+            </Principal>
+            <Dependent Role="imovelsocial">
+              <PropertyRef Name="id_social" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="municipio_ibfk_1">
+          <End Role="estado" Type="imobappModel.Store.estado" Multiplicity="1" />
+          <End Role="municipio" Type="imobappModel.Store.municipio" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="estado">
+              <PropertyRef Name="id_estado" />
+            </Principal>
+            <Dependent Role="municipio">
+              <PropertyRef Name="id_estado" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="imobappModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="imobappEntities">
+          <EntitySet Name="acabamento" EntityType="imobappModel.acabamento" />
+          <EntitySet Name="armario" EntityType="imobappModel.armario" />
+          <EntitySet Name="bairro" EntityType="imobappModel.bairro" />
+          <EntitySet Name="categoria" EntityType="imobappModel.categoria" />
+          <EntitySet Name="dormitorio" EntityType="imobappModel.dormitorio" />
+          <EntitySet Name="errolog" EntityType="imobappModel.errolog" />
+          <EntitySet Name="estado" EntityType="imobappModel.estado" />
+          <EntitySet Name="estadoimovel" EntityType="imobappModel.estadoimovel" />
+          <EntitySet Name="finalidade" EntityType="imobappModel.finalidade" />
+          <EntitySet Name="imagem" EntityType="imobappModel.imagem" />
+          <EntitySet Name="imovel" EntityType="imobappModel.imovel" />
+          <EntitySet Name="intima" EntityType="imobappModel.intima" />
+          <EntitySet Name="lazer" EntityType="imobappModel.lazer" />
+          <EntitySet Name="municipio" EntityType="imobappModel.municipio" />
+          <EntitySet Name="pais" EntityType="imobappModel.pais" />
+          <EntitySet Name="posicaoimovel" EntityType="imobappModel.posicaoimovel" />
+          <EntitySet Name="servico" EntityType="imobappModel.servico" />
+          <EntitySet Name="slider" EntityType="imobappModel.slider" />
+          <EntitySet Name="social" EntityType="imobappModel.social" />
+          <EntitySet Name="usuario" EntityType="imobappModel.usuario" />
+          <AssociationSet Name="bairro_ibfk_1" Association="imobappModel.bairro_ibfk_1">
+            <End Role="municipio" EntitySet="municipio" />
+            <End Role="bairro" EntitySet="bairro" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_4" Association="imobappModel.imovel_ibfk_4">
+            <End Role="bairro" EntitySet="bairro" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_3" Association="imobappModel.imovel_ibfk_3">
+            <End Role="categoria" EntitySet="categoria" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_6" Association="imobappModel.imovel_ibfk_6">
+            <End Role="dormitorio" EntitySet="dormitorio" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="estado_ibfk_1" Association="imobappModel.estado_ibfk_1">
+            <End Role="pais" EntitySet="pais" />
+            <End Role="estado" EntitySet="estado" />
+          </AssociationSet>
+          <AssociationSet Name="municipio_ibfk_1" Association="imobappModel.municipio_ibfk_1">
+            <End Role="estado" EntitySet="estado" />
+            <End Role="municipio" EntitySet="municipio" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_5" Association="imobappModel.imovel_ibfk_5">
+            <End Role="estadoimovel" EntitySet="estadoimovel" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_2" Association="imobappModel.imovel_ibfk_2">
+            <End Role="finalidade" EntitySet="finalidade" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imagem_ibfk_1" Association="imobappModel.imagem_ibfk_1">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="imagem" EntitySet="imagem" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_1" Association="imobappModel.imovel_ibfk_1">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovel_ibfk_7" Association="imobappModel.imovel_ibfk_7">
+            <End Role="posicaoimovel" EntitySet="posicaoimovel" />
+            <End Role="imovel" EntitySet="imovel" />
+          </AssociationSet>
+          <AssociationSet Name="imovelacabamento" Association="imobappModel.imovelacabamento">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="acabamento" EntitySet="acabamento" />
+          </AssociationSet>
+          <AssociationSet Name="imovelarmario" Association="imobappModel.imovelarmario">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="armario" EntitySet="armario" />
+          </AssociationSet>
+          <AssociationSet Name="imovelintima" Association="imobappModel.imovelintima">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="intima" EntitySet="intima" />
+          </AssociationSet>
+          <AssociationSet Name="imovellazer" Association="imobappModel.imovellazer">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="lazer" EntitySet="lazer" />
+          </AssociationSet>
+          <AssociationSet Name="imovelservico" Association="imobappModel.imovelservico">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="servico" EntitySet="servico" />
+          </AssociationSet>
+          <AssociationSet Name="imovelsocial" Association="imobappModel.imovelsocial">
+            <End Role="imovel" EntitySet="imovel" />
+            <End Role="social" EntitySet="social" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="acabamento">
+          <Key>
+            <PropertyRef Name="id_acabamento" />
+          </Key>
+          <Property Name="id_acabamento" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="String" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovelacabamento" FromRole="acabamento" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="armario">
+          <Key>
+            <PropertyRef Name="id_armario" />
+          </Key>
+          <Property Name="id_armario" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="String" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovelarmario" FromRole="armario" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="bairro">
+          <Key>
+            <PropertyRef Name="id_bairro" />
+          </Key>
+          <Property Name="id_bairro" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_bairro" Type="String" Nullable="false" />
+          <NavigationProperty Name="municipio" Relationship="imobappModel.bairro_ibfk_1" FromRole="bairro" ToRole="municipio" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_4" FromRole="bairro" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="categoria">
+          <Key>
+            <PropertyRef Name="id_categoria" />
+          </Key>
+          <Property Name="id_categoria" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="String" Nullable="false" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_3" FromRole="categoria" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="dormitorio">
+          <Key>
+            <PropertyRef Name="id_dormitorio" />
+          </Key>
+          <Property Name="id_dormitorio" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="Int16" Nullable="false" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_6" FromRole="dormitorio" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="errolog">
+          <Key>
+            <PropertyRef Name="id_erro" />
+          </Key>
+          <Property Name="id_erro" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_erro" Type="String" />
+          <Property Name="dt_erro" Type="DateTime" />
+          <Property Name="ds_stack" Type="String" />
+          <Property Name="ds_metodo" Type="String" />
+        </EntityType>
+        <EntityType Name="estado">
+          <Key>
+            <PropertyRef Name="id_estado" />
+          </Key>
+          <Property Name="id_estado" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cd_estado" Type="String" Nullable="false" />
+          <Property Name="nm_estado" Type="String" Nullable="false" />
+          <NavigationProperty Name="pais" Relationship="imobappModel.estado_ibfk_1" FromRole="estado" ToRole="pais" />
+          <NavigationProperty Name="municipio" Relationship="imobappModel.municipio_ibfk_1" FromRole="estado" ToRole="municipio" />
+        </EntityType>
+        <EntityType Name="estadoimovel">
+          <Key>
+            <PropertyRef Name="id_estado_imovel" />
+          </Key>
+          <Property Name="id_estado_imovel" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="String" Nullable="false" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_5" FromRole="estadoimovel" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="finalidade">
+          <Key>
+            <PropertyRef Name="id_finalidade" />
+          </Key>
+          <Property Name="id_finalidade" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="String" Nullable="false" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_2" FromRole="finalidade" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="imagem">
+          <Key>
+            <PropertyRef Name="id_imagem" />
+          </Key>
+          <Property Name="id_imagem" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_imagem_cripto" Type="String" Nullable="false" />
+          <Property Name="ds_imagem" Type="String" Nullable="false" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imagem_ibfk_1" FromRole="imagem" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="imovel">
+          <Key>
+            <PropertyRef Name="id_imovel" />
+          </Key>
+          <Property Name="id_imovel" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_padrao" Type="String" />
+          <Property Name="ds_endereco" Type="String" Nullable="false" />
+          <Property Name="ds_numero_endereco" Type="String" Nullable="false" />
+          <Property Name="ds_cep" Type="String" />
+          <Property Name="ds_complemento" Type="String" Nullable="false" />
+          <Property Name="ds_garagem" Type="String" />
+          <Property Name="ds_portaria" Type="String" />
+          <Property Name="ds_situacao" Type="String" />
+          <Property Name="qt_suite" Type="Int16" />
+          <Property Name="ds_banheiro" Type="String" />
+          <Property Name="nm_edificio" Type="String" />
+          <Property Name="ic_financiamento" Type="Boolean" />
+          <Property Name="vl_imovel" Type="Decimal" Nullable="false" />
+          <Property Name="vl_sem_comissao" Type="Decimal" Nullable="false" />
+          <Property Name="vl_iptu" Type="Decimal" />
+          <Property Name="vl_condominio" Type="Decimal" />
+          <Property Name="ic_vazio" Type="Boolean" />
+          <Property Name="cd_registro" Type="String" />
+          <Property Name="ic_documentacao" Type="Boolean" />
+          <Property Name="ic_elevador" Type="Boolean" />
+          <Property Name="ds_local_chaves" Type="String" />
+          <Property Name="vl_area_util" Type="Decimal" />
+          <Property Name="vl_area_total" Type="Decimal" />
+          <Property Name="ic_destaque" Type="Boolean" />
+          <Property Name="ic_ativo" Type="Boolean" />
+          <Property Name="dt_post" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="bairro" Relationship="imobappModel.imovel_ibfk_4" FromRole="imovel" ToRole="bairro" />
+          <NavigationProperty Name="categoria" Relationship="imobappModel.imovel_ibfk_3" FromRole="imovel" ToRole="categoria" />
+          <NavigationProperty Name="dormitorio" Relationship="imobappModel.imovel_ibfk_6" FromRole="imovel" ToRole="dormitorio" />
+          <NavigationProperty Name="estadoimovel" Relationship="imobappModel.imovel_ibfk_5" FromRole="imovel" ToRole="estadoimovel" />
+          <NavigationProperty Name="finalidade" Relationship="imobappModel.imovel_ibfk_2" FromRole="imovel" ToRole="finalidade" />
+          <NavigationProperty Name="imagem" Relationship="imobappModel.imagem_ibfk_1" FromRole="imovel" ToRole="imagem" />
+          <NavigationProperty Name="usuario" Relationship="imobappModel.imovel_ibfk_1" FromRole="imovel" ToRole="usuario" />
+          <NavigationProperty Name="posicaoimovel" Relationship="imobappModel.imovel_ibfk_7" FromRole="imovel" ToRole="posicaoimovel" />
+          <NavigationProperty Name="acabamento" Relationship="imobappModel.imovelacabamento" FromRole="imovel" ToRole="acabamento" />
+          <NavigationProperty Name="armario" Relationship="imobappModel.imovelarmario" FromRole="imovel" ToRole="armario" />
+          <NavigationProperty Name="intima" Relationship="imobappModel.imovelintima" FromRole="imovel" ToRole="intima" />
+          <NavigationProperty Name="lazer" Relationship="imobappModel.imovellazer" FromRole="imovel" ToRole="lazer" />
+          <NavigationProperty Name="servico" Relationship="imobappModel.imovelservico" FromRole="imovel" ToRole="servico" />
+          <NavigationProperty Name="social" Relationship="imobappModel.imovelsocial" FromRole="imovel" ToRole="social" />
+        </EntityType>
+        <EntityType Name="intima">
+          <Key>
+            <PropertyRef Name="id_intima" />
+          </Key>
+          <Property Name="id_intima" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="String" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovelintima" FromRole="intima" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="lazer">
+          <Key>
+            <PropertyRef Name="id_lazer" />
+          </Key>
+          <Property Name="id_lazer" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="String" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovellazer" FromRole="lazer" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="municipio">
+          <Key>
+            <PropertyRef Name="id_municipio" />
+          </Key>
+          <Property Name="id_municipio" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_municipio" Type="String" Nullable="false" />
+          <NavigationProperty Name="bairro" Relationship="imobappModel.bairro_ibfk_1" FromRole="municipio" ToRole="bairro" />
+          <NavigationProperty Name="estado" Relationship="imobappModel.municipio_ibfk_1" FromRole="municipio" ToRole="estado" />
+        </EntityType>
+        <EntityType Name="pais">
+          <Key>
+            <PropertyRef Name="id_pais" />
+          </Key>
+          <Property Name="id_pais" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cd_pais" Type="String" Nullable="false" />
+          <Property Name="nm_pais" Type="String" Nullable="false" />
+          <NavigationProperty Name="estado" Relationship="imobappModel.estado_ibfk_1" FromRole="pais" ToRole="estado" />
+        </EntityType>
+        <EntityType Name="posicaoimovel">
+          <Key>
+            <PropertyRef Name="id_posicao_imovel" />
+          </Key>
+          <Property Name="id_posicao_imovel" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="String" Nullable="false" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_7" FromRole="posicaoimovel" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="servico">
+          <Key>
+            <PropertyRef Name="id_servico" />
+          </Key>
+          <Property Name="id_servico" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="String" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovelservico" FromRole="servico" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="slider">
+          <Key>
+            <PropertyRef Name="id_slider" />
+          </Key>
+          <Property Name="id_slider" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_path_imagem" Type="String" Nullable="false" />
+          <Property Name="ds_texto1" Type="String" Nullable="false" />
+          <Property Name="ds_texto2" Type="String" Nullable="false" />
+          <Property Name="ic_ativo" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="social">
+          <Key>
+            <PropertyRef Name="id_social" />
+          </Key>
+          <Property Name="id_social" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_item" Type="String" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovelsocial" FromRole="social" ToRole="imovel" />
+        </EntityType>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Name="id_usuario" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_usuario" Type="String" Nullable="false" />
+          <Property Name="cd_cpf" Type="String" />
+          <Property Name="cd_creci" Type="String" Nullable="false" />
+          <Property Name="ds_login_facebook" Type="String" />
+          <Property Name="ds_email" Type="String" />
+          <Property Name="ds_password" Type="String" />
+          <Property Name="ds_telefone1" Type="String" />
+          <Property Name="ds_tipo_telefone_1" Type="String" />
+          <Property Name="ds_telefone2" Type="String" />
+          <Property Name="ds_tipo_telefone_2" Type="String" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_1" FromRole="usuario" ToRole="imovel" />
+        </EntityType>
+        <Association Name="bairro_ibfk_1">
+          <End Role="municipio" Type="imobappModel.municipio" Multiplicity="1" />
+          <End Role="bairro" Type="imobappModel.bairro" Multiplicity="*" />
+        </Association>
+        <Association Name="imovel_ibfk_4">
+          <End Role="bairro" Type="imobappModel.bairro" Multiplicity="1" />
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+        </Association>
+        <Association Name="imovel_ibfk_3">
+          <End Role="categoria" Type="imobappModel.categoria" Multiplicity="1" />
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+        </Association>
+        <Association Name="imovel_ibfk_6">
+          <End Role="dormitorio" Type="imobappModel.dormitorio" Multiplicity="0..1" />
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+        </Association>
+        <Association Name="estado_ibfk_1">
+          <End Role="pais" Type="imobappModel.pais" Multiplicity="1" />
+          <End Role="estado" Type="imobappModel.estado" Multiplicity="*" />
+        </Association>
+        <Association Name="municipio_ibfk_1">
+          <End Role="estado" Type="imobappModel.estado" Multiplicity="1" />
+          <End Role="municipio" Type="imobappModel.municipio" Multiplicity="*" />
+        </Association>
+        <Association Name="imovel_ibfk_5">
+          <End Role="estadoimovel" Type="imobappModel.estadoimovel" Multiplicity="1" />
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+        </Association>
+        <Association Name="imovel_ibfk_2">
+          <End Role="finalidade" Type="imobappModel.finalidade" Multiplicity="1" />
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+        </Association>
+        <Association Name="imagem_ibfk_1">
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="1" />
+          <End Role="imagem" Type="imobappModel.imagem" Multiplicity="*" />
+        </Association>
+        <Association Name="imovel_ibfk_1">
+          <End Role="usuario" Type="imobappModel.usuario" Multiplicity="1" />
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+        </Association>
+        <Association Name="imovel_ibfk_7">
+          <End Role="posicaoimovel" Type="imobappModel.posicaoimovel" Multiplicity="0..1" />
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+        </Association>
+        <Association Name="imovelacabamento">
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+          <End Role="acabamento" Type="imobappModel.acabamento" Multiplicity="*" />
+        </Association>
+        <Association Name="imovelarmario">
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+          <End Role="armario" Type="imobappModel.armario" Multiplicity="*" />
+        </Association>
+        <Association Name="imovelintima">
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+          <End Role="intima" Type="imobappModel.intima" Multiplicity="*" />
+        </Association>
+        <Association Name="imovellazer">
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+          <End Role="lazer" Type="imobappModel.lazer" Multiplicity="*" />
+        </Association>
+        <Association Name="imovelservico">
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+          <End Role="servico" Type="imobappModel.servico" Multiplicity="*" />
+        </Association>
+        <Association Name="imovelsocial">
+          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
+          <End Role="social" Type="imobappModel.social" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="imobappModelStoreContainer" CdmEntityContainer="imobappEntities">
+          <EntitySetMapping Name="acabamento"><EntityTypeMapping TypeName="imobappModel.acabamento"><MappingFragment StoreEntitySet="acabamento">
+            <ScalarProperty Name="id_acabamento" ColumnName="id_acabamento" />
+            <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="armario"><EntityTypeMapping TypeName="imobappModel.armario"><MappingFragment StoreEntitySet="armario">
+            <ScalarProperty Name="id_armario" ColumnName="id_armario" />
+            <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="bairro"><EntityTypeMapping TypeName="imobappModel.bairro"><MappingFragment StoreEntitySet="bairro">
+            <ScalarProperty Name="id_bairro" ColumnName="id_bairro" />
+            <ScalarProperty Name="nm_bairro" ColumnName="nm_bairro" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="categoria"><EntityTypeMapping TypeName="imobappModel.categoria"><MappingFragment StoreEntitySet="categoria">
+            <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+            <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="dormitorio"><EntityTypeMapping TypeName="imobappModel.dormitorio"><MappingFragment StoreEntitySet="dormitorio">
+            <ScalarProperty Name="id_dormitorio" ColumnName="id_dormitorio" />
+            <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="errolog"><EntityTypeMapping TypeName="imobappModel.errolog"><MappingFragment StoreEntitySet="errolog">
+            <ScalarProperty Name="id_erro" ColumnName="id_erro" />
+            <ScalarProperty Name="ds_erro" ColumnName="ds_erro" />
+            <ScalarProperty Name="dt_erro" ColumnName="dt_erro" />
+            <ScalarProperty Name="ds_stack" ColumnName="ds_stack" />
+            <ScalarProperty Name="ds_metodo" ColumnName="ds_metodo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="estado"><EntityTypeMapping TypeName="imobappModel.estado"><MappingFragment StoreEntitySet="estado">
+            <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+            <ScalarProperty Name="cd_estado" ColumnName="cd_estado" />
+            <ScalarProperty Name="nm_estado" ColumnName="nm_estado" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="estadoimovel"><EntityTypeMapping TypeName="imobappModel.estadoimovel"><MappingFragment StoreEntitySet="estadoimovel">
+            <ScalarProperty Name="id_estado_imovel" ColumnName="id_estado_imovel" />
+            <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="finalidade"><EntityTypeMapping TypeName="imobappModel.finalidade"><MappingFragment StoreEntitySet="finalidade">
+            <ScalarProperty Name="id_finalidade" ColumnName="id_finalidade" />
+            <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="imagem"><EntityTypeMapping TypeName="imobappModel.imagem"><MappingFragment StoreEntitySet="imagem">
+            <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
+            <ScalarProperty Name="ds_imagem_cripto" ColumnName="ds_imagem_cripto" />
+            <ScalarProperty Name="ds_imagem" ColumnName="ds_imagem" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="imovel"><EntityTypeMapping TypeName="imobappModel.imovel"><MappingFragment StoreEntitySet="imovel">
+            <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            <ScalarProperty Name="ds_padrao" ColumnName="ds_padrao" />
+            <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
+            <ScalarProperty Name="ds_numero_endereco" ColumnName="ds_numero_endereco" />
+            <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
+            <ScalarProperty Name="ds_complemento" ColumnName="ds_complemento" />
+            <ScalarProperty Name="ds_garagem" ColumnName="ds_garagem" />
+            <ScalarProperty Name="ds_portaria" ColumnName="ds_portaria" />
+            <ScalarProperty Name="ds_situacao" ColumnName="ds_situacao" />
+            <ScalarProperty Name="qt_suite" ColumnName="qt_suite" />
+            <ScalarProperty Name="ds_banheiro" ColumnName="ds_banheiro" />
+            <ScalarProperty Name="nm_edificio" ColumnName="nm_edificio" />
+            <ScalarProperty Name="ic_financiamento" ColumnName="ic_financiamento" />
+            <ScalarProperty Name="vl_imovel" ColumnName="vl_imovel" />
+            <ScalarProperty Name="vl_sem_comissao" ColumnName="vl_sem_comissao" />
+            <ScalarProperty Name="vl_iptu" ColumnName="vl_iptu" />
+            <ScalarProperty Name="vl_condominio" ColumnName="vl_condominio" />
+            <ScalarProperty Name="ic_vazio" ColumnName="ic_vazio" />
+            <ScalarProperty Name="cd_registro" ColumnName="cd_registro" />
+            <ScalarProperty Name="ic_documentacao" ColumnName="ic_documentacao" />
+            <ScalarProperty Name="ic_elevador" ColumnName="ic_elevador" />
+            <ScalarProperty Name="ds_local_chaves" ColumnName="ds_local_chaves" />
+            <ScalarProperty Name="vl_area_util" ColumnName="vl_area_util" />
+            <ScalarProperty Name="vl_area_total" ColumnName="vl_area_total" />
+            <ScalarProperty Name="ic_destaque" ColumnName="ic_destaque" />
+            <ScalarProperty Name="ic_ativo" ColumnName="ic_ativo" />
+            <ScalarProperty Name="dt_post" ColumnName="dt_post" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="intima"><EntityTypeMapping TypeName="imobappModel.intima"><MappingFragment StoreEntitySet="intima">
+            <ScalarProperty Name="id_intima" ColumnName="id_intima" />
+            <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="lazer"><EntityTypeMapping TypeName="imobappModel.lazer"><MappingFragment StoreEntitySet="lazer">
+            <ScalarProperty Name="id_lazer" ColumnName="id_lazer" />
+            <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="municipio"><EntityTypeMapping TypeName="imobappModel.municipio"><MappingFragment StoreEntitySet="municipio">
+            <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
+            <ScalarProperty Name="nm_municipio" ColumnName="nm_municipio" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="pais"><EntityTypeMapping TypeName="imobappModel.pais"><MappingFragment StoreEntitySet="pais">
+            <ScalarProperty Name="id_pais" ColumnName="id_pais" />
+            <ScalarProperty Name="cd_pais" ColumnName="cd_pais" />
+            <ScalarProperty Name="nm_pais" ColumnName="nm_pais" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="posicaoimovel"><EntityTypeMapping TypeName="imobappModel.posicaoimovel"><MappingFragment StoreEntitySet="posicaoimovel">
+            <ScalarProperty Name="id_posicao_imovel" ColumnName="id_posicao_imovel" />
+            <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="servico"><EntityTypeMapping TypeName="imobappModel.servico"><MappingFragment StoreEntitySet="servico">
+            <ScalarProperty Name="id_servico" ColumnName="id_servico" />
+            <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="slider"><EntityTypeMapping TypeName="imobappModel.slider"><MappingFragment StoreEntitySet="slider">
+            <ScalarProperty Name="id_slider" ColumnName="id_slider" />
+            <ScalarProperty Name="ds_path_imagem" ColumnName="ds_path_imagem" />
+            <ScalarProperty Name="ds_texto1" ColumnName="ds_texto1" />
+            <ScalarProperty Name="ds_texto2" ColumnName="ds_texto2" />
+            <ScalarProperty Name="ic_ativo" ColumnName="ic_ativo" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="social"><EntityTypeMapping TypeName="imobappModel.social"><MappingFragment StoreEntitySet="social">
+            <ScalarProperty Name="id_social" ColumnName="id_social" />
+            <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="usuario"><EntityTypeMapping TypeName="imobappModel.usuario"><MappingFragment StoreEntitySet="usuario">
+            <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+            <ScalarProperty Name="nm_usuario" ColumnName="nm_usuario" />
+            <ScalarProperty Name="cd_cpf" ColumnName="cd_cpf" />
+            <ScalarProperty Name="cd_creci" ColumnName="cd_creci" />
+            <ScalarProperty Name="ds_login_facebook" ColumnName="ds_login_facebook" />
+            <ScalarProperty Name="ds_email" ColumnName="ds_email" />
+            <ScalarProperty Name="ds_password" ColumnName="ds_password" />
+            <ScalarProperty Name="ds_telefone1" ColumnName="ds_telefone1" />
+            <ScalarProperty Name="ds_tipo_telefone_1" ColumnName="ds_tipo_telefone_1" />
+            <ScalarProperty Name="ds_telefone2" ColumnName="ds_telefone2" />
+            <ScalarProperty Name="ds_tipo_telefone_2" ColumnName="ds_tipo_telefone_2" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <AssociationSetMapping Name="bairro_ibfk_1" TypeName="imobappModel.bairro_ibfk_1" StoreEntitySet="bairro">
+            <EndProperty Name="municipio">
+              <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
+            </EndProperty>
+            <EndProperty Name="bairro">
+              <ScalarProperty Name="id_bairro" ColumnName="id_bairro" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovel_ibfk_4" TypeName="imobappModel.imovel_ibfk_4" StoreEntitySet="imovel">
+            <EndProperty Name="bairro">
+              <ScalarProperty Name="id_bairro" ColumnName="id_bairro" />
+            </EndProperty>
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovel_ibfk_3" TypeName="imobappModel.imovel_ibfk_3" StoreEntitySet="imovel">
+            <EndProperty Name="categoria">
+              <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+            </EndProperty>
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovel_ibfk_6" TypeName="imobappModel.imovel_ibfk_6" StoreEntitySet="imovel">
+            <EndProperty Name="dormitorio">
+              <ScalarProperty Name="id_dormitorio" ColumnName="id_dormitorio" />
+            </EndProperty>
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+            <Condition ColumnName="id_dormitorio" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="estado_ibfk_1" TypeName="imobappModel.estado_ibfk_1" StoreEntitySet="estado">
+            <EndProperty Name="pais">
+              <ScalarProperty Name="id_pais" ColumnName="id_pais" />
+            </EndProperty>
+            <EndProperty Name="estado">
+              <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="municipio_ibfk_1" TypeName="imobappModel.municipio_ibfk_1" StoreEntitySet="municipio">
+            <EndProperty Name="estado">
+              <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+            </EndProperty>
+            <EndProperty Name="municipio">
+              <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovel_ibfk_5" TypeName="imobappModel.imovel_ibfk_5" StoreEntitySet="imovel">
+            <EndProperty Name="estadoimovel">
+              <ScalarProperty Name="id_estado_imovel" ColumnName="id_estado_imovel" />
+            </EndProperty>
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovel_ibfk_2" TypeName="imobappModel.imovel_ibfk_2" StoreEntitySet="imovel">
+            <EndProperty Name="finalidade">
+              <ScalarProperty Name="id_finalidade" ColumnName="id_finalidade" />
+            </EndProperty>
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imagem_ibfk_1" TypeName="imobappModel.imagem_ibfk_1" StoreEntitySet="imagem">
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+            <EndProperty Name="imagem">
+              <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovel_ibfk_1" TypeName="imobappModel.imovel_ibfk_1" StoreEntitySet="imovel">
+            <EndProperty Name="usuario">
+              <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+            </EndProperty>
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovel_ibfk_7" TypeName="imobappModel.imovel_ibfk_7" StoreEntitySet="imovel">
+            <EndProperty Name="posicaoimovel">
+              <ScalarProperty Name="id_posicao_imovel" ColumnName="id_posicao_imovel" />
+            </EndProperty>
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+            <Condition ColumnName="id_posicao_imovel" IsNull="false" />
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovelacabamento" TypeName="imobappModel.imovelacabamento" StoreEntitySet="imovelacabamento">
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+            <EndProperty Name="acabamento">
+              <ScalarProperty Name="id_acabamento" ColumnName="id_acabamento" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovelarmario" TypeName="imobappModel.imovelarmario" StoreEntitySet="imovelarmario">
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+            <EndProperty Name="armario">
+              <ScalarProperty Name="id_armario" ColumnName="id_armario" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovelintima" TypeName="imobappModel.imovelintima" StoreEntitySet="imovelintima">
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+            <EndProperty Name="intima">
+              <ScalarProperty Name="id_intima" ColumnName="id_intima" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovellazer" TypeName="imobappModel.imovellazer" StoreEntitySet="imovellazer">
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+            <EndProperty Name="lazer">
+              <ScalarProperty Name="id_lazer" ColumnName="id_lazer" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovelservico" TypeName="imobappModel.imovelservico" StoreEntitySet="imovelservico">
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+            <EndProperty Name="servico">
+              <ScalarProperty Name="id_servico" ColumnName="id_servico" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="imovelsocial" TypeName="imobappModel.imovelsocial" StoreEntitySet="imovelsocial">
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+            <EndProperty Name="social">
+              <ScalarProperty Name="id_social" ColumnName="id_social" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ImobApp">
+        <EntityTypeShape EntityType="imobappModel.acabamento" Width="1.5" PointX="12" PointY="1.625" Height="1.5956835937499998" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.armario" Width="1.5" PointX="12" PointY="4" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.bairro" Width="1.5" PointX="7.5" PointY="8.625" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.categoria" Width="1.5" PointX="7.5" PointY="2" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.dormitorio" Width="1.5" PointX="7.5" PointY="4.375" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.errolog" Width="1.5" PointX="0.75" PointY="0.75" Height="1.9802864583333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.estado" Width="1.5" PointX="3" PointY="8.5" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.estadoimovel" Width="1.5" PointX="7.5" PointY="11.75" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.finalidade" Width="1.5" PointX="7.5" PointY="14" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.imagem" Width="1.5" PointX="12" PointY="6.25" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.imovel" Width="1.5" PointX="9.75" PointY="5.125" Height="8.9031380208333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.intima" Width="1.5" PointX="12" PointY="8.875" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.lazer" Width="1.5" PointX="12" PointY="11.25" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.municipio" Width="1.5" PointX="5.25" PointY="8.625" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.pais" Width="1.5" PointX="0.75" PointY="8.625" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.posicaoimovel" Width="1.5" PointX="7.5" PointY="16.375" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.servico" Width="1.5" PointX="12" PointY="13.5" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.slider" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.social" Width="1.5" PointX="12" PointY="15.875" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="imobappModel.usuario" Width="1.5" PointX="7.5" PointY="18.75" Height="3.3263964843750031" IsExpanded="true" />
+        <AssociationConnector Association="imobappModel.bairro_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="9.5189925130208337" />
+          <ConnectorPoint PointX="7.5" PointY="9.5189925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovel_ibfk_4" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="9.5189925130208337" />
+          <ConnectorPoint PointX="9.75" PointY="9.5189925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovel_ibfk_3" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="2.797841796875" />
+          <ConnectorPoint PointX="10.5" PointY="2.797841796875" />
+          <ConnectorPoint PointX="10.5" PointY="5.125" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovel_ibfk_6" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="5.547841796875" />
+          <ConnectorPoint PointX="9.75" PointY="5.547841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.estado_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.5189925130208337" />
+          <ConnectorPoint PointX="3" PointY="9.5189925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.municipio_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="9.5189925130208337" />
+          <ConnectorPoint PointX="5.25" PointY="9.5189925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovel_ibfk_5" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="12.547841796875" />
+          <ConnectorPoint PointX="9.75" PointY="12.547841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovel_ibfk_2" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="14.81191130729167" />
+          <ConnectorPoint PointX="10.010414166666665" PointY="14.81191130729167" />
+          <ConnectorPoint PointX="10.177080833333333" PointY="14.81191130729167" />
+          <ConnectorPoint PointX="10.5" PointY="14.81191130729167" />
+          <ConnectorPoint PointX="10.5" PointY="14.028138020833339" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imagem_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="7.1439925130208337" />
+          <ConnectorPoint PointX="12" PointY="7.1439925130208337" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovel_ibfk_1" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="20.4131982421875" />
+          <ConnectorPoint PointX="10.0937475" PointY="20.4131982421875" />
+          <ConnectorPoint PointX="10.0937475" PointY="14.028138020833339" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovel_ibfk_7" ManuallyRouted="false">
+          <ConnectorPoint PointX="9" PointY="17.172841796875" />
+          <ConnectorPoint PointX="10.010414166666665" PointY="17.172841796875" />
+          <ConnectorPoint PointX="10.177080833333333" PointY="17.172841796875" />
+          <ConnectorPoint PointX="10.9062525" PointY="17.172841796875" />
+          <ConnectorPoint PointX="10.9062525" PointY="14.028138020833339" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovelacabamento" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.9062525" PointY="5.125" />
+          <ConnectorPoint PointX="10.9062525" PointY="2.2114208984375" />
+          <ConnectorPoint PointX="12" PointY="2.2114208984375" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovelarmario" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="5.360341796875" />
+          <ConnectorPoint PointX="12" PointY="5.360341796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovelintima" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="9.6728417968750016" />
+          <ConnectorPoint PointX="12" PointY="9.6728417968750016" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovellazer" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="12.047841796875002" />
+          <ConnectorPoint PointX="12" PointY="12.047841796875002" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovelservico" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="13.764069010416669" />
+          <ConnectorPoint PointX="12" PointY="13.764069010416669" />
+        </AssociationConnector>
+        <AssociationConnector Association="imobappModel.imovelsocial" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.109378750000001" PointY="14.028138020833339" />
+          <ConnectorPoint PointX="11.109378750000001" PointY="16.523920898437503" />
+          <ConnectorPoint PointX="12" PointY="16.523920898437503" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
