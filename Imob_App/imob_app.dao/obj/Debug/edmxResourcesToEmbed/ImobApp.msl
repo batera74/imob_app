@@ -4,7 +4,7 @@
     <EntitySetMapping Name="acabamento">
       <EntityTypeMapping TypeName="imobappModel.acabamento">
         <MappingFragment StoreEntitySet="acabamento">
-          <ScalarProperty Name="id_acabamento" ColumnName="id_acabamento" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -12,7 +12,7 @@
     <EntitySetMapping Name="armario">
       <EntityTypeMapping TypeName="imobappModel.armario">
         <MappingFragment StoreEntitySet="armario">
-          <ScalarProperty Name="id_armario" ColumnName="id_armario" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -28,7 +28,7 @@
     <EntitySetMapping Name="categoria">
       <EntityTypeMapping TypeName="imobappModel.categoria">
         <MappingFragment StoreEntitySet="categoria">
-          <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -36,7 +36,7 @@
     <EntitySetMapping Name="dormitorio">
       <EntityTypeMapping TypeName="imobappModel.dormitorio">
         <MappingFragment StoreEntitySet="dormitorio">
-          <ScalarProperty Name="id_dormitorio" ColumnName="id_dormitorio" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -64,7 +64,7 @@
     <EntitySetMapping Name="estadoimovel">
       <EntityTypeMapping TypeName="imobappModel.estadoimovel">
         <MappingFragment StoreEntitySet="estadoimovel">
-          <ScalarProperty Name="id_estado_imovel" ColumnName="id_estado_imovel" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -72,7 +72,7 @@
     <EntitySetMapping Name="finalidade">
       <EntityTypeMapping TypeName="imobappModel.finalidade">
         <MappingFragment StoreEntitySet="finalidade">
-          <ScalarProperty Name="id_finalidade" ColumnName="id_finalidade" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -122,7 +122,7 @@
     <EntitySetMapping Name="intima">
       <EntityTypeMapping TypeName="imobappModel.intima">
         <MappingFragment StoreEntitySet="intima">
-          <ScalarProperty Name="id_intima" ColumnName="id_intima" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -130,7 +130,7 @@
     <EntitySetMapping Name="lazer">
       <EntityTypeMapping TypeName="imobappModel.lazer">
         <MappingFragment StoreEntitySet="lazer">
-          <ScalarProperty Name="id_lazer" ColumnName="id_lazer" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -155,7 +155,7 @@
     <EntitySetMapping Name="posicaoimovel">
       <EntityTypeMapping TypeName="imobappModel.posicaoimovel">
         <MappingFragment StoreEntitySet="posicaoimovel">
-          <ScalarProperty Name="id_posicao_imovel" ColumnName="id_posicao_imovel" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -163,7 +163,7 @@
     <EntitySetMapping Name="servico">
       <EntityTypeMapping TypeName="imobappModel.servico">
         <MappingFragment StoreEntitySet="servico">
-          <ScalarProperty Name="id_servico" ColumnName="id_servico" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -182,7 +182,7 @@
     <EntitySetMapping Name="social">
       <EntityTypeMapping TypeName="imobappModel.social">
         <MappingFragment StoreEntitySet="social">
-          <ScalarProperty Name="id_social" ColumnName="id_social" />
+          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -222,7 +222,7 @@
     </AssociationSetMapping>
     <AssociationSetMapping Name="imovel_ibfk_3" TypeName="imobappModel.imovel_ibfk_3" StoreEntitySet="imovel">
       <EndProperty Name="categoria">
-        <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+        <ScalarProperty Name="id" ColumnName="id_categoria" />
       </EndProperty>
       <EndProperty Name="imovel">
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
@@ -230,7 +230,7 @@
     </AssociationSetMapping>
     <AssociationSetMapping Name="imovel_ibfk_6" TypeName="imobappModel.imovel_ibfk_6" StoreEntitySet="imovel">
       <EndProperty Name="dormitorio">
-        <ScalarProperty Name="id_dormitorio" ColumnName="id_dormitorio" />
+        <ScalarProperty Name="id" ColumnName="id_dormitorio" />
       </EndProperty>
       <EndProperty Name="imovel">
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
@@ -255,7 +255,7 @@
     </AssociationSetMapping>
     <AssociationSetMapping Name="imovel_ibfk_5" TypeName="imobappModel.imovel_ibfk_5" StoreEntitySet="imovel">
       <EndProperty Name="estadoimovel">
-        <ScalarProperty Name="id_estado_imovel" ColumnName="id_estado_imovel" />
+        <ScalarProperty Name="id" ColumnName="id_estado_imovel" />
       </EndProperty>
       <EndProperty Name="imovel">
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
@@ -263,7 +263,7 @@
     </AssociationSetMapping>
     <AssociationSetMapping Name="imovel_ibfk_2" TypeName="imobappModel.imovel_ibfk_2" StoreEntitySet="imovel">
       <EndProperty Name="finalidade">
-        <ScalarProperty Name="id_finalidade" ColumnName="id_finalidade" />
+        <ScalarProperty Name="id" ColumnName="id_finalidade" />
       </EndProperty>
       <EndProperty Name="imovel">
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
@@ -287,7 +287,7 @@
     </AssociationSetMapping>
     <AssociationSetMapping Name="imovel_ibfk_7" TypeName="imobappModel.imovel_ibfk_7" StoreEntitySet="imovel">
       <EndProperty Name="posicaoimovel">
-        <ScalarProperty Name="id_posicao_imovel" ColumnName="id_posicao_imovel" />
+        <ScalarProperty Name="id" ColumnName="id_posicao_imovel" />
       </EndProperty>
       <EndProperty Name="imovel">
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
@@ -299,7 +299,7 @@
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
       </EndProperty>
       <EndProperty Name="acabamento">
-        <ScalarProperty Name="id_acabamento" ColumnName="id_acabamento" />
+        <ScalarProperty Name="id" ColumnName="id_acabamento" />
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="imovelarmario" TypeName="imobappModel.imovelarmario" StoreEntitySet="imovelarmario">
@@ -307,7 +307,7 @@
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
       </EndProperty>
       <EndProperty Name="armario">
-        <ScalarProperty Name="id_armario" ColumnName="id_armario" />
+        <ScalarProperty Name="id" ColumnName="id_armario" />
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="imovelintima" TypeName="imobappModel.imovelintima" StoreEntitySet="imovelintima">
@@ -315,7 +315,7 @@
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
       </EndProperty>
       <EndProperty Name="intima">
-        <ScalarProperty Name="id_intima" ColumnName="id_intima" />
+        <ScalarProperty Name="id" ColumnName="id_intima" />
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="imovellazer" TypeName="imobappModel.imovellazer" StoreEntitySet="imovellazer">
@@ -323,7 +323,7 @@
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
       </EndProperty>
       <EndProperty Name="lazer">
-        <ScalarProperty Name="id_lazer" ColumnName="id_lazer" />
+        <ScalarProperty Name="id" ColumnName="id_lazer" />
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="imovelservico" TypeName="imobappModel.imovelservico" StoreEntitySet="imovelservico">
@@ -331,7 +331,7 @@
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
       </EndProperty>
       <EndProperty Name="servico">
-        <ScalarProperty Name="id_servico" ColumnName="id_servico" />
+        <ScalarProperty Name="id" ColumnName="id_servico" />
       </EndProperty>
     </AssociationSetMapping>
     <AssociationSetMapping Name="imovelsocial" TypeName="imobappModel.imovelsocial" StoreEntitySet="imovelsocial">
@@ -339,7 +339,7 @@
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
       </EndProperty>
       <EndProperty Name="social">
-        <ScalarProperty Name="id_social" ColumnName="id_social" />
+        <ScalarProperty Name="id" ColumnName="id_social" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

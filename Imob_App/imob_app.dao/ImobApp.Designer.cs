@@ -28,7 +28,7 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovelsocial", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel), "social", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.social))]
 
 // Original file name:
-// Generation date: 14/07/2012 15:00:26
+// Generation date: 14/07/2012 17:01:29
 namespace imob_app.dao
 {
     
@@ -567,7 +567,7 @@ namespace imob_app.dao
     /// There are no comments for imobappModel.acabamento in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// id_acabamento
+    /// id
     /// </KeyProperties>
     [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="acabamento")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
@@ -577,41 +577,41 @@ namespace imob_app.dao
         /// <summary>
         /// Create a new acabamento object.
         /// </summary>
-        /// <param name="id_acabamento">Initial value of id_acabamento.</param>
+        /// <param name="id">Initial value of id.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static acabamento Createacabamento(short id_acabamento)
+        public static acabamento Createacabamento(short id)
         {
             acabamento acabamento = new acabamento();
-            acabamento.id_acabamento = id_acabamento;
+            acabamento.id = id;
             return acabamento;
         }
         /// <summary>
-        /// There are no comments for property id_acabamento in the schema.
+        /// There are no comments for property id in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [global::System.Runtime.Serialization.DataMemberAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_acabamento
+        public short id
         {
             get
             {
-                return this._id_acabamento;
+                return this._id;
             }
             set
             {
-                this.Onid_acabamentoChanging(value);
-                this.ReportPropertyChanging("id_acabamento");
-                this._id_acabamento = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_acabamento");
-                this.Onid_acabamentoChanged();
+                this.OnidChanging(value);
+                this.ReportPropertyChanging("id");
+                this._id = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id");
+                this.OnidChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_acabamento;
+        private short _id;
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_acabamentoChanging(short value);
+        partial void OnidChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_acabamentoChanged();
+        partial void OnidChanged();
         /// <summary>
         /// There are no comments for property ds_item in the schema.
         /// </summary>
@@ -666,7 +666,7 @@ namespace imob_app.dao
     /// There are no comments for imobappModel.armario in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// id_armario
+    /// id
     /// </KeyProperties>
     [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="armario")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
@@ -676,41 +676,41 @@ namespace imob_app.dao
         /// <summary>
         /// Create a new armario object.
         /// </summary>
-        /// <param name="id_armario">Initial value of id_armario.</param>
+        /// <param name="id">Initial value of id.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static armario Createarmario(short id_armario)
+        public static armario Createarmario(short id)
         {
             armario armario = new armario();
-            armario.id_armario = id_armario;
+            armario.id = id;
             return armario;
         }
         /// <summary>
-        /// There are no comments for property id_armario in the schema.
+        /// There are no comments for property id in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [global::System.Runtime.Serialization.DataMemberAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_armario
+        public short id
         {
             get
             {
-                return this._id_armario;
+                return this._id;
             }
             set
             {
-                this.Onid_armarioChanging(value);
-                this.ReportPropertyChanging("id_armario");
-                this._id_armario = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_armario");
-                this.Onid_armarioChanged();
+                this.OnidChanging(value);
+                this.ReportPropertyChanging("id");
+                this._id = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id");
+                this.OnidChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_armario;
+        private short _id;
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_armarioChanging(short value);
+        partial void OnidChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_armarioChanged();
+        partial void OnidChanged();
         /// <summary>
         /// There are no comments for property ds_item in the schema.
         /// </summary>
@@ -905,7 +905,7 @@ namespace imob_app.dao
     /// There are no comments for imobappModel.categoria in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// id_categoria
+    /// id
     /// </KeyProperties>
     [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="categoria")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
@@ -915,43 +915,43 @@ namespace imob_app.dao
         /// <summary>
         /// Create a new categoria object.
         /// </summary>
-        /// <param name="id_categoria">Initial value of id_categoria.</param>
+        /// <param name="id">Initial value of id.</param>
         /// <param name="ds_item">Initial value of ds_item.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static categoria Createcategoria(short id_categoria, string ds_item)
+        public static categoria Createcategoria(short id, string ds_item)
         {
             categoria categoria = new categoria();
-            categoria.id_categoria = id_categoria;
+            categoria.id = id;
             categoria.ds_item = ds_item;
             return categoria;
         }
         /// <summary>
-        /// There are no comments for property id_categoria in the schema.
+        /// There are no comments for property id in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [global::System.Runtime.Serialization.DataMemberAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_categoria
+        public short id
         {
             get
             {
-                return this._id_categoria;
+                return this._id;
             }
             set
             {
-                this.Onid_categoriaChanging(value);
-                this.ReportPropertyChanging("id_categoria");
-                this._id_categoria = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_categoria");
-                this.Onid_categoriaChanged();
+                this.OnidChanging(value);
+                this.ReportPropertyChanging("id");
+                this._id = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id");
+                this.OnidChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_categoria;
+        private short _id;
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_categoriaChanging(short value);
+        partial void OnidChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_categoriaChanged();
+        partial void OnidChanged();
         /// <summary>
         /// There are no comments for property ds_item in the schema.
         /// </summary>
@@ -1006,7 +1006,7 @@ namespace imob_app.dao
     /// There are no comments for imobappModel.dormitorio in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// id_dormitorio
+    /// id
     /// </KeyProperties>
     [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="dormitorio")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
@@ -1016,43 +1016,43 @@ namespace imob_app.dao
         /// <summary>
         /// Create a new dormitorio object.
         /// </summary>
-        /// <param name="id_dormitorio">Initial value of id_dormitorio.</param>
+        /// <param name="id">Initial value of id.</param>
         /// <param name="ds_item">Initial value of ds_item.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static dormitorio Createdormitorio(short id_dormitorio, short ds_item)
+        public static dormitorio Createdormitorio(short id, short ds_item)
         {
             dormitorio dormitorio = new dormitorio();
-            dormitorio.id_dormitorio = id_dormitorio;
+            dormitorio.id = id;
             dormitorio.ds_item = ds_item;
             return dormitorio;
         }
         /// <summary>
-        /// There are no comments for property id_dormitorio in the schema.
+        /// There are no comments for property id in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [global::System.Runtime.Serialization.DataMemberAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_dormitorio
+        public short id
         {
             get
             {
-                return this._id_dormitorio;
+                return this._id;
             }
             set
             {
-                this.Onid_dormitorioChanging(value);
-                this.ReportPropertyChanging("id_dormitorio");
-                this._id_dormitorio = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_dormitorio");
-                this.Onid_dormitorioChanged();
+                this.OnidChanging(value);
+                this.ReportPropertyChanging("id");
+                this._id = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id");
+                this.OnidChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_dormitorio;
+        private short _id;
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_dormitorioChanging(short value);
+        partial void OnidChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_dormitorioChanged();
+        partial void OnidChanged();
         /// <summary>
         /// There are no comments for property ds_item in the schema.
         /// </summary>
@@ -1434,7 +1434,7 @@ namespace imob_app.dao
     /// There are no comments for imobappModel.estadoimovel in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// id_estado_imovel
+    /// id
     /// </KeyProperties>
     [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="estadoimovel")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
@@ -1444,43 +1444,43 @@ namespace imob_app.dao
         /// <summary>
         /// Create a new estadoimovel object.
         /// </summary>
-        /// <param name="id_estado_imovel">Initial value of id_estado_imovel.</param>
+        /// <param name="id">Initial value of id.</param>
         /// <param name="ds_item">Initial value of ds_item.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static estadoimovel Createestadoimovel(short id_estado_imovel, string ds_item)
+        public static estadoimovel Createestadoimovel(short id, string ds_item)
         {
             estadoimovel estadoimovel = new estadoimovel();
-            estadoimovel.id_estado_imovel = id_estado_imovel;
+            estadoimovel.id = id;
             estadoimovel.ds_item = ds_item;
             return estadoimovel;
         }
         /// <summary>
-        /// There are no comments for property id_estado_imovel in the schema.
+        /// There are no comments for property id in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [global::System.Runtime.Serialization.DataMemberAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_estado_imovel
+        public short id
         {
             get
             {
-                return this._id_estado_imovel;
+                return this._id;
             }
             set
             {
-                this.Onid_estado_imovelChanging(value);
-                this.ReportPropertyChanging("id_estado_imovel");
-                this._id_estado_imovel = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_estado_imovel");
-                this.Onid_estado_imovelChanged();
+                this.OnidChanging(value);
+                this.ReportPropertyChanging("id");
+                this._id = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id");
+                this.OnidChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_estado_imovel;
+        private short _id;
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_estado_imovelChanging(short value);
+        partial void OnidChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_estado_imovelChanged();
+        partial void OnidChanged();
         /// <summary>
         /// There are no comments for property ds_item in the schema.
         /// </summary>
@@ -1535,7 +1535,7 @@ namespace imob_app.dao
     /// There are no comments for imobappModel.finalidade in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// id_finalidade
+    /// id
     /// </KeyProperties>
     [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="finalidade")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
@@ -1545,43 +1545,43 @@ namespace imob_app.dao
         /// <summary>
         /// Create a new finalidade object.
         /// </summary>
-        /// <param name="id_finalidade">Initial value of id_finalidade.</param>
+        /// <param name="id">Initial value of id.</param>
         /// <param name="ds_item">Initial value of ds_item.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static finalidade Createfinalidade(short id_finalidade, string ds_item)
+        public static finalidade Createfinalidade(short id, string ds_item)
         {
             finalidade finalidade = new finalidade();
-            finalidade.id_finalidade = id_finalidade;
+            finalidade.id = id;
             finalidade.ds_item = ds_item;
             return finalidade;
         }
         /// <summary>
-        /// There are no comments for property id_finalidade in the schema.
+        /// There are no comments for property id in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [global::System.Runtime.Serialization.DataMemberAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_finalidade
+        public short id
         {
             get
             {
-                return this._id_finalidade;
+                return this._id;
             }
             set
             {
-                this.Onid_finalidadeChanging(value);
-                this.ReportPropertyChanging("id_finalidade");
-                this._id_finalidade = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_finalidade");
-                this.Onid_finalidadeChanged();
+                this.OnidChanging(value);
+                this.ReportPropertyChanging("id");
+                this._id = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id");
+                this.OnidChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_finalidade;
+        private short _id;
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_finalidadeChanging(short value);
+        partial void OnidChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_finalidadeChanged();
+        partial void OnidChanged();
         /// <summary>
         /// There are no comments for property ds_item in the schema.
         /// </summary>
@@ -2974,7 +2974,7 @@ namespace imob_app.dao
     /// There are no comments for imobappModel.intima in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// id_intima
+    /// id
     /// </KeyProperties>
     [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="intima")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
@@ -2984,41 +2984,41 @@ namespace imob_app.dao
         /// <summary>
         /// Create a new intima object.
         /// </summary>
-        /// <param name="id_intima">Initial value of id_intima.</param>
+        /// <param name="id">Initial value of id.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static intima Createintima(short id_intima)
+        public static intima Createintima(short id)
         {
             intima intima = new intima();
-            intima.id_intima = id_intima;
+            intima.id = id;
             return intima;
         }
         /// <summary>
-        /// There are no comments for property id_intima in the schema.
+        /// There are no comments for property id in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [global::System.Runtime.Serialization.DataMemberAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_intima
+        public short id
         {
             get
             {
-                return this._id_intima;
+                return this._id;
             }
             set
             {
-                this.Onid_intimaChanging(value);
-                this.ReportPropertyChanging("id_intima");
-                this._id_intima = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_intima");
-                this.Onid_intimaChanged();
+                this.OnidChanging(value);
+                this.ReportPropertyChanging("id");
+                this._id = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id");
+                this.OnidChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_intima;
+        private short _id;
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_intimaChanging(short value);
+        partial void OnidChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_intimaChanged();
+        partial void OnidChanged();
         /// <summary>
         /// There are no comments for property ds_item in the schema.
         /// </summary>
@@ -3073,7 +3073,7 @@ namespace imob_app.dao
     /// There are no comments for imobappModel.lazer in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// id_lazer
+    /// id
     /// </KeyProperties>
     [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="lazer")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
@@ -3083,41 +3083,41 @@ namespace imob_app.dao
         /// <summary>
         /// Create a new lazer object.
         /// </summary>
-        /// <param name="id_lazer">Initial value of id_lazer.</param>
+        /// <param name="id">Initial value of id.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static lazer Createlazer(short id_lazer)
+        public static lazer Createlazer(short id)
         {
             lazer lazer = new lazer();
-            lazer.id_lazer = id_lazer;
+            lazer.id = id;
             return lazer;
         }
         /// <summary>
-        /// There are no comments for property id_lazer in the schema.
+        /// There are no comments for property id in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [global::System.Runtime.Serialization.DataMemberAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_lazer
+        public short id
         {
             get
             {
-                return this._id_lazer;
+                return this._id;
             }
             set
             {
-                this.Onid_lazerChanging(value);
-                this.ReportPropertyChanging("id_lazer");
-                this._id_lazer = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_lazer");
-                this.Onid_lazerChanged();
+                this.OnidChanging(value);
+                this.ReportPropertyChanging("id");
+                this._id = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id");
+                this.OnidChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_lazer;
+        private short _id;
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_lazerChanging(short value);
+        partial void OnidChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_lazerChanged();
+        partial void OnidChanged();
         /// <summary>
         /// There are no comments for property ds_item in the schema.
         /// </summary>
@@ -3442,7 +3442,7 @@ namespace imob_app.dao
     /// There are no comments for imobappModel.posicaoimovel in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// id_posicao_imovel
+    /// id
     /// </KeyProperties>
     [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="posicaoimovel")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
@@ -3452,43 +3452,43 @@ namespace imob_app.dao
         /// <summary>
         /// Create a new posicaoimovel object.
         /// </summary>
-        /// <param name="id_posicao_imovel">Initial value of id_posicao_imovel.</param>
+        /// <param name="id">Initial value of id.</param>
         /// <param name="ds_item">Initial value of ds_item.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static posicaoimovel Createposicaoimovel(short id_posicao_imovel, string ds_item)
+        public static posicaoimovel Createposicaoimovel(short id, string ds_item)
         {
             posicaoimovel posicaoimovel = new posicaoimovel();
-            posicaoimovel.id_posicao_imovel = id_posicao_imovel;
+            posicaoimovel.id = id;
             posicaoimovel.ds_item = ds_item;
             return posicaoimovel;
         }
         /// <summary>
-        /// There are no comments for property id_posicao_imovel in the schema.
+        /// There are no comments for property id in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [global::System.Runtime.Serialization.DataMemberAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_posicao_imovel
+        public short id
         {
             get
             {
-                return this._id_posicao_imovel;
+                return this._id;
             }
             set
             {
-                this.Onid_posicao_imovelChanging(value);
-                this.ReportPropertyChanging("id_posicao_imovel");
-                this._id_posicao_imovel = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_posicao_imovel");
-                this.Onid_posicao_imovelChanged();
+                this.OnidChanging(value);
+                this.ReportPropertyChanging("id");
+                this._id = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id");
+                this.OnidChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_posicao_imovel;
+        private short _id;
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_posicao_imovelChanging(short value);
+        partial void OnidChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_posicao_imovelChanged();
+        partial void OnidChanged();
         /// <summary>
         /// There are no comments for property ds_item in the schema.
         /// </summary>
@@ -3543,7 +3543,7 @@ namespace imob_app.dao
     /// There are no comments for imobappModel.servico in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// id_servico
+    /// id
     /// </KeyProperties>
     [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="servico")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
@@ -3553,41 +3553,41 @@ namespace imob_app.dao
         /// <summary>
         /// Create a new servico object.
         /// </summary>
-        /// <param name="id_servico">Initial value of id_servico.</param>
+        /// <param name="id">Initial value of id.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static servico Createservico(short id_servico)
+        public static servico Createservico(short id)
         {
             servico servico = new servico();
-            servico.id_servico = id_servico;
+            servico.id = id;
             return servico;
         }
         /// <summary>
-        /// There are no comments for property id_servico in the schema.
+        /// There are no comments for property id in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [global::System.Runtime.Serialization.DataMemberAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_servico
+        public short id
         {
             get
             {
-                return this._id_servico;
+                return this._id;
             }
             set
             {
-                this.Onid_servicoChanging(value);
-                this.ReportPropertyChanging("id_servico");
-                this._id_servico = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_servico");
-                this.Onid_servicoChanged();
+                this.OnidChanging(value);
+                this.ReportPropertyChanging("id");
+                this._id = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id");
+                this.OnidChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_servico;
+        private short _id;
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_servicoChanging(short value);
+        partial void OnidChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_servicoChanged();
+        partial void OnidChanged();
         /// <summary>
         /// There are no comments for property ds_item in the schema.
         /// </summary>
@@ -3808,7 +3808,7 @@ namespace imob_app.dao
     /// There are no comments for imobappModel.social in the schema.
     /// </summary>
     /// <KeyProperties>
-    /// id_social
+    /// id
     /// </KeyProperties>
     [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="social")]
     [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
@@ -3818,41 +3818,41 @@ namespace imob_app.dao
         /// <summary>
         /// Create a new social object.
         /// </summary>
-        /// <param name="id_social">Initial value of id_social.</param>
+        /// <param name="id">Initial value of id.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static social Createsocial(short id_social)
+        public static social Createsocial(short id)
         {
             social social = new social();
-            social.id_social = id_social;
+            social.id = id;
             return social;
         }
         /// <summary>
-        /// There are no comments for property id_social in the schema.
+        /// There are no comments for property id in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
         [global::System.Runtime.Serialization.DataMemberAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_social
+        public short id
         {
             get
             {
-                return this._id_social;
+                return this._id;
             }
             set
             {
-                this.Onid_socialChanging(value);
-                this.ReportPropertyChanging("id_social");
-                this._id_social = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_social");
-                this.Onid_socialChanged();
+                this.OnidChanging(value);
+                this.ReportPropertyChanging("id");
+                this._id = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id");
+                this.OnidChanged();
             }
         }
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_social;
+        private short _id;
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_socialChanging(short value);
+        partial void OnidChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_socialChanged();
+        partial void OnidChanged();
         /// <summary>
         /// There are no comments for property ds_item in the schema.
         /// </summary>

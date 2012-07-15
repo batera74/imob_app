@@ -122,16 +122,16 @@
   </EntityContainer>
   <EntityType Name="acabamento">
     <Key>
-      <PropertyRef Name="id_acabamento" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_acabamento" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="varchar" MaxLength="40" />
   </EntityType>
   <EntityType Name="armario">
     <Key>
-      <PropertyRef Name="id_armario" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_armario" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="varchar" MaxLength="40" />
   </EntityType>
   <EntityType Name="bairro">
@@ -144,16 +144,16 @@
   </EntityType>
   <EntityType Name="categoria">
     <Key>
-      <PropertyRef Name="id_categoria" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_categoria" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="40" />
   </EntityType>
   <EntityType Name="dormitorio">
     <Key>
-      <PropertyRef Name="id_dormitorio" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_dormitorio" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="smallint" Nullable="false" />
   </EntityType>
   <EntityType Name="errolog">
@@ -177,16 +177,16 @@
   </EntityType>
   <EntityType Name="estadoimovel">
     <Key>
-      <PropertyRef Name="id_estado_imovel" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_estado_imovel" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="40" />
   </EntityType>
   <EntityType Name="finalidade">
     <Key>
-      <PropertyRef Name="id_finalidade" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_finalidade" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="40" />
   </EntityType>
   <EntityType Name="imagem">
@@ -287,16 +287,16 @@
   </EntityType>
   <EntityType Name="intima">
     <Key>
-      <PropertyRef Name="id_intima" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_intima" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="varchar" MaxLength="40" />
   </EntityType>
   <EntityType Name="lazer">
     <Key>
-      <PropertyRef Name="id_lazer" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_lazer" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="varchar" MaxLength="40" />
   </EntityType>
   <EntityType Name="municipio">
@@ -317,16 +317,16 @@
   </EntityType>
   <EntityType Name="posicaoimovel">
     <Key>
-      <PropertyRef Name="id_posicao_imovel" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_posicao_imovel" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="20" />
   </EntityType>
   <EntityType Name="servico">
     <Key>
-      <PropertyRef Name="id_servico" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_servico" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="varchar" MaxLength="40" />
   </EntityType>
   <EntityType Name="slider">
@@ -341,9 +341,9 @@
   </EntityType>
   <EntityType Name="social">
     <Key>
-      <PropertyRef Name="id_social" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_social" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="varchar" MaxLength="40" />
   </EntityType>
   <EntityType Name="usuario">
@@ -415,7 +415,7 @@
     <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="finalidade">
-        <PropertyRef Name="id_finalidade" />
+        <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="imovel">
         <PropertyRef Name="id_finalidade" />
@@ -427,7 +427,7 @@
     <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="categoria">
-        <PropertyRef Name="id_categoria" />
+        <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="imovel">
         <PropertyRef Name="id_categoria" />
@@ -451,7 +451,7 @@
     <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="estadoimovel">
-        <PropertyRef Name="id_estado_imovel" />
+        <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="imovel">
         <PropertyRef Name="id_estado_imovel" />
@@ -463,7 +463,7 @@
     <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="dormitorio">
-        <PropertyRef Name="id_dormitorio" />
+        <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="imovel">
         <PropertyRef Name="id_dormitorio" />
@@ -475,7 +475,7 @@
     <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="posicaoimovel">
-        <PropertyRef Name="id_posicao_imovel" />
+        <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="imovel">
         <PropertyRef Name="id_posicao_imovel" />
@@ -499,7 +499,7 @@
     <End Role="imovelacabamento" Type="imobappModel.Store.imovelacabamento" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="acabamento">
-        <PropertyRef Name="id_acabamento" />
+        <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="imovelacabamento">
         <PropertyRef Name="id_acabamento" />
@@ -523,7 +523,7 @@
     <End Role="imovelarmario" Type="imobappModel.Store.imovelarmario" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="armario">
-        <PropertyRef Name="id_armario" />
+        <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="imovelarmario">
         <PropertyRef Name="id_armario" />
@@ -547,7 +547,7 @@
     <End Role="imovelintima" Type="imobappModel.Store.imovelintima" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="intima">
-        <PropertyRef Name="id_intima" />
+        <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="imovelintima">
         <PropertyRef Name="id_intima" />
@@ -571,7 +571,7 @@
     <End Role="imovellazer" Type="imobappModel.Store.imovellazer" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="lazer">
-        <PropertyRef Name="id_lazer" />
+        <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="imovellazer">
         <PropertyRef Name="id_lazer" />
@@ -595,7 +595,7 @@
     <End Role="imovelservico" Type="imobappModel.Store.imovelservico" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="servico">
-        <PropertyRef Name="id_servico" />
+        <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="imovelservico">
         <PropertyRef Name="id_servico" />
@@ -619,7 +619,7 @@
     <End Role="imovelsocial" Type="imobappModel.Store.imovelsocial" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="social">
-        <PropertyRef Name="id_social" />
+        <PropertyRef Name="id" />
       </Principal>
       <Dependent Role="imovelsocial">
         <PropertyRef Name="id_social" />

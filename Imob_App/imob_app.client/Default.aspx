@@ -19,6 +19,47 @@
     <script src="js/Kozuka_Gothic_Pro_OpenType_900.font.js"></script>
     <script src="js/cufon-replace.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/jquery.jqtransform.js"></script>
+    <script type="text/javascript">
+        /*$(document).ready(function () {           
+
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+
+        prm.add_endRequest(EndRequest);
+
+        function EndRequest(sender, args) {
+        $('form2').jqTransform({ imgPath: 'images/' });
+        $('#form2').jqTransform({ imgPath: 'images/' });
+        }
+        });       */
+
+        function pageLoad(sender, args) {
+            if (args.get_isPartialLoad()) {
+                fix_select($('#local'));
+                /*fix_select2($('#ddlMunicipio'));
+                fix_select2  ($('#ddlBairro'));  */
+            }
+        }
+
+        function fix_select(selector) {
+            selectedVal = $(selector).children(':selected').val();
+            $(selector).children('option').removeAttr('selected');
+            $(selector).children('option[value="' + selectedVal + '"]').attr('selected', 'selected');
+
+            $(selector).removeClass('jqTransformHidden');
+            $(selector).css('display', 'block');
+            $(selector).prev('ul').remove();
+            $(selector).prev('div.selectWrapper').remove();
+
+            var selectElm = $(selector).closest('.jqTransformSelectWrapper').html();
+
+            $(selector).closest('.jqTransformSelectWrapper').after(selectElm);
+            $(selector).closest('.jqTransformSelectWrapper').remove();
+
+            $(selector).closest('form').removeClass('jqtransformdone');
+            $(selector).closest('form').jqTransform();
+        }
+    </script>
     <!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
@@ -69,7 +110,6 @@
     </header>
     </div>
     <!-- Tabs Pesquisa -->
-    
     <div class="tabs_pesquisa">
         <div class="tabs-horz-top">
             <ul class="tabs-nav">
@@ -87,43 +127,54 @@
             </div>
             <div class="tab-content" style="height: 255px;">
                 <form id="form2" runat="server">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
                 <label>
                     <span class="text-form fleft">Localização:</span>
-                    <asp:DropDownList ID="ddlUF" runat="server" style="width: 50px">
-                    </asp:DropDownList>
-                    <asp:DropDownList ID="ddlCidade" runat="server" style="width: 195px">
-                    </asp:DropDownList>
-                    <asp:DropDownList ID="ddlBairro" runat="server" style="width: 170px">
-                    </asp:DropDownList>
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <div id="local">
+                                <asp:DropDownList ID="ddlUF" runat="server" Style="width: 50px" AutoPostBack="True"
+                                    CausesValidation="True" OnSelectedIndexChanged="ddlUF_SelectedIndexChanged">
+                                </asp:DropDownList>
+                                <asp:DropDownList ID="ddlMunicipio" runat="server" Style="width: 195px" AutoPostBack="True"
+                                    OnSelectedIndexChanged="ddlMunicipio_SelectedIndexChanged">
+                                </asp:DropDownList>
+                                <asp:DropDownList ID="ddlBairro" runat="server" Style="width: 170px" AutoPostBack="True">
+                                </asp:DropDownList>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
                 </label>
-                <label>                    
+                <label>
                     <span class="text-form fleft">Características:</span>
-                    <asp:DropDownList ID="ddlDormitorios" runat="server" style="width: 130px">
-                    </asp:DropDownList>                                           
-                    <asp:DropDownList ID="ddlTipo" runat="server" style="width: 130px">
-                    </asp:DropDownList>                     
+                    <asp:DropDownList ID="ddlDormitorios" runat="server" Style="width: 130px">
+                    </asp:DropDownList>
+                    <asp:DropDownList ID="ddlTipo" runat="server" Style="width: 130px">
+                    </asp:DropDownList>
                 </label>
-                <label>                    
+                <label>
                     <span class="text-form fleft">Valores:</span>
                 </label>
                 <label>
-                    <asp:TextBox ID="txtValorDe" runat="server" onblur="if(this.value==''){this.value='DE: Ex 150000 *'}" onfocus="if(this.value='DE: Ex 150000 *'){this.value=''}"
-                        value="DE: Ex 150000 *" name="valor1" ></asp:TextBox>
+                    <asp:TextBox ID="txtValorDe" runat="server" onblur="if(this.value==''){this.value='DE: Ex 150000 *'}"
+                        onfocus="if(this.value='DE: Ex 150000 *'){this.value=''}" value="DE: Ex 150000 *"
+                        name="valor1"></asp:TextBox>
                 </label>
                 <label>
-                    <asp:TextBox ID="txtValorAte" runat="server" onblur="if(this.value==''){this.value='ATÉ: Ex 250000 *'}" onfocus="if(this.value='ATÉ: Ex 250000 *'){this.value=''}"
-                        value="ATÉ: Ex 250000 *" name="valor2"></asp:TextBox>                    
+                    <asp:TextBox ID="txtValorAte" runat="server" onblur="if(this.value==''){this.value='ATÉ: Ex 250000 *'}"
+                        onfocus="if(this.value='ATÉ: Ex 250000 *'){this.value=''}" value="ATÉ: Ex 250000 *"
+                        name="valor2"></asp:TextBox>
                 </label>
                 <label>
                     <div class="fright" style="margin-top: 15px;">
-                        <asp:HyperLink class="btn" ID="hlkPesquisar" runat="server">Pesquisar</asp:HyperLink>                        
+                        <asp:HyperLink class="btn" ID="hlkPesquisar" runat="server">Pesquisar</asp:HyperLink>
                     </div>
                 </label>
                 </form>
             </div>
         </div>
-    </div
-    
+    </div>
     <!-- Main PAge Slider -->
     <div class="flex_slider_home">
         <slider:Slider runat="server" ID="slider" />

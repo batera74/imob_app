@@ -53,67 +53,67 @@ CREATE TABLE IF NOT EXISTS `Bairro` (
 
 DROP TABLE IF EXISTS `Categoria`;
 CREATE TABLE IF NOT EXISTS `Categoria` (
- `id_categoria` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ `id` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  `ds_item` VARCHAR(40) NOT NULL
 );
   
 DROP TABLE IF EXISTS `Dormitorio`;
 CREATE TABLE `Dormitorio` (
- `id_dormitorio` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ `id` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  `ds_item` SMALLINT NOT NULL
 );
 
 DROP TABLE IF EXISTS `Finalidade`;
 CREATE TABLE IF NOT EXISTS `Finalidade` (
- `id_finalidade` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ `id` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  `ds_item` VARCHAR(40) NOT NULL
 );
 
 DROP TABLE IF EXISTS `EstadoImovel`;
 CREATE TABLE IF NOT EXISTS `EstadoImovel` (
- `id_estado_imovel` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ `id` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  `ds_item` VARCHAR(40) NOT NULL 
 );
 
 DROP TABLE IF EXISTS `PosicaoImovel`;
 CREATE TABLE IF NOT EXISTS `PosicaoImovel` (
- id_posicao_imovel SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  ds_item VARCHAR(20) NOT NULL
 );
 
 DROP TABLE IF EXISTS `Social`;
 CREATE TABLE IF NOT EXISTS `Social` (
- id_social SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  ds_item VARCHAR(40) NULL
 );
 
 DROP TABLE IF EXISTS `Acabamento`;
 CREATE TABLE IF NOT EXISTS `Acabamento` (
- id_acabamento SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  ds_item VARCHAR(40) NULL
 );
 
 DROP TABLE IF EXISTS `Intima`;
 CREATE TABLE IF NOT EXISTS `Intima` (
- id_intima SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  ds_item VARCHAR(40) NULL
 );
 
 DROP TABLE IF EXISTS `Servico`;
 CREATE TABLE IF NOT EXISTS `Servico` (
- id_servico SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  ds_item VARCHAR(40) NULL
 );
 
 DROP TABLE IF EXISTS `Armario`;
 CREATE TABLE IF NOT EXISTS `Armario` (
- id_armario SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  ds_item VARCHAR(40) NULL
 );
 
 DROP TABLE IF EXISTS `Lazer`;
 CREATE TABLE IF NOT EXISTS `Lazer` (
- id_lazer SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
  ds_item VARCHAR(40) NULL
 );
 
@@ -155,12 +155,12 @@ CREATE TABLE IF NOT EXISTS `Imovel` (
  `ic_ativo` bit NULL,
  `dt_post` date NOT NULL,
  FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario),    
- FOREIGN KEY (id_finalidade) REFERENCES Finalidade(id_finalidade),
- FOREIGN KEY (id_categoria) REFERENCES Categoria(id_categoria),
+ FOREIGN KEY (id_finalidade) REFERENCES Finalidade(id),
+ FOREIGN KEY (id_categoria) REFERENCES Categoria(id),
  FOREIGN KEY (id_bairro) REFERENCES Bairro(id_bairro),
- FOREIGN KEY (id_estado_imovel) REFERENCES EstadoImovel(id_estado_imovel),
- FOREIGN KEY (id_dormitorio) REFERENCES Dormitorio(id_dormitorio),   
- FOREIGN KEY (id_posicao_imovel) REFERENCES PosicaoImovel(id_posicao_imovel)
+ FOREIGN KEY (id_estado_imovel) REFERENCES EstadoImovel(id),
+ FOREIGN KEY (id_dormitorio) REFERENCES Dormitorio(id),   
+ FOREIGN KEY (id_posicao_imovel) REFERENCES PosicaoImovel(id)
              
 );
 
@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `ImovelSocial` (
  `id_social` SMALLINT NOT NULL,
  PRIMARY KEY(id_imovel,id_social),
  FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_social) REFERENCES Social(id_social)
+ FOREIGN KEY (id_social) REFERENCES Social(id)
 );
 
 DROP TABLE IF EXISTS `ImovelAcabamento`;
@@ -188,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `ImovelAcabamento` (
  `id_acabamento` SMALLINT NOT NULL,
  PRIMARY KEY(id_imovel,id_acabamento),
  FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_acabamento) REFERENCES Acabamento(id_acabamento)
+ FOREIGN KEY (id_acabamento) REFERENCES Acabamento(id)
 );
 
 DROP TABLE IF EXISTS `ImovelIntima`;
@@ -197,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `ImovelIntima` (
  `id_intima` SMALLINT NOT NULL,
  PRIMARY KEY(id_imovel,id_intima),
  FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_intima) REFERENCES Intima(id_intima)
+ FOREIGN KEY (id_intima) REFERENCES Intima(id)
 );
 
 DROP TABLE IF EXISTS `ImovelServico`;
@@ -206,7 +206,7 @@ CREATE TABLE IF NOT EXISTS `ImovelServico` (
  `id_servico` SMALLINT NOT NULL,
  PRIMARY KEY(id_imovel,id_servico),
  FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_servico) REFERENCES Servico(id_servico)
+ FOREIGN KEY (id_servico) REFERENCES Servico(id)
 );
 
 DROP TABLE IF EXISTS `ImovelArmario`;
@@ -215,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `ImovelArmario` (
  `id_armario` SMALLINT NOT NULL,
  PRIMARY KEY(id_imovel, id_armario),
  FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_armario) REFERENCES Armario(id_armario)
+ FOREIGN KEY (id_armario) REFERENCES Armario(id)
 );
 
 DROP TABLE IF EXISTS `ImovelLazer`;
@@ -224,7 +224,7 @@ CREATE TABLE `ImovelLazer` (
  `id_lazer` SMALLINT NOT NULL,
  PRIMARY KEY(id_imovel, id_lazer),
  FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_lazer) REFERENCES Lazer(id_lazer)
+ FOREIGN KEY (id_lazer) REFERENCES Lazer(id)
 );
 
 DROP TABLE IF EXISTS `ErroLog`;

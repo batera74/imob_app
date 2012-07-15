@@ -8,16 +8,21 @@ using System.Collections;
 
 namespace imob_app.business
 {
-    public class Estado : IEntidade
+    public class Estado : IEntidadeLocalizacao
     {
         public IEnumerable SelecionarTodos()
         {
             var ctx = new imobappEntities();
-            var consulta = from a in ctx.estado select new { a.id_estado, a.cd_estado };
+            List<estado> consulta = (from a in ctx.estado select a).ToList();
             return consulta;
         }
 
         public IEnumerable Selecionar(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable SelecionarPorReferencia(short id)
         {
             throw new NotImplementedException();
         }

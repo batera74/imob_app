@@ -92,17 +92,17 @@
   </EntityContainer>
   <EntityType Name="acabamento">
     <Key>
-      <PropertyRef Name="id_acabamento" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_acabamento" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovelacabamento" FromRole="acabamento" ToRole="imovel" />
   </EntityType>
   <EntityType Name="armario">
     <Key>
-      <PropertyRef Name="id_armario" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_armario" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovelarmario" FromRole="armario" ToRole="imovel" />
   </EntityType>
@@ -117,17 +117,17 @@
   </EntityType>
   <EntityType Name="categoria">
     <Key>
-      <PropertyRef Name="id_categoria" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_categoria" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="String" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_3" FromRole="categoria" ToRole="imovel" />
   </EntityType>
   <EntityType Name="dormitorio">
     <Key>
-      <PropertyRef Name="id_dormitorio" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_dormitorio" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="Int16" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_6" FromRole="dormitorio" ToRole="imovel" />
   </EntityType>
@@ -153,17 +153,17 @@
   </EntityType>
   <EntityType Name="estadoimovel">
     <Key>
-      <PropertyRef Name="id_estado_imovel" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_estado_imovel" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="String" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_5" FromRole="estadoimovel" ToRole="imovel" />
   </EntityType>
   <EntityType Name="finalidade">
     <Key>
-      <PropertyRef Name="id_finalidade" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_finalidade" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="String" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_2" FromRole="finalidade" ToRole="imovel" />
   </EntityType>
@@ -224,17 +224,17 @@
   </EntityType>
   <EntityType Name="intima">
     <Key>
-      <PropertyRef Name="id_intima" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_intima" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovelintima" FromRole="intima" ToRole="imovel" />
   </EntityType>
   <EntityType Name="lazer">
     <Key>
-      <PropertyRef Name="id_lazer" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_lazer" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovellazer" FromRole="lazer" ToRole="imovel" />
   </EntityType>
@@ -258,17 +258,17 @@
   </EntityType>
   <EntityType Name="posicaoimovel">
     <Key>
-      <PropertyRef Name="id_posicao_imovel" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_posicao_imovel" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="String" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_7" FromRole="posicaoimovel" ToRole="imovel" />
   </EntityType>
   <EntityType Name="servico">
     <Key>
-      <PropertyRef Name="id_servico" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_servico" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovelservico" FromRole="servico" ToRole="imovel" />
   </EntityType>
@@ -284,9 +284,9 @@
   </EntityType>
   <EntityType Name="social">
     <Key>
-      <PropertyRef Name="id_social" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="id_social" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovelsocial" FromRole="social" ToRole="imovel" />
   </EntityType>

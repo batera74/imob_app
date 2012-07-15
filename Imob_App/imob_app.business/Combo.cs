@@ -19,5 +19,17 @@ namespace imob_app.business
             ddl.DataValueField = valueField;
             ddl.DataBind();
         }
+
+        public void CarregarCombo(ref DropDownList ddl, IEntidadeLocalizacao entidade, string textField, string valueField, string primeiroItem, int idEntidadeReferencia)
+        {
+            business.IEntidadeLocalizacao _entidade = entidade;
+            ddl.Items.Clear();
+            ddl.Items.Add(new ListItem(primeiroItem, ""));
+            ddl.AppendDataBoundItems = true;
+            ddl.DataSource = _entidade.SelecionarPorReferencia((short)idEntidadeReferencia);
+            ddl.DataTextField = textField;
+            ddl.DataValueField = valueField;
+            ddl.DataBind();
+        }
     }
 }

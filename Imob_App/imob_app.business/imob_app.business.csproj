@@ -46,6 +46,7 @@
     <Compile Include="Dormitorio.cs" />
     <Compile Include="Estado.cs" />
     <Compile Include="IEntidade.cs" />
+    <Compile Include="IEntidadeLocalizacao.cs" />
     <Compile Include="Municipio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tipo.cs" />

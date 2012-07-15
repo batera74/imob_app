@@ -127,16 +127,16 @@
         </EntityContainer>
         <EntityType Name="acabamento">
           <Key>
-            <PropertyRef Name="id_acabamento" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_acabamento" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="varchar" MaxLength="40" />
         </EntityType>
         <EntityType Name="armario">
           <Key>
-            <PropertyRef Name="id_armario" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_armario" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="varchar" MaxLength="40" />
         </EntityType>
         <EntityType Name="bairro">
@@ -149,16 +149,16 @@
         </EntityType>
         <EntityType Name="categoria">
           <Key>
-            <PropertyRef Name="id_categoria" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_categoria" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="40" />
         </EntityType>
         <EntityType Name="dormitorio">
           <Key>
-            <PropertyRef Name="id_dormitorio" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_dormitorio" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="smallint" Nullable="false" />
         </EntityType>
         <EntityType Name="errolog">
@@ -182,16 +182,16 @@
         </EntityType>
         <EntityType Name="estadoimovel">
           <Key>
-            <PropertyRef Name="id_estado_imovel" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_estado_imovel" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="40" />
         </EntityType>
         <EntityType Name="finalidade">
           <Key>
-            <PropertyRef Name="id_finalidade" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_finalidade" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="40" />
         </EntityType>
         <EntityType Name="imagem">
@@ -292,16 +292,16 @@
         </EntityType>
         <EntityType Name="intima">
           <Key>
-            <PropertyRef Name="id_intima" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_intima" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="varchar" MaxLength="40" />
         </EntityType>
         <EntityType Name="lazer">
           <Key>
-            <PropertyRef Name="id_lazer" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_lazer" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="varchar" MaxLength="40" />
         </EntityType>
         <EntityType Name="municipio">
@@ -322,16 +322,16 @@
         </EntityType>
         <EntityType Name="posicaoimovel">
           <Key>
-            <PropertyRef Name="id_posicao_imovel" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_posicao_imovel" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="varchar" Nullable="false" MaxLength="20" />
         </EntityType>
         <EntityType Name="servico">
           <Key>
-            <PropertyRef Name="id_servico" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_servico" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="varchar" MaxLength="40" />
         </EntityType>
         <EntityType Name="slider">
@@ -346,9 +346,9 @@
         </EntityType>
         <EntityType Name="social">
           <Key>
-            <PropertyRef Name="id_social" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_social" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="varchar" MaxLength="40" />
         </EntityType>
         <EntityType Name="usuario">
@@ -420,7 +420,7 @@
           <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="finalidade">
-              <PropertyRef Name="id_finalidade" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="imovel">
               <PropertyRef Name="id_finalidade" />
@@ -432,7 +432,7 @@
           <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="categoria">
-              <PropertyRef Name="id_categoria" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="imovel">
               <PropertyRef Name="id_categoria" />
@@ -456,7 +456,7 @@
           <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="estadoimovel">
-              <PropertyRef Name="id_estado_imovel" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="imovel">
               <PropertyRef Name="id_estado_imovel" />
@@ -468,7 +468,7 @@
           <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="dormitorio">
-              <PropertyRef Name="id_dormitorio" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="imovel">
               <PropertyRef Name="id_dormitorio" />
@@ -480,7 +480,7 @@
           <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="posicaoimovel">
-              <PropertyRef Name="id_posicao_imovel" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="imovel">
               <PropertyRef Name="id_posicao_imovel" />
@@ -504,7 +504,7 @@
           <End Role="imovelacabamento" Type="imobappModel.Store.imovelacabamento" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="acabamento">
-              <PropertyRef Name="id_acabamento" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="imovelacabamento">
               <PropertyRef Name="id_acabamento" />
@@ -528,7 +528,7 @@
           <End Role="imovelarmario" Type="imobappModel.Store.imovelarmario" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="armario">
-              <PropertyRef Name="id_armario" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="imovelarmario">
               <PropertyRef Name="id_armario" />
@@ -552,7 +552,7 @@
           <End Role="imovelintima" Type="imobappModel.Store.imovelintima" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="intima">
-              <PropertyRef Name="id_intima" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="imovelintima">
               <PropertyRef Name="id_intima" />
@@ -576,7 +576,7 @@
           <End Role="imovellazer" Type="imobappModel.Store.imovellazer" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="lazer">
-              <PropertyRef Name="id_lazer" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="imovellazer">
               <PropertyRef Name="id_lazer" />
@@ -600,7 +600,7 @@
           <End Role="imovelservico" Type="imobappModel.Store.imovelservico" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="servico">
-              <PropertyRef Name="id_servico" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="imovelservico">
               <PropertyRef Name="id_servico" />
@@ -624,7 +624,7 @@
           <End Role="imovelsocial" Type="imobappModel.Store.imovelsocial" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="social">
-              <PropertyRef Name="id_social" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="imovelsocial">
               <PropertyRef Name="id_social" />
@@ -740,17 +740,17 @@
         </EntityContainer>
         <EntityType Name="acabamento">
           <Key>
-            <PropertyRef Name="id_acabamento" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_acabamento" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovelacabamento" FromRole="acabamento" ToRole="imovel" />
         </EntityType>
         <EntityType Name="armario">
           <Key>
-            <PropertyRef Name="id_armario" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_armario" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovelarmario" FromRole="armario" ToRole="imovel" />
         </EntityType>
@@ -765,17 +765,17 @@
         </EntityType>
         <EntityType Name="categoria">
           <Key>
-            <PropertyRef Name="id_categoria" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_categoria" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="String" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_3" FromRole="categoria" ToRole="imovel" />
         </EntityType>
         <EntityType Name="dormitorio">
           <Key>
-            <PropertyRef Name="id_dormitorio" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_dormitorio" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="Int16" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_6" FromRole="dormitorio" ToRole="imovel" />
         </EntityType>
@@ -801,17 +801,17 @@
         </EntityType>
         <EntityType Name="estadoimovel">
           <Key>
-            <PropertyRef Name="id_estado_imovel" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_estado_imovel" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="String" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_5" FromRole="estadoimovel" ToRole="imovel" />
         </EntityType>
         <EntityType Name="finalidade">
           <Key>
-            <PropertyRef Name="id_finalidade" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_finalidade" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="String" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_2" FromRole="finalidade" ToRole="imovel" />
         </EntityType>
@@ -872,17 +872,17 @@
         </EntityType>
         <EntityType Name="intima">
           <Key>
-            <PropertyRef Name="id_intima" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_intima" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovelintima" FromRole="intima" ToRole="imovel" />
         </EntityType>
         <EntityType Name="lazer">
           <Key>
-            <PropertyRef Name="id_lazer" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_lazer" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovellazer" FromRole="lazer" ToRole="imovel" />
         </EntityType>
@@ -906,17 +906,17 @@
         </EntityType>
         <EntityType Name="posicaoimovel">
           <Key>
-            <PropertyRef Name="id_posicao_imovel" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_posicao_imovel" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="String" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_7" FromRole="posicaoimovel" ToRole="imovel" />
         </EntityType>
         <EntityType Name="servico">
           <Key>
-            <PropertyRef Name="id_servico" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_servico" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovelservico" FromRole="servico" ToRole="imovel" />
         </EntityType>
@@ -932,9 +932,9 @@
         </EntityType>
         <EntityType Name="social">
           <Key>
-            <PropertyRef Name="id_social" />
+            <PropertyRef Name="id" />
           </Key>
-          <Property Name="id_social" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovelsocial" FromRole="social" ToRole="imovel" />
         </EntityType>
@@ -1030,11 +1030,11 @@
       <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
         <EntityContainerMapping StorageEntityContainer="imobappModelStoreContainer" CdmEntityContainer="imobappEntities">
           <EntitySetMapping Name="acabamento"><EntityTypeMapping TypeName="imobappModel.acabamento"><MappingFragment StoreEntitySet="acabamento">
-            <ScalarProperty Name="id_acabamento" ColumnName="id_acabamento" />
+            <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="armario"><EntityTypeMapping TypeName="imobappModel.armario"><MappingFragment StoreEntitySet="armario">
-            <ScalarProperty Name="id_armario" ColumnName="id_armario" />
+            <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="bairro"><EntityTypeMapping TypeName="imobappModel.bairro"><MappingFragment StoreEntitySet="bairro">
@@ -1042,11 +1042,11 @@
             <ScalarProperty Name="nm_bairro" ColumnName="nm_bairro" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="categoria"><EntityTypeMapping TypeName="imobappModel.categoria"><MappingFragment StoreEntitySet="categoria">
-            <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+            <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="dormitorio"><EntityTypeMapping TypeName="imobappModel.dormitorio"><MappingFragment StoreEntitySet="dormitorio">
-            <ScalarProperty Name="id_dormitorio" ColumnName="id_dormitorio" />
+            <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="errolog"><EntityTypeMapping TypeName="imobappModel.errolog"><MappingFragment StoreEntitySet="errolog">
@@ -1062,11 +1062,11 @@
             <ScalarProperty Name="nm_estado" ColumnName="nm_estado" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="estadoimovel"><EntityTypeMapping TypeName="imobappModel.estadoimovel"><MappingFragment StoreEntitySet="estadoimovel">
-            <ScalarProperty Name="id_estado_imovel" ColumnName="id_estado_imovel" />
+            <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="finalidade"><EntityTypeMapping TypeName="imobappModel.finalidade"><MappingFragment StoreEntitySet="finalidade">
-            <ScalarProperty Name="id_finalidade" ColumnName="id_finalidade" />
+            <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="imagem"><EntityTypeMapping TypeName="imobappModel.imagem"><MappingFragment StoreEntitySet="imagem">
@@ -1104,11 +1104,11 @@
             <ScalarProperty Name="dt_post" ColumnName="dt_post" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="intima"><EntityTypeMapping TypeName="imobappModel.intima"><MappingFragment StoreEntitySet="intima">
-            <ScalarProperty Name="id_intima" ColumnName="id_intima" />
+            <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="lazer"><EntityTypeMapping TypeName="imobappModel.lazer"><MappingFragment StoreEntitySet="lazer">
-            <ScalarProperty Name="id_lazer" ColumnName="id_lazer" />
+            <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="municipio"><EntityTypeMapping TypeName="imobappModel.municipio"><MappingFragment StoreEntitySet="municipio">
@@ -1121,11 +1121,11 @@
             <ScalarProperty Name="nm_pais" ColumnName="nm_pais" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="posicaoimovel"><EntityTypeMapping TypeName="imobappModel.posicaoimovel"><MappingFragment StoreEntitySet="posicaoimovel">
-            <ScalarProperty Name="id_posicao_imovel" ColumnName="id_posicao_imovel" />
+            <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="servico"><EntityTypeMapping TypeName="imobappModel.servico"><MappingFragment StoreEntitySet="servico">
-            <ScalarProperty Name="id_servico" ColumnName="id_servico" />
+            <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="slider"><EntityTypeMapping TypeName="imobappModel.slider"><MappingFragment StoreEntitySet="slider">
@@ -1136,7 +1136,7 @@
             <ScalarProperty Name="ic_ativo" ColumnName="ic_ativo" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="social"><EntityTypeMapping TypeName="imobappModel.social"><MappingFragment StoreEntitySet="social">
-            <ScalarProperty Name="id_social" ColumnName="id_social" />
+            <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="usuario"><EntityTypeMapping TypeName="imobappModel.usuario"><MappingFragment StoreEntitySet="usuario">
@@ -1170,7 +1170,7 @@
           </AssociationSetMapping>
           <AssociationSetMapping Name="imovel_ibfk_3" TypeName="imobappModel.imovel_ibfk_3" StoreEntitySet="imovel">
             <EndProperty Name="categoria">
-              <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+              <ScalarProperty Name="id" ColumnName="id_categoria" />
             </EndProperty>
             <EndProperty Name="imovel">
               <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
@@ -1178,7 +1178,7 @@
           </AssociationSetMapping>
           <AssociationSetMapping Name="imovel_ibfk_6" TypeName="imobappModel.imovel_ibfk_6" StoreEntitySet="imovel">
             <EndProperty Name="dormitorio">
-              <ScalarProperty Name="id_dormitorio" ColumnName="id_dormitorio" />
+              <ScalarProperty Name="id" ColumnName="id_dormitorio" />
             </EndProperty>
             <EndProperty Name="imovel">
               <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
@@ -1203,7 +1203,7 @@
           </AssociationSetMapping>
           <AssociationSetMapping Name="imovel_ibfk_5" TypeName="imobappModel.imovel_ibfk_5" StoreEntitySet="imovel">
             <EndProperty Name="estadoimovel">
-              <ScalarProperty Name="id_estado_imovel" ColumnName="id_estado_imovel" />
+              <ScalarProperty Name="id" ColumnName="id_estado_imovel" />
             </EndProperty>
             <EndProperty Name="imovel">
               <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
@@ -1211,7 +1211,7 @@
           </AssociationSetMapping>
           <AssociationSetMapping Name="imovel_ibfk_2" TypeName="imobappModel.imovel_ibfk_2" StoreEntitySet="imovel">
             <EndProperty Name="finalidade">
-              <ScalarProperty Name="id_finalidade" ColumnName="id_finalidade" />
+              <ScalarProperty Name="id" ColumnName="id_finalidade" />
             </EndProperty>
             <EndProperty Name="imovel">
               <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
@@ -1235,7 +1235,7 @@
           </AssociationSetMapping>
           <AssociationSetMapping Name="imovel_ibfk_7" TypeName="imobappModel.imovel_ibfk_7" StoreEntitySet="imovel">
             <EndProperty Name="posicaoimovel">
-              <ScalarProperty Name="id_posicao_imovel" ColumnName="id_posicao_imovel" />
+              <ScalarProperty Name="id" ColumnName="id_posicao_imovel" />
             </EndProperty>
             <EndProperty Name="imovel">
               <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
@@ -1247,7 +1247,7 @@
               <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
             </EndProperty>
             <EndProperty Name="acabamento">
-              <ScalarProperty Name="id_acabamento" ColumnName="id_acabamento" />
+              <ScalarProperty Name="id" ColumnName="id_acabamento" />
             </EndProperty>
           </AssociationSetMapping>
           <AssociationSetMapping Name="imovelarmario" TypeName="imobappModel.imovelarmario" StoreEntitySet="imovelarmario">
@@ -1255,7 +1255,7 @@
               <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
             </EndProperty>
             <EndProperty Name="armario">
-              <ScalarProperty Name="id_armario" ColumnName="id_armario" />
+              <ScalarProperty Name="id" ColumnName="id_armario" />
             </EndProperty>
           </AssociationSetMapping>
           <AssociationSetMapping Name="imovelintima" TypeName="imobappModel.imovelintima" StoreEntitySet="imovelintima">
@@ -1263,7 +1263,7 @@
               <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
             </EndProperty>
             <EndProperty Name="intima">
-              <ScalarProperty Name="id_intima" ColumnName="id_intima" />
+              <ScalarProperty Name="id" ColumnName="id_intima" />
             </EndProperty>
           </AssociationSetMapping>
           <AssociationSetMapping Name="imovellazer" TypeName="imobappModel.imovellazer" StoreEntitySet="imovellazer">
@@ -1271,7 +1271,7 @@
               <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
             </EndProperty>
             <EndProperty Name="lazer">
-              <ScalarProperty Name="id_lazer" ColumnName="id_lazer" />
+              <ScalarProperty Name="id" ColumnName="id_lazer" />
             </EndProperty>
           </AssociationSetMapping>
           <AssociationSetMapping Name="imovelservico" TypeName="imobappModel.imovelservico" StoreEntitySet="imovelservico">
@@ -1279,7 +1279,7 @@
               <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
             </EndProperty>
             <EndProperty Name="servico">
-              <ScalarProperty Name="id_servico" ColumnName="id_servico" />
+              <ScalarProperty Name="id" ColumnName="id_servico" />
             </EndProperty>
           </AssociationSetMapping>
           <AssociationSetMapping Name="imovelsocial" TypeName="imobappModel.imovelsocial" StoreEntitySet="imovelsocial">
@@ -1287,7 +1287,7 @@
               <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
             </EndProperty>
             <EndProperty Name="social">
-              <ScalarProperty Name="id_social" ColumnName="id_social" />
+              <ScalarProperty Name="id" ColumnName="id_social" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>
