@@ -20,46 +20,6 @@
     <script src="js/cufon-replace.js"></script>
     <script src="js/script.js"></script>
     <script src="js/jquery.jqtransform.js"></script>
-    <script type="text/javascript">
-        /*$(document).ready(function () {           
-
-        var prm = Sys.WebForms.PageRequestManager.getInstance();
-
-        prm.add_endRequest(EndRequest);
-
-        function EndRequest(sender, args) {
-        $('form2').jqTransform({ imgPath: 'images/' });
-        $('#form2').jqTransform({ imgPath: 'images/' });
-        }
-        });       */
-
-        function pageLoad(sender, args) {
-            if (args.get_isPartialLoad()) {
-                fix_select($('#local'));
-                /*fix_select2($('#ddlMunicipio'));
-                fix_select2  ($('#ddlBairro'));  */
-            }
-        }
-
-        function fix_select(selector) {
-            selectedVal = $(selector).children(':selected').val();
-            $(selector).children('option').removeAttr('selected');
-            $(selector).children('option[value="' + selectedVal + '"]').attr('selected', 'selected');
-
-            $(selector).removeClass('jqTransformHidden');
-            $(selector).css('display', 'block');
-            $(selector).prev('ul').remove();
-            $(selector).prev('div.selectWrapper').remove();
-
-            var selectElm = $(selector).closest('.jqTransformSelectWrapper').html();
-
-            $(selector).closest('.jqTransformSelectWrapper').after(selectElm);
-            $(selector).closest('.jqTransformSelectWrapper').remove();
-
-            $(selector).closest('form').removeClass('jqtransformdone');
-            $(selector).closest('form').jqTransform();
-        }
-    </script>
     <!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">

@@ -12,6 +12,31 @@ $.include('js/jquery-ui-1.8.17.custom.min.js')
 $.include('js/jquery.cycle.all.min.js')
 $.include('js/jquery.cookie.js')
 
+function pageLoad(sender, args) {
+    if (args.get_isPartialLoad()) {
+        fix_select($('#local'));
+    }
+}
+
+function fix_select(selector) {
+    selectedVal = $(selector).children(':selected').val();
+    $(selector).children('option').removeAttr('selected');
+    $(selector).children('option[value="' + selectedVal + '"]').attr('selected', 'selected');
+
+    $(selector).removeClass('jqTransformHidden');
+    $(selector).css('display', 'block');
+    $(selector).prev('ul').remove();
+    $(selector).prev('div.selectWrapper').remove();
+
+    var selectElm = $(selector).closest('.jqTransformSelectWrapper').html();
+
+    $(selector).closest('.jqTransformSelectWrapper').after(selectElm);
+    $(selector).closest('.jqTransformSelectWrapper').remove();
+
+    $(selector).closest('form').removeClass('jqtransformdone');
+    $(selector).closest('form').jqTransform();
+}
+
 $(function(){
 	if($('.tweet').length)$.include('js/jquery.tweet.js');
 	if($('.lightbox-image').length)$.include('js/jquery.prettyPhoto.js');
