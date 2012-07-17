@@ -70,7 +70,6 @@
     <Content Include="css\pro_pages_style.css" />
     <Content Include="css\reset.css" />
     <Content Include="css\style.css" />
-    <Content Include="css\view-source static.livedemo00.template-help.com wt_38674 css ie.css" />
     <Content Include="Default.aspx" />
     <Content Include="images\apto_exemplo.jpg" />
     <Content Include="images\banner-button-1-left.png" />
@@ -215,9 +214,16 @@
     <Compile Include="controls\slider.ascx.designer.cs">
       <DependentUpon>slider.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
+    <Compile Include="Default.Master.cs">
+      <DependentUpon>Default.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.Master.designer.cs">
+      <DependentUpon>Default.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -235,6 +241,7 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.Master" />
     <None Include="fonts\icomoon-webfont.eot" />
     <None Include="fonts\icomoon-webfont.ttf" />
     <None Include="fonts\icomoon-webfont.woff" />
