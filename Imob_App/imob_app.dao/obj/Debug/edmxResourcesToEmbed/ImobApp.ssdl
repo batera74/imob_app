@@ -197,6 +197,7 @@
     <Property Name="ds_imagem_cripto" Type="text" Nullable="false" />
     <Property Name="ds_imagem" Type="varchar" Nullable="false" MaxLength="150" />
     <Property Name="id_imovel" Type="smallint" Nullable="false" />
+    <Property Name="ic_principal" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="imovel">
     <Key>

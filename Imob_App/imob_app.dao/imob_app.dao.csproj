@@ -42,12 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="ImobApp.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ImobApp.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ImovelResultado.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +56,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ImobApp.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Properties\DataSources\imobappEntities.datasource" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

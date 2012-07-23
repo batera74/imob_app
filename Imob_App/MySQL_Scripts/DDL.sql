@@ -169,7 +169,8 @@ CREATE TABLE IF NOT EXISTS `Imagem` (
   `id_imagem` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `ds_imagem_cripto` TEXT COLLATE latin1_general_ci NOT NULL,
   `ds_imagem` VARCHAR(150) NOT NULL,
-  `id_imovel` SMALLINT NOT NULL,    
+  `id_imovel` SMALLINT NOT NULL,  
+  `ic_principal` BIT NOT NULL,
   FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel)
 );
 

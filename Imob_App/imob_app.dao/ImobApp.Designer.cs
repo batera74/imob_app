@@ -28,7 +28,7 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovelsocial", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel), "social", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.social))]
 
 // Original file name:
-// Generation date: 14/07/2012 17:01:29
+// Generation date: 22/07/2012 15:55:07
 namespace imob_app.dao
 {
     
@@ -1649,13 +1649,15 @@ namespace imob_app.dao
         /// <param name="id_imagem">Initial value of id_imagem.</param>
         /// <param name="ds_imagem_cripto">Initial value of ds_imagem_cripto.</param>
         /// <param name="ds_imagem">Initial value of ds_imagem.</param>
+        /// <param name="ic_principal">Initial value of ic_principal.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static imagem Createimagem(short id_imagem, string ds_imagem_cripto, string ds_imagem)
+        public static imagem Createimagem(short id_imagem, string ds_imagem_cripto, string ds_imagem, bool ic_principal)
         {
             imagem imagem = new imagem();
             imagem.id_imagem = id_imagem;
             imagem.ds_imagem_cripto = ds_imagem_cripto;
             imagem.ds_imagem = ds_imagem;
+            imagem.ic_principal = ic_principal;
             return imagem;
         }
         /// <summary>
@@ -1739,6 +1741,33 @@ namespace imob_app.dao
         partial void Onds_imagemChanging(string value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         partial void Onds_imagemChanged();
+        /// <summary>
+        /// There are no comments for property ic_principal in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public bool ic_principal
+        {
+            get
+            {
+                return this._ic_principal;
+            }
+            set
+            {
+                this.Onic_principalChanging(value);
+                this.ReportPropertyChanging("ic_principal");
+                this._ic_principal = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("ic_principal");
+                this.Onic_principalChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        private bool _ic_principal;
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onic_principalChanging(bool value);
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onic_principalChanged();
         /// <summary>
         /// There are no comments for imovel in the schema.
         /// </summary>

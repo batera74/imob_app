@@ -1,0 +1,75 @@
+﻿body {
+}
+
+table.principal
+{
+    width: 100%;
+    margin-top: 20px;
+}
+
+table.item
+{
+    width: 200px;
+    height: 350px;
+    margin: 0 10px 10px 0;
+    border: 1px solid #FFE7BA;   
+}
+
+table.sample 
+{
+	border-width: 2px;
+	border-spacing: 2px;
+	border-style: none;
+	border-color: gray;
+	border-collapse: separate;
+	background-color: white;
+}
+table.sample th {
+	border-width: 2px;
+	padding: 1px;
+	border-style: solid;
+	border-color: white;
+	background-color: white;
+}
+table.sample td {
+	border-width: 2px;
+	padding: 1px;
+	border-style: solid;
+	border-color: white;
+	background-color: white;
+}
+
+.categoria
+{
+    font-size: small;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #f45c40;
+}
+
+.valor
+{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;    
+    color: #f45c40;
+}
+
+.line
+{
+    width: 100%;
+    height: 2px;
+    margin: 7px 0 7px 0;
+    background:url(../../images/repeater/line.png) repeat-x 160px 0;
+}
+
+.texto
+{
+    padding: 5px;
+}
+
+.ha_centro
+{
+    text-align: center;
+}

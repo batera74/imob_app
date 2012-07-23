@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Layout.controls {
+namespace imob_app.client.controls {
     
     
-    public partial class CustomDataList {
+    public partial class ImovelRepeater {
         
         /// <summary>
         /// lbtnFirst1 control.

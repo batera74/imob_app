@@ -1,23 +1,23 @@
 ﻿using System;
-using System.Data;
-using System.Configuration;
+using System.Collections.Generic;
+using System.Linq;
 using System.Web;
-using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Web.UI.WebControls.WebParts;
-using System.Web.UI.HtmlControls;
+using System.Data;
+using System.Data.Entity;
+using System.Collections;
+using imob_app.dao;
 
-
-namespace Layout.controls
+namespace imob_app.client.controls
 {
-    public partial class CustomDataList : System.Web.UI.UserControl
+    public partial class ImovelRepeater : System.Web.UI.UserControl
     {
         #region Public Properties
-        public DataTable DataTableSource 
-        { 
-            get; 
-            set; 
+        public List<ImovelResultado> DataSource
+        {
+            get;
+            set;
         }
         public int TotalRegistros { get; set; }
         #endregion
@@ -97,10 +97,9 @@ namespace Layout.controls
         /// </summary>
         private void BindItemsList()
         {
-            if (DataTableSource != null && DataTableSource.Rows.Count > 0)
+            if(DataSource != null && DataSource.Count > 0)
             {
-                DataTable dataTable = DataTableSource;
-                _PageDataSource.DataSource = dataTable.DefaultView;
+                _PageDataSource.DataSource = DataSource;
                 _PageDataSource.AllowPaging = true;
                 _PageDataSource.PageSize = TotalRegistros;
                 _PageDataSource.CurrentPageIndex = CurrentPage;
@@ -186,7 +185,7 @@ namespace Layout.controls
 
         protected void Page_Load(object sender, EventArgs e)
         {
-                this.BindItemsList();
+            this.BindItemsList();
         }
 
         protected void dlPaging_ItemCommand(object source, DataListCommandEventArgs e)
@@ -243,11 +242,11 @@ namespace Layout.controls
                     img.ImageUrl = "http://www.imobiliariainfinity.com.br/Images/Imoveis/sem_imagem.jpg";
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
             }
         }
+
     }
 }
-

@@ -175,6 +175,7 @@
     <Property Name="ds_imagem_cripto" Type="String" Nullable="false" />
     <Property Name="ds_imagem" Type="String" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imagem_ibfk_1" FromRole="imagem" ToRole="imovel" />
+    <Property Type="Boolean" Name="ic_principal" Nullable="false" />
   </EntityType>
   <EntityType Name="imovel">
     <Key>

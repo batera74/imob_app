@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="imobappModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+    <Schema Namespace="imobappModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
         <EntityContainer Name="imobappModelStoreContainer">
           <EntitySet Name="acabamento" EntityType="imobappModel.Store.acabamento" store:Type="Tables" Schema="imobapp" />
           <EntitySet Name="armario" EntityType="imobappModel.Store.armario" store:Type="Tables" Schema="imobapp" />
@@ -202,6 +202,7 @@
           <Property Name="ds_imagem_cripto" Type="text" Nullable="false" />
           <Property Name="ds_imagem" Type="varchar" Nullable="false" MaxLength="150" />
           <Property Name="id_imovel" Type="smallint" Nullable="false" />
+          <Property Name="ic_principal" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="imovel">
           <Key>
@@ -643,8 +644,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="imobappModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
@@ -823,6 +823,7 @@
           <Property Name="ds_imagem_cripto" Type="String" Nullable="false" />
           <Property Name="ds_imagem" Type="String" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imagem_ibfk_1" FromRole="imagem" ToRole="imovel" />
+          <Property Type="Boolean" Name="ic_principal" Nullable="false" />
         </EntityType>
         <EntityType Name="imovel">
           <Key>
@@ -1070,7 +1071,8 @@
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="imagem"><EntityTypeMapping TypeName="imobappModel.imagem"><MappingFragment StoreEntitySet="imagem">
-            <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
+            <ScalarProperty Name="ic_principal" ColumnName="ic_principal" />
+                <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
             <ScalarProperty Name="ds_imagem_cripto" ColumnName="ds_imagem_cripto" />
             <ScalarProperty Name="ds_imagem" ColumnName="ds_imagem" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>

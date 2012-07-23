@@ -11,7 +11,7 @@ namespace imob_app.client
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

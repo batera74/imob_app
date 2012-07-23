@@ -37,6 +37,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -48,17 +49,20 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="controls\css\dataList.css" />
+    <Content Include="controls\css\repeater\dataList.css" />
     <Content Include="controls\css\slider\flexslider.css" />
-    <Content Include="controls\css\imoves_rpt.css" />
-    <Content Include="controls\CustomDataList.ascx" />
+    <Content Include="controls\images\repeater\line.png" />
+    <Content Include="controls\images\repeater\next.png" />
+    <Content Include="controls\images\repeater\next1.png" />
+    <Content Include="controls\images\repeater\prev.png" />
+    <Content Include="controls\images\repeater\prev1.png" />
     <Content Include="controls\images\slider\bull-h.png" />
     <Content Include="controls\images\slider\bull.png" />
     <Content Include="controls\images\slider\flex-text-1.png" />
     <Content Include="controls\images\slider\flex-text-2.png" />
     <Content Include="controls\images\slider\next.png" />
     <Content Include="controls\images\slider\prev.png" />
-    <Content Include="controls\Imoveis.ascx" />
+    <Content Include="controls\ImovelRepeater.ascx" />
     <Content Include="controls\js\slider\jquery.flexslider-min.js" />
     <Content Include="controls\slider.ascx" />
     <Content Include="css\forms.css" />
@@ -182,7 +186,7 @@
     <Content Include="js\superfish.js" />
     <Content Include="js\tms-0.4.x.js" />
     <Content Include="js\uCarausel.js" />
-    <Content Include="ResultadoPesquisa.aspx" />
+    <Content Include="Pesquisa.aspx" />
     <Content Include="skin\blue.monday\jplayer.blue.monday.css" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -193,19 +197,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="controls\CustomDataList.ascx.cs">
-      <DependentUpon>CustomDataList.ascx</DependentUpon>
+    <Compile Include="controls\ImovelRepeater.ascx.cs">
+      <DependentUpon>ImovelRepeater.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="controls\CustomDataList.ascx.designer.cs">
-      <DependentUpon>CustomDataList.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="controls\Imoveis.ascx.cs">
-      <DependentUpon>Imoveis.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="controls\Imoveis.ascx.designer.cs">
-      <DependentUpon>Imoveis.ascx</DependentUpon>
+    <Compile Include="controls\ImovelRepeater.ascx.designer.cs">
+      <DependentUpon>ImovelRepeater.ascx</DependentUpon>
     </Compile>
     <Compile Include="controls\slider.ascx.cs">
       <DependentUpon>slider.ascx</DependentUpon>
@@ -228,14 +225,17 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ResultadoPesquisa.aspx.cs">
-      <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>
+    <Compile Include="Pesquisa.aspx.cs">
+      <DependentUpon>Pesquisa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ResultadoPesquisa.aspx.designer.cs">
-      <DependentUpon>ResultadoPesquisa.aspx</DependentUpon>
+    <Compile Include="Pesquisa.aspx.designer.cs">
+      <DependentUpon>Pesquisa.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Imagem.ashx.cs">
+      <DependentUpon>Imagem.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -248,6 +248,7 @@
     <None Include="fonts\icomoonsocial-webfont.eot" />
     <None Include="fonts\icomoonsocial-webfont.ttf" />
     <None Include="fonts\icomoonsocial-webfont.woff" />
+    <Content Include="Imagem.ashx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\imob_app.business\imob_app.business.csproj">

@@ -24,6 +24,6 @@ INSERT INTO Finalidade (ds_item) VALUES ('Venda'),('Locação'),('Revenda');
 
 INSERT INTO Lazer (ds_item) VALUES ('Playground'), ('Piscina'), ('Academia'), ('Cinema');
 
-INSERT INTO EstadoImovel (ds_item) VALUES ('Novo'), ('Usado'), ('Em Construção');
+INSERT INTO EstadoImovel (ds_item) VALUES ('Novo'), ('Seminovo'), ('Em Construção');
 
 INSERT INTO PosicaoImovel (ds_item) VALUES ('Frente'), ('Lateral'), ('Fundos');
