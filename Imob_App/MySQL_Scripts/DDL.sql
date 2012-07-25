@@ -167,11 +167,10 @@ CREATE TABLE IF NOT EXISTS `Imovel` (
 DROP TABLE IF EXISTS `Imagem`;
 CREATE TABLE IF NOT EXISTS `Imagem` (
   `id_imagem` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `ds_imagem_cripto` TEXT COLLATE latin1_general_ci NOT NULL,
+  `ds_imagem_cripto` LONGTEXT COLLATE latin1_general_ci NOT NULL,
   `ds_imagem` VARCHAR(150) NOT NULL,
   `id_imovel` SMALLINT NOT NULL,  
-  `ic_principal` BIT NOT NULL,
-  FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel)
+  `ic_principal` BIT NOT NULL
 );
 
 DROP TABLE IF EXISTS `ImovelSocial`;
@@ -227,6 +226,7 @@ CREATE TABLE `ImovelLazer` (
  FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
  FOREIGN KEY (id_lazer) REFERENCES Lazer(id)
 );
+
 
 DROP TABLE IF EXISTS `ErroLog`;
 CREATE TABLE IF NOT EXISTS `ErroLog`

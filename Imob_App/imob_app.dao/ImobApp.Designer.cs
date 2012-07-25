@@ -28,7 +28,7 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovelsocial", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel), "social", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.social))]
 
 // Original file name:
-// Generation date: 22/07/2012 15:55:07
+// Generation date: 24/07/2012 23:12:59
 namespace imob_app.dao
 {
     

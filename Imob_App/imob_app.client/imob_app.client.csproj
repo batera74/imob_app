@@ -14,6 +14,7 @@
     <AssemblyName>imob_app.client</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,18 +36,19 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="controls\css\repeater\dataList.css" />
@@ -65,6 +67,7 @@
     <Content Include="controls\ImovelRepeater.ascx" />
     <Content Include="controls\js\slider\jquery.flexslider-min.js" />
     <Content Include="controls\slider.ascx" />
+    <Content Include="CriptografarImagem.aspx" />
     <Content Include="css\forms.css" />
     <Content Include="css\grid.css" />
     <Content Include="css\ie.css" />
@@ -211,6 +214,13 @@
     <Compile Include="controls\slider.ascx.designer.cs">
       <DependentUpon>slider.ascx</DependentUpon>
     </Compile>
+    <Compile Include="CriptografarImagem.aspx.cs">
+      <DependentUpon>CriptografarImagem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CriptografarImagem.aspx.designer.cs">
+      <DependentUpon>CriptografarImagem.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.Master.cs">
       <DependentUpon>Default.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -258,6 +268,10 @@
     <ProjectReference Include="..\imob_app.dao\imob_app.dao.csproj">
       <Project>{A1700615-2846-4D20-A557-3B84415C7C02}</Project>
       <Name>imob_app.dao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\imob_app.entidades\imob_app.entidades.csproj">
+      <Project>{B5A1CE7F-7EA9-42D4-9BCD-00935D0B6166}</Project>
+      <Name>imob_app.entidades</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -647,7 +647,7 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="imobappModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+      <Schema Namespace="imobappModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
         <EntityContainer Name="imobappEntities">
           <EntitySet Name="acabamento" EntityType="imobappModel.acabamento" />
           <EntitySet Name="armario" EntityType="imobappModel.armario" />
@@ -742,7 +742,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovelacabamento" FromRole="acabamento" ToRole="imovel" />
         </EntityType>
@@ -750,7 +750,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovelarmario" FromRole="armario" ToRole="imovel" />
         </EntityType>
@@ -758,7 +758,7 @@
           <Key>
             <PropertyRef Name="id_bairro" />
           </Key>
-          <Property Name="id_bairro" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_bairro" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="nm_bairro" Type="String" Nullable="false" />
           <NavigationProperty Name="municipio" Relationship="imobappModel.bairro_ibfk_1" FromRole="bairro" ToRole="municipio" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_4" FromRole="bairro" ToRole="imovel" />
@@ -767,7 +767,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_item" Type="String" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_3" FromRole="categoria" ToRole="imovel" />
         </EntityType>
@@ -775,7 +775,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_item" Type="Int16" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_6" FromRole="dormitorio" ToRole="imovel" />
         </EntityType>
@@ -783,7 +783,7 @@
           <Key>
             <PropertyRef Name="id_erro" />
           </Key>
-          <Property Name="id_erro" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_erro" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_erro" Type="String" />
           <Property Name="dt_erro" Type="DateTime" />
           <Property Name="ds_stack" Type="String" />
@@ -793,7 +793,7 @@
           <Key>
             <PropertyRef Name="id_estado" />
           </Key>
-          <Property Name="id_estado" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_estado" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="cd_estado" Type="String" Nullable="false" />
           <Property Name="nm_estado" Type="String" Nullable="false" />
           <NavigationProperty Name="pais" Relationship="imobappModel.estado_ibfk_1" FromRole="estado" ToRole="pais" />
@@ -803,7 +803,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_item" Type="String" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_5" FromRole="estadoimovel" ToRole="imovel" />
         </EntityType>
@@ -811,7 +811,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_item" Type="String" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_2" FromRole="finalidade" ToRole="imovel" />
         </EntityType>
@@ -819,7 +819,7 @@
           <Key>
             <PropertyRef Name="id_imagem" />
           </Key>
-          <Property Name="id_imagem" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_imagem" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_imagem_cripto" Type="String" Nullable="false" />
           <Property Name="ds_imagem" Type="String" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imagem_ibfk_1" FromRole="imagem" ToRole="imovel" />
@@ -829,7 +829,7 @@
           <Key>
             <PropertyRef Name="id_imovel" />
           </Key>
-          <Property Name="id_imovel" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_imovel" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_padrao" Type="String" />
           <Property Name="ds_endereco" Type="String" Nullable="false" />
           <Property Name="ds_numero_endereco" Type="String" Nullable="false" />
@@ -875,7 +875,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovelintima" FromRole="intima" ToRole="imovel" />
         </EntityType>
@@ -883,7 +883,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovellazer" FromRole="lazer" ToRole="imovel" />
         </EntityType>
@@ -891,7 +891,7 @@
           <Key>
             <PropertyRef Name="id_municipio" />
           </Key>
-          <Property Name="id_municipio" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_municipio" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="nm_municipio" Type="String" Nullable="false" />
           <NavigationProperty Name="bairro" Relationship="imobappModel.bairro_ibfk_1" FromRole="municipio" ToRole="bairro" />
           <NavigationProperty Name="estado" Relationship="imobappModel.municipio_ibfk_1" FromRole="municipio" ToRole="estado" />
@@ -900,7 +900,7 @@
           <Key>
             <PropertyRef Name="id_pais" />
           </Key>
-          <Property Name="id_pais" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_pais" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="cd_pais" Type="String" Nullable="false" />
           <Property Name="nm_pais" Type="String" Nullable="false" />
           <NavigationProperty Name="estado" Relationship="imobappModel.estado_ibfk_1" FromRole="pais" ToRole="estado" />
@@ -909,7 +909,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_item" Type="String" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_7" FromRole="posicaoimovel" ToRole="imovel" />
         </EntityType>
@@ -917,7 +917,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovelservico" FromRole="servico" ToRole="imovel" />
         </EntityType>
@@ -925,7 +925,7 @@
           <Key>
             <PropertyRef Name="id_slider" />
           </Key>
-          <Property Name="id_slider" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_slider" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_path_imagem" Type="String" Nullable="false" />
           <Property Name="ds_texto1" Type="String" Nullable="false" />
           <Property Name="ds_texto2" Type="String" Nullable="false" />
@@ -935,7 +935,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovelsocial" FromRole="social" ToRole="imovel" />
         </EntityType>
@@ -943,7 +943,7 @@
           <Key>
             <PropertyRef Name="id_usuario" />
           </Key>
-          <Property Name="id_usuario" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_usuario" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Name="nm_usuario" Type="String" Nullable="false" />
           <Property Name="cd_cpf" Type="String" />
           <Property Name="cd_creci" Type="String" Nullable="false" />
@@ -1312,7 +1312,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="ImobApp">
+      <Diagram Name="ImobApp" ZoomLevel="74">
         <EntityTypeShape EntityType="imobappModel.acabamento" Width="1.5" PointX="12" PointY="1.625" Height="1.5956835937499998" IsExpanded="true" />
         <EntityTypeShape EntityType="imobappModel.armario" Width="1.5" PointX="12" PointY="4" Height="1.5956835937499996" IsExpanded="true" />
         <EntityTypeShape EntityType="imobappModel.bairro" Width="1.5" PointX="7.5" PointY="8.625" Height="1.7879850260416674" IsExpanded="true" />
@@ -1342,9 +1342,9 @@
           <ConnectorPoint PointX="9.75" PointY="9.5189925130208337" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovel_ibfk_3" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="2.797841796875" />
-          <ConnectorPoint PointX="10.5" PointY="2.797841796875" />
-          <ConnectorPoint PointX="10.5" PointY="5.125" />
+          <ConnectorPoint PointX="9" PointY="2.9035522460937497" />
+          <ConnectorPoint PointX="10.29687375" PointY="2.9035522460937497" />
+          <ConnectorPoint PointX="10.29687375" PointY="5.125" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovel_ibfk_6" ManuallyRouted="false">
           <ConnectorPoint PointX="9" PointY="5.547841796875" />
@@ -1363,32 +1363,32 @@
           <ConnectorPoint PointX="9.75" PointY="12.547841796875" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovel_ibfk_2" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="14.81191130729167" />
-          <ConnectorPoint PointX="10.010414166666665" PointY="14.81191130729167" />
-          <ConnectorPoint PointX="10.177080833333333" PointY="14.81191130729167" />
-          <ConnectorPoint PointX="10.5" PointY="14.81191130729167" />
-          <ConnectorPoint PointX="10.5" PointY="14.028138020833339" />
+          <ConnectorPoint PointX="9" PointY="14.908062023437498" />
+          <ConnectorPoint PointX="10.010414166666665" PointY="14.908062023437498" />
+          <ConnectorPoint PointX="10.177080833333333" PointY="14.908062023437498" />
+          <ConnectorPoint PointX="10.5" PointY="14.908062023437498" />
+          <ConnectorPoint PointX="10.5" PointY="14.220439453125" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imagem_ibfk_1" ManuallyRouted="false">
-          <ConnectorPoint PointX="11.25" PointY="7.1439925130208337" />
-          <ConnectorPoint PointX="12" PointY="7.1439925130208337" />
+          <ConnectorPoint PointX="11.25" PointY="7.3362939453125" />
+          <ConnectorPoint PointX="12" PointY="7.3362939453125" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovel_ibfk_1" ManuallyRouted="false">
           <ConnectorPoint PointX="9" PointY="20.4131982421875" />
           <ConnectorPoint PointX="10.0937475" PointY="20.4131982421875" />
-          <ConnectorPoint PointX="10.0937475" PointY="14.028138020833339" />
+          <ConnectorPoint PointX="10.0937475" PointY="14.220439453125" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovel_ibfk_7" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="17.172841796875" />
-          <ConnectorPoint PointX="10.010414166666665" PointY="17.172841796875" />
-          <ConnectorPoint PointX="10.177080833333333" PointY="17.172841796875" />
-          <ConnectorPoint PointX="10.9062525" PointY="17.172841796875" />
-          <ConnectorPoint PointX="10.9062525" PointY="14.028138020833339" />
+          <ConnectorPoint PointX="9" PointY="17.247302246093753" />
+          <ConnectorPoint PointX="10.010414166666665" PointY="17.247302246093753" />
+          <ConnectorPoint PointX="10.177080833333333" PointY="17.247302246093753" />
+          <ConnectorPoint PointX="10.835941875" PointY="17.247302246093753" />
+          <ConnectorPoint PointX="10.835941875" PointY="14.220439453125" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovelacabamento" ManuallyRouted="false">
-          <ConnectorPoint PointX="10.9062525" PointY="5.125" />
-          <ConnectorPoint PointX="10.9062525" PointY="2.2114208984375" />
-          <ConnectorPoint PointX="12" PointY="2.2114208984375" />
+          <ConnectorPoint PointX="10.804689374999999" PointY="5.125" />
+          <ConnectorPoint PointX="10.804689374999999" PointY="2.2642761230468746" />
+          <ConnectorPoint PointX="12" PointY="2.2642761230468746" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovelarmario" ManuallyRouted="false">
           <ConnectorPoint PointX="11.25" PointY="5.360341796875" />
@@ -1403,13 +1403,13 @@
           <ConnectorPoint PointX="12" PointY="12.047841796875002" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovelservico" ManuallyRouted="false">
-          <ConnectorPoint PointX="11.25" PointY="13.764069010416669" />
-          <ConnectorPoint PointX="12" PointY="13.764069010416669" />
+          <ConnectorPoint PointX="11.25" PointY="13.8602197265625" />
+          <ConnectorPoint PointX="12" PointY="13.8602197265625" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovelsocial" ManuallyRouted="false">
-          <ConnectorPoint PointX="11.109378750000001" PointY="14.028138020833339" />
-          <ConnectorPoint PointX="11.109378750000001" PointY="16.523920898437503" />
-          <ConnectorPoint PointX="12" PointY="16.523920898437503" />
+          <ConnectorPoint PointX="11.074223437499999" PointY="14.220439453125" />
+          <ConnectorPoint PointX="11.074223437499999" PointY="16.561151123046876" />
+          <ConnectorPoint PointX="12" PointY="16.561151123046876" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

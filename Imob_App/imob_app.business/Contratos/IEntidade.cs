@@ -6,10 +6,12 @@ using System.Data;
 using System.Data.Entity;
 using imob_app.dao;
 using System.Collections;
-namespace imob_app.business
+
+namespace imob_app.business.Contratos
 {
-    public interface IEntidadeLocalizacao : IEntidade
+    public interface IEntidade
     {
-        IEnumerable SelecionarPorReferencia(short id);
+        IEnumerable SelecionarTodos();
+        IEnumerable Selecionar(int id);
     }
 }

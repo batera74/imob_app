@@ -5,5 +5,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="conteudo" runat="server">
- <rpt:Imovel runat="server" ID="imoveis" />
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            <rpt:Imovel runat="server" ID="imoveis" TotalRegistros="6" />
+        </ContentTemplate>
+    </asp:UpdatePanel>
 </asp:Content>

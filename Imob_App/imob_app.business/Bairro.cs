@@ -5,6 +5,7 @@ using System.Text;
 using System.Data.Entity;
 using imob_app.dao;
 using System.Collections;
+using imob_app.business.Contratos;
 
 namespace imob_app.business
 {

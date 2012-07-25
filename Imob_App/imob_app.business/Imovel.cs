@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Collections;
-using imob_app.dao;
 using System.Data;
+using imob_app.dao;
+using imob_app.entidades;
+using imob_app.business.Contratos;
 
 namespace imob_app.business
 {
@@ -14,32 +16,22 @@ namespace imob_app.business
         public IEnumerable SelecionarTodos()
         {
             var ctx = new imobappEntities();
-            /*
-            var imobs = from x in ctx.imovel                        
-                        join i in (from i2 in ctx.imagem where i2.ic_principal == true select i2) 
-                        on x.id_imovel equals i.imovel.id_imovel 
-                        where i.ic_principal == true*/
-            var teste = from c in ctx.imovel
-                        join i in ctx.imagem on c.id_imovel equals i.imovel.id_imovel into j1
-                        from j2 in j1.DefaultIfEmpty()
-                     select new ImovelResultado()
-                     {
-                         Categoria = j2.imovel.categoria.ds_item,
-                         Referencia = j2.imovel.id_imovel,
-                         Bairro = j2.imovel.bairro.nm_bairro,
-                         Municipio = j2.imovel.bairro.municipio.nm_municipio,
-                         Estado = j2.imovel.bairro.municipio.estado.cd_estado,
-                         AreaTotal = j2.imovel.vl_area_total,
-                         AreaUtil = j2.imovel.vl_area_util,
-                         EstadoImovel = j2.imovel.estadoimovel.ds_item,
-                         Valor = j2.imovel.vl_imovel,
-                         IdFotoPrincipal = j2.id_imagem
-                     };
+            var teste = from imov in ctx.imovel
+                        select new entidades.ImovelResultado()
+                        {
+                            Categoria = imov.categoria.ds_item,
+                            Referencia = imov.id_imovel,
+                            Bairro = imov.bairro.nm_bairro,
+                            Municipio = imov.bairro.municipio.nm_municipio,
+                            Estado = imov.bairro.municipio.estado.cd_estado,
+                            AreaTotal = imov.vl_area_total,
+                            AreaUtil = imov.vl_area_util,
+                            EstadoImovel = imov.estadoimovel.ds_item,
+                            Valor = imov.vl_imovel,
+                            Imagens = imov.imagem
+                        };
 
-            
-
-//            return imobs.ToList();
-            return teste.ToList();
+            return teste.OrderByDescending(o => o.Referencia).ToList();
         }
 
         public IEnumerable Selecionar(int id)
@@ -47,6 +39,14 @@ namespace imob_app.business
             throw new NotImplementedException();
         }
 
+        public void PreencherIdFotoPrincipal(List<entidades.ImovelResultado> imoveis)
+        {
+            foreach (ImovelResultado item in imoveis)
+            {
+                dao.imagem img = item.Imagens.FirstOrDefault(p => p.ic_principal == true);
+                item.IdFotoPrincipal = img != null ? img.id_imagem : 1;
+            }
+        }
 
     }
 }

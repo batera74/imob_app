@@ -8,13 +8,14 @@ using System.Data;
 using System.Data.Entity;
 using System.Collections;
 using imob_app.dao;
+using imob_app.entidades;
 
 namespace imob_app.client.controls
 {
     public partial class ImovelRepeater : System.Web.UI.UserControl
     {
         #region Public Properties
-        public List<ImovelResultado> DataSource
+        public List<entidades.ImovelResultado> DataSource
         {
             get;
             set;

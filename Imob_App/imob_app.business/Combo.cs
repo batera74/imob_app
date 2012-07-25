@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Web.UI.WebControls;
+using imob_app.business.Contratos;
 
 namespace imob_app.business
 {
@@ -10,7 +11,7 @@ namespace imob_app.business
     {
         public void CarregarCombo(ref DropDownList ddl, IEntidade entidade, string textField, string valueField, string primeiroItem)
         {
-            business.IEntidade _entidade = entidade;
+            IEntidade _entidade = entidade;
             ddl.Items.Clear();
             ddl.Items.Add(new ListItem(primeiroItem, ""));
             ddl.AppendDataBoundItems = true;
@@ -22,7 +23,7 @@ namespace imob_app.business
 
         public void CarregarCombo(ref DropDownList ddl, IEntidadeLocalizacao entidade, string textField, string valueField, string primeiroItem, int idEntidadeReferencia)
         {
-            business.IEntidadeLocalizacao _entidade = entidade;
+            IEntidadeLocalizacao _entidade = entidade;
             ddl.Items.Clear();
             ddl.Items.Add(new ListItem(primeiroItem, ""));
             ddl.AppendDataBoundItems = true;

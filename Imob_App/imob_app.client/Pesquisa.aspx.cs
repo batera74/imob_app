@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using imob_app.entidades;
 
 namespace imob_app.client
 {
@@ -12,7 +13,9 @@ namespace imob_app.client
         protected void Page_Load(object sender, EventArgs e)
         {
             business.Imovel imovel = new business.Imovel();
-            imoveis.DataSource = imovel.SelecionarTodos().OfType<dao.ImovelResultado>().ToList(); ;        
+            List<entidades.ImovelResultado> lista = imovel.SelecionarTodos().OfType<entidades.ImovelResultado>().ToList();
+            imovel.PreencherIdFotoPrincipal(lista);
+            imoveis.DataSource = lista;
         }
     }
 }

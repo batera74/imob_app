@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "imob_app.business", "imob_a
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "imob_app.dao", "imob_app.dao\imob_app.dao.csproj", "{A1700615-2846-4D20-A557-3B84415C7C02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "imob_app.entidades", "imob_app.entidades\imob_app.entidades.csproj", "{B5A1CE7F-7EA9-42D4-9BCD-00935D0B6166}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{A1700615-2846-4D20-A557-3B84415C7C02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1700615-2846-4D20-A557-3B84415C7C02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1700615-2846-4D20-A557-3B84415C7C02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5A1CE7F-7EA9-42D4-9BCD-00935D0B6166}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A1CE7F-7EA9-42D4-9BCD-00935D0B6166}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A1CE7F-7EA9-42D4-9BCD-00935D0B6166}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A1CE7F-7EA9-42D4-9BCD-00935D0B6166}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
