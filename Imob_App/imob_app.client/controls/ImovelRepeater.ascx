@@ -49,8 +49,7 @@
                                     <tr>
                                         <td>
                                             <a href="../DetalhesImovel.aspx?Imovel=<%# Eval("Referencia") %>">
-                                                <asp:Image Style="border: 0px;" ID="Image2" runat="server" Height="131px" Width="200px"
-                                                    ImageUrl='<%# Eval("IdFotoPrincipal", "../Imagem.ashx?idFoto={0}") %>' /></a>
+                                                <asp:Image Style="border: 0px;" ID="Image2" runat="server" Height="131px" Width="200px"/></a>
                                         </td>
                                     </tr>
                                 </table>

@@ -11,7 +11,8 @@ namespace imob_app.client
 {
     public partial class CriptografarImagem : System.Web.UI.Page
     {
-        private const string Temp = @"C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\Imagens_Temp\";
+        //private const string Temp = @"C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\Imagens_Temp\";
+        private const string Temp = @"D:\BKP_ITG\Projetos\Microgen\ImobApp\Code\imob_app\Imob_App\Imagens_Temp\";
 
         protected void Page_Load(object sender, EventArgs e)
         {
