@@ -14,7 +14,7 @@ namespace imob_app.client
         {
             business.Imovel imovel = new business.Imovel();
             List<entidades.ImovelResultado> lista = imovel.SelecionarTodos().OfType<entidades.ImovelResultado>().ToList();
-            imovel.PreencherIdFotoPrincipal(lista);
+            //imovel.PreencherIdFotoPrincipal(lista);
             imoveis.DataSource = lista;
         }
     }

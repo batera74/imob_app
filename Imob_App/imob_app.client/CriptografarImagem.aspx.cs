@@ -11,6 +11,8 @@ namespace imob_app.client
 {
     public partial class CriptografarImagem : System.Web.UI.Page
     {
+        private const string Temp = @"C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\Imagens_Temp\";
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -55,8 +57,8 @@ namespace imob_app.client
                         {
                             try
                             {
-                                string path1 = @"C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\Imagens_Temp\";
-                                path = path1 + DateTime.Now.ToString("ddMMyy") + "_" + file.FileName;
+                                LimparTemp();
+                                path = Temp + DateTime.Now.ToString("ddMMyy") + "_" + file.FileName;
                                 file.SaveAs(path);
                             }
                             catch (Exception ex)
@@ -97,6 +99,13 @@ namespace imob_app.client
             byte[] array = ms.ToArray();
             ms.Close();
             return Convert.ToBase64String(array);
+        }
+
+        public static void LimparTemp()
+        {
+            string[] filePaths = Directory.GetFiles(Temp);
+            foreach (string filePath in filePaths)
+                File.Delete(filePath);
         }
     }
 }

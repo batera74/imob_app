@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="imobappModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+<Schema Namespace="imobappModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
   <EntityContainer Name="imobappEntities">
     <EntitySet Name="acabamento" EntityType="imobappModel.acabamento" />
     <EntitySet Name="armario" EntityType="imobappModel.armario" />
@@ -94,7 +94,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovelacabamento" FromRole="acabamento" ToRole="imovel" />
   </EntityType>
@@ -102,7 +102,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovelarmario" FromRole="armario" ToRole="imovel" />
   </EntityType>
@@ -110,7 +110,7 @@
     <Key>
       <PropertyRef Name="id_bairro" />
     </Key>
-    <Property Name="id_bairro" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_bairro" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="nm_bairro" Type="String" Nullable="false" />
     <NavigationProperty Name="municipio" Relationship="imobappModel.bairro_ibfk_1" FromRole="bairro" ToRole="municipio" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_4" FromRole="bairro" ToRole="imovel" />
@@ -119,7 +119,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_item" Type="String" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_3" FromRole="categoria" ToRole="imovel" />
   </EntityType>
@@ -127,7 +127,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_item" Type="Int16" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_6" FromRole="dormitorio" ToRole="imovel" />
   </EntityType>
@@ -135,7 +135,7 @@
     <Key>
       <PropertyRef Name="id_erro" />
     </Key>
-    <Property Name="id_erro" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_erro" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_erro" Type="String" />
     <Property Name="dt_erro" Type="DateTime" />
     <Property Name="ds_stack" Type="String" />
@@ -145,7 +145,7 @@
     <Key>
       <PropertyRef Name="id_estado" />
     </Key>
-    <Property Name="id_estado" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_estado" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="cd_estado" Type="String" Nullable="false" />
     <Property Name="nm_estado" Type="String" Nullable="false" />
     <NavigationProperty Name="pais" Relationship="imobappModel.estado_ibfk_1" FromRole="estado" ToRole="pais" />
@@ -155,7 +155,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_item" Type="String" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_5" FromRole="estadoimovel" ToRole="imovel" />
   </EntityType>
@@ -163,7 +163,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_item" Type="String" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_2" FromRole="finalidade" ToRole="imovel" />
   </EntityType>
@@ -171,7 +171,7 @@
     <Key>
       <PropertyRef Name="id_imagem" />
     </Key>
-    <Property Name="id_imagem" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_imagem" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_imagem_cripto" Type="String" Nullable="false" />
     <Property Name="ds_imagem" Type="String" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imagem_ibfk_1" FromRole="imagem" ToRole="imovel" />
@@ -181,7 +181,7 @@
     <Key>
       <PropertyRef Name="id_imovel" />
     </Key>
-    <Property Name="id_imovel" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_imovel" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_padrao" Type="String" />
     <Property Name="ds_endereco" Type="String" Nullable="false" />
     <Property Name="ds_numero_endereco" Type="String" Nullable="false" />
@@ -227,7 +227,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovelintima" FromRole="intima" ToRole="imovel" />
   </EntityType>
@@ -235,7 +235,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovellazer" FromRole="lazer" ToRole="imovel" />
   </EntityType>
@@ -243,7 +243,7 @@
     <Key>
       <PropertyRef Name="id_municipio" />
     </Key>
-    <Property Name="id_municipio" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_municipio" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="nm_municipio" Type="String" Nullable="false" />
     <NavigationProperty Name="bairro" Relationship="imobappModel.bairro_ibfk_1" FromRole="municipio" ToRole="bairro" />
     <NavigationProperty Name="estado" Relationship="imobappModel.municipio_ibfk_1" FromRole="municipio" ToRole="estado" />
@@ -252,7 +252,7 @@
     <Key>
       <PropertyRef Name="id_pais" />
     </Key>
-    <Property Name="id_pais" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_pais" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="cd_pais" Type="String" Nullable="false" />
     <Property Name="nm_pais" Type="String" Nullable="false" />
     <NavigationProperty Name="estado" Relationship="imobappModel.estado_ibfk_1" FromRole="pais" ToRole="estado" />
@@ -261,7 +261,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_item" Type="String" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_7" FromRole="posicaoimovel" ToRole="imovel" />
   </EntityType>
@@ -269,7 +269,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovelservico" FromRole="servico" ToRole="imovel" />
   </EntityType>
@@ -277,7 +277,7 @@
     <Key>
       <PropertyRef Name="id_slider" />
     </Key>
-    <Property Name="id_slider" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_slider" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_path_imagem" Type="String" Nullable="false" />
     <Property Name="ds_texto1" Type="String" Nullable="false" />
     <Property Name="ds_texto2" Type="String" Nullable="false" />
@@ -287,7 +287,7 @@
     <Key>
       <PropertyRef Name="id" />
     </Key>
-    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="ds_item" Type="String" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovelsocial" FromRole="social" ToRole="imovel" />
   </EntityType>
@@ -295,7 +295,7 @@
     <Key>
       <PropertyRef Name="id_usuario" />
     </Key>
-    <Property Name="id_usuario" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_usuario" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Name="nm_usuario" Type="String" Nullable="false" />
     <Property Name="cd_cpf" Type="String" />
     <Property Name="cd_creci" Type="String" Nullable="false" />

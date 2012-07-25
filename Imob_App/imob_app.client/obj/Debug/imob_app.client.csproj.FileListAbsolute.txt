@@ -18,3 +18,5 @@ C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\imob_
 C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\imob_app.dao.pdb
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\imob_app.entidades.dll
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\imob_app.entidades.pdb
+C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\imob_app.entidades.dll
+C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\imob_app.entidades.pdb

@@ -11,8 +11,10 @@ namespace imob_app.entidades
     {
         //private EntityCollection<dao.imagem> imagens;
 
-        public string Categoria { get; set; }
         public int Referencia { get; set; }
+        public string Categoria { get; set; }
+        public int? Dormitorio { get; set; }
+        public int? Suite { get; set; }
         public string Bairro { get; set; }
         public string Municipio { get; set; }
         public string Estado { get; set; }
@@ -35,6 +37,6 @@ namespace imob_app.entidades
         //        this.IdFotoPrincipal = imagem != null ? imagem.id_imagem : 1;                 
         //    }
         //}
-        public int IdFotoPrincipal { get; set; }
+//        public int IdFotoPrincipal { get; set; }
     }
 }

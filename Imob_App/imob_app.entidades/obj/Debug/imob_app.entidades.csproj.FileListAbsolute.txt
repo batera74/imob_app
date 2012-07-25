@@ -5,3 +5,10 @@ C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\bin\Deb
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\obj\Debug\imob_app.entidades.dll
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\obj\Debug\imob_app.entidades.pdb
+C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\bin\Debug\imob_app.entidades.dll
+C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\bin\Debug\imob_app.entidades.pdb
+C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\bin\Debug\imob_app.dao.dll
+C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\bin\Debug\imob_app.dao.pdb
+C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\obj\Debug\imob_app.entidades.dll
+C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\obj\Debug\imob_app.entidades.pdb

@@ -235,7 +235,8 @@ namespace imob_app.client.controls
         protected void dListItems_ItemDataBound(object sender, DataListItemEventArgs e)
         {
             Image img = (Image)e.Item.FindControl("Image2");
-
+            dao.imagem imagem = ((ImovelResultado)e.Item.DataItem).Imagens.FirstOrDefault(i => i.ic_principal == true);
+            img.ImageUrl = "../Imagem.ashx?idFoto=" + (imagem != null ? imagem.id_imagem : 1);
             try
             {
                 if (img.ImageUrl.Equals("") || img.ImageUrl == null)

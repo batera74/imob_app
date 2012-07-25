@@ -19,8 +19,10 @@ namespace imob_app.business
             var teste = from imov in ctx.imovel
                         select new entidades.ImovelResultado()
                         {
-                            Categoria = imov.categoria.ds_item,
                             Referencia = imov.id_imovel,
+                            Categoria = imov.categoria.ds_item,                            
+                            Dormitorio = imov.dormitorio.ds_item,
+                            Suite = imov.qt_suite,
                             Bairro = imov.bairro.nm_bairro,
                             Municipio = imov.bairro.municipio.nm_municipio,
                             Estado = imov.bairro.municipio.estado.cd_estado,
@@ -44,7 +46,7 @@ namespace imob_app.business
             foreach (ImovelResultado item in imoveis)
             {
                 dao.imagem img = item.Imagens.FirstOrDefault(p => p.ic_principal == true);
-                item.IdFotoPrincipal = img != null ? img.id_imagem : 1;
+                //item.IdFotoPrincipal = img != null ? img.id_imagem : 1;
             }
         }
 

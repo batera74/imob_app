@@ -158,8 +158,7 @@ CREATE TABLE IF NOT EXISTS `Imovel` (
  FOREIGN KEY (id_finalidade) REFERENCES Finalidade(id),
  FOREIGN KEY (id_categoria) REFERENCES Categoria(id),
  FOREIGN KEY (id_bairro) REFERENCES Bairro(id_bairro),
- FOREIGN KEY (id_estado_imovel) REFERENCES EstadoImovel(id),
- FOREIGN KEY (id_dormitorio) REFERENCES Dormitorio(id),   
+ FOREIGN KEY (id_estado_imovel) REFERENCES EstadoImovel(id), 
  FOREIGN KEY (id_posicao_imovel) REFERENCES PosicaoImovel(id)
              
 );
