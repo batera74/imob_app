@@ -7,11 +7,11 @@ using imob_app.business.Contratos;
 
 namespace imob_app.business
 {
-    public class Combo
+    public static class Combo<T>
     {
-        public void CarregarCombo(ref DropDownList ddl, IEntidade entidade, string textField, string valueField, string primeiroItem)
+        public static void CarregarCombo(ref DropDownList ddl, IEntidade<T> entidade, string textField, string valueField, string primeiroItem)
         {
-            IEntidade _entidade = entidade;
+            IEntidade<T> _entidade = entidade;
             ddl.Items.Clear();
             ddl.Items.Add(new ListItem(primeiroItem, ""));
             ddl.AppendDataBoundItems = true;
@@ -21,9 +21,9 @@ namespace imob_app.business
             ddl.DataBind();
         }
 
-        public void CarregarCombo(ref DropDownList ddl, IEntidadeLocalizacao entidade, string textField, string valueField, string primeiroItem, int idEntidadeReferencia)
+        public static void CarregarCombo(ref DropDownList ddl, IEntidadeLocalizacao<T> entidade, string textField, string valueField, string primeiroItem, int idEntidadeReferencia)
         {
-            IEntidadeLocalizacao _entidade = entidade;
+            IEntidadeLocalizacao<T> _entidade = entidade;
             ddl.Items.Clear();
             ddl.Items.Add(new ListItem(primeiroItem, ""));
             ddl.AppendDataBoundItems = true;

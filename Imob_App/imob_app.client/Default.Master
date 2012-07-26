@@ -88,7 +88,7 @@
                             onfocus="if(this.value=='Ex Código: 598752      Ex Nome: Edifício Guanumbis      Ex Endereço: Vila Olímpia - São Paulo'){this.value=''}"
                             value="Ex Código: 598752      Ex Nome: Edifício Guanumbis      Ex Endereço: Vila Olímpia - São Paulo"
                             name="search" ID="txtPesquisa"></asp:TextBox>
-                        <a class="btn">Pesquisar</a>
+                        <asp:LinkButton CssClass="btn" ID="lnkPesquisa" runat="server">Pesquisar</asp:LinkButton>
                     </div>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                         <span class="text-form fleft">Características:</span>
                         <asp:DropDownList ID="ddlDormitorios" runat="server" Style="width: 130px">
                         </asp:DropDownList>
-                        <asp:DropDownList ID="ddlTipo" runat="server" Style="width: 170px">
+                        <asp:DropDownList ID="ddlCategoria" runat="server" Style="width: 170px">
                         </asp:DropDownList>
                     </div>
                     <br />
@@ -132,7 +132,8 @@
                             name="valor2"></asp:TextBox>
                     </div>
                     <div class="fright" style="margin-top: 15px;">
-                        <asp:HyperLink class="btn" ID="hlkPesquisar" runat="server">Pesquisar</asp:HyperLink>
+                        <asp:LinkButton CssClass="btn" ID="lnkPesquisarAvancado" runat="server" 
+                            onclick="lnkPesquisarAvancado_Click">Pesquisar</asp:LinkButton>                        
                     </div>
                 </div>
             </div>

@@ -9,21 +9,20 @@ using imob_app.business.Contratos;
 
 namespace imob_app.business
 {
-    public class Estado : IEntidadeLocalizacao
+    public class Estado : IEntidadeLocalizacao<dao.estado>
     {
-        public IEnumerable SelecionarTodos()
+        public List<dao.estado> SelecionarTodos()
         {
             var ctx = new imobappEntities();
-            List<estado> consulta = (from a in ctx.estado select a).ToList();
-            return consulta;
+            return (from a in ctx.estado select a).ToList();            
         }
 
-        public IEnumerable Selecionar(int id)
+        public List<dao.estado> Selecionar(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable SelecionarPorReferencia(short id)
+        public List<dao.estado> SelecionarPorReferencia(short id)
         {
             throw new NotImplementedException();
         }

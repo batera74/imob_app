@@ -54,7 +54,7 @@
     <Compile Include="Imovel.cs" />
     <Compile Include="Municipio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tipo.cs" />
+    <Compile Include="Categoria.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\imob_app.dao\imob_app.dao.csproj">

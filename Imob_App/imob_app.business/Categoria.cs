@@ -9,16 +9,15 @@ using imob_app.business.Contratos;
 
 namespace imob_app.business
 {
-    public class Tipo : IEntidade
+    public class Categoria : IEntidade<dao.categoria>
     {
-        public IEnumerable SelecionarTodos()
+        public List<dao.categoria> SelecionarTodos()
         {
             var ctx = new imobappEntities();
-            List<categoria> consulta = (from a in ctx.categoria select a).ToList();
-            return consulta;
+            return (from a in ctx.categoria select a).ToList();
         }
 
-        public IEnumerable Selecionar(int id)
+        public List<dao.categoria> Selecionar(int id)
         {
             throw new NotImplementedException();
         }

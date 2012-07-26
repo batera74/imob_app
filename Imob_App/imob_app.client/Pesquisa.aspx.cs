@@ -12,10 +12,8 @@ namespace imob_app.client
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            business.Imovel imovel = new business.Imovel();
-            List<entidades.ImovelResultado> lista = imovel.SelecionarTodos().OfType<entidades.ImovelResultado>().ToList();
-            //imovel.PreencherIdFotoPrincipal(lista);
-            imoveis.DataSource = lista;
+            business.Imovel imov = new business.Imovel();            
+            imoveis.DataSource = imov.SelecionarTodos();
         }
     }
 }

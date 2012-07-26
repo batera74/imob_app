@@ -9,25 +9,24 @@ using imob_app.business.Contratos;
 
 namespace imob_app.business
 {
-    public class Municipio : IEntidadeLocalizacao
+    public class Municipio : IEntidadeLocalizacao<dao.municipio>
     {
-        public IEnumerable SelecionarTodos()
+        public List<dao.municipio> SelecionarTodos()
         {
             var ctx = new imobappEntities();
-            List<municipio> consulta = (from a in ctx.municipio select a).ToList();
-            return consulta;
+            return (from a in ctx.municipio select a).ToList();
+            
         }
 
-        public IEnumerable Selecionar(int id)
+        public List<dao.municipio> Selecionar(int id)
         {
             throw new NotImplementedException();
         }
 
-        public IEnumerable SelecionarPorReferencia(short id)
+        public List<dao.municipio> SelecionarPorReferencia(short id)
         {
             var ctx = new imobappEntities();
-            List<municipio> consulta = (from a in ctx.municipio where a.estado.id_estado == id select a).ToList();
-            return consulta;
+            return (from a in ctx.municipio where a.estado.id_estado == id select a).ToList();            
         }
     }
 }

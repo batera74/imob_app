@@ -9,9 +9,9 @@ using System.Collections;
 
 namespace imob_app.business.Contratos
 {
-    public interface IEntidade
+    public interface IEntidade<T>
     {
-        IEnumerable SelecionarTodos();
-        IEnumerable Selecionar(int id);
+        List<T> SelecionarTodos();
+        List<T> Selecionar(int id);
     }
 }

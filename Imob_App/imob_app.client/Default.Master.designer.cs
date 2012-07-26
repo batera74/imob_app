@@ -49,6 +49,15 @@ namespace imob_app.client {
         protected global::System.Web.UI.WebControls.TextBox txtPesquisa;
         
         /// <summary>
+        /// lnkPesquisa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkPesquisa;
+        
+        /// <summary>
         /// UpdatePanel1 control.
         /// </summary>
         /// <remarks>
@@ -94,13 +103,13 @@ namespace imob_app.client {
         protected global::System.Web.UI.WebControls.DropDownList ddlDormitorios;
         
         /// <summary>
-        /// ddlTipo control.
+        /// ddlCategoria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlTipo;
+        protected global::System.Web.UI.WebControls.DropDownList ddlCategoria;
         
         /// <summary>
         /// txtValorDe control.
@@ -121,13 +130,13 @@ namespace imob_app.client {
         protected global::System.Web.UI.WebControls.TextBox txtValorAte;
         
         /// <summary>
-        /// hlkPesquisar control.
+        /// lnkPesquisarAvancado control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hlkPesquisar;
+        protected global::System.Web.UI.WebControls.LinkButton lnkPesquisarAvancado;
         
         /// <summary>
         /// conteudo control.

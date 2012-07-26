@@ -18,26 +18,38 @@ namespace imob_app.client
 
         private void CarregarCombosPesquisa()
         {
-            business.Combo combo = new business.Combo();
-            combo.CarregarCombo(ref ddlUF, new business.Estado(), "cd_estado", "id_estado", "UF *");
-            combo.CarregarCombo(ref ddlMunicipio, new business.Municipio(), "nm_municipio", "id_municipio", "Município *");
-            combo.CarregarCombo(ref ddlBairro, new business.Bairro(), "nm_bairro", "id_bairro", "Bairro *");
-            combo.CarregarCombo(ref ddlDormitorios, new business.Dormitorio(), "ds_item", "id", "Dormitorios *");
-            combo.CarregarCombo(ref ddlTipo, new business.Tipo(), "ds_item", "id", "Tipo *");
+            
+            business.Combo<dao.estado>.CarregarCombo(ref ddlUF, new business.Estado(), "cd_estado", "id_estado", "UF *");
+            business.Combo<dao.municipio>.CarregarCombo(ref ddlMunicipio, new business.Municipio(), "nm_municipio", "id_municipio", "Município *");
+            business.Combo<dao.bairro>.CarregarCombo(ref ddlBairro, new business.Bairro(), "nm_bairro", "id_bairro", "Bairro *");
+            business.Combo<dao.dormitorio>.CarregarCombo(ref ddlDormitorios, new business.Dormitorio(), "ds_item", "id", "Dormitorios *");
+            business.Combo<dao.categoria>.CarregarCombo(ref ddlCategoria, new business.Categoria(), "ds_item", "id", "Tipo *");
         }
 
         protected void ddlUF_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            business.Combo combo = new business.Combo();
-            combo.CarregarCombo(ref ddlMunicipio, new business.Municipio(),
+        {            
+            business.Combo<dao.municipio>.CarregarCombo(ref ddlMunicipio, new business.Municipio(),
                 "nm_municipio", "id_municipio", "Municipio *", Convert.ToInt16(ddlUF.SelectedValue));
         }
 
         protected void ddlMunicipio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            business.Combo combo = new business.Combo();
-            combo.CarregarCombo(ref ddlBairro, new business.Bairro(),
+        {            
+            business.Combo<dao.bairro>.CarregarCombo(ref ddlBairro, new business.Bairro(),
                 "nm_bairro", "id_bairro", "Bairro *", Convert.ToInt16(ddlMunicipio.SelectedValue));
+        }
+
+        protected void lnkPesquisarAvancado_Click(object sender, EventArgs e)
+        {
+            bool localizacaoCompleto, caracteristicasCompleto, valoresCompleto = false;
+
+            if (ddlBairro.SelectedIndex > 0)
+                localizacaoCompleto = true;
+
+            if (ddlDormitorios.SelectedIndex > 0 && ddlCategoria.SelectedIndex > 0)
+                caracteristicasCompleto = true;
+
+            if (!txtValorDe.Text.Equals(String.Empty) && !txtValorAte.Text.Equals(String.Empty))
+                valoresCompleto = true;
         }
     }
 }

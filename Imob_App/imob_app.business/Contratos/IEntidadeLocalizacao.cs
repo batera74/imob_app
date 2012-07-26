@@ -9,8 +9,8 @@ using System.Collections;
 
 namespace imob_app.business.Contratos
 {
-    public interface IEntidadeLocalizacao : IEntidade
+    public interface IEntidadeLocalizacao<T> : IEntidade<T>
     {
-        IEnumerable SelecionarPorReferencia(short id);
+        List<T> SelecionarPorReferencia(short id);
     }
 }

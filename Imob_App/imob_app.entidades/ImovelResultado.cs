@@ -9,8 +9,6 @@ namespace imob_app.entidades
 {
     public class ImovelResultado
     {
-        //private EntityCollection<dao.imagem> imagens;
-
         public int Referencia { get; set; }
         public string Categoria { get; set; }
         public int? Dormitorio { get; set; }
@@ -23,20 +21,30 @@ namespace imob_app.entidades
         public string EstadoImovel { get; set; }
         public decimal Valor { get; set; }
         public EntityCollection<imagem> Imagens { get; set; }
-        //{
-        //    get
-        //    {
-        //        imagem imagem = imagens.FirstOrDefault(i => i.ic_principal == true);
-        //        this.IdFotoPrincipal = imagem != null ? imagem.id_imagem : 1;
-        //        return imagens;                
-        //    }
-        //    set 
-        //    {
-        //        imagens = value;
-        //        imagem imagem = imagens.FirstOrDefault(i => i.ic_principal == true);
-        //        this.IdFotoPrincipal = imagem != null ? imagem.id_imagem : 1;                 
-        //    }
-        //}
-//        public int IdFotoPrincipal { get; set; }
+        
+        public ImovelResultado()
+        {
+        }
+
+        public ImovelResultado(dao.imovel imov)
+        {            
+            Referencia = imov.id_imovel;
+            Categoria = imov.categoria.ds_item;
+            Dormitorio = imov.dormitorio.ds_item;
+            Suite = imov.qt_suite;
+            Bairro = imov.bairro.nm_bairro;
+            Municipio = imov.bairro.municipio.nm_municipio;
+            Estado = imov.bairro.municipio.estado.cd_estado;
+            AreaTotal = imov.vl_area_total;
+            AreaUtil = imov.vl_area_util;
+            EstadoImovel = imov.estadoimovel.ds_item;
+            Valor = imov.vl_imovel;
+            Imagens = imov.imagem;
+        }
+
+        public ImovelResultado Converter(dao.imovel imovel)
+        {
+            return new ImovelResultado(imovel);
+        }
     }
 }
