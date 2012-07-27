@@ -13,6 +13,24 @@ namespace imob_app.client.controls {
     public partial class ImovelRepeater {
         
         /// <summary>
+        /// lblEncontrados1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblEncontrados1;
+        
+        /// <summary>
+        /// lblPaginas1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPaginas1;
+        
+        /// <summary>
         /// lbtnFirst1 control.
         /// </summary>
         /// <remarks>
@@ -121,12 +139,21 @@ namespace imob_app.client.controls {
         protected global::System.Web.UI.WebControls.ImageButton lbtnLast;
         
         /// <summary>
-        /// lblPageInfo control.
+        /// lblEncontrados2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPageInfo;
+        protected global::System.Web.UI.WebControls.Label lblEncontrados2;
+        
+        /// <summary>
+        /// lblPaginas2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPaginas2;
     }
 }

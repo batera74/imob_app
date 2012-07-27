@@ -5,9 +5,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="conteudo" runat="server">
-    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-        <ContentTemplate>
-            <rpt:Imovel runat="server" ID="imoveis" TotalRegistros="6" />
-        </ContentTemplate>
-    </asp:UpdatePanel>
+    <h7 class="head-1"><strong>Resultados da Pesquisa</strong></h7>
+    <h8><asp:Label runat="server" ID="lblFiltros"></asp:Label></h8>
+    <rpt:Imovel runat="server" ID="imoveis" TotalRegistros="6" />
 </asp:Content>

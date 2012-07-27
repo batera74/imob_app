@@ -188,5 +188,54 @@ namespace imob_app.business
                         Imagens = imov.imagem
                     }).ToList();
         }
+
+        public List<entidades.ImovelResultado> Selecionar(dao.bairro bairro, dao.dormitorio dormitorio, dao.categoria categoria)
+        {
+            return (from imov in _ctx.imovel
+                    where imov.bairro.id_bairro == bairro.id_bairro
+                    && imov.dormitorio.id == dormitorio.id
+                    && imov.categoria.id == categoria.id
+                    select new entidades.ImovelResultado()
+                    {
+                        Referencia = imov.id_imovel,
+                        Categoria = imov.categoria.ds_item,
+                        Dormitorio = imov.dormitorio.ds_item,
+                        Suite = imov.qt_suite,
+                        Bairro = imov.bairro.nm_bairro,
+                        Municipio = imov.bairro.municipio.nm_municipio,
+                        Estado = imov.bairro.municipio.estado.cd_estado,
+                        AreaTotal = imov.vl_area_total,
+                        AreaUtil = imov.vl_area_util,
+                        EstadoImovel = imov.estadoimovel.ds_item,
+                        Valor = imov.vl_imovel,
+                        Imagens = imov.imagem
+                    }).ToList();
+        }        
+
+        public List<entidades.ImovelResultado> Selecionar(dao.bairro bairro, dao.dormitorio dormitorio, dao.categoria categoria,
+                                                          decimal valorDe, decimal valorAte)
+        {
+            return (from imov in _ctx.imovel
+                    where imov.bairro.id_bairro == bairro.id_bairro
+                    && imov.dormitorio.id == dormitorio.id
+                    && imov.categoria.id == categoria.id
+                    && imov.vl_imovel > valorDe
+                    && imov.vl_imovel < valorAte
+                    select new entidades.ImovelResultado()
+                    {
+                        Referencia = imov.id_imovel,
+                        Categoria = imov.categoria.ds_item,
+                        Dormitorio = imov.dormitorio.ds_item,
+                        Suite = imov.qt_suite,
+                        Bairro = imov.bairro.nm_bairro,
+                        Municipio = imov.bairro.municipio.nm_municipio,
+                        Estado = imov.bairro.municipio.estado.cd_estado,
+                        AreaTotal = imov.vl_area_total,
+                        AreaUtil = imov.vl_area_util,
+                        EstadoImovel = imov.estadoimovel.ds_item,
+                        Valor = imov.vl_imovel,
+                        Imagens = imov.imagem
+                    }).ToList();
+        }
     }
 }

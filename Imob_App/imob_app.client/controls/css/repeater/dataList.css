@@ -4,7 +4,7 @@
 table.principal
 {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 table.item
@@ -51,7 +51,8 @@ table.sample td {
 {
     width: 100%;
     text-align: center;
-    font-size: 15px;
+    font-weight: bold;
+    font-size: 16px;
     text-transform: uppercase;    
     color: #f45c40;
 }

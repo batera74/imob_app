@@ -1,6 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ImovelRepeater.ascx.cs"
     Inherits="imob_app.client.controls.ImovelRepeater" %>
-<link href="../controls/css/repeater/dataList.css" rel="stylesheet" type="text/css" />
 <table class="principal">
     <tr>
         <td>
@@ -8,6 +7,13 @@
                 <tr>
                     <td align="center">
                         <table>
+                            <tr align="center">
+                                <td colspan="5" align="center" style="height: 30px" valign="top">
+                                    <asp:Label ID="lblEncontrados1" runat="server" Font-Names="Calibri" Font-Size="Small"></asp:Label>
+                                    <br />
+                                    <asp:Label ID="lblPaginas1" runat="server" Font-Names="Calibri" Font-Size="X-Small"></asp:Label>
+                                </td>
+                            </tr>
                             <tr>
                                 <td>
                                     <asp:ImageButton ID="lbtnFirst1" runat="server" ImageUrl="images/repeater/prev.png"
@@ -21,7 +27,7 @@
                                         ForeColor="#333333">
                                         <ItemTemplate>
                                             <asp:LinkButton ID="lnkbtnPaging" runat="server" CommandArgument='<%# Eval("PageIndex") %>'
-                                                CommandName="Paging" Text='<%# Eval("PageText") %>' ForeColor="#333333"></asp:LinkButton>&nbsp;
+                                                CommandName="Paging" Text='<%# Eval("PageText") %>' ForeColor="#333333" Font-Size="Small"></asp:LinkButton>&nbsp;
                                         </ItemTemplate>
                                     </asp:DataList>
                                 </td>
@@ -49,12 +55,14 @@
                                     <tr>
                                         <td>
                                             <a href="../DetalhesImovel.aspx?Imovel=<%# Eval("Referencia") %>">
-                                                <asp:Image Style="border: 0px;" ID="Image2" runat="server" Height="131px" Width="200px"/></a>
+                                                <asp:Image Style="border: 0px;" ID="Image2" runat="server" Height="131px" Width="200px" /></a>
                                         </td>
                                     </tr>
                                 </table>
                                 <div class="texto">
                                     <asp:Label ID="lblCategoria" runat="server" CssClass="categoria" Text='<%# Eval("Categoria") %>'></asp:Label>
+                                    <br />
+                                    <asp:Label ID="lblDormitorios" runat="server" Font-Size="Small" Text='<%# Eval("Dormitorio", "{0} dorm(s)")+" - "+Eval("Suite", "{0} suíte(s)") %>'></asp:Label>
                                     <br />
                                     <asp:Label ID="lblReferencia" runat="server" Font-Size="Small" Text='<%# Eval("Referencia", "Referencia: {0}") %>'></asp:Label>
                                     <br />
@@ -122,7 +130,9 @@
                             </tr>
                             <tr align="center">
                                 <td colspan="5" align="center" style="height: 30px" valign="top">
-                                    <asp:Label ID="lblPageInfo" runat="server" Font-Names="Calibri" Font-Size="Small"></asp:Label>
+                                    <asp:Label ID="lblEncontrados2" runat="server" Font-Names="Calibri" Font-Size="Small"></asp:Label>
+                                    <br />
+                                    <asp:Label ID="lblPaginas2" runat="server" Font-Names="Calibri" Font-Size="X-Small"></asp:Label>
                                 </td>
                             </tr>
                         </table>

@@ -40,16 +40,13 @@ namespace imob_app.client
 
         protected void lnkPesquisarAvancado_Click(object sender, EventArgs e)
         {
-            bool localizacaoCompleto, caracteristicasCompleto, valoresCompleto = false;
-
-            if (ddlBairro.SelectedIndex > 0)
-                localizacaoCompleto = true;
-
-            if (ddlDormitorios.SelectedIndex > 0 && ddlCategoria.SelectedIndex > 0)
-                caracteristicasCompleto = true;
-
-            if (!txtValorDe.Text.Equals(String.Empty) && !txtValorAte.Text.Equals(String.Empty))
-                valoresCompleto = true;
+            Response.Redirect("Pesquisa.aspx?estado=" + ddlUF.SelectedValue
+                + "&municipio=" + ddlMunicipio.SelectedValue
+                + "&bairro=" + ddlBairro.SelectedValue
+                + "&dormitorios=" + ddlDormitorios.SelectedValue
+                + "&categoria=" + ddlCategoria.SelectedValue
+                + "&valorDe=" + txtValorDe.Text
+                + "&valorAte=" + txtValorAte.Text);
         }
     }
 }

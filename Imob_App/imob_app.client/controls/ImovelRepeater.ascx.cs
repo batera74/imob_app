@@ -106,7 +106,10 @@ namespace imob_app.client.controls
                 _PageDataSource.CurrentPageIndex = CurrentPage;
                 ViewState["TotalPages"] = _PageDataSource.PageCount;
 
-                this.lblPageInfo.Text = "Página " + (CurrentPage + 1) + " de " + _PageDataSource.PageCount;
+                this.lblEncontrados1.Text = _PageDataSource.DataSourceCount + " imóveis encontrados";
+                this.lblPaginas1.Text = "Página " + (CurrentPage + 1) + " de " + _PageDataSource.PageCount;
+                this.lblEncontrados2.Text = _PageDataSource.DataSourceCount + " imóveis encontrados";
+                this.lblPaginas2.Text = "Página " + (CurrentPage + 1) + " de " + _PageDataSource.PageCount;
                 this.lbtnPrevious.Enabled = !_PageDataSource.IsFirstPage;
                 this.lbtnNext.Enabled = !_PageDataSource.IsLastPage;
                 this.lbtnFirst.Enabled = !_PageDataSource.IsFirstPage;
@@ -122,7 +125,10 @@ namespace imob_app.client.controls
             }
             else
             {
-                this.lblPageInfo.Visible = this.lblPageInfo.Enabled = false;
+                this.lblEncontrados1.Visible = this.lblEncontrados1.Enabled = false;
+                this.lblEncontrados2.Visible = this.lblEncontrados2.Enabled = false;
+                this.lblPaginas1.Visible = this.lblPaginas1.Enabled = false;
+                this.lblPaginas2.Visible = this.lblPaginas2.Enabled = false;
                 this.lbtnPrevious.Visible = this.lbtnPrevious.Enabled = false;
                 this.lbtnNext.Visible = this.lbtnNext.Enabled = false;
                 this.lbtnFirst.Visible = this.lbtnFirst.Enabled = false;
