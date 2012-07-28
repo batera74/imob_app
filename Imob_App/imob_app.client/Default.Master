@@ -59,18 +59,18 @@
         </div>
         <nav>
         	<ul class="sf-menu">
-            	<li class="current"><a href="index.html">Home</a></li>
-                <li><a href="index-1.html">TheDealers</a>
+            	<li class="current"><a href="Default.aspx">Home</a></li>
+                <li><a href="#">TheDealers</a>
                 	<ul>
-                    	<li><a href="more.html">Link 1</a></li>
-                        <li><a href="more.html">Link 2</a></li>
-                        <li><a href="more.html">Linke 3</a></li>
+                    	<li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Linke 3</a></li>
                     </ul>
                 </li>
-                <li><a href="index-2.html">Meus Imóveis</a></li>
-                <li><a href="index-3.html">Notícias</a></li>
-                <li><a href="index-4.html">Salão Virtual</a></li>
-                <li><a href="index-6.html">Galeria</a></li>
+                <li><a href="#">Meus Imóveis</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Salão Virtual</a></li>
+                <li><a href="#">Galeria</a></li>
             </ul>
         </nav>
     </header>

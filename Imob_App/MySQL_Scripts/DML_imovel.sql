@@ -1,7 +1,33 @@
 USE ImobApp;
 
-
-INSERT INTO Imovel VALUES
+INSERT INTO imovel VALUES
+(1, 1, 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
+1, 3, 1, 1, '2', 'Orion', 1, 80000, 70000, 110, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'), 
+(2, 1, 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
+1, 2, 0, 1, '2', 'Trip', 1, 300000, 282000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
+(3, 1, 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
+1, 2, 0, 1, '2', 'Trip', 1, 200000, 184000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
+(4, 1, 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
+1, 3, 1, 1, '2', 'Orion', 1, 80000, 70000, 110, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'), 
+(5, 1, 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
+1, 2, 0, 1, '2', 'Trip', 1, 300000, 282000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
+(6, 1, 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
+1, 2, 0, 1, '2', 'Trip', 1, 200000, 184000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
 (7, 1, 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
-1, 3, 1, 1, '2', 'Orion', 1, 80000, 70000, 110, 300, 1, NULL, 1, 1, 'Portaria',60, 75,
-1, 1, '2011-10-10');
+1, 3, 1, 1, '2', 'Orion', 1, 80000, 70000, 110, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'), 
+(8, 1, 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
+1, 2, 0, 1, '2', 'Trip', 1, 300000, 282000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
+(9, 1, 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
+1, 2, 0, 1, '2', 'Trip', 1, 200000, 184000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
+(10, 1, 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
+1, 3, 1, 1, '2', 'Orion', 1, 80000, 70000, 110, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'), 
+(11, 1, 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
+1, 2, 0, 1, '2', 'Trip', 1, 300000, 282000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
+(12, 1, 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
+1, 2, 0, 1, '2', 'Trip', 1, 200000, 184000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
+(13, 1, 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
+1, 3, 1, 1, '2', 'Orion', 1, 80000, 70000, 110, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'), 
+(14, 1, 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
+1, 2, 0, 1, '2', 'Trip', 1, 300000, 282000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
+(15, 1, 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
+1, 2, 0, 1, '2', 'Trip', 1, 200000, 184000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10');

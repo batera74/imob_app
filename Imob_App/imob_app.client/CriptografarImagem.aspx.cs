@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Configuration;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -12,7 +13,7 @@ namespace imob_app.client
     public partial class CriptografarImagem : System.Web.UI.Page
     {
         //private const string Temp = @"C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\Imagens_Temp\";
-        private const string Temp = @"D:\BKP_ITG\Projetos\Microgen\ImobApp\Code\imob_app\Imob_App\Imagens_Temp\";
+        private static string Temp = ConfigurationManager.AppSettings["ImagesTempDir"];
 
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -156,7 +156,7 @@
                     	<input type="text" onBlur="if(this.value==''){this.value='E-Mail *'}" onFocus="if(this.value=='E-Mail *'){this.value=''}" value="E-Mail *" name="email">
                     </div>
                     <div class="row-2">
-                    	Voce deseja receber as novidades do site? *
+                    	Aceita receber informativos do site? *
                     </div>
                     <div class="row-3">
                     	<div class="col-1">

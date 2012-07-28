@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,14 +13,20 @@ namespace imob_app.client
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            int estado = Convert.ToInt32(Request.QueryString["estado"]);
-            int municipio = Convert.ToInt32(Request.QueryString["municipio"]);
-            int bairro = Convert.ToInt32(Request.QueryString["bairro"]);
-            int dormitorio = Convert.ToInt32(Request.QueryString["dormitorios"]);
-            int categoria = Convert.ToInt32(Request.QueryString["categoria"]);
+            int result;
+
+            int estado = (Int32.TryParse(Request.QueryString["estado"], out result)?result:0);
+            int municipio = (Int32.TryParse(Request.QueryString["municipio"], out result) ? result : 0);
+            int bairro = (Int32.TryParse(Request.QueryString["bairro"], out result) ? result : 0);
+            int dormitorio = (Int32.TryParse(Request.QueryString["dormitorios"], out result) ? result : 0);
+            int categoria = (Int32.TryParse(Request.QueryString["categoria"], out result) ? result : 0); 
+            
             decimal valorDe, valorAte;
-            bool result = Decimal.TryParse(Request.QueryString["valorDe"].ToString(), out valorDe);
-            bool result2 = Decimal.TryParse(Request.QueryString["valorDe"].ToString(), out valorAte);
+            NumberStyles style = NumberStyles.AllowDecimalPoint;
+            CultureInfo culture = CultureInfo.CreateSpecificCulture("pt-BR");
+            
+            Decimal.TryParse(Request.QueryString["valorDe"].ToString(), style, culture, out valorDe);
+            Decimal.TryParse(Request.QueryString["valorAte"].ToString(), style, culture, out valorAte);
 
             business.Imovel imov = new business.Imovel();
             imoveis.DataSource = Carregar(estado, municipio, bairro, dormitorio, categoria, valorDe, valorAte);
@@ -29,12 +36,16 @@ namespace imob_app.client
                                                         decimal valorDe, decimal valorAte)
         {
 
-            if (estado > 0 && municipio > 0 && bairro > 0)
-            {                
-                dao.bairro novoBairro = new dao.bairro() { id_bairro = (short)bairro };
-            }
+            //if (estado > 0 && municipio > 0 && bairro > 0)
+            //{                
+            //    dao.bairro novoBairro = new dao.bairro() { id_bairro = (short)bairro };
+            //}
 
-            return null;
+            //return null;
+
+            business.Imovel imov = new business.Imovel();            
+            return imov.SelecionarTodos();
+
         }
     }
 }

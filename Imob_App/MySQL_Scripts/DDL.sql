@@ -1,249 +1,249 @@
-DROP DATABASE IF EXISTS `ImobApp`;
-CREATE DATABASE IF NOT EXISTS `ImobApp`;
+drop database if exists `imobapp`;
+create database if not exists `imobapp`;
 
-USE `ImobApp`;
+use `imobapp`;
 
-DROP TABLE IF EXISTS `Usuario`;
-CREATE TABLE IF NOT EXISTS `Usuario` (
- `id_usuario` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `nm_usuario` VARCHAR(70) NOT NULL,
- `cd_cpf` CHAR(11) NULL,
- `cd_creci` VARCHAR(7) NOT NULL,
- `ds_login_facebook` VARCHAR(50) NULL,
- `ds_email` VARCHAR(50) NULL,
- `ds_password` VARCHAR(500),
- `ds_telefone1` VARCHAR(20) NULL,
- `ds_tipo_telefone_1` VARCHAR(40) NULL,
- `ds_telefone2` VARCHAR(20) NULL,
- `ds_tipo_telefone_2` VARCHAR(40) NULL
+drop table if exists `usuario`;
+create table if not exists `usuario` (
+ `id_usuario` smallint not null auto_increment primary key,
+ `nm_usuario` varchar(70) not null,
+ `cd_cpf` char(11) null,
+ `cd_creci` varchar(7) not null,
+ `ds_login_facebook` varchar(50) null,
+ `ds_email` varchar(50) null,
+ `ds_password` varchar(500),
+ `ds_telefone1` varchar(20) null,
+ `ds_tipo_telefone_1` varchar(40) null,
+ `ds_telefone2` varchar(20) null,
+ `ds_tipo_telefone_2` varchar(40) null
 );
 
-DROP TABLE IF EXISTS `Pais`;
-CREATE TABLE IF NOT EXISTS `Pais` (
- `id_pais` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `cd_pais`  CHAR(2) NOT NULL,
- `nm_pais`  VARCHAR(50) NOT NULL
+drop table if exists `pais`;
+create table if not exists `pais` (
+ `id_pais` smallint not null auto_increment primary key,
+ `cd_pais`  char(2) not null,
+ `nm_pais`  varchar(50) not null
 );
 
-DROP TABLE IF EXISTS `Estado`;
-CREATE TABLE IF NOT EXISTS `Estado` (
- `id_estado` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `id_pais` SMALLINT NOT NULL,
- `cd_estado` CHAR(2) NOT NULL ,
- `nm_estado` VARCHAR(45) NOT NULL,
- FOREIGN KEY (id_pais) REFERENCES Pais(id_pais)
+drop table if exists `estado`;
+create table if not exists `estado` (
+ `id_estado` smallint not null auto_increment primary key,
+ `id_pais` smallint not null,
+ `cd_estado` char(2) not null ,
+ `nm_estado` varchar(45) not null,
+ foreign key (id_pais) references pais(id_pais)
 );
 
-DROP TABLE IF EXISTS `Municipio`;
-CREATE TABLE IF NOT EXISTS `Municipio` (
- `id_municipio` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `id_estado` SMALLINT NOT NULL,
- `nm_municipio` VARCHAR(45) NOT NULL,
- FOREIGN KEY (id_estado) REFERENCES Estado(id_estado)   
+drop table if exists `municipio`;
+create table if not exists `municipio` (
+ `id_municipio` smallint not null auto_increment primary key,
+ `id_estado` smallint not null,
+ `nm_municipio` varchar(45) not null,
+ foreign key (id_estado) references estado(id_estado)   
 );
  
-DROP TABLE IF EXISTS `Bairro`;
-CREATE TABLE IF NOT EXISTS `Bairro` (
- `id_bairro` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `id_municipio` SMALLINT NOT NULL,
- `nm_bairro` VARCHAR(45) NOT NULL,
- FOREIGN KEY (id_municipio) REFERENCES Municipio(id_municipio)
+drop table if exists `bairro`;
+create table if not exists `bairro` (
+ `id_bairro` smallint not null auto_increment primary key,
+ `id_municipio` smallint not null,
+ `nm_bairro` varchar(45) not null,
+ foreign key (id_municipio) references municipio(id_municipio)
 );
 
 
-DROP TABLE IF EXISTS `Categoria`;
-CREATE TABLE IF NOT EXISTS `Categoria` (
- `id` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `ds_item` VARCHAR(40) NOT NULL
+drop table if exists `categoria`;
+create table if not exists `categoria` (
+ `id` smallint not null auto_increment primary key,
+ `ds_item` varchar(40) not null
 );
   
-DROP TABLE IF EXISTS `Dormitorio`;
-CREATE TABLE `Dormitorio` (
- `id` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `ds_item` SMALLINT NOT NULL
+drop table if exists `dormitorio`;
+create table `dormitorio` (
+ `id` smallint not null auto_increment primary key,
+ `ds_item` smallint not null
 );
 
-DROP TABLE IF EXISTS `Finalidade`;
-CREATE TABLE IF NOT EXISTS `Finalidade` (
- `id` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `ds_item` VARCHAR(40) NOT NULL
+drop table if exists `finalidade`;
+create table if not exists `finalidade` (
+ `id` smallint not null auto_increment primary key,
+ `ds_item` varchar(40) not null
 );
 
-DROP TABLE IF EXISTS `EstadoImovel`;
-CREATE TABLE IF NOT EXISTS `EstadoImovel` (
- `id` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `ds_item` VARCHAR(40) NOT NULL 
+drop table if exists `estadoimovel`;
+create table if not exists `estadoimovel` (
+ `id` smallint not null auto_increment primary key,
+ `ds_item` varchar(40) not null 
 );
 
-DROP TABLE IF EXISTS `PosicaoImovel`;
-CREATE TABLE IF NOT EXISTS `PosicaoImovel` (
- id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- ds_item VARCHAR(20) NOT NULL
+drop table if exists `posicaoimovel`;
+create table if not exists `posicaoimovel` (
+ id smallint not null auto_increment primary key,
+ ds_item varchar(20) not null
 );
 
-DROP TABLE IF EXISTS `Social`;
-CREATE TABLE IF NOT EXISTS `Social` (
- id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- ds_item VARCHAR(40) NULL
+drop table if exists `social`;
+create table if not exists `social` (
+ id smallint not null auto_increment primary key,
+ ds_item varchar(40) null
 );
 
-DROP TABLE IF EXISTS `Acabamento`;
-CREATE TABLE IF NOT EXISTS `Acabamento` (
- id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- ds_item VARCHAR(40) NULL
+drop table if exists `acabamento`;
+create table if not exists `acabamento` (
+ id smallint not null auto_increment primary key,
+ ds_item varchar(40) null
 );
 
-DROP TABLE IF EXISTS `Intima`;
-CREATE TABLE IF NOT EXISTS `Intima` (
- id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- ds_item VARCHAR(40) NULL
+drop table if exists `intima`;
+create table if not exists `intima` (
+ id smallint not null auto_increment primary key,
+ ds_item varchar(40) null
 );
 
-DROP TABLE IF EXISTS `Servico`;
-CREATE TABLE IF NOT EXISTS `Servico` (
- id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- ds_item VARCHAR(40) NULL
+drop table if exists `servico`;
+create table if not exists `servico` (
+ id smallint not null auto_increment primary key,
+ ds_item varchar(40) null
 );
 
-DROP TABLE IF EXISTS `Armario`;
-CREATE TABLE IF NOT EXISTS `Armario` (
- id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- ds_item VARCHAR(40) NULL
+drop table if exists `armario`;
+create table if not exists `armario` (
+ id smallint not null auto_increment primary key,
+ ds_item varchar(40) null
 );
 
-DROP TABLE IF EXISTS `Lazer`;
-CREATE TABLE IF NOT EXISTS `Lazer` (
- id SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- ds_item VARCHAR(40) NULL
+drop table if exists `lazer`;
+create table if not exists `lazer` (
+ id smallint not null auto_increment primary key,
+ ds_item varchar(40) null
 );
 
 
-DROP TABLE IF EXISTS `Imovel`;
-CREATE TABLE IF NOT EXISTS `Imovel` (
- `id_imovel` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
- `id_usuario` SMALLINT NOT NULL,
- `id_finalidade` SMALLINT NOT NULL,
- `id_categoria` SMALLINT NOT NULL,
- `ds_padrao` VARCHAR(50) NULL,
- `ds_endereco` VARCHAR(60) NOT NULL,
- `ds_numero_endereco` VARCHAR(10) NOT NULL,
- `ds_cep` CHAR(8) NULL,
- `ds_complemento` VARCHAR(20) NOT NULL,
- `id_bairro` SMALLINT NOT NULL,
- `ds_garagem` VARCHAR(30) NULL,
- `ds_portaria` VARCHAR(30) NULL,
- `ds_situacao` VARCHAR(60) NULL, 
- `id_estado_imovel` SMALLINT NOT NULL,
- `id_dormitorio` SMALLINT NULL,
- `qt_suite` SMALLINT NULL,
- `id_posicao_imovel` SMALLINT NULL,
- `ds_banheiro` VARCHAR(80) NULL,
- `nm_edificio` VARCHAR(40) NULL,
- `ic_financiamento` bit NULL,
- `vl_imovel` DECIMAL NOT NULL,
- `vl_sem_comissao` DECIMAL NOT NULL,
- `vl_iptu` DECIMAL NULL,
- `vl_condominio` DECIMAL NULL,
- `ic_vazio` bit NULL,
- `cd_registro` VARCHAR(20) NULL,
- `ic_documentacao` bit NULL,
- `ic_elevador` bit NULL,
- `ds_local_chaves` VARCHAR(40) NULL,
- `vl_area_util` DECIMAL NULL,
- `vl_area_total` DECIMAL NULL,
- `ic_destaque` bit NULL,
- `ic_ativo` bit NULL,
- `dt_post` date NOT NULL,
- FOREIGN KEY (id_usuario) REFERENCES Usuario(id_usuario),    
- FOREIGN KEY (id_finalidade) REFERENCES Finalidade(id),
- FOREIGN KEY (id_categoria) REFERENCES Categoria(id),
- FOREIGN KEY (id_bairro) REFERENCES Bairro(id_bairro),
- FOREIGN KEY (id_estado_imovel) REFERENCES EstadoImovel(id), 
- FOREIGN KEY (id_posicao_imovel) REFERENCES PosicaoImovel(id)
+drop table if exists `imovel`;
+create table if not exists `imovel` (
+ `id_imovel` smallint not null auto_increment primary key,
+ `id_usuario` smallint not null,
+ `id_finalidade` smallint not null,
+ `id_categoria` smallint not null,
+ `ds_padrao` varchar(50) null,
+ `ds_endereco` varchar(60) not null,
+ `ds_numero_endereco` varchar(10) not null,
+ `ds_cep` char(8) null,
+ `ds_complemento` varchar(20) not null,
+ `id_bairro` smallint not null,
+ `ds_garagem` varchar(30) null,
+ `ds_portaria` varchar(30) null,
+ `ds_situacao` varchar(60) null, 
+ `id_estado_imovel` smallint not null,
+ `id_dormitorio` smallint null,
+ `qt_suite` smallint null,
+ `id_posicao_imovel` smallint null,
+ `ds_banheiro` varchar(80) null,
+ `nm_edificio` varchar(40) null,
+ `ic_financiamento` bit null,
+ `vl_imovel` decimal not null,
+ `vl_sem_comissao` decimal not null,
+ `vl_iptu` decimal null,
+ `vl_condominio` decimal null,
+ `ic_vazio` bit null,
+ `cd_registro` varchar(20) null,
+ `ic_documentacao` bit null,
+ `ic_elevador` bit null,
+ `ds_local_chaves` varchar(40) null,
+ `vl_area_util` decimal null,
+ `vl_area_total` decimal null,
+ `ic_destaque` bit null,
+ `ic_ativo` bit null,
+ `dt_post` date not null,
+ foreign key (id_usuario) references usuario(id_usuario),    
+ foreign key (id_finalidade) references finalidade(id),
+ foreign key (id_categoria) references categoria(id),
+ foreign key (id_bairro) references bairro(id_bairro),
+ foreign key (id_estado_imovel) references estadoimovel(id), 
+ foreign key (id_posicao_imovel) references posicaoimovel(id)
              
 );
 
-DROP TABLE IF EXISTS `Imagem`;
-CREATE TABLE IF NOT EXISTS `Imagem` (
-  `id_imagem` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  `ds_imagem_cripto` LONGTEXT COLLATE latin1_general_ci NOT NULL,
-  `ds_imagem` VARCHAR(150) NOT NULL,
-  `id_imovel` SMALLINT NOT NULL,  
-  `ic_principal` BIT NOT NULL
+drop table if exists `imagem`;
+create table if not exists `imagem` (
+  `id_imagem` smallint not null auto_increment primary key,
+  `ds_imagem_cripto` longtext collate latin1_general_ci not null,
+  `ds_imagem` varchar(150) not null,
+  `id_imovel` smallint not null,  
+  `ic_principal` bit not null
 );
 
-DROP TABLE IF EXISTS `ImovelSocial`;
-CREATE TABLE IF NOT EXISTS `ImovelSocial` (
- `id_imovel` SMALLINT NOT NULL,
- `id_social` SMALLINT NOT NULL,
- PRIMARY KEY(id_imovel,id_social),
- FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_social) REFERENCES Social(id)
+drop table if exists `imovelsocial`;
+create table if not exists `imovelsocial` (
+ `id_imovel` smallint not null,
+ `id_social` smallint not null,
+ primary key(id_imovel,id_social),
+ foreign key (id_imovel) references imovel(id_imovel),
+ foreign key (id_social) references social(id)
 );
 
-DROP TABLE IF EXISTS `ImovelAcabamento`;
-CREATE TABLE IF NOT EXISTS `ImovelAcabamento` (
- `id_imovel` SMALLINT NOT NULL,
- `id_acabamento` SMALLINT NOT NULL,
- PRIMARY KEY(id_imovel,id_acabamento),
- FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_acabamento) REFERENCES Acabamento(id)
+drop table if exists `imovelacabamento`;
+create table if not exists `imovelacabamento` (
+ `id_imovel` smallint not null,
+ `id_acabamento` smallint not null,
+ primary key(id_imovel,id_acabamento),
+ foreign key (id_imovel) references imovel(id_imovel),
+ foreign key (id_acabamento) references acabamento(id)
 );
 
-DROP TABLE IF EXISTS `ImovelIntima`;
-CREATE TABLE IF NOT EXISTS `ImovelIntima` (
- `id_imovel` SMALLINT NOT NULL,
- `id_intima` SMALLINT NOT NULL,
- PRIMARY KEY(id_imovel,id_intima),
- FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_intima) REFERENCES Intima(id)
+drop table if exists `imovelintima`;
+create table if not exists `imovelintima` (
+ `id_imovel` smallint not null,
+ `id_intima` smallint not null,
+ primary key(id_imovel,id_intima),
+ foreign key (id_imovel) references imovel(id_imovel),
+ foreign key (id_intima) references intima(id)
 );
 
-DROP TABLE IF EXISTS `ImovelServico`;
-CREATE TABLE IF NOT EXISTS `ImovelServico` (
- `id_imovel` SMALLINT NOT NULL,
- `id_servico` SMALLINT NOT NULL,
- PRIMARY KEY(id_imovel,id_servico),
- FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_servico) REFERENCES Servico(id)
+drop table if exists `imovelservico`;
+create table if not exists `imovelservico` (
+ `id_imovel` smallint not null,
+ `id_servico` smallint not null,
+ primary key(id_imovel,id_servico),
+ foreign key (id_imovel) references imovel(id_imovel),
+ foreign key (id_servico) references servico(id)
 );
 
-DROP TABLE IF EXISTS `ImovelArmario`;
-CREATE TABLE IF NOT EXISTS `ImovelArmario` (
- `id_imovel` SMALLINT NOT NULL,
- `id_armario` SMALLINT NOT NULL,
- PRIMARY KEY(id_imovel, id_armario),
- FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_armario) REFERENCES Armario(id)
+drop table if exists `imovelarmario`;
+create table if not exists `imovelarmario` (
+ `id_imovel` smallint not null,
+ `id_armario` smallint not null,
+ primary key(id_imovel, id_armario),
+ foreign key (id_imovel) references imovel(id_imovel),
+ foreign key (id_armario) references armario(id)
 );
 
-DROP TABLE IF EXISTS `ImovelLazer`;
-CREATE TABLE `ImovelLazer` (
- `id_imovel` SMALLINT NOT NULL,
- `id_lazer` SMALLINT NOT NULL,
- PRIMARY KEY(id_imovel, id_lazer),
- FOREIGN KEY (id_imovel) REFERENCES Imovel(id_imovel),
- FOREIGN KEY (id_lazer) REFERENCES Lazer(id)
+drop table if exists `imovellazer`;
+create table `imovellazer` (
+ `id_imovel` smallint not null,
+ `id_lazer` smallint not null,
+ primary key(id_imovel, id_lazer),
+ foreign key (id_imovel) references imovel(id_imovel),
+ foreign key (id_lazer) references lazer(id)
 );
 
 
-DROP TABLE IF EXISTS `ErroLog`;
-CREATE TABLE IF NOT EXISTS `ErroLog`
+drop table if exists `errolog`;
+create table if not exists `errolog`
 (
-	`id_erro` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	`ds_erro` VARCHAR(500),
-	`dt_erro` DATETIME,
-	`ds_stack` VARCHAR(255),
-	`ds_metodo` VARCHAR(100)
+	`id_erro` smallint not null auto_increment primary key,
+	`ds_erro` varchar(500),
+	`dt_erro` datetime,
+	`ds_stack` varchar(255),
+	`ds_metodo` varchar(100)
 	
 );
 
-DROP TABLE IF EXISTS `Slider`;
-CREATE TABLE IF NOT EXISTS `Slider`
+drop table if exists `slider`;
+create table if not exists `slider`
 (
-	`id_slider` SMALLINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	`ds_path_imagem` VARCHAR(255) NOT NULL,
-	`ds_texto1` VARCHAR(29) NOT NULL,
-	`ds_texto2` VARCHAR(24) NOT NULL,
-	`ic_ativo` BIT NOT NULL
+	`id_slider` smallint not null auto_increment primary key,
+	`ds_path_imagem` varchar(255) not null,
+	`ds_texto1` varchar(29) not null,
+	`ds_texto2` varchar(24) not null,
+	`ic_ativo` bit not null
 );
