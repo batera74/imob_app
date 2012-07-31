@@ -60,9 +60,9 @@ namespace imob_app.business
             if (idCategoria > 0)
                 query.Append(VerificaQuery(query.ToString()) + "it.categoria.id == " + idCategoria);
             if (valorDe > 0)
-                query.Append(VerificaQuery(query.ToString()) + "it.vl_imovel > " + valorDe);
+                query.Append(VerificaQuery(query.ToString()) + "it.vl_imovel >= " + valorDe);
             if (valorAte > 0)
-                query.Append(VerificaQuery(query.ToString()) + "it.vl_imovel < " + valorAte);
+                query.Append(VerificaQuery(query.ToString()) + "it.vl_imovel <= " + valorAte);
 
             var imoveis = _ctx.imovel.Where(query.ToString());
 
