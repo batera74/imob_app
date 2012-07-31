@@ -11,6 +11,8 @@ namespace imob_app.client
 {
     public partial class Pesquisa : System.Web.UI.Page
     {
+        private List<ImovelResultado> dataSource;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             int result;
@@ -29,23 +31,21 @@ namespace imob_app.client
             Decimal.TryParse(Request.QueryString["valorAte"].ToString(), style, culture, out valorAte);
 
             business.Imovel imov = new business.Imovel();
-            imoveis.DataSource = Carregar(estado, municipio, bairro, dormitorio, categoria, valorDe, valorAte);
+
+            if (!IsPostBack)
+            {
+                dataSource = Carregar(estado, municipio, bairro, dormitorio, categoria, valorDe, valorAte);
+                imoveis.DataSource = dataSource;
+            }
+            else
+                imoveis.DataSource = dataSource;
         }
 
-        public List<entidades.ImovelResultado> Carregar(int estado, int municipio, int bairro, int dormitorio, int categoria,
+        public List<entidades.ImovelResultado> Carregar(int idEstado, int idMunicipio, int idBairro, int idDormitorio, int idCategoria,
                                                         decimal valorDe, decimal valorAte)
         {
-
-            //if (estado > 0 && municipio > 0 && bairro > 0)
-            //{                
-            //    dao.bairro novoBairro = new dao.bairro() { id_bairro = (short)bairro };
-            //}
-
-            //return null;
-
-            business.Imovel imov = new business.Imovel();            
-            return imov.SelecionarTodos();
-
+            business.Imovel imov = new business.Imovel();
+            return imov.Pesquisar(idEstado, idMunicipio, idBairro, idDormitorio, idCategoria, valorDe, valorAte);
         }
     }
 }

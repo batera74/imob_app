@@ -46,6 +46,7 @@
     <Compile Include="Bairro.cs" />
     <Compile Include="Combo.cs" />
     <Compile Include="Dormitorio.cs" />
+    <Compile Include="Dynamic.cs" />
     <Compile Include="Estado.cs" />
     <Compile Include="Foto.cs" />
     <Compile Include="Funcoes.cs" />
