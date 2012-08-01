@@ -1,6 +1,6 @@
 ﻿.labelCaracteristicas
 {
-    font-size:12px;
+    font-size: 12px;
 }
 
 #galeria
@@ -12,64 +12,78 @@
 #galeriaPai
 {
     width: 260px;
-    float:left;
+    float: left;
+    position: relative;
 }
 
+.itemCaracteristica
+{
+    margin-top: 6px;
+}
 
 #galBigImg
 {
-	width: 245px;
-	height: 209px;
-	float: left;
-	background-color: #FFFFFF;
-	color: #FFFFFF;
-	padding: 2px;
-	border: solid 1px #c3c3c3;
+    width: 245px;
+    height: 209px;
+    float: left;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    padding: 2px;
+    border: solid 1px #c3c3c3;
 }
 
 #galMiniImg
 {
-	width: 74px;
-	height: 63px;
-	float: left;
-	background-color: #FFFFFF;
-	color: #FFFFFF;
-	padding: 3px;
-	border: solid 1px #c3c3c3;
+    width: 74px;
+    height: 63px;
+    float: left;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    padding: 3px;
+    border: solid 1px #c3c3c3;
 }
 
 #detalhesPai
 {
-    margin: 22px 0px 0px 8px;
+    margin: 0px 0px 0px 8px;
     width: 422px;
-    float: left;    
+    float: left;
 }
 
 #conteudoDetalhes
-{    
+{
     width: 420px;
     float: right;
     border: solid 1px #c3c3c3;
     padding: 5px;
 }
 
-#carac1 
-{ 
-    width: 230px; 
+#carac1
+{
+    width: 230px;
     height: 140px;
     float: left;
     border: solid 1px #c3c3c3;
     padding: 5px;
 }
-#especificacoes  
+#especificacoes
 {
-    width: 165px;
-    height: 150px;
-    float: left;     
+    width: 155px;
+    height: 140px;
+    float: left;
     border: solid 1px #c3c3c3;
     margin-left: 4px;
-    padding-left: 5px;
+    padding: 5px;
 }
 
-.caracteristicas { width: 120px; float: left; vertical-align: top; }
-#caracteristicas2 { width: 100px; }
+.caracteristicas
+{
+    width: 120px;
+    float: left;
+    vertical-align: top;
+    margin-top: 10px;
+}
+#caracteristicas2
+{
+    width: 100px;
+}

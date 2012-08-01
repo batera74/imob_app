@@ -12,12 +12,12 @@ namespace imob_app.client
         protected void Page_Load(object sender, EventArgs e)
         {
             business.Imovel imov = new business.Imovel();
-            dao.imovel imovel = imov.Selecionar(Convert.ToInt32(Request.QueryString["idImovel"]));
+            dao.imovel imovel = imov.SelecionarImov(Convert.ToInt32(Request.QueryString["Imovel"]));
             CarregarImagens(imovel);
             CarregarDetalhes(imovel);
             CarregarCaracteristicas(imovel);
         }
-
+        
         private void CarregarImagens(dao.imovel imovel)
         {
             dtlMini.DataSource = imovel.imagem;
@@ -58,6 +58,13 @@ namespace imob_app.client
 
             dtSocial.DataSource = imovel.social;
             dtSocial.DataBind();
+        }
+
+        protected void dtlMini_ItemDataBound(object sender, DataListItemEventArgs e)
+        {
+            Image img = (Image)e.Item.FindControl("Imagem");
+            dao.imagem imagem = ((dao.imagem)e.Item.DataItem);
+            img.ImageUrl = "../Imagem.ashx?idFoto=" + imagem.id_imagem;
         }
     }
 }

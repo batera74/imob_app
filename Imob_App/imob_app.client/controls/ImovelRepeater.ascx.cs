@@ -242,18 +242,7 @@ namespace imob_app.client.controls
         {
             Image img = (Image)e.Item.FindControl("Image2");
             dao.imagem imagem = ((ImovelResultado)e.Item.DataItem).Imagens.FirstOrDefault(i => i.ic_principal == true);
-            img.ImageUrl = "../Imagem.ashx?idFoto=" + (imagem != null ? imagem.id_imagem : 1);
-            try
-            {
-                if (img.ImageUrl.Equals("") || img.ImageUrl == null)
-                {
-                    img.ImageUrl = "http://www.imobiliariainfinity.com.br/Images/Imoveis/sem_imagem.jpg";
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
+            img.ImageUrl = "../Imagem.ashx?idFoto=" + (imagem != null ? imagem.id_imagem : 1);           
         }
 
     }

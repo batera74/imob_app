@@ -50,9 +50,9 @@ namespace imob_app.business
             if (idBairro > 0)
                 query.Append("it.bairro.id_bairro == " + idBairro);
             else if (idMunicipio > 0)
-                query.Append("it.municipio.id_municipio == " + idMunicipio);
+                query.Append("it.bairro.municipio.id_municipio == " + idMunicipio);
             else if (idEstado > 0)
-                query.Append("it.estado.id_estado == " + idEstado);
+                query.Append("it.bairro.municipio.estado.id_estado == " + idEstado);
 
 
             if (idDormitorio > 0)
@@ -82,7 +82,7 @@ namespace imob_app.business
                         Valor = imov.vl_imovel,
                         Imagens = imov.imagem
                     }).ToList();
-            
+
         }
 
         public string VerificaQuery(string query)
@@ -96,31 +96,59 @@ namespace imob_app.business
         public entidades.ImovelResultado SelecionarResultado(int id)
         {
             var query = (from imov in _ctx.imovel
-                    where imov.id_imovel == id
-                    select new entidades.ImovelResultado()
-                        {
-                            Referencia = imov.id_imovel,
-                            Categoria = imov.categoria.ds_item,
-                            Dormitorio = imov.dormitorio.ds_item,
-                            Suite = imov.qt_suite,
-                            Bairro = imov.bairro.nm_bairro,
-                            Municipio = imov.bairro.municipio.nm_municipio,
-                            Estado = imov.bairro.municipio.estado.cd_estado,
-                            AreaTotal = imov.vl_area_total,
-                            AreaUtil = imov.vl_area_util,
-                            EstadoImovel = imov.estadoimovel.ds_item,
-                            Valor = imov.vl_imovel,
-                            Imagens = imov.imagem
-                        });
-            
+                         where imov.id_imovel == id
+                         select new entidades.ImovelResultado()
+                             {
+                                 Referencia = imov.id_imovel,
+                                 Categoria = imov.categoria.ds_item,
+                                 Dormitorio = imov.dormitorio.ds_item,
+                                 Suite = imov.qt_suite,
+                                 Bairro = imov.bairro.nm_bairro,
+                                 Municipio = imov.bairro.municipio.nm_municipio,
+                                 Estado = imov.bairro.municipio.estado.cd_estado,
+                                 AreaTotal = imov.vl_area_total,
+                                 AreaUtil = imov.vl_area_util,
+                                 EstadoImovel = imov.estadoimovel.ds_item,
+                                 Valor = imov.vl_imovel,
+                                 Imagens = imov.imagem
+                             });
+
             return query.FirstOrDefault();
         }
 
-        public dao.imovel Selecionar(int id)
+        public dao.imovel SelecionarImov(int id)
         {
-            return (from imov in _ctx.imovel
-                         where imov.id_imovel == id
-                         select imov).FirstOrDefault();
+            dao.imovel imovel = (from imov in _ctx.imovel
+                                     .Include("categoria")
+                                     .Include("bairro")
+                                     .Include("categoria")
+                                     .Include("dormitorio")
+                                     .Include("estadoimovel")
+                                     .Include("finalidade")
+                                     .Include("posicaoimovel")
+                                     .Include("usuario")
+                                     .Include("imagem")
+                                     .Include("acabamento")
+                                     //.Include("armario")
+                                     //.Include("intima")
+                                     //.Include("lazer")
+                                     //.Include("social")
+                                     //.Include("servico")
+
+                        where imov.id_imovel == id
+                        select imov).FirstOrDefault();
+
+            imovel.categoriaReference.Load();
+            imovel.bairroReference.Load();
+            imovel.bairro.municipioReference.Load();
+            imovel.categoriaReference.Load();
+            imovel.dormitorioReference.Load();
+            imovel.estadoimovelReference.Load();
+            imovel.finalidadeReference.Load();
+            imovel.posicaoimovelReference.Load();
+            imovel.usuarioReference.Load();
+
+            return imovel;
         }
 
         public List<entidades.ImovelResultado> Selecionar(int idBairro, int idDormitorio, int idCategoria,
@@ -148,5 +176,27 @@ namespace imob_app.business
                         Imagens = imov.imagem
                     }).ToList();
         }
+
+
+        public List<ImovelResultado> Selecionar(int id)
+        {
+            return (from imov in _ctx.imovel
+                    where imov.id_imovel == id
+                    select new entidades.ImovelResultado()
+                    {
+                        Referencia = imov.id_imovel,
+                        Categoria = imov.categoria.ds_item,
+                        Dormitorio = imov.dormitorio.ds_item,
+                        Suite = imov.qt_suite,
+                        Bairro = imov.bairro.nm_bairro,
+                        Municipio = imov.bairro.municipio.nm_municipio,
+                        Estado = imov.bairro.municipio.estado.cd_estado,
+                        AreaTotal = imov.vl_area_total,
+                        AreaUtil = imov.vl_area_util,
+                        EstadoImovel = imov.estadoimovel.ds_item,
+                        Valor = imov.vl_imovel,
+                        Imagens = imov.imagem
+                    }).ToList();
+        }
     }
-} 
+}
