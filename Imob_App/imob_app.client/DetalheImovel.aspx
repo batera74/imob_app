@@ -2,7 +2,7 @@
     CodeBehind="DetalheImovel.aspx.cs" Inherits="imob_app.client.DetalheImovel" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="css/detalheImovel.css">
+    <link rel="stylesheet" href="css/detalheImovel.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="conteudo" runat="server">
     <h7 class="head-1">Detalhes do Imóvel</h7>
