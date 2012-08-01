@@ -93,9 +93,9 @@ namespace imob_app.business
                 return "";
         }
 
-        public List<entidades.ImovelResultado> Selecionar(int id)
+        public entidades.ImovelResultado SelecionarResultado(int id)
         {
-            return (from imov in _ctx.imovel
+            var query = (from imov in _ctx.imovel
                     where imov.id_imovel == id
                     select new entidades.ImovelResultado()
                         {
@@ -111,7 +111,16 @@ namespace imob_app.business
                             EstadoImovel = imov.estadoimovel.ds_item,
                             Valor = imov.vl_imovel,
                             Imagens = imov.imagem
-                        }).ToList();
+                        });
+            
+            return query.FirstOrDefault();
+        }
+
+        public dao.imovel Selecionar(int id)
+        {
+            return (from imov in _ctx.imovel
+                         where imov.id_imovel == id
+                         select imov).FirstOrDefault();
         }
 
         public List<entidades.ImovelResultado> Selecionar(int idBairro, int idDormitorio, int idCategoria,
@@ -138,6 +147,6 @@ namespace imob_app.business
                         Valor = imov.vl_imovel,
                         Imagens = imov.imagem
                     }).ToList();
-        }        
+        }
     }
-}
+} 

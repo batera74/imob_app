@@ -1,0 +1,75 @@
+﻿.labelCaracteristicas
+{
+    font-size:12px;
+}
+
+#galeria
+{
+    height: 350px;
+    width: 260px;
+}
+
+#galeriaPai
+{
+    width: 260px;
+    float:left;
+}
+
+
+#galBigImg
+{
+	width: 245px;
+	height: 209px;
+	float: left;
+	background-color: #FFFFFF;
+	color: #FFFFFF;
+	padding: 2px;
+	border: solid 1px #c3c3c3;
+}
+
+#galMiniImg
+{
+	width: 74px;
+	height: 63px;
+	float: left;
+	background-color: #FFFFFF;
+	color: #FFFFFF;
+	padding: 3px;
+	border: solid 1px #c3c3c3;
+}
+
+#detalhesPai
+{
+    margin: 22px 0px 0px 8px;
+    width: 422px;
+    float: left;    
+}
+
+#conteudoDetalhes
+{    
+    width: 420px;
+    float: right;
+    border: solid 1px #c3c3c3;
+    padding: 5px;
+}
+
+#carac1 
+{ 
+    width: 230px; 
+    height: 140px;
+    float: left;
+    border: solid 1px #c3c3c3;
+    padding: 5px;
+}
+#especificacoes  
+{
+    width: 165px;
+    height: 150px;
+    float: left;     
+    border: solid 1px #c3c3c3;
+    margin-left: 4px;
+    padding-left: 5px;
+}
+
+.caracteristicas { width: 120px; float: left; vertical-align: top; }
+#caracteristicas2 { width: 100px; }
