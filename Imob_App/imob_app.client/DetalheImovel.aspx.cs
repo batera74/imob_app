@@ -27,10 +27,10 @@ namespace imob_app.client
         private void CarregarDetalhes(dao.imovel imovel)
         {
             lblImovel.Text = imovel.categoria.ds_item;
-            lblCidade.Text = imovel.bairro.municipio.nm_municipio;
-            lblValor.Text = lblValor.Text + imovel.vl_imovel;
-            lblCondominio.Text = lblCondominio.Text + imovel.vl_condominio;
-            lblIPTU.Text = lblIPTU.Text + imovel.vl_iptu;
+            lblCidade.Text = lblCidade.Text + imovel.bairro.municipio.nm_municipio + " - " + imovel.bairro.municipio.estado.cd_estado;
+            lblValor.Text = lblValor.Text + String.Format("{0:C}", imovel.vl_imovel);
+            lblCondominio.Text = lblCondominio.Text + String.Format("{0:C}", imovel.vl_condominio);
+            lblIPTU.Text = lblIPTU.Text + String.Format("{0:C}", imovel.vl_iptu);
             lblID.Text = lblID.Text + imovel.id_imovel;
             lblBanheiro.Text = lblBanheiro.Text + imovel.ds_banheiro;
             lblGaragem.Text = lblGaragem.Text + imovel.ds_garagem;

@@ -17,7 +17,7 @@ body{
 html,body{height:100%;}
 
 /*  Header styles */
-h1,h2,h3,h4,h5,h6,h7{
+h1,h2,h3,h4,h5,h6,h7,h8{
 	color:#939191;
 	padding:0 0 20px 0;	
 	font-weight:normal;
@@ -36,8 +36,10 @@ h3{font-size:30px; line-height:36px;}
 h4{font-size:27px; line-height:33px;}  
 h5{font-size:24px; line-height:29px;}
 h6{font-size:21px; line-height:26px;}
-h7{font-size:21px; line-height:27px;}
-h8{font-size:12px; line-height:27px;}
+h7{font-size:21px; line-height:20px;}
+h8{font-size:18px; line-height:26px;}
+h9{font-size:13px; line-height:26px;}
+
 
 	.head-1 strong {
 		display:block;

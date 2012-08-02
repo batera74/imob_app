@@ -13,6 +13,8 @@
     <meta name="author" content="Your name">
     <link rel="stylesheet" href="css/style.css">
     <link href="../controls/css/repeater/dataList.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/detalheImovel.css" />
+    <link rel="stylesheet" href="css/jquery.lightbox-0.5.css" />
     <script src="js/jquery-1.7.1.min.js"></script>
     <script src="js/cufon-yui.js"></script>
     <script src="js/Kozuka_Gothic_Pro_OpenType_300.font.js"></script>
@@ -23,6 +25,7 @@
     <script src="js/cufon-replace.js"></script>
     <script src="js/script.js"></script>
     <script src="js/jquery.jqtransform.js"></script>
+    <script src="js/jquery.lightbox-0.5.min.js"></script>
     <!--[if lt IE 8]>
    <div style=' clear: both; text-align:center; position: relative;'>
      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">

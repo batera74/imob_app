@@ -1,9 +1,4 @@
-﻿.labelCaracteristicas
-{
-    font-size: 12px;
-}
-
-#galeria
+﻿#galeria
 {
     height: 350px;
     width: 260px;
@@ -45,14 +40,14 @@
 
 #detalhesPai
 {
-    margin: 0px 0px 0px 8px;
+    margin: 0px 0px 0px 40px;
     width: 422px;
     float: left;
 }
 
 #conteudoDetalhes
 {
-    width: 420px;
+    width: 415px;
     float: right;
     border: solid 1px #c3c3c3;
     padding: 5px;
@@ -66,9 +61,21 @@
     border: solid 1px #c3c3c3;
     padding: 5px;
 }
+
+h10
+{
+    font-weight:bold;
+    font-size: 11px;
+}
+
+.labelCaracteristicas
+{
+    font-size: 12px;    
+}
+
 #especificacoes
 {
-    width: 155px;
+    width: 159px;
     height: 140px;
     float: left;
     border: solid 1px #c3c3c3;

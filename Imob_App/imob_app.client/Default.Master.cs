@@ -30,7 +30,7 @@ namespace imob_app.client
         protected void ddlUF_SelectedIndexChanged(object sender, EventArgs e)
         {            
             business.Combo<dao.municipio>.CarregarCombo(ref ddlMunicipio, new business.Municipio(),
-                "nm_municipio", "id_municipio", "Municipio *", Convert.ToInt16(ddlUF.SelectedValue));
+                "nm_municipio", "id_municipio", "Município *", Convert.ToInt16(ddlUF.SelectedValue));
         }
 
         protected void ddlMunicipio_SelectedIndexChanged(object sender, EventArgs e)

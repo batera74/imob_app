@@ -121,6 +121,8 @@ namespace imob_app.business
             dao.imovel imovel = (from imov in _ctx.imovel
                                      .Include("categoria")
                                      .Include("bairro")
+                                     .Include("bairro.municipio")
+                                     .Include("bairro.municipio.estado")
                                      .Include("categoria")
                                      .Include("dormitorio")
                                      .Include("estadoimovel")
@@ -128,12 +130,12 @@ namespace imob_app.business
                                      .Include("posicaoimovel")
                                      .Include("usuario")
                                      .Include("imagem")
+                                     .Include("armario")
                                      .Include("acabamento")
-                                     //.Include("armario")
-                                     //.Include("intima")
-                                     //.Include("lazer")
-                                     //.Include("social")
-                                     //.Include("servico")
+                                     .Include("intima")
+                                     .Include("lazer")
+                                     .Include("social")
+                                     .Include("servico")
 
                         where imov.id_imovel == id
                         select imov).FirstOrDefault();
