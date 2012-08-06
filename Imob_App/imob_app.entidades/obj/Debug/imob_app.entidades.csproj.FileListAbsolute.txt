@@ -12,3 +12,10 @@ C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\bin\De
 C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\obj\Debug\imob_app.entidades.dll
 C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.entidades\obj\Debug\imob_app.entidades.pdb
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.entidades\bin\Debug\imob_app.entidades.dll
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.entidades\bin\Debug\imob_app.entidades.pdb
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.entidades\bin\Debug\imob_app.dao.dll
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.entidades\bin\Debug\imob_app.dao.pdb
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.entidades\obj\Debug\ResolveAssemblyReference.cache
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.entidades\obj\Debug\imob_app.entidades.dll
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.entidades\obj\Debug\imob_app.entidades.pdb

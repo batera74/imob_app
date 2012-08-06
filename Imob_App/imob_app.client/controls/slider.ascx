@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="slider.ascx.cs" Inherits="imob_app.client.controls.slider" %>
-<link rel="stylesheet" href="../controls/css/slider/flexslider.css" media="screen" />
-<script src="../controls/js/slider/jquery.flexslider-min.js"></script>
+<link rel="stylesheet" href="controls/css/slider/flexslider.css" media="screen" />
+<script src="controls/js/slider/jquery.flexslider-min.js"></script>
 <script type="text/javascript">		
     $(function(){			
         $('.flexslider').flexslider({ animation: "fade", slideshow: true, slideshowSpeed: 7000, animationDuration: 600, prevText: "Previous", nextText: "Next", controlNav: true, }) })	
@@ -8,7 +8,7 @@
 <div class="flexslider">
     <ul class="slides">
         <li>
-            <img src="../images/slide1.jpg" alt="">
+            <img src="images/slide1.jpg" alt="">
             <!--<div class="flex-caption">
                 <div class="flex-text-1">
                     Lorem Ipsum Dolor3</div>
@@ -18,7 +18,7 @@
            </div>-->
         </li>
         <li>
-            <img src="../images/slide2.jpg" alt="">
+            <img src="images/slide2.jpg" alt="">
             <!--<div class="flex-caption">
                 <div class="flex-text-1">
                     Lorem Ipsum Dolor3</div>
@@ -28,7 +28,7 @@
            </div>-->
         </li>
         <li>
-            <img src="../images/slide3.jpg" alt="">
+            <img src="images/slide3.jpg" alt="">
             <!--<div class="flex-caption">
                 <div class="flex-text-1">
                     Lorem Ipsum Dolor3</div>
@@ -38,7 +38,7 @@
            </div>-->
         </li> 
         <li>
-            <img src="../images/slide2.jpg" alt="">
+            <img src="images/slide2.jpg" alt="">
             <!--
             <div class="flex-caption">
                 <div class="flex-text-1">

@@ -10,3 +10,9 @@ C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.dao\bin\Debug\im
 C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.dao\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.dao\obj\Debug\imob_app.dao.dll
 C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\imob_app.dao\obj\Debug\imob_app.dao.pdb
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.dao\bin\Debug\imob_app.dao.dll.config
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.dao\bin\Debug\imob_app.dao.dll
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.dao\bin\Debug\imob_app.dao.pdb
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.dao\obj\Debug\ResolveAssemblyReference.cache
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.dao\obj\Debug\imob_app.dao.dll
+C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.dao\obj\Debug\imob_app.dao.pdb

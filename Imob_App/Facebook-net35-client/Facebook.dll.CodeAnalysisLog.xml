@@ -1,0 +1,479 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Targets>
+  <Target Name="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Bin\Debug\net35-client\Facebook.dll">
+   <Modules>
+    <Module Name="facebook.dll">
+     <Namespaces>
+      <Namespace Name="Facebook">
+       <Types>
+        <Type Name="CombinationStream" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="CombinationStream.cs" Line="150">Modify 'CombinationStream.BeginRead(byte[], int, int, AsyncCallback, object)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="CombinationStream+CombinationStreamAsyncResult" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Messages>
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+           <Issue Name="NonBreaking" Certainty="95" Level="CriticalError">Implement IDisposable on 'CombinationStream.CombinationStreamAsyncResult' because it creates members of the following IDisposable types: 'ManualResetEvent'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="DataContractJsonSerializerStrategy" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#CanAdd(System.Reflection.MemberInfo,System.String&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Runtime.Serialization.IgnoreDataMemberAttribute" TypeName="UseOnlyApiFromTargetedFramework" Category="Microsoft.Portability" CheckId="CA1903" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="DependsOnFix">
+             <Issue Name="MemberReferencesType" Certainty="95" Level="Error" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1542">Member 'DataContractJsonSerializerStrategy.CanAdd(MemberInfo, out string)' uses type 'IgnoreDataMemberAttribute'. Because this type was introduced in .NET Framework 3.0 Service Pack 2, which was not included in the project's target framework, .NET Framework 3.5, your application may fail to run on systems without this service pack installed.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FacebookClient" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.cctor()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="CriticalWarning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.cs" Line="49">Initialize all static fields in 'FacebookClient' when those fields are declared and remove the explicit static constructor.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Api(Facebook.HttpMethod,System.String,System.Object,System.Type)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.Sync.cs" Line="113">Object 'responseStream' can be disposed more than once in method 'FacebookClient.Api(HttpMethod, string, object, Type)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 113</Issue>
+             <Issue Certainty="75" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.Sync.cs" Line="113">Object 'responseStream' can be disposed more than once in method 'FacebookClient.Api(HttpMethod, string, object, Type)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 113</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ApiAsync(Facebook.HttpMethod,System.String,System.Object,System.Type,System.Object)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.Async.cs" Line="99">'FacebookClient.ApiAsync(HttpMethod, string, object, Type, object)' has a cyclomatic complexity of 29. Rewrite or refactor the method to reduce complexity to 25.</Issue>
+            </Message>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.Async.cs" Line="190">Object 'stream' can be disposed more than once in method 'FacebookClient.ApiAsync(HttpMethod, string, object, Type, object)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 190</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BuildHttpQuery(System.Object,System.Func`2&lt;System.String,System.String&gt;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.cs" Line="868">'parameter', a parameter, is cast to type 'IEnumerable' multiple times in method 'FacebookClient.BuildHttpQuery(object, Func&lt;string, string&gt;)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.cs" Line="858">'parameter', a parameter, is cast to type 'IEnumerable&lt;KeyValuePair&lt;string, object&gt;&gt;' multiple times in method 'FacebookClient.BuildHttpQuery(object, Func&lt;string, string&gt;)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.cs" Line="863">'parameter', a parameter, is cast to type 'IEnumerable&lt;KeyValuePair&lt;string, string&gt;&gt;' multiple times in method 'FacebookClient.BuildHttpQuery(object, Func&lt;string, string&gt;)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.cs" Line="839">'parameter', a parameter, is cast to type 'string' multiple times in method 'FacebookClient.BuildHttpQuery(object, Func&lt;string, string&gt;)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetException(Facebook.HttpHelper,System.Object)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Int32.TryParse(System.String,System.Int32@)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Name="TryParse" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.cs" Line="731">'FacebookClient.GetException(HttpHelper, object)' calls 'int.TryParse(string, out int)' but does not explicitly check whether the conversion succeeded. Either use the return value in a conditional statement or verify that the call site expects that the out argument will be set to the default value when the conversion fails.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PrepareRequest(Facebook.HttpMethod,System.String,System.Object,System.Type,System.IO.Stream&amp;,System.Boolean&amp;,System.Collections.Generic.IList`1&lt;System.Int32&gt;&amp;)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="Breaking">
+             <Issue Name="Method" Certainty="75" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.cs" Line="261">'FacebookClient.PrepareRequest(HttpMethod, string, object, Type, out Stream, out bool, out IList&lt;int&gt;)' is coupled with 36 different types from 10 different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above 40 indicates poor maintainability, a class coupling between 40 and 30 indicates moderate maintainability, and a class coupling below 30 indicates good maintainability.</Issue>
+            </Message>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookClient.cs" Line="435">In method 'FacebookClient.PrepareRequest(HttpMethod, string, object, Type, out Stream, out bool, out IList&lt;int&gt;)', call System.IDisposable.Dispose on object 'new MemoryStream(Encoding.UTF8.GetBytes(sb.ToString()))' before all references to it are out of scope.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FacebookMediaStream" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Dispose()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Name="NotCalled" Certainty="75" Level="CriticalWarning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="FacebookMediaStream.cs" Line="76">Change 'FacebookMediaStream.Dispose()' to call 'GC.SuppressFinalize(object)'. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="HttpHelper" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#HtmlDecode(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Certainty="90" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="1730">'HttpHelper.HtmlDecode(string)' has a cyclomatic complexity of 28. Rewrite or refactor the method to reduce complexity to 25.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InitEntities()" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUnmaintainableCode" Category="Microsoft.Maintainability" CheckId="CA1505" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Name="Method" Certainty="75" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="1449">'HttpHelper.InitEntities()' has a maintainability index of 20. Rewrite or refactor the method to increase its maintainability index (MI). An MI below 10 indicates poor maintainability, an MI between 10 and 20 indicates moderate maintainability, and an MI above 20 indicates good maintainability.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OpenReadAsync(System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="987">Modify 'HttpHelper.OpenReadAsync(object)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OpenWriteAsync(System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="1043">Modify 'HttpHelper.OpenWriteAsync(object)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="1062">Modify 'HttpHelper.OpenWriteAsync(object)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ResponseCallback(System.IAsyncResult,System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="1105">Modify 'HttpHelper.ResponseCallback(IAsyncResult, object)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="HttpWebRequestWrapper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetRequestStream()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="418">Change 'HttpWebRequestWrapper.GetRequestStream()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetResponse()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="409">Change 'HttpWebRequestWrapper.GetResponse()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Headers" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="99">Change 'HttpWebRequestWrapper.Headers' to be read-only by removing the property setter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Referer" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Referer" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="243">Correct the spelling of 'Referer' in member name 'HttpWebRequestWrapper.Referer' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="HttpWebResponseWrapper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetResponseStream()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="612">Change 'HttpWebResponseWrapper.GetResponseStream()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="PocoJsonSerializerStrategy" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#DeserializeObject(System.Object,System.Type)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1345">'value', a parameter, is cast to type 'IDictionary&lt;string, object&gt;' multiple times in method 'PocoJsonSerializerStrategy.DeserializeObject(object, Type)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1401">'value', a parameter, is cast to type 'IList&lt;object&gt;' multiple times in method 'PocoJsonSerializerStrategy.DeserializeObject(object, Type)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1331">'value', a parameter, is cast to type 'double' multiple times in method 'PocoJsonSerializerStrategy.DeserializeObject(object, Type)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant isint instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1331">'value', a parameter, is cast to type 'long' multiple times in method 'PocoJsonSerializerStrategy.DeserializeObject(object, Type)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant isint instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1319">'value', a parameter, is cast to type 'string' multiple times in method 'PocoJsonSerializerStrategy.DeserializeObject(object, Type)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant isint instruction.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TrySerializeKnownTypes(System.Object,System.Object&amp;)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1457">'input', a parameter, is cast to type 'Enum' multiple times in method 'PocoJsonSerializerStrategy.TrySerializeKnownTypes(object, out object)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SimpleJson" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#SerializeObject(Facebook.IJsonSerializerStrategy,System.Collections.IEnumerable,System.Collections.IEnumerable,System.Text.StringBuilder)" Kind="Method" Static="True" Accessibility="Family" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Name="Local" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1080">'key', a variable, is cast to type 'string' multiple times in method 'SimpleJson.SerializeObject(IJsonSerializerStrategy, IEnumerable, IEnumerable, StringBuilder)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SerializeValue(Facebook.IJsonSerializerStrategy,System.Object,System.Text.StringBuilder)" Kind="Method" Static="True" Accessibility="Family" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1036">'value', a parameter, is cast to type 'IDictionary&lt;string, object&gt;' multiple times in method 'SimpleJson.SerializeValue(IJsonSerializerStrategy, object, StringBuilder)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1041">'value', a parameter, is cast to type 'IDictionary&lt;string, string&gt;' multiple times in method 'SimpleJson.SerializeValue(IJsonSerializerStrategy, object, StringBuilder)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1045">'value', a parameter, is cast to type 'IEnumerable' multiple times in method 'SimpleJson.SerializeValue(IJsonSerializerStrategy, object, StringBuilder)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="SimpleJson.cs" Line="1033">'value', a parameter, is cast to type 'string' multiple times in method 'SimpleJson.SerializeValue(IJsonSerializerStrategy, object, StringBuilder)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="WebExceptionWrapper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="Breaking">
+           <Issue Certainty="95" Level="Error">Rename 'WebExceptionWrapper' to end in 'Exception'.</Issue>
+          </Message>
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">Add an implementation of GetObjectData to type 'WebExceptionWrapper'.</Issue>
+          </Message>
+          <Message TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+           <Issue Name="MissingConstructor" Certainty="95" Level="Error">Add the following constructor to 'WebExceptionWrapper': public WebExceptionWrapper(String).</Issue>
+           <Issue Name="MissingConstructor" Certainty="95" Level="Error">Add the following constructor to 'WebExceptionWrapper': public WebExceptionWrapper(String, Exception).</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#.ctor()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="NonBreaking">
+             <Issue Name="Accessibility" Certainty="95" Level="Error" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="627">Change the accessibility of 'WebExceptionWrapper.WebExceptionWrapper()' to public.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetResponse()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2012-08-06 00:34:34Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\Projetos\Microgen\GitHub_Code\facebook-csharp-sdk\Source\Facebook" File="HttpHelper.cs" Line="665">Change 'WebExceptionWrapper.GetResponse()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AvoidExcessiveClassCoupling" Category="Microsoft.Maintainability" CheckId="CA1506">
+   <Name>Avoid excessive class coupling</Name>
+   <Description>Types and methods with a high degree of class coupling can be difficult to maintain.</Description>
+   <Resolution Name="Method">{0} is coupled with {1} different types from {2} different namespaces. Rewrite or refactor the method to decrease its class coupling, or consider moving the method to one of the other types it is tightly coupled with. A class coupling above {3} indicates poor maintainability, a class coupling between {3} and {4} indicates moderate maintainability, and a class coupling below {4} indicates good maintainability.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb397994(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidExcessiveComplexity" Category="Microsoft.Maintainability" CheckId="CA1502">
+   <Name>Avoid excessive complexity</Name>
+   <Description>Method implementations that are exceedingly complex increase the challenge of understanding and maintaining code.</Description>
+   <Resolution Name="Default">{0} has a cyclomatic complexity of {1}. Rewrite or refactor the method to reduce complexity to {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182212(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidUnmaintainableCode" Category="Microsoft.Maintainability" CheckId="CA1505">
+   <Name>Avoid unmaintainable code</Name>
+   <Description>Types and methods with a high degree of class coupling, cyclomatic complexity and/or program length can be difficult to maintain.</Description>
+   <Resolution Name="Method">{0} has a maintainability index of {1}. Rewrite or refactor the method to increase its maintainability index (MI). An MI below {2} indicates poor maintainability, an MI between {2} and {3} indicates moderate maintainability, and an MI above {3} indicates good maintainability.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386043(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Warning</MessageLevel>
+   <File Name="maintainabilityrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="CallGCSuppressFinalizeCorrectly" Category="Microsoft.Usage" CheckId="CA1816">
+   <Name>Call GC.SuppressFinalize correctly</Name>
+   <Description>Call GC.SuppressFinalize to suppress finalization of your instance once Dispose has been called. Objects that implement IDisposable should call SuppressFinalize from the IDisposable.Dispose method to prevent the garbage collector from calling Object.Finalize on an object that does not require it.</Description>
+   <Resolution Name="NotCalled">Change {0} to call {1}. This will prevent derived types that introduce a finalizer from needing to re-implement 'IDisposable' to call it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182269(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+   <Name>Collection properties should be read only</Name>
+   <Description>Properties that return collections should be read-only so that users cannot entirely replace the backing store. Users can still modify the contents of the collection by calling relevant methods on the collection. Note that the XmlSerializer class has special support for deserializing read-only collections. See the XmlSerializer overview for more information.</Description>
+   <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182327(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>Dispose objects before losing scope</Name>
+   <Description>If a disposable object is not explicitly disposed before all references to it are out of scope, the object will be disposed at some indeterminate time when the garbage collector runs the finalizer of the object. Because an exceptional event might occur that will prevent the finalizer of the object from running, the object should be explicitly disposed instead.</Description>
+   <Resolution Name="NonExceptionEdge">In method {0}, call System.IDisposable.Dispose on object {1} before all references to it are out of scope.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202">
+   <Name>Do not dispose objects multiple times</Name>
+   <Description>A correctly implemented Dispose method can be called multiple times without throwing an exception. However, this is not guaranteed and to avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.</Description>
+   <Resolution Name="Default">Object {0} can be disposed more than once in method {1}. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 113</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182334(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800">
+   <Name>Do not cast unnecessarily</Name>
+   <Description>Avoid duplicate casts where possible, since there is a cost associated with them.</Description>
+   <Resolution Name="Local">{0}, a variable, is cast to type {1} multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+   <Resolution Name="Parameter">{0}, a parameter, is cast to type {1} multiple times in method {2}. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant {3} instruction.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182271(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806">
+   <Name>Do not ignore method results</Name>
+   <Description>The result of methods that return new instances of strings should be assigned to a variable and subsequently used. If the result of a method that creates a new object, such as String.ToLower(), is not assigned to a variable, the call is wasted.</Description>
+   <Resolution Name="TryParse">{0} calls {1} but does not explicitly check whether the conversion succeeded. Either use the return value in a conditional statement or verify that the call site expects that the out argument will be set to the default value when the conversion fails.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182273(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710">
+   <Name>Identifiers should have correct suffix</Name>
+   <Description>Types that extend certain base types have specified name suffixes. Types that extend Attribute, for example, should be suffixed in 'Attribute', as in ObsoleteAttribute. This rules checks types that extend several base types, including Attribute, Exception, EventArgs, IMembershipPermission, Stream, and others.</Description>
+   <Resolution Name="Default">Rename {0} to end in '{1}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182244(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240">
+   <Name>Implement ISerializable correctly</Name>
+   <Description>If a type is assignable to ISerializable, it should implement GetObjectData. For unsealed types, the GetObjectData method should be callable and overridable by derived types.</Description>
+   <Resolution Name="Default">Add an implementation of GetObjectData to type {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182342(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="60">Error</MessageLevel>
+   <File Name="usagerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementStandardExceptionConstructors" Category="Microsoft.Design" CheckId="CA1032">
+   <Name>Implement standard exception constructors</Name>
+   <Description>Multiple constructors are required to correctly implement a custom exception. Missing constructors can make your exception unusable in certain scenarios. For example, the serialization constructor is required for handling exceptions in XML Web services.</Description>
+   <Resolution Name="Accessibility">Change the accessibility of {0} to {1}.</Resolution>
+   <Resolution Name="MissingConstructor">Add the following constructor to {0}: {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182151(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="InitializeReferenceTypeStaticFieldsInline" Category="Microsoft.Performance" CheckId="CA1810">
+   <Name>Initialize reference type static fields inline</Name>
+   <Description>Static fields should be initialized when declared. Initializing static data in explicit static constructors results in less performant code.</Description>
+   <Resolution Name="Default">Initialize all static fields in {0} when those fields are declared and remove the explicit static constructor.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182275(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">CriticalWarning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001">
+   <Name>Types that own disposable fields should be disposable</Name>
+   <Description>Types that declare disposable members should also implement IDisposable. If the type does not own any unmanaged resources, do not implement a finalizer on it.</Description>
+   <Resolution Name="NonBreaking">Implement IDisposable on {0} because it creates members of the following IDisposable types: {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182172(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="UseOnlyApiFromTargetedFramework" Category="Microsoft.Portability" CheckId="CA1903">
+   <Name>Use only API from targeted framework</Name>
+   <Description />
+   <Resolution Name="MemberReferencesType">Member {0} uses type {1}. Because this type was introduced in {2}, which was not included in the project's target framework, {3}, your application may fail to run on systems without this service pack installed.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/cc667408(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="portabilityrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+   <Name>Use properties where appropriate</Name>
+   <Description>Properties should be used instead of Get/Set methods in most situations. Methods are preferable to properties in the following situations: the operation is a conversion, is expensive or has an observable side-effect; the order of execution is important; calling the member twice in succession creates different results; a member is static but returns a mutable value; or the member returns an array.</Description>
+   <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182181(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

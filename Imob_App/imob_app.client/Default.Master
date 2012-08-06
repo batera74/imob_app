@@ -6,7 +6,7 @@
 <head>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <title>TheDealers - O jeito mais eficaz de negociar imóveis</title>
+    <title>YourPlace - O jeito mais fácil de achar seu imóvel!</title>
     <meta charset="utf-8">
     <meta name="description" content="Your description">
     <meta name="keywords" content="Your keywords">
@@ -58,12 +58,12 @@
                 	+11 43211234
                 </div>
             </div>
-        	<a href="index.html" class="logo">TheDealers Facebook</a>
+        	<a href="index.html" class="logo">YourPlace</a>
         </div>
         <nav>
         	<ul class="sf-menu">
             	<li class="current"><a href="Default.aspx">Home</a></li>
-                <li><a href="#">TheDealers</a>
+                <li><a href="#">YourPlace</a>
                 	<ul>
                     	<li><a href="#">Link 1</a></li>
                         <li><a href="#">Link 2</a></li>
@@ -150,14 +150,14 @@
     <!-- Footer -->
     <footer>
 	<div class="fright">
-    	TheDealers  &copy; 2012 <a href="index-7.html">Politca de Privacidade</a>
+    	YourPlace  &copy; 2012 <a href="index-7.html">Politca de Privacidade</a>
         <div class="alignright">
         	<!-- {%FOOTER_LINK} -->
         </div>
     </div>
     <ul class="footer-nav">
     	<li><a class="current" href="index.html">Home</a></li>
-        <li><a href="index-1.html">TheDealers</a></li>     
+        <li><a href="index-1.html">YourPlace</a></li>     
         <li><a href="index-2.html">Meus Imóveis</a></li>     
         <li><a href="index-3.html">Notícias</a></li>   
         <li><a href="index-4.html">Salão Virtual</a></li>   

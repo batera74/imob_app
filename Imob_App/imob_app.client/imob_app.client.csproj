@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Facebook">
+      <HintPath>..\Facebook-net35-client\Facebook.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -95,6 +98,7 @@
     <Content Include="images\box-title-marker.png" />
     <Content Include="images\bull-h2.png" />
     <Content Include="images\checkbox.png" />
+    <Content Include="images\findyourplace.png" />
     <Content Include="images\lightbox-blank.gif" />
     <Content Include="images\lightbox-btn-close.gif" />
     <Content Include="images\closelabel.gif" />
@@ -211,6 +215,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="controls\ImovelRepeater.ascx.cs">
       <DependentUpon>ImovelRepeater.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
