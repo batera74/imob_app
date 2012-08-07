@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Facebook;
 
 namespace imob_app.client
 {
@@ -13,8 +14,10 @@ namespace imob_app.client
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
+            {
+                lblFirstName.Text = ((IDictionary<string, object>)Session["user"])["first_name"].ToString();
                 CarregarCombosPesquisa();
-
+            }
         }
 
         private void CarregarCombosPesquisa()

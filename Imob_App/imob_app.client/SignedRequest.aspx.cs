@@ -7,13 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace imob_app.client
 {
-    public partial class _Default : BasePage
+    public partial class SignedRequest : System.Web.UI.Page
     {
-        
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
     }
 }

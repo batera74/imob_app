@@ -52,10 +52,10 @@
     	<div class="inner">
         	<div class="fright">
             	<strong class="header-text">
-                	Fale com um de nossos corretores:
+                	Você não possui novas mensagens.
                 </strong>
                 <div class="header-phone">
-                	+11 43211234
+                	Olá, <b><asp:Label runat="server" ID="lblFirstName"></asp:Label></b>!
                 </div>
             </div>
         	<a href="index.html" class="logo">YourPlace</a>
@@ -150,7 +150,7 @@
     <!-- Footer -->
     <footer>
 	<div class="fright">
-    	YourPlace  &copy; 2012 <a href="index-7.html">Politca de Privacidade</a>
+    	YourPlace  &copy; 2012 <a href="SignedRequest.aspx">Politca de Privacidade</a>
         <div class="alignright">
         	<!-- {%FOOTER_LINK} -->
         </div>
