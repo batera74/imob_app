@@ -98,40 +98,43 @@ namespace imob_app.client
         {
             try
             {
-                string signedRequest;
-                // Gambi para debugarmos.....
-                if (getPageUrl().ToLower().IndexOf("localhost") > -1)
+                if (!Page.IsPostBack)
                 {
-                    // Para obter seu token:
-                    //https://www.facebook.com/dialog/oauth?client_id=YOUR_APP_ID&redirect_uri=https://www.facebook.com/connect/login_success.html&response_type=token
-                    // YOUR_APP_ID se refere ao valor da variável ApplicationID lá em cima. ;-)
-                    // O token aparece na URL após o envio da chamada.
-                    
+                    string signedRequest;
+                    // Gambi para debugarmos.....
+                    if (getPageUrl().ToLower().IndexOf("localhost") > -1)
+                    {
+                        // Para obter seu token:
+                        //https://www.facebook.com/dialog/oauth?client_id=YOUR_APP_ID&redirect_uri=https://www.facebook.com/connect/login_success.html&response_type=token
+                        // YOUR_APP_ID se refere ao valor da variável ApplicationID lá em cima. ;-)
+                        // O token aparece na URL após o envio da chamada.
 
-                    // Se o signedRequest abaixo não funfar, acesse http://apps.facebook.com/placetoyou e clique no link "Política de Privacidade". Pegue a linguiça e atribua à variável abaixo. ;-)
-                    //signedRequest = "jNT3nTbUXBzKUNfQb4aPH8LSA9AZpwhGKo99idDN8Ws.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzNDQzMTIwMDAsImlzc3VlZF9hdCI6MTM0NDMwNjEzNywib2F1dGhfdG9rZW4iOiJBQUFHcFBsYlZNRmNCQUM1SVdESkVYMzFMSXhqRDM0bmJOVWFyRDl6NDVBTVhUVlBNS1R3UDhmUEFCTFNDU2pISFg2OHdmbGRVRlhGcldSUUs4cmpoS0NxSTk2d01zcHB5NDIyOTFrVnlnNWN2cjBiSSIsInVzZXIiOnsiY291bnRyeSI6ImJyIiwibG9jYWxlIjoicHRfQlIiLCJhZ2UiOnsibWluIjoyMX19LCJ1c2VyX2lkIjoiMTAwMDAzNjk1NjYxMDc0In0";
-                    signedRequest = "rRgyo5v3X-98q0koYojqSKtWDh-FcjylrHujbUXwgu8.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzNDQzMTU2MDAsImlzc3VlZF9hdCI6MTM0NDMwODcwOSwib2F1dGhfdG9rZW4iOiJBQUFHcFBsYlZNRmNCQU1VN2VmdXk2TmplN0lBMWQ4WkFWY1duM0NtTnZMeVM2WkJtZWtZZlpDTE1vQm5nZWVRMTI2NWtwSmZ6Q1pCa2doTVhvbXZ1dUNLQVM0c1ZaQm1WTHRYR3RXNVpCT2hQNHp0SWRCWkFEbkUiLCJ1c2VyIjp7ImNvdW50cnkiOiJiciIsImxvY2FsZSI6InB0X0JSIiwiYWdlIjp7Im1pbiI6MjF9fSwidXNlcl9pZCI6IjEwMDAwMzY5NTY2MTA3NCJ9";
-                }
-                else
-                {
-                    signedRequest = Request.Form["signed_request"];
-                }
-                var client = new FacebookClient();
-                object result;
-                if (client.TryParseSignedRequest(ApplicationSecret, signedRequest, out result))
-                {
-                    var auth = result as IDictionary<string, object>;
-                    string token = (string)auth["oauth_token"];
-                    string userId = auth["user_id"].ToString();
-                    
-                    var user = new FacebookClient(token).Get("me") as IDictionary<string, object>;
-                    Session["user"] = user;
-                    //Alert(user.ToString());
-                }
-                else
-                {
-                    Response.Redirect("https://www.facebook.com/pages/Place-2-You-Community/251693864933782");
-                    Response.End();
+
+                        // Se o signedRequest abaixo não funfar, acesse http://apps.facebook.com/placetoyou e clique no link "Política de Privacidade". Pegue a linguiça e atribua à variável abaixo. ;-)
+                        //signedRequest = "jNT3nTbUXBzKUNfQb4aPH8LSA9AZpwhGKo99idDN8Ws.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzNDQzMTIwMDAsImlzc3VlZF9hdCI6MTM0NDMwNjEzNywib2F1dGhfdG9rZW4iOiJBQUFHcFBsYlZNRmNCQUM1SVdESkVYMzFMSXhqRDM0bmJOVWFyRDl6NDVBTVhUVlBNS1R3UDhmUEFCTFNDU2pISFg2OHdmbGRVRlhGcldSUUs4cmpoS0NxSTk2d01zcHB5NDIyOTFrVnlnNWN2cjBiSSIsInVzZXIiOnsiY291bnRyeSI6ImJyIiwibG9jYWxlIjoicHRfQlIiLCJhZ2UiOnsibWluIjoyMX19LCJ1c2VyX2lkIjoiMTAwMDAzNjk1NjYxMDc0In0";
+                        signedRequest = "rRgyo5v3X-98q0koYojqSKtWDh-FcjylrHujbUXwgu8.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzNDQzMTU2MDAsImlzc3VlZF9hdCI6MTM0NDMwODcwOSwib2F1dGhfdG9rZW4iOiJBQUFHcFBsYlZNRmNCQU1VN2VmdXk2TmplN0lBMWQ4WkFWY1duM0NtTnZMeVM2WkJtZWtZZlpDTE1vQm5nZWVRMTI2NWtwSmZ6Q1pCa2doTVhvbXZ1dUNLQVM0c1ZaQm1WTHRYR3RXNVpCT2hQNHp0SWRCWkFEbkUiLCJ1c2VyIjp7ImNvdW50cnkiOiJiciIsImxvY2FsZSI6InB0X0JSIiwiYWdlIjp7Im1pbiI6MjF9fSwidXNlcl9pZCI6IjEwMDAwMzY5NTY2MTA3NCJ9";
+                    }
+                    else
+                    {
+                        signedRequest = Request.Form["signed_request"];
+                    }
+                    var client = new FacebookClient();
+                    object result;
+                    if (client.TryParseSignedRequest(ApplicationSecret, signedRequest, out result))
+                    {
+                        var auth = result as IDictionary<string, object>;
+                        string token = (string)auth["oauth_token"];
+                        string userId = auth["user_id"].ToString();
+
+                        var user = new FacebookClient(token).Get("me") as IDictionary<string, object>;
+                        Session["user"] = user;
+                        //Alert(user.ToString());
+                    }
+                    else
+                    {
+                        Response.Redirect("https://www.facebook.com/pages/Place-2-You-O-lugar-perfeito-para-sua-fam%C3%ADlia-ou-seus-neg%C3%B3cios/251693864933782");
+                        Response.End();
+                    }
                 }
             }
             catch (Exception ex)

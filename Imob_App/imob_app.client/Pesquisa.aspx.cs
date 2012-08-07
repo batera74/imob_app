@@ -9,7 +9,7 @@ using imob_app.entidades;
 
 namespace imob_app.client
 {
-    public partial class Pesquisa : System.Web.UI.Page
+    public partial class Pesquisa : BasePage
     {
         private List<ImovelResultado> dataSource;
 

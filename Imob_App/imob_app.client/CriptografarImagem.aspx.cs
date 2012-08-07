@@ -10,7 +10,7 @@ using System.Drawing;
 
 namespace imob_app.client
 {
-    public partial class CriptografarImagem : System.Web.UI.Page
+    public partial class CriptografarImagem : BasePage
     {
         //private const string Temp = @"C:\Users\guilhermea\Documents\GitHub\imob_app\Imob_App\Imagens_Temp\";
         private static string Temp = ConfigurationManager.AppSettings["ImagesTempDir"];

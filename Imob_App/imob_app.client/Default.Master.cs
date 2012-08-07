@@ -15,7 +15,10 @@ namespace imob_app.client
         {
             if (!IsPostBack)
             {
-                lblFirstName.Text = ((IDictionary<string, object>)Session["user"])["first_name"].ToString();
+                if (Session["user"] != null)
+                    lblFirstName.Text = ((IDictionary<string, object>)Session["user"])["first_name"].ToString();
+                else
+                    lblFirstName.Text = "Fiote";
                 CarregarCombosPesquisa();
             }
         }

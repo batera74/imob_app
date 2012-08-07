@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <% Response.Write(Request.Form["signed_request"]); %>
+        <asp:Label runat="server" ID="lblSignedRequest"></asp:Label>
     </div>
     </form>
 </body>

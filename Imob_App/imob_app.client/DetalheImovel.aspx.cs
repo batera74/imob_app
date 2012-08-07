@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace imob_app.client
 {
-    public partial class DetalheImovel : System.Web.UI.Page
+    public partial class DetalheImovel : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

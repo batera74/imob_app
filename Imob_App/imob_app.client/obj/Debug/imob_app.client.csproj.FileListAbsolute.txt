@@ -34,3 +34,16 @@ C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.client\bin\Facebook.
 C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.client\obj\Debug\ResolveAssemblyReference.cache
 C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.client\obj\Debug\imob_app.client.dll
 C:\Projetos\Microgen\GitHub_Code\imob_app\Imob_App\imob_app.client\obj\Debug\imob_app.client.pdb
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\bin\imob_app.client.dll
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\bin\imob_app.client.pdb
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\bin\Facebook.dll
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\bin\imob_app.business.dll
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\bin\imob_app.dao.dll
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\bin\imob_app.entidades.dll
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\bin\imob_app.business.pdb
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\bin\imob_app.dao.pdb
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\bin\imob_app.entidades.pdb
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\bin\Facebook.xml
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\obj\Debug\ResolveAssemblyReference.cache
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\obj\Debug\imob_app.client.dll
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\obj\Debug\imob_app.client.pdb
