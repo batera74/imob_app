@@ -47,3 +47,5 @@ D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\bin\Facebo
 D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\obj\Debug\ResolveAssemblyReference.cache
 D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\obj\Debug\imob_app.client.dll
 D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.client\obj\Debug\imob_app.client.pdb
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\Facebook.dll
+C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\Facebook.xml

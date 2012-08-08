@@ -13,13 +13,13 @@ namespace imob_app.client {
     public partial class DetalheImovel {
         
         /// <summary>
-        /// dtlMini control.
+        /// galeria control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList dtlMini;
+        protected global::imob_app.client.controls.galeria galeria;
         
         /// <summary>
         /// lblImovel control.

@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true"
     CodeBehind="DetalheImovel.aspx.cs" Inherits="imob_app.client.DetalheImovel" %>
+<%@ Register TagPrefix="galeria" TagName="Galeria" Src="~/controls/galeria.ascx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -22,15 +23,8 @@
                     <br />(clique para ampliar)                    
                     <br />
                     <br />
-                    <asp:DataList ID="dtlMini" runat="server" RepeatColumns="3" Height="146px" Width="252px">
-                        <ItemTemplate>
-                            <div id="galMiniImg">
-                                <a href="../Imagem.ashx?idFoto=<%# Eval("id_imagem") %>" rel="lightbox[galeria]">
-                                    <asp:ImageButton ID="Imagem" runat="server" Height="63px" Width="74px" ImageUrl='<%# Eval("id_imagem", "../Imagem.ashx?idFoto={0}") %>' />
-                                </a>
-                            </div>
-                        </ItemTemplate>
-                    </asp:DataList>           
+                    
+                    <galeria:Galeria runat="server" ID="galeria" />
                 </div>
                 <div id="detalhesPai">
                     <h8>Características do Imóvel</h8>

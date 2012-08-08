@@ -54,8 +54,16 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="controls\css\galeria\close.png" />
+    <Content Include="controls\css\galeria\loading.gif" />
+    <Content Include="controls\css\galeria\next.png" />
+    <Content Include="controls\css\galeria\pause.png" />
+    <Content Include="controls\css\galeria\play.png" />
+    <Content Include="controls\css\galeria\previous.png" />
+    <Content Include="controls\css\galeria\shadowbox.css" />
     <Content Include="controls\css\repeater\dataList.css" />
     <Content Include="controls\css\slider\flexslider.css" />
+    <Content Include="controls\galeria.ascx" />
     <Content Include="controls\images\repeater\line.png" />
     <Content Include="controls\images\repeater\next.png" />
     <Content Include="controls\images\repeater\next1.png" />
@@ -68,6 +76,8 @@
     <Content Include="controls\images\slider\next.png" />
     <Content Include="controls\images\slider\prev.png" />
     <Content Include="controls\ImovelRepeater.ascx" />
+    <Content Include="controls\js\galeria\demo.js" />
+    <Content Include="controls\js\galeria\shadowbox.js" />
     <Content Include="controls\js\slider\jquery.flexslider-min.js" />
     <Content Include="controls\slider.ascx" />
     <Content Include="CriptografarImagem.aspx" />
@@ -219,6 +229,13 @@
   <ItemGroup>
     <Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\galeria.ascx.cs">
+      <DependentUpon>galeria.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="controls\galeria.ascx.designer.cs">
+      <DependentUpon>galeria.ascx</DependentUpon>
     </Compile>
     <Compile Include="controls\ImovelRepeater.ascx.cs">
       <DependentUpon>ImovelRepeater.ascx</DependentUpon>

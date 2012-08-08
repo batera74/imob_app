@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace imob_app.client {
+namespace imob_app.client.controls {
     
     
-    public partial class _Default {
+    public partial class galeria {
         
         /// <summary>
-        /// slider control.
+        /// dtlMini control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::imob_app.client.controls.slider slider;
+        protected global::System.Web.UI.WebControls.DataList dtlMini;
     }
 }

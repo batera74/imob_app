@@ -17,11 +17,10 @@ namespace imob_app.client
             CarregarDetalhes(imovel);
             CarregarCaracteristicas(imovel);
         }
-        
+
         private void CarregarImagens(dao.imovel imovel)
         {
-            dtlMini.DataSource = imovel.imagem;
-            dtlMini.DataBind();
+            galeria.DataSource = imovel.imagem;
         }
 
         private void CarregarDetalhes(dao.imovel imovel)
@@ -58,13 +57,6 @@ namespace imob_app.client
 
             dtSocial.DataSource = imovel.social;
             dtSocial.DataBind();
-        }
-
-        protected void dtlMini_ItemDataBound(object sender, DataListItemEventArgs e)
-        {
-            Image img = (Image)e.Item.FindControl("Imagem");
-            dao.imagem imagem = ((dao.imagem)e.Item.DataItem);
-            img.ImageUrl = "../Imagem.ashx?idFoto=" + imagem.id_imagem;
         }
     }
 }
