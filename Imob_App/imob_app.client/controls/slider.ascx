@@ -1,9 +1,9 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="slider.ascx.cs" Inherits="imob_app.client.controls.slider" %>
 <link rel="stylesheet" href="controls/css/slider/flexslider.css" media="screen" />
 <script src="controls/js/slider/jquery.flexslider-min.js"></script>
-<script type="text/javascript">		
+<script type="text/javascript" language="javascript">		
     $(function(){			
-        $('.flexslider').flexslider({ animation: "fade", slideshow: true, slideshowSpeed: 7000, animationDuration: 600, prevText: "Previous", nextText: "Next", controlNav: true, }) })	
+        $('.flexslider').flexslider({ animation: "fade", slideshow: true, slideshowSpeed: 7000, animationDuration: 600, prevText: "Previous", nextText: "Next", controlNav: true }) })	
 </script>
 <div class="flexslider">
     <ul class="slides">
