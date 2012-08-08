@@ -1,15 +1,20 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Default.Master" AutoEventWireup="true"
     CodeBehind="DetalheImovel.aspx.cs" Inherits="imob_app.client.DetalheImovel" %>
-<%@ Register TagPrefix="galeria" TagName="Galeria" Src="~/controls/galeria.ascx" %>
 
+<%@ Register TagPrefix="galeria" TagName="Galeria" Src="~/controls/galeria.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script src="js/shadowbox.js"></script>
+    <script src="js/demo.js"></script>
+    <link rel="stylesheet" href="css/shadowbox/shadowbox.css" media="screen" />
+    
+    <script type="text/javascript">
+        Shadowbox.init({
+            overlayOpacity: 0.8
+        }, setupDemos);
+
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="conteudo" runat="server">
-    <script type="text/javascript">
-        $(function () {
-            $('#galMiniImg a').lightBox();
-        });
-    </script>
     <section id="content">
 	    <div class="container_24">
             <div class="wrapper">
@@ -124,7 +129,7 @@
                     </div>
             </div>
             <div>
-                <a href="">
+                <a href="EstouInteressado.aspx" rel="shadowbox;width=500;height=370">
                 <asp:Label ID="lblDetalhes" runat="server" CssClass="button" Text='Estou interessado $'></asp:Label></a>
             </div>
         </div>

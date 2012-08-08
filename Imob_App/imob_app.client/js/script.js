@@ -76,7 +76,8 @@ $(function(){
 	$(".tabs-vert-left ul.tabs-nav").tabs(".tabs-vert-left .tab-content");
 	$(".tabs-vert-right ul.tabs-nav").tabs(".tabs-vert-right .tab-content");	
 // Forms
-	$('#form2').jqTransform({imgPath:'images/'});
+	$('#form2').jqTransform({ imgPath: 'images/' });
+	$('#formInteresse').jqTransform({ imgPath: 'images/' });
 	$('#accept-card-form').jqTransform({imgPath:'images/'});
 	$('#application-form').jqTransform({imgPath:'images/'});
 // Carausel

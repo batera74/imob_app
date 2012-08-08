@@ -64,6 +64,11 @@ h9{font-size:13px; line-height:26px;}
 		margin:-5px 0 -2px 0;
 		color:#f45c40;
 	}
+	.head-1 .heading-row-2_ {
+		display:block;
+		margin: 5px 0 -2px 0;
+		color:#f45c40;
+	}
 	.head-1 em {display:block; font-style:normal;}
 	
 	.hp-1 {padding:0 0 30px 0;}
@@ -636,4 +641,9 @@ b.heading-404 {
 	float: left;
 	margin-right: 10px;
 	border: solid 2px #f45c40;
+}
+
+.estouInteressado
+{
+    margin: 20px 0 0 20px;
 }

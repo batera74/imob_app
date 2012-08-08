@@ -11,7 +11,7 @@ input[type="text"],input[type=password],textarea{font-family:Arial, Helvetica, s
 		border-radius:5px;
 		-moz-border-radius:5px; 
 		-webkit-border-radius:5px;  
-		width:208px; 
+		width:248px; 
 		border:1px solid #efedee;
 		color:#818181;
 		font-size:12px;
@@ -379,6 +379,62 @@ input[type="text"],input[type=password],textarea{font-family:Arial, Helvetica, s
 #form2 .jqTransformCheckboxWrapper a.jqTransformChecked {background: transparent url(../images/checkbox.png) 0 -16px no-repeat;}
 /* ------------- * Hidden - used to hide the original form elements * ------------- */
 #form2 .jqTransformHidden {display: none;}
+
+
+/********** Estou Interessado ***************/
+#formInteresse{ width: 360px; height: 240px; }
+	#formInteresse label{ display:block; position:relative; min-height:40px;}
+	#formInteresse input[type="text"]{ border-radius:3px; width:270px; box-shadow:inset 0 0 5px rgba(0,0,0,.1); color: #8a8a8a;}
+	#formInteresse textarea{ resize:none;border-radius:3px; height:120px; box-shadow:inset 0 0 5px rgba(0,0,0,.1); color: #8a8a8a;}
+	#formInteresse span.text-form{ display:inline-block; padding:5px 6px 0;}
+	#formInteresse div.text-form{ padding:5px 0 10px 0; min-width:90px;}
+	#formInteresse .text-formInteresse{ margin:3px 0 0 5px;}
+	#formInteresse .text-form3{ padding:8px 0px 5px 5px;}
+	#formInteresse .btns{ padding:10px 0 0 0;}	
+.pad-form{ padding-top:5px;}
+.pad-formInteresse{ padding-top:25px;}
+/* ------------- * Selects * ------------- */
+#formInteresse .jqTransformSelectWrapper {position:relative; float:left;}
+#formInteresse .jqTransformSelectWrapper div span{ display:block;float: none; min-width:30px !important;background:#fff;position:relative;white-space: nowrap;overflow:hidden;cursor:pointer;border:1px solid #ddd;padding:5px; border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
+#formInteresse .jqTransformSelectWrapper  a.jqTransformSelectOpen {display: block;position:absolute; right:14px;top:4px;width:22px;height:21px;background: url(../images/form-select.gif) no-repeat  0 0;}
+#formInteresse .jqTransformSelectWrapper  a.jqTransformSelectOpen:hover{ background-position:0 -21px;}
+/*#formInteresse .jqTransformSelectWrapper li { height: 10px;}*/
+#formInteresse .jqTransformSelectWrapper ul {	
+	max-height: 90px;
+	position: absolute;
+	left: 0px;
+	background-color: #FFF;
+	display: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: auto;
+	overflow-y: auto;
+	z-index:10;
+	border:1px solid #ddd;
+	/*width:194px !important;*/
+	border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
+#formInteresse .jqTransformSelectWrapper ul a {display: block;padding:2px;color:#000;font-size:12px;padding-left:12px;}
+#formInteresse .jqTransformSelectWrapper ul a.selected {color: #B94A48;}
+#formInteresse .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {color: #fff; background:#ddd;text-decoration:none;}
+/* ------------- * Radios * ------------- */
+#formInteresse .jqTransformRadioWrapper {float: left;display:block; margin:5px 0 0;}
+#formInteresse .jqTransformRadio {
+	background: transparent url(../images/radio.png) 0 0px no-repeat;
+	vertical-align: middle;
+	height:16px;
+	width:16px;
+	display:block;/*display: -moz-inline-block;*/
+}
+/* ------------- * Checked - Radio * ------------- */
+#formInteresse a.jqTransformChecked {background: transparent url(../images/radio.png) 0 -17px no-repeat;}
+/* -- * Checkboxes * -- */
+#formInteresse span.jqTransformCheckboxWrapper{display:block;float:left; padding:10px 0 0 0;}
+#formInteresse a.jqTransformCheckbox {background: transparent url(../images/checkbox.png) 0 0px no-repeat;vertical-align: middle;height:15px;width:15px;display:block;/*display: -moz-inline-block;*/}
+/* -- * Checked * -- */
+#formInteresse .jqTransformCheckboxWrapper a.jqTransformChecked {background: transparent url(../images/checkbox.png) 0 -16px no-repeat;}
+/* ------------- * Hidden - used to hide the original form elements * ------------- */
+#formInteresse .jqTransformHidden {display: none;}
+
 
 
 /* ------------------------------------------------ */
