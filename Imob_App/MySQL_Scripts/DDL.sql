@@ -5,16 +5,17 @@ use `imobapp`;
 
 drop table if exists `usuario`;
 create table if not exists `usuario` (
- `id_usuario` smallint not null auto_increment primary key, 
+ `id_usuario` integer not null primary key, 
+ `nm_usuario` varchar(80) null, 
  `cd_cpf` char(11) null,
- `cd_creci` varchar(7) not null, 
+ `cd_creci` varchar(7) null, 
  `ds_email` varchar(50) null,
  `ds_telefone1` varchar(20) null,
  `ds_tipo_telefone_1` varchar(40) null,
  `ds_telefone2` varchar(20) null,
  `ds_tipo_telefone_2` varchar(40) null,
  `ic_ativo` bit not null,
- `ds_estado_conta` varchar(20) null
+ `ds_estado_conta` varchar(50) null
 );
 
 drop table if exists `pais`;
@@ -120,7 +121,7 @@ create table if not exists `lazer` (
 drop table if exists `imovel`;
 create table if not exists `imovel` (
  `id_imovel` smallint not null auto_increment primary key,
- `id_usuario` smallint not null,
+ `id_usuario` integer not null,
  `id_finalidade` smallint not null,
  `id_categoria` smallint not null,
  `ds_padrao` varchar(50) null,
