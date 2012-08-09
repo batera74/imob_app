@@ -31,6 +31,15 @@ namespace imob_app.client {
         protected global::System.Web.UI.WebControls.Label lblImovel;
         
         /// <summary>
+        /// lblValor control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblValor;
+        
+        /// <summary>
         /// lblID control.
         /// </summary>
         /// <remarks>
@@ -47,15 +56,6 @@ namespace imob_app.client {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblCidade;
-        
-        /// <summary>
-        /// lblValor control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblValor;
         
         /// <summary>
         /// lblCondominio control.

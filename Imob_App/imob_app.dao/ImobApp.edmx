@@ -40,10 +40,6 @@
             <End Role="pais" EntitySet="pais" />
             <End Role="estado" EntitySet="estado" />
           </AssociationSet>
-          <AssociationSet Name="imagem_ibfk_1" Association="imobappModel.Store.imagem_ibfk_1">
-            <End Role="imovel" EntitySet="imovel" />
-            <End Role="imagem" EntitySet="imagem" />
-          </AssociationSet>
           <AssociationSet Name="imovel_ibfk_1" Association="imobappModel.Store.imovel_ibfk_1">
             <End Role="usuario" EntitySet="usuario" />
             <End Role="imovel" EntitySet="imovel" />
@@ -199,7 +195,7 @@
             <PropertyRef Name="id_imagem" />
           </Key>
           <Property Name="id_imagem" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="ds_imagem_cripto" Type="text" Nullable="false" />
+          <Property Name="ds_imagem_cripto" Type="longtext" Nullable="false" />
           <Property Name="ds_imagem" Type="varchar" Nullable="false" MaxLength="150" />
           <Property Name="id_imovel" Type="smallint" Nullable="false" />
           <Property Name="ic_principal" Type="bit" Nullable="false" />
@@ -357,16 +353,15 @@
             <PropertyRef Name="id_usuario" />
           </Key>
           <Property Name="id_usuario" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="nm_usuario" Type="varchar" Nullable="false" MaxLength="70" />
           <Property Name="cd_cpf" Type="char" MaxLength="11" />
           <Property Name="cd_creci" Type="varchar" Nullable="false" MaxLength="7" />
-          <Property Name="ds_login_facebook" Type="varchar" MaxLength="50" />
           <Property Name="ds_email" Type="varchar" MaxLength="50" />
-          <Property Name="ds_password" Type="varchar" MaxLength="500" />
           <Property Name="ds_telefone1" Type="varchar" MaxLength="20" />
           <Property Name="ds_tipo_telefone_1" Type="varchar" MaxLength="40" />
           <Property Name="ds_telefone2" Type="varchar" MaxLength="20" />
           <Property Name="ds_tipo_telefone_2" Type="varchar" MaxLength="40" />
+          <Property Name="ic_ativo" Type="bit" Nullable="false" />
+          <Property Name="ds_estado_conta" Type="varchar" MaxLength="100" />
         </EntityType>
         <Association Name="bairro_ibfk_1">
           <End Role="municipio" Type="imobappModel.Store.municipio" Multiplicity="1" />
@@ -389,18 +384,6 @@
             </Principal>
             <Dependent Role="estado">
               <PropertyRef Name="id_pais" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="imagem_ibfk_1">
-          <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="1" />
-          <End Role="imagem" Type="imobappModel.Store.imagem" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="imovel">
-              <PropertyRef Name="id_imovel" />
-            </Principal>
-            <Dependent Role="imagem">
-              <PropertyRef Name="id_imovel" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -668,7 +651,6 @@
           <EntitySet Name="servico" EntityType="imobappModel.servico" />
           <EntitySet Name="slider" EntityType="imobappModel.slider" />
           <EntitySet Name="social" EntityType="imobappModel.social" />
-          <EntitySet Name="usuario" EntityType="imobappModel.usuario" />
           <AssociationSet Name="bairro_ibfk_1" Association="imobappModel.bairro_ibfk_1">
             <End Role="municipio" EntitySet="municipio" />
             <End Role="bairro" EntitySet="bairro" />
@@ -705,10 +687,6 @@
             <End Role="imovel" EntitySet="imovel" />
             <End Role="imagem" EntitySet="imagem" />
           </AssociationSet>
-          <AssociationSet Name="imovel_ibfk_1" Association="imobappModel.imovel_ibfk_1">
-            <End Role="usuario" EntitySet="usuario" />
-            <End Role="imovel" EntitySet="imovel" />
-          </AssociationSet>
           <AssociationSet Name="imovel_ibfk_7" Association="imobappModel.imovel_ibfk_7">
             <End Role="posicaoimovel" EntitySet="posicaoimovel" />
             <End Role="imovel" EntitySet="imovel" />
@@ -736,6 +714,11 @@
           <AssociationSet Name="imovelsocial" Association="imobappModel.imovelsocial">
             <End Role="imovel" EntitySet="imovel" />
             <End Role="social" EntitySet="social" />
+          </AssociationSet>
+          <EntitySet Name="usuario" EntityType="imobappModel.usuario" />
+          <AssociationSet Name="imovel_ibfk_1" Association="imobappModel.imovel_ibfk_1">
+            <End Role="usuario" EntitySet="usuario" />
+            <End Role="imovel" EntitySet="imovel" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="acabamento">
@@ -862,7 +845,6 @@
           <NavigationProperty Name="estadoimovel" Relationship="imobappModel.imovel_ibfk_5" FromRole="imovel" ToRole="estadoimovel" />
           <NavigationProperty Name="finalidade" Relationship="imobappModel.imovel_ibfk_2" FromRole="imovel" ToRole="finalidade" />
           <NavigationProperty Name="imagem" Relationship="imobappModel.imagem_ibfk_1" FromRole="imovel" ToRole="imagem" />
-          <NavigationProperty Name="usuario" Relationship="imobappModel.imovel_ibfk_1" FromRole="imovel" ToRole="usuario" />
           <NavigationProperty Name="posicaoimovel" Relationship="imobappModel.imovel_ibfk_7" FromRole="imovel" ToRole="posicaoimovel" />
           <NavigationProperty Name="acabamento" Relationship="imobappModel.imovelacabamento" FromRole="imovel" ToRole="acabamento" />
           <NavigationProperty Name="armario" Relationship="imobappModel.imovelarmario" FromRole="imovel" ToRole="armario" />
@@ -870,6 +852,7 @@
           <NavigationProperty Name="lazer" Relationship="imobappModel.imovellazer" FromRole="imovel" ToRole="lazer" />
           <NavigationProperty Name="servico" Relationship="imobappModel.imovelservico" FromRole="imovel" ToRole="servico" />
           <NavigationProperty Name="social" Relationship="imobappModel.imovelsocial" FromRole="imovel" ToRole="social" />
+          <NavigationProperty Name="usuario" Relationship="imobappModel.imovel_ibfk_1" FromRole="imovel" ToRole="usuario" />
         </EntityType>
         <EntityType Name="intima">
           <Key>
@@ -939,23 +922,6 @@
           <Property Name="ds_item" Type="String" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovelsocial" FromRole="social" ToRole="imovel" />
         </EntityType>
-        <EntityType Name="usuario">
-          <Key>
-            <PropertyRef Name="id_usuario" />
-          </Key>
-          <Property Name="id_usuario" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
-          <Property Name="nm_usuario" Type="String" Nullable="false" />
-          <Property Name="cd_cpf" Type="String" />
-          <Property Name="cd_creci" Type="String" Nullable="false" />
-          <Property Name="ds_login_facebook" Type="String" />
-          <Property Name="ds_email" Type="String" />
-          <Property Name="ds_password" Type="String" />
-          <Property Name="ds_telefone1" Type="String" />
-          <Property Name="ds_tipo_telefone_1" Type="String" />
-          <Property Name="ds_telefone2" Type="String" />
-          <Property Name="ds_tipo_telefone_2" Type="String" />
-          <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_1" FromRole="usuario" ToRole="imovel" />
-        </EntityType>
         <Association Name="bairro_ibfk_1">
           <End Role="municipio" Type="imobappModel.municipio" Multiplicity="1" />
           <End Role="bairro" Type="imobappModel.bairro" Multiplicity="*" />
@@ -992,10 +958,6 @@
           <End Role="imovel" Type="imobappModel.imovel" Multiplicity="1" />
           <End Role="imagem" Type="imobappModel.imagem" Multiplicity="*" />
         </Association>
-        <Association Name="imovel_ibfk_1">
-          <End Role="usuario" Type="imobappModel.usuario" Multiplicity="1" />
-          <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
-        </Association>
         <Association Name="imovel_ibfk_7">
           <End Role="posicaoimovel" Type="imobappModel.posicaoimovel" Multiplicity="0..1" />
           <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
@@ -1023,6 +985,26 @@
         <Association Name="imovelsocial">
           <End Role="imovel" Type="imobappModel.imovel" Multiplicity="*" />
           <End Role="social" Type="imobappModel.social" Multiplicity="*" />
+        </Association>
+        <EntityType Name="usuario">
+          <Key>
+            <PropertyRef Name="id_usuario" />
+          </Key>
+          <Property Type="Int16" Name="id_usuario" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="cd_cpf" />
+          <Property Type="String" Name="cd_creci" Nullable="false" />
+          <Property Type="String" Name="ds_email" />
+          <Property Type="String" Name="ds_telefone1" />
+          <Property Type="String" Name="ds_tipo_telefone_1" />
+          <Property Type="String" Name="ds_telefone2" />
+          <Property Type="String" Name="ds_tipo_telefone_2" />
+          <Property Type="Boolean" Name="ic_ativo" Nullable="false" />
+          <Property Type="String" Name="ds_estado_conta" />
+          <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_1" FromRole="usuario" ToRole="imovel" />
+        </EntityType>
+        <Association Name="imovel_ibfk_1">
+          <End Type="imobappModel.usuario" Role="usuario" Multiplicity="1" />
+          <End Type="imobappModel.imovel" Role="imovel" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -1141,19 +1123,6 @@
             <ScalarProperty Name="id" ColumnName="id" />
             <ScalarProperty Name="ds_item" ColumnName="ds_item" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="usuario"><EntityTypeMapping TypeName="imobappModel.usuario"><MappingFragment StoreEntitySet="usuario">
-            <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
-            <ScalarProperty Name="nm_usuario" ColumnName="nm_usuario" />
-            <ScalarProperty Name="cd_cpf" ColumnName="cd_cpf" />
-            <ScalarProperty Name="cd_creci" ColumnName="cd_creci" />
-            <ScalarProperty Name="ds_login_facebook" ColumnName="ds_login_facebook" />
-            <ScalarProperty Name="ds_email" ColumnName="ds_email" />
-            <ScalarProperty Name="ds_password" ColumnName="ds_password" />
-            <ScalarProperty Name="ds_telefone1" ColumnName="ds_telefone1" />
-            <ScalarProperty Name="ds_tipo_telefone_1" ColumnName="ds_tipo_telefone_1" />
-            <ScalarProperty Name="ds_telefone2" ColumnName="ds_telefone2" />
-            <ScalarProperty Name="ds_tipo_telefone_2" ColumnName="ds_tipo_telefone_2" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <AssociationSetMapping Name="bairro_ibfk_1" TypeName="imobappModel.bairro_ibfk_1" StoreEntitySet="bairro">
             <EndProperty Name="municipio">
               <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
@@ -1227,14 +1196,6 @@
               <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="imovel_ibfk_1" TypeName="imobappModel.imovel_ibfk_1" StoreEntitySet="imovel">
-            <EndProperty Name="usuario">
-              <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
-            </EndProperty>
-            <EndProperty Name="imovel">
-              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-            </EndProperty>
-          </AssociationSetMapping>
           <AssociationSetMapping Name="imovel_ibfk_7" TypeName="imobappModel.imovel_ibfk_7" StoreEntitySet="imovel">
             <EndProperty Name="posicaoimovel">
               <ScalarProperty Name="id" ColumnName="id_posicao_imovel" />
@@ -1292,6 +1253,30 @@
               <ScalarProperty Name="id" ColumnName="id_social" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="usuario">
+            <EntityTypeMapping TypeName="imobappModel.usuario">
+              <MappingFragment StoreEntitySet="usuario">
+                <ScalarProperty Name="ds_estado_conta" ColumnName="ds_estado_conta" />
+                <ScalarProperty Name="ic_ativo" ColumnName="ic_ativo" />
+                <ScalarProperty Name="ds_tipo_telefone_2" ColumnName="ds_tipo_telefone_2" />
+                <ScalarProperty Name="ds_telefone2" ColumnName="ds_telefone2" />
+                <ScalarProperty Name="ds_tipo_telefone_1" ColumnName="ds_tipo_telefone_1" />
+                <ScalarProperty Name="ds_telefone1" ColumnName="ds_telefone1" />
+                <ScalarProperty Name="ds_email" ColumnName="ds_email" />
+                <ScalarProperty Name="cd_creci" ColumnName="cd_creci" />
+                <ScalarProperty Name="cd_cpf" ColumnName="cd_cpf" />
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="imovel_ibfk_1" TypeName="imobappModel.imovel_ibfk_1" StoreEntitySet="imovel">
+            <EndProperty Name="imovel">
+              <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+            </EndProperty>
+            <EndProperty Name="usuario">
+              <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+            </EndProperty>
+          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1332,7 +1317,6 @@
         <EntityTypeShape EntityType="imobappModel.servico" Width="1.5" PointX="12" PointY="13.5" Height="1.5956835937500031" IsExpanded="true" />
         <EntityTypeShape EntityType="imobappModel.slider" Width="1.5" PointX="2.75" PointY="0.75" Height="1.9802864583333388" IsExpanded="true" />
         <EntityTypeShape EntityType="imobappModel.social" Width="1.5" PointX="12" PointY="15.875" Height="1.5956835937500031" IsExpanded="true" />
-        <EntityTypeShape EntityType="imobappModel.usuario" Width="1.5" PointX="7.5" PointY="18.75" Height="3.3263964843750031" IsExpanded="true" />
         <AssociationConnector Association="imobappModel.bairro_ibfk_1" ManuallyRouted="false">
           <ConnectorPoint PointX="6.75" PointY="9.5189925130208337" />
           <ConnectorPoint PointX="7.5" PointY="9.5189925130208337" />
@@ -1342,9 +1326,9 @@
           <ConnectorPoint PointX="9.75" PointY="9.5189925130208337" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovel_ibfk_3" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="2.9035522460937497" />
-          <ConnectorPoint PointX="10.29687375" PointY="2.9035522460937497" />
-          <ConnectorPoint PointX="10.29687375" PointY="5.125" />
+          <ConnectorPoint PointX="9" PointY="2.9365867614746088" />
+          <ConnectorPoint PointX="10.241209921875" PointY="2.9365867614746088" />
+          <ConnectorPoint PointX="10.241209921875" PointY="5.125" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovel_ibfk_6" ManuallyRouted="false">
           <ConnectorPoint PointX="9" PointY="5.547841796875" />
@@ -1363,32 +1347,23 @@
           <ConnectorPoint PointX="9.75" PointY="12.547841796875" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovel_ibfk_2" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="14.908062023437498" />
-          <ConnectorPoint PointX="10.010414166666665" PointY="14.908062023437498" />
-          <ConnectorPoint PointX="10.177080833333333" PointY="14.908062023437498" />
-          <ConnectorPoint PointX="10.5" PointY="14.908062023437498" />
-          <ConnectorPoint PointX="10.5" PointY="14.220439453125" />
+          <ConnectorPoint PointX="9" PointY="14.811911307291666" />
+          <ConnectorPoint PointX="10.20898546875" PointY="14.811911307291666" />
+          <ConnectorPoint PointX="10.20898546875" PointY="14.028138020833334" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imagem_ibfk_1" ManuallyRouted="false">
-          <ConnectorPoint PointX="11.25" PointY="7.3362939453125" />
-          <ConnectorPoint PointX="12" PointY="7.3362939453125" />
-        </AssociationConnector>
-        <AssociationConnector Association="imobappModel.imovel_ibfk_1" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="20.4131982421875" />
-          <ConnectorPoint PointX="10.0937475" PointY="20.4131982421875" />
-          <ConnectorPoint PointX="10.0937475" PointY="14.220439453125" />
+          <ConnectorPoint PointX="11.25" PointY="7.2401432291666667" />
+          <ConnectorPoint PointX="12" PointY="7.2401432291666667" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovel_ibfk_7" ManuallyRouted="false">
-          <ConnectorPoint PointX="9" PointY="17.247302246093753" />
-          <ConnectorPoint PointX="10.010414166666665" PointY="17.247302246093753" />
-          <ConnectorPoint PointX="10.177080833333333" PointY="17.247302246093753" />
-          <ConnectorPoint PointX="10.835941875" PointY="17.247302246093753" />
-          <ConnectorPoint PointX="10.835941875" PointY="14.220439453125" />
+          <ConnectorPoint PointX="9" PointY="17.270571136474612" />
+          <ConnectorPoint PointX="10.63086421875" PointY="17.270571136474612" />
+          <ConnectorPoint PointX="10.63086421875" PointY="14.028138020833334" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovelacabamento" ManuallyRouted="false">
-          <ConnectorPoint PointX="10.804689374999999" PointY="5.125" />
-          <ConnectorPoint PointX="10.804689374999999" PointY="2.2642761230468746" />
-          <ConnectorPoint PointX="12" PointY="2.2642761230468746" />
+          <ConnectorPoint PointX="10.7768574609375" PointY="5.125" />
+          <ConnectorPoint PointX="10.7768574609375" PointY="2.2807933807373044" />
+          <ConnectorPoint PointX="12" PointY="2.2807933807373044" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovelarmario" ManuallyRouted="false">
           <ConnectorPoint PointX="11.25" PointY="5.360341796875" />
@@ -1403,13 +1378,18 @@
           <ConnectorPoint PointX="12" PointY="12.047841796875002" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovelservico" ManuallyRouted="false">
-          <ConnectorPoint PointX="11.25" PointY="13.8602197265625" />
-          <ConnectorPoint PointX="12" PointY="13.8602197265625" />
+          <ConnectorPoint PointX="11.25" PointY="13.764069010416666" />
+          <ConnectorPoint PointX="12" PointY="13.764069010416666" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovelsocial" ManuallyRouted="false">
-          <ConnectorPoint PointX="11.074223437499999" PointY="14.220439453125" />
-          <ConnectorPoint PointX="11.074223437499999" PointY="16.561151123046876" />
-          <ConnectorPoint PointX="12" PointY="16.561151123046876" />
+          <ConnectorPoint PointX="10.971684609375" PointY="14.028138020833334" />
+          <ConnectorPoint PointX="10.971684609375" PointY="16.572785568237308" />
+          <ConnectorPoint PointX="12" PointY="16.572785568237308" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="imobappModel.usuario" Width="1.5" PointX="0.75" PointY="4" Height="3.1340950520833317" />
+        <AssociationConnector Association="imobappModel.imovel_ibfk_1" >
+          <ConnectorPoint PointX="2.25" PointY="6.5836393229166656" />
+          <ConnectorPoint PointX="9.75" PointY="6.5836393229166656" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

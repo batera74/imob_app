@@ -11,22 +11,26 @@ namespace imob_app.business
 {
     public class Municipio : IEntidadeLocalizacao<dao.municipio>
     {
+        private imobappEntities _ctx;
+
+        public Municipio()
+        {
+            _ctx = new imobappEntities();
+        }
+
         public List<dao.municipio> SelecionarTodos()
         {
-            var ctx = new imobappEntities();
-            return (from a in ctx.municipio select a).ToList();
-            
+            return (from a in _ctx.municipio select a).ToList();            
         }
 
-        public List<dao.municipio> Selecionar(int id)
+        public dao.municipio Selecionar(int id)
         {
-            throw new NotImplementedException();
+            return (from m in _ctx.municipio where m.id_municipio == id select m).FirstOrDefault();
         }
 
-        public List<dao.municipio> SelecionarPorReferencia(short id)
+        public List<dao.municipio> SelecionarPorReferencia(int id)
         {
-            var ctx = new imobappEntities();
-            return (from a in ctx.municipio where a.estado.id_estado == id select a).ToList();            
+            return (from a in _ctx.municipio where a.estado.id_estado == id select a).ToList();            
         }
     }
 }

@@ -34,8 +34,8 @@ namespace imob_app.client
             lblBanheiro.Text = lblBanheiro.Text + imovel.ds_banheiro;
             lblGaragem.Text = lblGaragem.Text + imovel.ds_garagem;
             lblPortaria.Text = lblPortaria.Text + imovel.ds_portaria;
-            lblElevador.Text = lblElevador.Text + imovel.ic_elevador;
-            lblVazio.Text = lblVazio.Text + imovel.ic_vazio;
+            lblElevador.Text = lblElevador.Text + (imovel.ic_elevador == true ? "Sim" : "Não");
+            lblVazio.Text = lblVazio.Text + (imovel.ic_vazio == true ? "Sim" : "Não");
         }
 
         private void CarregarCaracteristicas(dao.imovel imovel)

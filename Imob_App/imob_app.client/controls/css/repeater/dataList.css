@@ -39,24 +39,6 @@ table.sample td {
 	background-color: white;
 }
 
-.categoria
-{
-    font-size: small;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #f45c40;
-}
-
-.valor
-{
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: uppercase;    
-    color: #f45c40;
-}
-
 .line
 {
     width: 100%;

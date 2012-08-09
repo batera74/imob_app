@@ -11,6 +11,6 @@ namespace imob_app.business.Contratos
 {
     public interface IEntidadeLocalizacao<T> : IEntidade<T>
     {
-        List<T> SelecionarPorReferencia(short id);
+        List<T> SelecionarPorReferencia(int id);
     }
 }

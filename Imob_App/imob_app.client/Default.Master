@@ -57,7 +57,7 @@
                 	Olá, <b><asp:Label runat="server" ID="lblFirstName"></asp:Label></b>!
                 </div>
             </div>
-        	<a href="index.html" class="logo">YourPlace</a>
+        	<a href="Default.aspx" class="logo">YourPlace</a>
         </div>
         <nav>
         	<ul class="sf-menu">

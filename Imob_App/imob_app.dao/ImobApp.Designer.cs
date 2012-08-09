@@ -18,7 +18,6 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_5", "estadoimovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.estadoimovel), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_2", "finalidade", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.finalidade), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imagem_ibfk_1", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.imovel), "imagem", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imagem))]
-[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_1", "usuario", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.usuario), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_7", "posicaoimovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(imob_app.dao.posicaoimovel), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovelacabamento", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel), "acabamento", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.acabamento))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovelarmario", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel), "armario", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.armario))]
@@ -26,9 +25,10 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovellazer", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel), "lazer", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.lazer))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovelservico", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel), "servico", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.servico))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovelsocial", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel), "social", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.social))]
+[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_1", "usuario", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.usuario), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
 
 // Original file name:
-// Generation date: 24/07/2012 23:12:59
+// Generation date: 09/08/2012 11:14:36
 namespace imob_app.dao
 {
     
@@ -2789,45 +2789,6 @@ namespace imob_app.dao
             }
         }
         /// <summary>
-        /// There are no comments for usuario in the schema.
-        /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("imobappModel", "imovel_ibfk_1", "usuario")]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        [global::System.Xml.Serialization.XmlIgnoreAttribute()]
-        [global::System.Xml.Serialization.SoapIgnoreAttribute()]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        public usuario usuario
-        {
-            get
-            {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<usuario>("imobappModel.imovel_ibfk_1", "usuario").Value;
-            }
-            set
-            {
-                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<usuario>("imobappModel.imovel_ibfk_1", "usuario").Value = value;
-            }
-        }
-        /// <summary>
-        /// There are no comments for usuario in the schema.
-        /// </summary>
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        public global::System.Data.Objects.DataClasses.EntityReference<usuario> usuarioReference
-        {
-            get
-            {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<usuario>("imobappModel.imovel_ibfk_1", "usuario");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<usuario>("imobappModel.imovel_ibfk_1", "usuario", value);
-                }
-            }
-        }
-        /// <summary>
         /// There are no comments for posicaoimovel in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("imobappModel", "imovel_ibfk_7", "posicaoimovel")]
@@ -2995,6 +2956,45 @@ namespace imob_app.dao
                 if ((value != null))
                 {
                     ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<social>("imobappModel.imovelsocial", "social", value);
+                }
+            }
+        }
+        /// <summary>
+        /// There are no comments for usuario in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("imobappModel", "imovel_ibfk_1", "usuario")]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        [global::System.Xml.Serialization.XmlIgnoreAttribute()]
+        [global::System.Xml.Serialization.SoapIgnoreAttribute()]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public usuario usuario
+        {
+            get
+            {
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<usuario>("imobappModel.imovel_ibfk_1", "usuario").Value;
+            }
+            set
+            {
+                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<usuario>("imobappModel.imovel_ibfk_1", "usuario").Value = value;
+            }
+        }
+        /// <summary>
+        /// There are no comments for usuario in the schema.
+        /// </summary>
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public global::System.Data.Objects.DataClasses.EntityReference<usuario> usuarioReference
+        {
+            get
+            {
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<usuario>("imobappModel.imovel_ibfk_1", "usuario");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<usuario>("imobappModel.imovel_ibfk_1", "usuario", value);
                 }
             }
         }
@@ -3947,15 +3947,15 @@ namespace imob_app.dao
         /// Create a new usuario object.
         /// </summary>
         /// <param name="id_usuario">Initial value of id_usuario.</param>
-        /// <param name="nm_usuario">Initial value of nm_usuario.</param>
         /// <param name="cd_creci">Initial value of cd_creci.</param>
+        /// <param name="ic_ativo">Initial value of ic_ativo.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static usuario Createusuario(short id_usuario, string nm_usuario, string cd_creci)
+        public static usuario Createusuario(short id_usuario, string cd_creci, bool ic_ativo)
         {
             usuario usuario = new usuario();
             usuario.id_usuario = id_usuario;
-            usuario.nm_usuario = nm_usuario;
             usuario.cd_creci = cd_creci;
+            usuario.ic_ativo = ic_ativo;
             return usuario;
         }
         /// <summary>
@@ -3985,33 +3985,6 @@ namespace imob_app.dao
         partial void Onid_usuarioChanging(short value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         partial void Onid_usuarioChanged();
-        /// <summary>
-        /// There are no comments for property nm_usuario in the schema.
-        /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public string nm_usuario
-        {
-            get
-            {
-                return this._nm_usuario;
-            }
-            set
-            {
-                this.Onnm_usuarioChanging(value);
-                this.ReportPropertyChanging("nm_usuario");
-                this._nm_usuario = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, false);
-                this.ReportPropertyChanged("nm_usuario");
-                this.Onnm_usuarioChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private string _nm_usuario;
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onnm_usuarioChanging(string value);
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onnm_usuarioChanged();
         /// <summary>
         /// There are no comments for property cd_cpf in the schema.
         /// </summary>
@@ -4067,33 +4040,6 @@ namespace imob_app.dao
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         partial void Oncd_creciChanged();
         /// <summary>
-        /// There are no comments for property ds_login_facebook in the schema.
-        /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute()]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public string ds_login_facebook
-        {
-            get
-            {
-                return this._ds_login_facebook;
-            }
-            set
-            {
-                this.Onds_login_facebookChanging(value);
-                this.ReportPropertyChanging("ds_login_facebook");
-                this._ds_login_facebook = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, true);
-                this.ReportPropertyChanged("ds_login_facebook");
-                this.Onds_login_facebookChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private string _ds_login_facebook;
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onds_login_facebookChanging(string value);
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onds_login_facebookChanged();
-        /// <summary>
         /// There are no comments for property ds_email in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute()]
@@ -4120,33 +4066,6 @@ namespace imob_app.dao
         partial void Onds_emailChanging(string value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         partial void Onds_emailChanged();
-        /// <summary>
-        /// There are no comments for property ds_password in the schema.
-        /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute()]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public string ds_password
-        {
-            get
-            {
-                return this._ds_password;
-            }
-            set
-            {
-                this.Onds_passwordChanging(value);
-                this.ReportPropertyChanging("ds_password");
-                this._ds_password = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, true);
-                this.ReportPropertyChanged("ds_password");
-                this.Onds_passwordChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private string _ds_password;
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onds_passwordChanging(string value);
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onds_passwordChanged();
         /// <summary>
         /// There are no comments for property ds_telefone1 in the schema.
         /// </summary>
@@ -4255,6 +4174,60 @@ namespace imob_app.dao
         partial void Onds_tipo_telefone_2Changing(string value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         partial void Onds_tipo_telefone_2Changed();
+        /// <summary>
+        /// There are no comments for property ic_ativo in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public bool ic_ativo
+        {
+            get
+            {
+                return this._ic_ativo;
+            }
+            set
+            {
+                this.Onic_ativoChanging(value);
+                this.ReportPropertyChanging("ic_ativo");
+                this._ic_ativo = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("ic_ativo");
+                this.Onic_ativoChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        private bool _ic_ativo;
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onic_ativoChanging(bool value);
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onic_ativoChanged();
+        /// <summary>
+        /// There are no comments for property ds_estado_conta in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute()]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public string ds_estado_conta
+        {
+            get
+            {
+                return this._ds_estado_conta;
+            }
+            set
+            {
+                this.Onds_estado_contaChanging(value);
+                this.ReportPropertyChanging("ds_estado_conta");
+                this._ds_estado_conta = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, true);
+                this.ReportPropertyChanged("ds_estado_conta");
+                this.Onds_estado_contaChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        private string _ds_estado_conta;
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onds_estado_contaChanging(string value);
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onds_estado_contaChanged();
         /// <summary>
         /// There are no comments for imovel in the schema.
         /// </summary>

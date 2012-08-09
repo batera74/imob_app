@@ -6,7 +6,6 @@
     <script src="js/shadowbox.js"></script>
     <script src="js/demo.js"></script>
     <link rel="stylesheet" href="css/shadowbox/shadowbox.css" media="screen" />
-    
     <script type="text/javascript">
         Shadowbox.init({
             overlayOpacity: 0.8
@@ -19,65 +18,60 @@
 	    <div class="container_24">
             <div class="wrapper">
             <br />
-                <h7 class="head-1">Detalhes do Imóvel</h7>
-                <br />
+                <h7 class="head-1"><strong>Detalhes do Imóvel</strong></h7>
                 <br />
                 <br />
                 <div id="galeriaPai">
-                    <h8>Galeria de Fotos</h8> 
-                    <br />(clique para ampliar)                    
+                    <h8 class="head-1"><strong>Galeria de Fotos</strong></h8> 
+                    (clique para ampliar)                    
                     <br />
                     <br />
                     
                     <galeria:Galeria runat="server" ID="galeria" />
                 </div>
                 <div id="detalhesPai">
-                    <h8>Características do Imóvel</h8>
+                    <h8 class="head-1"><strong><asp:Label ID="lblImovel" runat="server"></asp:Label></strong></h8>                    
+                    <h8><asp:Label ID="lblValor" runat="server" CssClass="tituloValor"></asp:Label></h8>
+                    <br />
+                    <div style="margin-top: 8px;">
+                    <h8 class="head-1"><strong>Características do Imóvel</strong></h8>     
                     <div id="conteudoDetalhes">
-                        <div id="carac1">
-                            <h10>Categoria: </h10>
-                            <asp:Label ID="lblImovel" CssClass="labelCaracteristicas" runat="server"></asp:Label>
-                            <br />
+                        <div id="carac1">                            
                             <h10>Referência: </h10>
-                            <asp:Label ID="lblID" CssClass="labelCaracteristicas" runat="server"></asp:Label>
+                            <h11><asp:Label ID="lblID" runat="server"></asp:Label></h11>
                             <br />
                             <h10>Localização: </h10>
-                            <asp:Label ID="lblCidade" CssClass="labelCaracteristicas" runat="server"></asp:Label>
-                            <br />
-                            <h10>Valor: </h10>
-                            <asp:Label ID="lblValor" CssClass="labelCaracteristicas" runat="server"></asp:Label>
+                            <h11><asp:Label ID="lblCidade" runat="server"></asp:Label></h11>
                             <br />
                             <h10>Valor Condomínio: </h10>
-                            <asp:Label ID="lblCondominio" CssClass="labelCaracteristicas" runat="server"></asp:Label>
+                            <h11><asp:Label ID="lblCondominio" runat="server"></asp:Label></h11>
                             <br />
                             <h10>Valor IPTU: </h10> 
-                            <asp:Label ID="lblIPTU" CssClass="labelCaracteristicas" runat="server"></asp:Label>
-                        </div>
-                        <div id="especificacoes">
+                            <h11><asp:Label ID="lblIPTU" runat="server"></asp:Label></h11>
+                            <br />
                             <h10>Banheiros: </h10>
-                            <asp:Label ID="lblBanheiro" CssClass="labelCaracteristicas" runat="server"></asp:Label>
+                            <h11><asp:Label ID="lblBanheiro" runat="server"></asp:Label></h11>
                             <br />
                             <h10>Garagem: </h10>
-                            <asp:Label ID="lblGaragem" CssClass="labelCaracteristicas" runat="server"></asp:Label>
+                            <h11><asp:Label ID="lblGaragem" runat="server"></asp:Label></h11>
                             <br />
                             <h10>Portaria: </h10>
-                            <asp:Label ID="lblPortaria" CssClass="labelCaracteristicas" runat="server"></asp:Label>
+                            <h11><asp:Label ID="lblPortaria" runat="server"></asp:Label></h11>
                             <br />
                             <h10>Elevador: </h10>
-                            <asp:Label ID="lblElevador" CssClass="labelCaracteristicas" runat="server"></asp:Label>
+                            <h11><asp:Label ID="lblElevador" runat="server"></asp:Label></h11>
                             <br />
                             <h10>Vazio: </h10>
-                            <asp:Label ID="lblVazio" runat="server"></asp:Label>
-                            <br />
-                        </div>
-                        <div>
+                            <h11><asp:Label ID="lblVazio" runat="server"></asp:Label></h11>
+                        </div>  
+                        </div>                                         
                         <table>
                             <tr>
                                 <td class="caracteristicas">
                                     <h10>Acabamento:</h10><asp:DataList ID="dtAcabamento" runat="server">
                                         <ItemTemplate>
                                             <img alt="" src="images/link-marker.gif" class="itemCaracteristica"/>
-                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label>
+                                            <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
                                         </ItemTemplate>
                                     </asp:DataList>
                                 </td>
@@ -85,7 +79,7 @@
                                     <h10>Armários:</h10><asp:DataList ID="dtArmarios" runat="server">
                                         <ItemTemplate>
                                             <img alt="" src="images/link-marker.gif" class="itemCaracteristica"/>
-                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label>
+                                            <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
                                         </ItemTemplate>
                                     </asp:DataList>
                                 </td>
@@ -93,7 +87,7 @@
                                     <h10>Íntima:</h10><asp:DataList ID="dtIntima" runat="server">
                                         <ItemTemplate>
                                                 <img alt="" src="images/link-marker.gif" class="itemCaracteristica"/>
-                                                <asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label>
+                                                <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
                                         </ItemTemplate>
                                     </asp:DataList>
                                 </td>
@@ -103,7 +97,7 @@
                                     <h10>Lazer:</h10><asp:DataList ID="dtLazer" runat="server">
                                         <ItemTemplate>
                                             <img alt="" src="Images/link-marker.gif" class="itemCaracteristica"/>
-                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label>
+                                            <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
                                         </ItemTemplate>
                                     </asp:DataList>
                                 </td>
@@ -111,7 +105,7 @@
                                     <h10>Serviços:</h10><asp:DataList ID="dtServicos" runat="server">
                                         <ItemTemplate>
                                             <img alt="" src="Images/link-marker.gif" class="itemCaracteristica"/>
-                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label>
+                                            <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
                                         </ItemTemplate>
                                     </asp:DataList>
                                 </td>
@@ -119,7 +113,7 @@
                                     <h10>Social:</h10><asp:DataList ID="dtSocial" runat="server">
                                         <ItemTemplate>
                                             <img alt="" src="Images/link-marker.gif" class="itemCaracteristica" />
-                                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label>
+                                            <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
                                         </ItemTemplate>
                                     </asp:DataList>
                                 </td>

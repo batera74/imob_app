@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CadastroImovel.aspx" />
+    <Content Include="Excluir.aspx" />
     <Content Include="MeusImoveis.aspx" />
     <Content Include="controls\css\repeater\dataList.css" />
     <Content Include="controls\css\slider\flexslider.css" />
@@ -237,6 +238,13 @@
     </Compile>
     <Compile Include="CadastroImovel.aspx.designer.cs">
       <DependentUpon>CadastroImovel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Excluir.aspx.cs">
+      <DependentUpon>Excluir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Excluir.aspx.designer.cs">
+      <DependentUpon>Excluir.aspx</DependentUpon>
     </Compile>
     <Compile Include="MeusImoveis.aspx.cs">
       <DependentUpon>MeusImoveis.aspx</DependentUpon>

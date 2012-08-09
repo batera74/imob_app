@@ -12,6 +12,6 @@ namespace imob_app.business.Contratos
     public interface IEntidade<T>
     {
         List<T> SelecionarTodos();
-        List<T> Selecionar(int id);
+        T Selecionar(int id);
     }
 }

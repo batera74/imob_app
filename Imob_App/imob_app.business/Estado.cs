@@ -11,18 +11,24 @@ namespace imob_app.business
 {
     public class Estado : IEntidadeLocalizacao<dao.estado>
     {
+        private imobappEntities _ctx;
+
+        public Estado()
+        {
+            _ctx = new imobappEntities();
+        }
+
         public List<dao.estado> SelecionarTodos()
         {
-            var ctx = new imobappEntities();
-            return (from a in ctx.estado select a).ToList();            
+            return (from e in _ctx.estado select e).ToList();            
         }
 
-        public List<dao.estado> Selecionar(int id)
+        public dao.estado Selecionar(int id)
         {
-            throw new NotImplementedException();
+            return (from e in _ctx.estado where e.id_estado == id select e).FirstOrDefault();
         }
 
-        public List<dao.estado> SelecionarPorReferencia(short id)
+        public List<dao.estado> SelecionarPorReferencia(int id)
         {
             throw new NotImplementedException();
         }

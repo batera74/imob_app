@@ -11,15 +11,21 @@ namespace imob_app.business
 {
     public class Dormitorio : IEntidade<dao.dormitorio>
     {
+        private imobappEntities _ctx;
+
+        public Dormitorio()
+        {
+            _ctx = new imobappEntities();
+        }
+
         public List<dormitorio> SelecionarTodos()
         {
-            var ctx = new imobappEntities();
-            return (from a in ctx.dormitorio select a).ToList();            
+            return (from d in _ctx.dormitorio select d).ToList();            
         }
         
-        public List<dao.dormitorio> Selecionar(int id)
+        public dao.dormitorio Selecionar(int id)
         {
-            throw new NotImplementedException();
+            return (from d in _ctx.dormitorio where d.id == id select d).FirstOrDefault();
         }
     }
 }

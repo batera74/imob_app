@@ -9,6 +9,7 @@ namespace imob_app.business
 {
     public class Funcoes
     {
+        //Converte uma lista para DataTable
         public static DataTable ListToDataTable<T>(List<T> list)
         {
             DataTable dt = new DataTable();
@@ -27,6 +28,12 @@ namespace imob_app.business
                 dt.Rows.Add(row);
             }
             return dt;
+        }
+
+        //Alerta javascript
+        public static string Alerta(string mensagem)
+        {
+            return @"<script language='javascript'>alert('The following errors have occurred: \n" + mensagem + " .');</script>";
         }
     }
 }

@@ -68,7 +68,7 @@
                                     <br />
                                     <asp:Label ID="lblBairroCidadeEstado" runat="server" Font-Size="Small" Text='<%# Eval("Bairro")+" - "+Eval("Municipio")+" - "+Eval("Estado") %>'></asp:Label>
                                     <br />
-                                    <asp:Label ID="lblAreas" runat="server" Font-Size="Small" Text='<%# Eval("AreaUtil", "Total: {0} m²") + " - " + Eval("AreaTotal", "Útil: {0} m²") %>'></asp:Label>
+                                    <asp:Label ID="lblAreas" runat="server" Font-Size="Small" Text='<%# Eval("AreaUtil", "Área: {0} m² Total") + " - " + Eval("AreaTotal", "{0} m² Útil") %>'></asp:Label>
                                     <br />
                                     <asp:Label ID="lblEstadoImovel" runat="server" Font-Size="Small" Text='<%# Eval("EstadoImovel", "Estado do Imóvel: {0}") %>'></asp:Label>
                                     <br />

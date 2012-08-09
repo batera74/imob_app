@@ -45,6 +45,7 @@ h9{font-size:13px; line-height:26px;}
 		display:block;
 		color:#1a171b;
 	}
+	
 	.head-1 b {
 		display:block;
 		color:#f45c40;
@@ -647,4 +648,21 @@ b.heading-404 {
 .estouInteressado
 {
     margin: 20px 0 0 20px;
+}
+
+.categoria
+{    
+    display:block;
+	font-size:16px;
+	color:#f45c40;	
+}
+
+.valor
+{
+    text-align: center;    
+    display:block;
+	font-size:18px;
+	font-weight: bold;
+	line-height:15px;
+	color:#f45c40;
 }

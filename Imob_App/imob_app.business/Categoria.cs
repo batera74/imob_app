@@ -11,15 +11,21 @@ namespace imob_app.business
 {
     public class Categoria : IEntidade<dao.categoria>
     {
-        public List<dao.categoria> SelecionarTodos()
+        private imobappEntities _ctx;
+        
+        public Categoria()
         {
-            var ctx = new imobappEntities();
-            return (from a in ctx.categoria select a).ToList();
+            _ctx = new imobappEntities();
         }
 
-        public List<dao.categoria> Selecionar(int id)
+        public List<dao.categoria> SelecionarTodos()
         {
-            throw new NotImplementedException();
+            return (from c in _ctx.categoria select c).ToList();
+        }
+
+        public dao.categoria Selecionar(int id)
+        {
+            return (from c in _ctx.categoria where c.id == id select c).FirstOrDefault();
         }
     }
 }

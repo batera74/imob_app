@@ -188,23 +188,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="usuario">
-      <EntityTypeMapping TypeName="imobappModel.usuario">
-        <MappingFragment StoreEntitySet="usuario">
-          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
-          <ScalarProperty Name="nm_usuario" ColumnName="nm_usuario" />
-          <ScalarProperty Name="cd_cpf" ColumnName="cd_cpf" />
-          <ScalarProperty Name="cd_creci" ColumnName="cd_creci" />
-          <ScalarProperty Name="ds_login_facebook" ColumnName="ds_login_facebook" />
-          <ScalarProperty Name="ds_email" ColumnName="ds_email" />
-          <ScalarProperty Name="ds_password" ColumnName="ds_password" />
-          <ScalarProperty Name="ds_telefone1" ColumnName="ds_telefone1" />
-          <ScalarProperty Name="ds_tipo_telefone_1" ColumnName="ds_tipo_telefone_1" />
-          <ScalarProperty Name="ds_telefone2" ColumnName="ds_telefone2" />
-          <ScalarProperty Name="ds_tipo_telefone_2" ColumnName="ds_tipo_telefone_2" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <AssociationSetMapping Name="bairro_ibfk_1" TypeName="imobappModel.bairro_ibfk_1" StoreEntitySet="bairro">
       <EndProperty Name="municipio">
         <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
@@ -278,14 +261,6 @@
         <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="imovel_ibfk_1" TypeName="imobappModel.imovel_ibfk_1" StoreEntitySet="imovel">
-      <EndProperty Name="usuario">
-        <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
-      </EndProperty>
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="imovel_ibfk_7" TypeName="imobappModel.imovel_ibfk_7" StoreEntitySet="imovel">
       <EndProperty Name="posicaoimovel">
         <ScalarProperty Name="id" ColumnName="id_posicao_imovel" />
@@ -341,6 +316,30 @@
       </EndProperty>
       <EndProperty Name="social">
         <ScalarProperty Name="id" ColumnName="id_social" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="imobappModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="ds_estado_conta" ColumnName="ds_estado_conta" />
+          <ScalarProperty Name="ic_ativo" ColumnName="ic_ativo" />
+          <ScalarProperty Name="ds_tipo_telefone_2" ColumnName="ds_tipo_telefone_2" />
+          <ScalarProperty Name="ds_telefone2" ColumnName="ds_telefone2" />
+          <ScalarProperty Name="ds_tipo_telefone_1" ColumnName="ds_tipo_telefone_1" />
+          <ScalarProperty Name="ds_telefone1" ColumnName="ds_telefone1" />
+          <ScalarProperty Name="ds_email" ColumnName="ds_email" />
+          <ScalarProperty Name="cd_creci" ColumnName="cd_creci" />
+          <ScalarProperty Name="cd_cpf" ColumnName="cd_cpf" />
+          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="imovel_ibfk_1" TypeName="imobappModel.imovel_ibfk_1" StoreEntitySet="imovel">
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+      <EndProperty Name="usuario">
+        <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>
