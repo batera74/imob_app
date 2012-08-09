@@ -358,7 +358,7 @@ header{
 	text-align:right;
 	color:#8a8a8a;
 	font-weight:normal;
-	font-size:16px;
+	font-size:13px;
 	line-height:22px;
 	padding:12px 0 0 0;
 }
@@ -448,10 +448,11 @@ header nav {
 .flex_slider_home
 {    
 	position:relative;
-	width:725px;
+	width:726px;
 	left:50%;
 	margin:0 0 10px -365px;	
-	border:3px solid #eee;	
+	border:1px solid #eee;	
+	padding: 1px;
 }
 
 /********************** Content ************************/

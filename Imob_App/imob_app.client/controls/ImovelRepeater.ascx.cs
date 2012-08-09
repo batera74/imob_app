@@ -20,10 +20,15 @@ namespace imob_app.client.controls
             get;
             set;
         }
+
         public int TotalRegistros { get; set; }
+
+        public bool Admin { get; set; }
+
         #endregion
 
-        #region Private Properties
+        #region Private Properties       
+
         private int CurrentPage
         {
             get
@@ -98,7 +103,7 @@ namespace imob_app.client.controls
         /// </summary>
         private void BindItemsList()
         {
-            if(DataSource != null && DataSource.Count > 0)
+            if (DataSource != null && DataSource.Count > 0)
             {
                 _PageDataSource.DataSource = DataSource;
                 _PageDataSource.AllowPaging = true;
@@ -242,8 +247,19 @@ namespace imob_app.client.controls
         {
             Image img = (Image)e.Item.FindControl("Image2");
             dao.imagem imagem = ((ImovelResultado)e.Item.DataItem).Imagens.FirstOrDefault(i => i.ic_principal == true);
-            img.ImageUrl = "../Imagem.ashx?idFoto=" + (imagem != null ? imagem.id_imagem : 1);           
-        }
+            img.ImageUrl = "../Imagem.ashx?idFoto=" + (imagem != null ? imagem.id_imagem : 1);
 
+            if (Admin)
+            {
+                Literal btns = (Literal)e.Item.FindControl("BtnsAdmin");
+                         
+                btns.Text = "<br /><br /><a href=\"CadastroImovel.aspx?Imovel=" + ((ImovelResultado)e.Item.DataItem).Referencia + "\">";
+                btns.Text += "<span id=\"lblEditar\" class=\"button\">Editar +</span></a>";
+
+                btns.Text += "<br /><br /><a href=\"javascript:confirmDelete('Excluir.aspx?Imovel=" + ((ImovelResultado)e.Item.DataItem).Referencia + "')\">";
+                btns.Text += "<span id=\"lblEditar\" class=\"button\">Excluir -</span></a>";
+
+            }
+        }
     }
 }

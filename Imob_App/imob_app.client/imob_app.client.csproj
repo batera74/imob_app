@@ -54,6 +54,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CadastroImovel.aspx" />
+    <Content Include="MeusImoveis.aspx" />
     <Content Include="controls\css\repeater\dataList.css" />
     <Content Include="controls\css\slider\flexslider.css" />
     <Content Include="controls\galeria.ascx" />
@@ -229,6 +231,20 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroImovel.aspx.cs">
+      <DependentUpon>CadastroImovel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroImovel.aspx.designer.cs">
+      <DependentUpon>CadastroImovel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MeusImoveis.aspx.cs">
+      <DependentUpon>MeusImoveis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MeusImoveis.aspx.designer.cs">
+      <DependentUpon>MeusImoveis.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>

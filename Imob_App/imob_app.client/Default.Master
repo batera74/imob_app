@@ -42,7 +42,8 @@
     </asp:ScriptManager>
     <!-- PRO Framework Panel Begin -->
     <!--
-<div id="advanced"><span class="trigger"><strong></strong><em></em></span><div class="bg_pro"><div class="pro_main"><a href="" class="pro_logo"></a><ul class="pro_menu"><li><a href="index.html"><img src="images/pro_home.png" alt=""></a></li><li><a href="404.html">Pages<span></span></a><ul>	<li><a href="under_construction.html">Under Construction</a></li><li><a href="intro.html">Intro Page</a></li><li><a href="404.html">404 page</a></li></ul></li><li><a href="layouts.html">Layouts</a></li><li><a href="typography.html">Typography</a></li><li><a href="portfolio.html">Gallery Layouts<span></span></a><ul><li><a href="portfolio.html">Portfolio</a></li><li><a href="just-slider.html">Sliders</a><ul><li><a href="just-slider.html">Just Slider</a></li><li><a href="kwicks.html">Kwicks Slider</a></li><li><a href="functional-slider.html">Functional Slider</a></li></ul></li><li><a href="gallery-page1.html">Gallery</a></li></ul></li><li><a href="misc.html">Extras<span></span></a><ul><li><a href="social_media.html">Social and Media<br> Sharing</a></li><li><a href="css3.html">CSS3 Tricks</a></li><li><a href="misc.html">Misc</a></li></ul></li></ul><div class="clear"></div></div></div><div class="bg_pro2"></div></div>-->
+<div id="advanced"><span class="trigger"><strong></strong><em></em></span><div class="bg_pro"><div class="pro_main"><a href="" class="pro_logo"></a><ul class="pro_menu"><li><a href="index.html"><img src="images/pro_home.png" alt=""></a></li><li><a href="404.html">Pages<span></span></a><ul>	<li><a href="under_construction.html">Under Construction</a></li><li><a href="intro.html">Intro Page</a></li><li><a href="404.html">404 page</a></li></ul></li><li><a href="layouts.html">Layouts</a></li><li><a href="typography.html">Typography</a></li><li><a href="portfolio.html">Gallery Layouts<span></span></a><ul><li><a href="portfolio.html">Portfolio</a></li><li><a href="just-slider.html">Sliders</a><ul><li><a href="just-slider.html">Just Slider</a></li><li><a href="kwicks.html">Kwicks Slider</a></li><li><a href="functional-slider.html">Functional Slider</a></li></ul></li><li><a href="gallery-page1.html">Gallery</a></li></ul></li><li><a href="misc.html">Extras<span></span></a><ul><li><a href="social_media.html">Social and Media<br> Sharing</a></li><li><a href="css3.html">CSS3 Tricks</a></li><li><a href="misc.html">Misc</a></li></ul></li></ul><div class="clear"></div></div></div><div class="bg_pro2"></div></div>
+-->
     <!-- PRO Framework Panel End -->
     <!-- Header -->
     <div class="main">
@@ -50,7 +51,7 @@
     	<div class="inner">
         	<div class="fright">
             	<strong class="header-text">
-                	Você não possui novas mensagens.
+                	Meus Imóveis | 0 Mensagem(s) | Painel de Controle
                 </strong>
                 <div class="header-phone">
                 	Olá, <b><asp:Label runat="server" ID="lblFirstName"></asp:Label></b>!

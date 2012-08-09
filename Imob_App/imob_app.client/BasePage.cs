@@ -127,9 +127,7 @@ namespace imob_app.client
                         string userId = auth["user_id"].ToString();
 
                         //var user = new FacebookClient(token).Get("me") as IDictionary<string, object>;
-                        //Session["user"] = user;
-
-                        Session["user"] = null;
+                        //Session["user"] = user;                        
 
                         //Alert(user.ToString());
                     }

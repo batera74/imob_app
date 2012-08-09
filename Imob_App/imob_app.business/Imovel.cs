@@ -116,7 +116,30 @@ namespace imob_app.business
             return query.FirstOrDefault();
         }
 
-        public dao.imovel SelecionarImov(int id)
+        public List<entidades.ImovelResultado> SelecionarPorUsuario(int idUsuario)
+        {
+            var query = (from imov in _ctx.imovel
+                         where imov.usuario.id_usuario == idUsuario
+                         select new entidades.ImovelResultado()
+                         {
+                             Referencia = imov.id_imovel,
+                             Categoria = imov.categoria.ds_item,
+                             Dormitorio = imov.dormitorio.ds_item,
+                             Suite = imov.qt_suite,
+                             Bairro = imov.bairro.nm_bairro,
+                             Municipio = imov.bairro.municipio.nm_municipio,
+                             Estado = imov.bairro.municipio.estado.cd_estado,
+                             AreaTotal = imov.vl_area_total,
+                             AreaUtil = imov.vl_area_util,
+                             EstadoImovel = imov.estadoimovel.ds_item,
+                             Valor = imov.vl_imovel,
+                             Imagens = imov.imagem
+                         });
+
+            return query.ToList();
+        }
+
+        public dao.imovel SelecionarImovel(int id)
         {
             dao.imovel imovel = (from imov in _ctx.imovel
                                      .Include("categoria")

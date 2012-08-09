@@ -5,17 +5,16 @@ use `imobapp`;
 
 drop table if exists `usuario`;
 create table if not exists `usuario` (
- `id_usuario` smallint not null auto_increment primary key,
- `nm_usuario` varchar(70) not null,
+ `id_usuario` smallint not null auto_increment primary key, 
  `cd_cpf` char(11) null,
- `cd_creci` varchar(7) not null,
- `ds_login_facebook` varchar(50) null,
+ `cd_creci` varchar(7) not null, 
  `ds_email` varchar(50) null,
- `ds_password` varchar(500),
  `ds_telefone1` varchar(20) null,
  `ds_tipo_telefone_1` varchar(40) null,
  `ds_telefone2` varchar(20) null,
- `ds_tipo_telefone_2` varchar(40) null
+ `ds_tipo_telefone_2` varchar(40) null,
+ `ic_ativo` bit not null,
+ `ds_estado_conta` varchar(20) null
 );
 
 drop table if exists `pais`;

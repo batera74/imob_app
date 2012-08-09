@@ -82,6 +82,9 @@
                                     <div class="ha_centro">
                                         <a href="../DetalheImovel.aspx?Imovel=<%# Eval("Referencia") %>">
                                             <asp:Label ID="lblDetalhes" runat="server" CssClass="button" Text='Detalhes >'></asp:Label></a>
+                                        
+                                        <asp:Literal ID="BtnsAdmin" runat="server"></asp:Literal>
+
                                     </div>
                                     <br />
                                 </div>

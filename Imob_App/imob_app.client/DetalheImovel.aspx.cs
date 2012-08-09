@@ -12,7 +12,7 @@ namespace imob_app.client
         protected void Page_Load(object sender, EventArgs e)
         {
             business.Imovel imov = new business.Imovel();
-            dao.imovel imovel = imov.SelecionarImov(Convert.ToInt32(Request.QueryString["Imovel"]));
+            dao.imovel imovel = imov.SelecionarImovel(Convert.ToInt32(Request.QueryString["Imovel"]));
             CarregarImagens(imovel);
             CarregarDetalhes(imovel);
             CarregarCaracteristicas(imovel);

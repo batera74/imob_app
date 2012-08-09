@@ -12,6 +12,12 @@ $.include('js/jquery-ui-1.8.17.custom.min.js')
 $.include('js/jquery.cycle.all.min.js')
 $.include('js/jquery.cookie.js')
 
+function confirmDelete(delUrl) {
+    if (confirm("Tem certeza que deseja excluir o imóvel?")) {
+        document.location = delUrl;
+    }
+}
+
 function pageLoad(sender, args) {
     if (args.get_isPartialLoad()) {
         fix_select($('#local'));

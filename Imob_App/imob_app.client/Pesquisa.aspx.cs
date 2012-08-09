@@ -36,6 +36,7 @@ namespace imob_app.client
             {
                 dataSource = Carregar(estado, municipio, bairro, dormitorio, categoria, valorDe, valorAte);
                 imoveis.DataSource = dataSource;
+                imoveis.Admin = false;
             }
             else
                 imoveis.DataSource = dataSource;
