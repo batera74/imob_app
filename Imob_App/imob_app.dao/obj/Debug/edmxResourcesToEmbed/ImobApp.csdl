@@ -85,7 +85,7 @@
       <End Role="social" EntitySet="social" />
     </AssociationSet>
     <EntitySet Name="usuario" EntityType="imobappModel.usuario" />
-    <AssociationSet Name="imovel_ibfk_1" Association="imobappModel.imovel_ibfk_1">
+    <AssociationSet Name="imovel_ibfk_8" Association="imobappModel.imovel_ibfk_8">
       <End Role="usuario" EntitySet="usuario" />
       <End Role="imovel" EntitySet="imovel" />
     </AssociationSet>
@@ -221,7 +221,7 @@
     <NavigationProperty Name="lazer" Relationship="imobappModel.imovellazer" FromRole="imovel" ToRole="lazer" />
     <NavigationProperty Name="servico" Relationship="imobappModel.imovelservico" FromRole="imovel" ToRole="servico" />
     <NavigationProperty Name="social" Relationship="imobappModel.imovelsocial" FromRole="imovel" ToRole="social" />
-    <NavigationProperty Name="usuario" Relationship="imobappModel.imovel_ibfk_1" FromRole="imovel" ToRole="usuario" />
+    <NavigationProperty Name="usuario" Relationship="imobappModel.imovel_ibfk_8" FromRole="imovel" ToRole="usuario" />
   </EntityType>
   <EntityType Name="intima">
     <Key>
@@ -359,9 +359,10 @@
     <Key>
       <PropertyRef Name="id_usuario" />
     </Key>
-    <Property Type="Int16" Name="id_usuario" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="Int32" Name="id_usuario" Nullable="false" />
+    <Property Type="String" Name="nm_usuario" />
     <Property Type="String" Name="cd_cpf" />
-    <Property Type="String" Name="cd_creci" Nullable="false" />
+    <Property Type="String" Name="cd_creci" />
     <Property Type="String" Name="ds_email" />
     <Property Type="String" Name="ds_telefone1" />
     <Property Type="String" Name="ds_tipo_telefone_1" />
@@ -369,9 +370,9 @@
     <Property Type="String" Name="ds_tipo_telefone_2" />
     <Property Type="Boolean" Name="ic_ativo" Nullable="false" />
     <Property Type="String" Name="ds_estado_conta" />
-    <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_1" FromRole="usuario" ToRole="imovel" />
+    <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_8" FromRole="usuario" ToRole="imovel" />
   </EntityType>
-  <Association Name="imovel_ibfk_1">
+  <Association Name="imovel_ibfk_8">
     <End Type="imobappModel.usuario" Role="usuario" Multiplicity="1" />
     <End Type="imobappModel.imovel" Role="imovel" Multiplicity="*" />
   </Association>

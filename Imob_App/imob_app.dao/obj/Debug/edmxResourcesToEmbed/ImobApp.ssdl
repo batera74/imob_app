@@ -35,10 +35,6 @@
       <End Role="pais" EntitySet="pais" />
       <End Role="estado" EntitySet="estado" />
     </AssociationSet>
-    <AssociationSet Name="imovel_ibfk_1" Association="imobappModel.Store.imovel_ibfk_1">
-      <End Role="usuario" EntitySet="usuario" />
-      <End Role="imovel" EntitySet="imovel" />
-    </AssociationSet>
     <AssociationSet Name="imovel_ibfk_2" Association="imobappModel.Store.imovel_ibfk_2">
       <End Role="finalidade" EntitySet="finalidade" />
       <End Role="imovel" EntitySet="imovel" />
@@ -61,6 +57,10 @@
     </AssociationSet>
     <AssociationSet Name="imovel_ibfk_7" Association="imobappModel.Store.imovel_ibfk_7">
       <End Role="posicaoimovel" EntitySet="posicaoimovel" />
+      <End Role="imovel" EntitySet="imovel" />
+    </AssociationSet>
+    <AssociationSet Name="imovel_ibfk_8" Association="imobappModel.Store.imovel_ibfk_8">
+      <End Role="usuario" EntitySet="usuario" />
       <End Role="imovel" EntitySet="imovel" />
     </AssociationSet>
     <AssociationSet Name="imovelacabamento_ibfk_1" Association="imobappModel.Store.imovelacabamento_ibfk_1">
@@ -200,7 +200,6 @@
       <PropertyRef Name="id_imovel" />
     </Key>
     <Property Name="id_imovel" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="id_usuario" Type="smallint" Nullable="false" />
     <Property Name="id_finalidade" Type="smallint" Nullable="false" />
     <Property Name="id_categoria" Type="smallint" Nullable="false" />
     <Property Name="ds_padrao" Type="varchar" MaxLength="50" />
@@ -233,6 +232,7 @@
     <Property Name="ic_destaque" Type="bit" />
     <Property Name="ic_ativo" Type="bit" />
     <Property Name="dt_post" Type="date" Nullable="false" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="imovelacabamento">
     <Key>
@@ -347,9 +347,10 @@
     <Key>
       <PropertyRef Name="id_usuario" />
     </Key>
-    <Property Name="id_usuario" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="nm_usuario" Type="varchar" MaxLength="80" />
     <Property Name="cd_cpf" Type="char" MaxLength="11" />
-    <Property Name="cd_creci" Type="varchar" Nullable="false" MaxLength="7" />
+    <Property Name="cd_creci" Type="varchar" MaxLength="7" />
     <Property Name="ds_email" Type="varchar" MaxLength="50" />
     <Property Name="ds_telefone1" Type="varchar" MaxLength="20" />
     <Property Name="ds_tipo_telefone_1" Type="varchar" MaxLength="40" />
@@ -379,18 +380,6 @@
       </Principal>
       <Dependent Role="estado">
         <PropertyRef Name="id_pais" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="imovel_ibfk_1">
-    <End Role="usuario" Type="imobappModel.Store.usuario" Multiplicity="1" />
-    <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="usuario">
-        <PropertyRef Name="id_usuario" />
-      </Principal>
-      <Dependent Role="imovel">
-        <PropertyRef Name="id_usuario" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -463,6 +452,18 @@
       </Principal>
       <Dependent Role="imovel">
         <PropertyRef Name="id_posicao_imovel" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="imovel_ibfk_8">
+    <End Role="usuario" Type="imobappModel.Store.usuario" Multiplicity="1" />
+    <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="id_usuario" />
+      </Principal>
+      <Dependent Role="imovel">
+        <PropertyRef Name="id_usuario" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

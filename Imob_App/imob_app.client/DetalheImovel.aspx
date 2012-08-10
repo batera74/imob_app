@@ -3,8 +3,8 @@
 
 <%@ Register TagPrefix="galeria" TagName="Galeria" Src="~/controls/galeria.ascx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <script src="js/shadowbox.js"></script>
-    <script src="js/demo.js"></script>
+    <script src="js/shadowbox.js" type="text/javascript"></script>
+    <script src="js/demo.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/shadowbox/shadowbox.css" media="screen" />
     <script type="text/javascript">
         Shadowbox.init({
@@ -17,7 +17,6 @@
     <section id="content">
 	    <div class="container_24">
             <div class="wrapper">
-            <br />
                 <h7 class="head-1"><strong>Detalhes do Imóvel</strong></h7>
                 <br />
                 <br />
@@ -28,6 +27,12 @@
                     <br />
                     
                     <galeria:Galeria runat="server" ID="galeria" />
+                    
+                    <div style="text-align: center;">
+                        <br />
+                        <a href="EstouInteressado.aspx" rel="shadowbox;width=500;height=370">
+                        <asp:Label ID="lblDetalhes" runat="server" CssClass="button" Text='Estou interessado $'></asp:Label></a>
+                    </div>
                 </div>
                 <div id="detalhesPai">
                     <h8 class="head-1"><strong><asp:Label ID="lblImovel" runat="server"></asp:Label></strong></h8>                    
@@ -35,8 +40,7 @@
                     <br />
                     <div style="margin-top: 8px;">
                     <h8 class="head-1"><strong>Características do Imóvel</strong></h8>     
-                    <div id="conteudoDetalhes">
-                        <div id="carac1">                            
+                    <div id="conteudoDetalhes">                           
                             <h10>Referência: </h10>
                             <h11><asp:Label ID="lblID" runat="server"></asp:Label></h11>
                             <br />
@@ -63,8 +67,8 @@
                             <br />
                             <h10>Vazio: </h10>
                             <h11><asp:Label ID="lblVazio" runat="server"></asp:Label></h11>
-                        </div>  
-                        </div>                                         
+                        </div> 
+                        <div id="conteudoDetalhes2">
                         <table>
                             <tr>
                                 <td class="caracteristicas">
@@ -93,7 +97,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="caracteristicas">
+                                <td class="caracteristicas1">
                                     <h10>Lazer:</h10><asp:DataList ID="dtLazer" runat="server">
                                         <ItemTemplate>
                                             <img alt="" src="Images/link-marker.gif" class="itemCaracteristica"/>
@@ -101,7 +105,7 @@
                                         </ItemTemplate>
                                     </asp:DataList>
                                 </td>
-                                <td class="caracteristicas">
+                                <td class="caracteristicas1">
                                     <h10>Serviços:</h10><asp:DataList ID="dtServicos" runat="server">
                                         <ItemTemplate>
                                             <img alt="" src="Images/link-marker.gif" class="itemCaracteristica"/>
@@ -109,7 +113,7 @@
                                         </ItemTemplate>
                                     </asp:DataList>
                                 </td>
-                                <td class="caracteristicas">
+                                <td class="caracteristicas1">
                                     <h10>Social:</h10><asp:DataList ID="dtSocial" runat="server">
                                         <ItemTemplate>
                                             <img alt="" src="Images/link-marker.gif" class="itemCaracteristica" />
@@ -119,12 +123,9 @@
                                 </td>
                             </tr>
                         </table>
+                        </div>                                        
                         </div>
                     </div>
-            </div>
-            <div>
-                <a href="EstouInteressado.aspx" rel="shadowbox;width=500;height=370">
-                <asp:Label ID="lblDetalhes" runat="server" CssClass="button" Text='Estou interessado $'></asp:Label></a>
             </div>
         </div>
     </section>

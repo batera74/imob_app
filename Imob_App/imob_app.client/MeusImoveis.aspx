@@ -4,7 +4,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="conteudo" runat="server">
-    <br />
     <h7 class="head-1"><strong>Meus Imóveis</strong></h7>
     <rpt:Imovel runat="server" ID="imoveis" TotalRegistros="6" />
 </asp:Content>

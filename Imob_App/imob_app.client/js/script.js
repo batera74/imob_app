@@ -84,6 +84,7 @@ $(function(){
 // Forms
 	$('#form2').jqTransform({ imgPath: 'images/' });
 	$('#formInteresse').jqTransform({ imgPath: 'images/' });
+	$('#formImovel').jqTransform({ imgPath: 'images/' });
 	$('#accept-card-form').jqTransform({imgPath:'images/'});
 	$('#application-form').jqTransform({imgPath:'images/'});
 // Carausel

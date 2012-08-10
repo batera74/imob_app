@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Collections;
+using imob_app.dao;
 
 namespace imob_app.client
 {
@@ -20,12 +22,20 @@ namespace imob_app.client
 
         private void CarregarImagens(dao.imovel imovel)
         {
-            galeria.DataSource = imovel.imagem;
+            dao.imobappEntities _ctx = new imobappEntities();
+
+            if (imovel.imagem != null || imovel.imagem.Count > 0)
+                galeria.DataSource = imovel.imagem;
+            else
+            {
+                var query = from i in _ctx.imagem where i.id_imagem == 1 select i;
+                galeria.DataSource = query;
+            }
         }
 
         private void CarregarDetalhes(dao.imovel imovel)
         {
-            lblImovel.Text = imovel.categoria.ds_item;
+            lblImovel.Text = imovel.categoria.ds_item + " - " + imovel.dormitorio.ds_item + "dorm(s)";
             lblCidade.Text = lblCidade.Text + imovel.bairro.municipio.nm_municipio + " - " + imovel.bairro.municipio.estado.cd_estado;
             lblValor.Text = lblValor.Text + String.Format("{0:C}", imovel.vl_imovel);
             lblCondominio.Text = lblCondominio.Text + String.Format("{0:C}", imovel.vl_condominio);
@@ -39,24 +49,25 @@ namespace imob_app.client
         }
 
         private void CarregarCaracteristicas(dao.imovel imovel)
+        {            
+            CarregarDataListCaracteristicas(dtAcabamento, imovel.acabamento);
+            CarregarDataListCaracteristicas(dtArmarios, imovel.armario);
+            CarregarDataListCaracteristicas(dtIntima, imovel.intima);
+            CarregarDataListCaracteristicas(dtLazer, imovel.lazer);
+            CarregarDataListCaracteristicas(dtServicos, imovel.servico);
+            CarregarDataListCaracteristicas(dtSocial, imovel.social);
+        }
+
+        private void CarregarDataListCaracteristicas(DataList dataList, IEnumerable source)
         {
-            dtAcabamento.DataSource = imovel.acabamento;
-            dtAcabamento.DataBind();
+            List<string> nInformado = new List<string>() { "Não Informado" };
 
-            dtArmarios.DataSource = imovel.armario;
-            dtArmarios.DataBind();
+            if (source != null)
+                dataList.DataSource = source;
+            else
+                dataList.DataSource = nInformado;
 
-            dtIntima.DataSource = imovel.intima;
-            dtIntima.DataBind();
-
-            dtLazer.DataSource = imovel.lazer;
-            dtLazer.DataBind();
-
-            dtServicos.DataSource = imovel.servico;
-            dtServicos.DataBind();
-
-            dtSocial.DataSource = imovel.social;
-            dtSocial.DataBind();
+            dataList.DataBind();
         }
     }
 }

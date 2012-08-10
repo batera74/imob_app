@@ -462,7 +462,8 @@ section#content	{
 	z-index:5;
 	padding:0 0 40px 0;
 }
-#accept-card-form .row-1, #rate-form .row-1, #application-form .row-1 {
+
+#accept-card-form .row-1, #rate-form .row-1, #application-form .row-1, #formImovel .row-1 {
 	height:41px; 
 }
 #accept-card-form .row-2 {

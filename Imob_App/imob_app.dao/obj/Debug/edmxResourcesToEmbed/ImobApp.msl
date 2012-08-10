@@ -330,11 +330,12 @@
           <ScalarProperty Name="ds_email" ColumnName="ds_email" />
           <ScalarProperty Name="cd_creci" ColumnName="cd_creci" />
           <ScalarProperty Name="cd_cpf" ColumnName="cd_cpf" />
+          <ScalarProperty Name="nm_usuario" ColumnName="nm_usuario" />
           <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="imovel_ibfk_1" TypeName="imobappModel.imovel_ibfk_1" StoreEntitySet="imovel">
+    <AssociationSetMapping Name="imovel_ibfk_8" TypeName="imobappModel.imovel_ibfk_8" StoreEntitySet="imovel">
       <EndProperty Name="imovel">
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
       </EndProperty>

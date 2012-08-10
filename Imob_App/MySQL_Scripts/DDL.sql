@@ -15,7 +15,7 @@ create table if not exists `usuario` (
  `ds_telefone2` varchar(20) null,
  `ds_tipo_telefone_2` varchar(40) null,
  `ic_ativo` bit not null,
- `ds_estado_conta` varchar(50) null
+ `ds_estado_conta` varchar(100) null
 );
 
 drop table if exists `pais`;

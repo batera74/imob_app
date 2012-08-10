@@ -33,7 +33,7 @@
         <div id="formInteresse">
             <div class="row-1">
                 <span class="text-form fleft">Assunto:&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="text" value="Estou interessado no seu imóvel!" name="Assunto">
+                <input type="text" value="Estou interessado no seu imóvel!" name="Assunto" runat="server">
             </div>
             <br />
             <div class="row-1">
