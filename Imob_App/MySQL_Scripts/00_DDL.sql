@@ -1,7 +1,8 @@
-drop database if exists `imobapp`;
-create database if not exists `imobapp`;
-
-use `imobapp`;
+-drop database if exists `imobapp`;
+-create database if not exists `imobapp`;
+-
+-use `imobapp`;
+-
 
 drop table if exists `usuario`;
 create table if not exists `usuario` (
@@ -251,7 +252,8 @@ create table if not exists `slider`
 );
 
 drop table if exists `conversa`;
-create  table `imobapp`.`conversa` (
+create  table `conversa` 
+(
 	`id_conversa` int not null ,
 	`dt_mensagem` datetime not null ,
 	`id_usuario_de` int not null ,
