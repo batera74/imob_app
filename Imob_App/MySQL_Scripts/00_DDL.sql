@@ -1,8 +1,8 @@
--drop database if exists `imobapp`;
--create database if not exists `imobapp`;
--
--use `imobapp`;
--
+drop database if exists `imobapp`;
+create database if not exists `imobapp`;
+
+use `imobapp`;
+
 
 drop table if exists `usuario`;
 create table if not exists `usuario` (
@@ -53,9 +53,26 @@ create table if not exists `bairro` (
  foreign key (id_municipio) references municipio(id_municipio)
 );
 
+drop table if exists `logradouro`;
+create table if not exists `logradouro` (
+ `id_logradouro` smallint not null auto_increment primary key,
+ `ds_logradouro` varchar(40) not null
+);
 
 drop table if exists `categoria`;
 create table if not exists `categoria` (
+ `id` smallint not null auto_increment primary key,
+ `ds_item` varchar(40) not null
+);
+
+drop table if exists `garagem`;
+create table if not exists `garagem` (
+ `id` smallint not null auto_increment primary key,
+ `ds_item` varchar(40) not null
+);
+
+drop table if exists `padrao`;
+create table if not exists `padrao` (
  `id` smallint not null auto_increment primary key,
  `ds_item` varchar(40) not null
 );
@@ -127,43 +144,43 @@ create table if not exists `imovel` (
  `id_usuario` integer not null,
  `id_finalidade` smallint not null,
  `id_categoria` smallint not null,
- `ds_padrao` varchar(50) null,
- `ds_endereco` varchar(60) not null,
- `ds_numero_endereco` varchar(10) not null,
- `ds_cep` char(8) null,
- `ds_complemento` varchar(20) not null,
  `id_bairro` smallint not null,
- `ds_garagem` varchar(30) null,
- `ds_portaria` varchar(30) null,
- `ds_situacao` varchar(60) null, 
+ `id_posicao_imovel` smallint not null,
+ `id_garagem` smallint not null, 
  `id_estado_imovel` smallint not null,
  `id_dormitorio` smallint null,
- `qt_suite` smallint null,
- `id_posicao_imovel` smallint null,
- `ds_banheiro` varchar(80) null,
- `nm_edificio` varchar(40) null,
- `ic_financiamento` bit null,
+ `id_padrao` smallint not null,
+ `id_logradouro` smallint not null, 
+ `nm_edificio` varchar(40) null,  
+ `ds_endereco` varchar(70) not null,
+ `ds_numero_endereco` varchar(10) not null,
+ `ds_complemento` varchar(20) not null,  
+ `ds_cep` char(8) null,     
+ `qt_suite` smallint null, 
+ `qt_banheiro` smallint null,    
  `vl_imovel` decimal not null,
- `vl_sem_comissao` decimal not null,
  `vl_iptu` decimal null,
  `vl_condominio` decimal null,
- `ic_vazio` bit null,
- `cd_registro` varchar(20) null,
- `ic_documentacao` bit null,
- `ic_elevador` bit null,
- `ds_local_chaves` varchar(40) null,
  `vl_area_util` decimal null,
  `vl_area_total` decimal null,
+ `ic_financiamento` bit null,
+ `ic_vazio` bit null,
+ `ic_portaria` bit null,
+ `ic_documentacao` bit null,
+ `ic_elevador` bit null,
  `ic_destaque` bit null,
  `ic_ativo` bit null,
  `dt_post` date not null,
  foreign key (id_usuario) references usuario(id_usuario),    
  foreign key (id_finalidade) references finalidade(id),
+ foreign key (id_dormitorio) references dormitorio(id),
  foreign key (id_categoria) references categoria(id),
+ foreign key (id_garagem) references garagem(id),
+ foreign key (id_padrao) references padrao(id),
  foreign key (id_bairro) references bairro(id_bairro),
  foreign key (id_estado_imovel) references estadoimovel(id), 
- foreign key (id_posicao_imovel) references posicaoimovel(id)
-             
+ foreign key (id_posicao_imovel) references posicaoimovel(id),
+ foreign key (id_logradouro) references logradouro(id_logradouro)
 );
 
 drop table if exists `imagem`;
@@ -172,7 +189,8 @@ create table if not exists `imagem` (
   `ds_imagem_cripto` longtext collate latin1_general_ci not null,
   `ds_imagem` varchar(150) not null,
   `id_imovel` smallint not null,  
-  `ic_principal` bit not null
+  `ic_principal` bit not null,
+  foreign key (id_imovel) references imovel(id_imovel)
 );
 
 drop table if exists `imovelsocial`;
