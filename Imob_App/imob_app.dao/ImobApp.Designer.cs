@@ -28,7 +28,7 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_8", "usuario", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.usuario), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
 
 // Original file name:
-// Generation date: 09/08/2012 20:38:16
+// Generation date: 10/08/2012 23:03:59
 namespace imob_app.dao
 {
     
@@ -3948,12 +3948,14 @@ namespace imob_app.dao
         /// </summary>
         /// <param name="id_usuario">Initial value of id_usuario.</param>
         /// <param name="ic_ativo">Initial value of ic_ativo.</param>
+        /// <param name="id_facebook">Initial value of id_facebook.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static usuario Createusuario(int id_usuario, bool ic_ativo)
+        public static usuario Createusuario(int id_usuario, bool ic_ativo, string id_facebook)
         {
             usuario usuario = new usuario();
             usuario.id_usuario = id_usuario;
             usuario.ic_ativo = ic_ativo;
+            usuario.id_facebook = id_facebook;
             return usuario;
         }
         /// <summary>
@@ -4253,6 +4255,33 @@ namespace imob_app.dao
         partial void Onds_estado_contaChanging(string value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         partial void Onds_estado_contaChanged();
+        /// <summary>
+        /// There are no comments for property id_facebook in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public string id_facebook
+        {
+            get
+            {
+                return this._id_facebook;
+            }
+            set
+            {
+                this.Onid_facebookChanging(value);
+                this.ReportPropertyChanging("id_facebook");
+                this._id_facebook = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, false);
+                this.ReportPropertyChanged("id_facebook");
+                this.Onid_facebookChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        private string _id_facebook;
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onid_facebookChanging(string value);
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onid_facebookChanged();
         /// <summary>
         /// There are no comments for imovel in the schema.
         /// </summary>

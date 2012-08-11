@@ -5,7 +5,8 @@ use `imobapp`;
 
 drop table if exists `usuario`;
 create table if not exists `usuario` (
- `id_usuario` varchar(20) not null primary key, 
+ `id_usuario` integer not null primary key, 
+ `id_facebook` varchar(20) not null, 
  `nm_usuario` varchar(80) null, 
  `cd_cpf` char(11) null,
  `cd_creci` varchar(7) null, 
@@ -15,7 +16,8 @@ create table if not exists `usuario` (
  `ds_telefone2` varchar(20) null,
  `ds_tipo_telefone_2` varchar(40) null,
  `ic_ativo` bit not null,
- `ds_estado_conta` varchar(100) null
+ `ds_estado_conta` varchar(100) null,
+ UNIQUE INDEX `id_facebook_UNIQUE` (`id_facebook` ASC)
 );
 
 drop table if exists `pais`;
@@ -121,7 +123,7 @@ create table if not exists `lazer` (
 drop table if exists `imovel`;
 create table if not exists `imovel` (
  `id_imovel` smallint not null auto_increment primary key,
- `id_usuario` varchar(20) not null,
+ `id_usuario` integer not null,
  `id_finalidade` smallint not null,
  `id_categoria` smallint not null,
  `ds_padrao` varchar(50) null,
@@ -246,4 +248,19 @@ create table if not exists `slider`
 	`ds_texto1` varchar(29) not null,
 	`ds_texto2` varchar(24) not null,
 	`ic_ativo` bit not null
+);
+
+drop table if exists `conversa`;
+create  table `imobapp`.`conversa` (
+	`id_conversa` int not null ,
+	`dt_mensagem` datetime not null ,
+	`id_usuario_de` int not null ,
+	`id_usuario_para` int not null ,
+	`ic_lida` tinyint not null ,
+	`ds_assunto` varchar(256) not null ,
+	`ds_mensagem` text not null ,
+	index `idx_id_conversa` using hash (`id_conversa` asc) ,
+	index `idx_id_usuario_de` using hash (`id_usuario_de` asc),
+	foreign key (id_usuario_de) references usuario(id_usuario),
+	foreign key (id_usuario_para) references usuario(id_usuario)
 );

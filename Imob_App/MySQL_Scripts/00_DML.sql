@@ -5695,10 +5695,10 @@ INSERT INTO bairro (id_municipio, nm_bairro) VALUES
 -- ----------------------------------------------------------------------------------------------------------------
 
 INSERT INTO usuario VALUES
-('100001483134817', 'Guilherme Andrade', '38570535856', '343534', 'batera74@hotmail.com',
+(1, '100001483134817', 'Guilherme Andrade', '38570535856', '343534', 'batera74@hotmail.com',
 '13 9132-7396', 'Celular', '11 3127-7240', 'Comercial', 1, '?????');
 INSERT INTO usuario VALUES
-('100000047296884', 'Leonardo Cesar Rombesso', '29468545822', null, 'lrombesso@gmail.com',
+(2, '100000047296884', 'Leonardo Cesar Rombesso', '29468545822', null, 'lrombesso@gmail.com',
 '11 9941-7059', 'Celular', '11 3127-7243', 'Comercial', 1, '?????');
 
 -- ----------------------------------------------------------------------------------------------------------------
@@ -5706,35 +5706,35 @@ INSERT INTO usuario VALUES
 -- ----------------------------------------------------------------------------------------------------------------
 
 INSERT INTO imovel VALUES
-(1, '100001483134817', 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
+(1, 1, 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
 1, 3, 1, 1, '2', 'Orion', 1, 80000, 70000, 110, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'), 
-(2, '100000047296884', 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
+(2, 2, 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
 1, 2, 0, 1, '2', 'Trip', 1, 300000, 282000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
-(3, '100001483134817', 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
+(3, 1, 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
 1, 2, 0, 1, '2', 'Trip', 1, 200000, 184000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
-(4, '100000047296884', 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
+(4, 2, 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
 1, 3, 1, 1, '2', 'Orion', 1, 80000, 70000, 110, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'), 
-(5, '100001483134817', 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
+(5, 1, 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
 1, 2, 0, 1, '2', 'Trip', 1, 300000, 282000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
-(6, '100000047296884', 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
+(6, 2, 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
 1, 2, 0, 1, '2', 'Trip', 1, 200000, 184000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
-(7, '100001483134817', 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
+(7, 1, 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
 1, 3, 1, 1, '2', 'Orion', 1, 80000, 70000, 110, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'), 
-(8, '100000047296884', 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
+(8, 2, 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
 1, 2, 0, 1, '2', 'Trip', 1, 300000, 282000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
-(9, '100001483134817', 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
+(9, 1, 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
 1, 2, 0, 1, '2', 'Trip', 1, 200000, 184000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
-(10, '100000047296884', 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
+(10, 2, 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
 1, 3, 1, 1, '2', 'Orion', 1, 80000, 70000, 110, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'), 
-(11, '100001483134817', 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
+(11, 1, 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
 1, 2, 0, 1, '2', 'Trip', 1, 300000, 282000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
-(12, '100000047296884', 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
+(12, 2, 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
 1, 2, 0, 1, '2', 'Trip', 1, 200000, 184000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
-(13, '100001483134817', 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
+(13, 1, 1, 1, NULL, 'Avenida Pedro Lessa', '121', '11040500', '50', 3, 'Fechada', 'Sim', NULL,
 1, 3, 1, 1, '2', 'Orion', 1, 80000, 70000, 110, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'), 
-(14, '100000047296884', 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
+(14, 2, 1, 1, NULL, 'Rua Fortunato Ferraz', '320', '05093000', '50', 2, 'Fechada', 'Sim', NULL,
 1, 2, 0, 1, '2', 'Trip', 1, 300000, 282000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10'),
-(15, '100001483134817', 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
+(15, 1, 1, 1, NULL, 'Rua José de Albuquerque Medeiros', '738', '02336000', '50', 2, 'Fechada', 'Sim', NULL,
 1, 2, 0, 1, '2', 'Trip', 1, 200000, 184000, 410, 300, 1, NULL, 1, 1, 'Portaria',60, 75, 1, 1, '2011-10-10');
 
 -- ----------------------------------------------------------------------------------------------------------------

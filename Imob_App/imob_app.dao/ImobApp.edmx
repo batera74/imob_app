@@ -1003,6 +1003,7 @@
           <Property Type="Boolean" Name="ic_ativo" Nullable="false" />
           <Property Type="String" Name="ds_estado_conta" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_8" FromRole="usuario" ToRole="imovel" />
+          <Property Type="String" Name="id_facebook" Nullable="false" />
         </EntityType>
         <Association Name="imovel_ibfk_8">
           <End Type="imobappModel.usuario" Role="usuario" Multiplicity="1" />
@@ -1393,10 +1394,10 @@
           <ConnectorPoint PointX="10.912193860677084" PointY="16.523920898437503" />
           <ConnectorPoint PointX="12" PointY="16.523920898437503" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="imobappModel.usuario" Width="1.5" PointX="0.75" PointY="4" Height="3.326396484374996" />
+        <EntityTypeShape EntityType="imobappModel.usuario" Width="1.5" PointX="0.75" PointY="4" Height="3.5186979166666656" />
         <AssociationConnector Association="imobappModel.imovel_ibfk_8" >
-          <ConnectorPoint PointX="2.25" PointY="6.6797900390624978" />
-          <ConnectorPoint PointX="9.75" PointY="6.6797900390624978" />
+          <ConnectorPoint PointX="2.25" PointY="6.7759407552083326" />
+          <ConnectorPoint PointX="9.75" PointY="6.7759407552083326" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

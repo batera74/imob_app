@@ -28,20 +28,15 @@
     <form id="interessado" runat="server">
     <div class="estouInteressado">
         <h3 class="head-1">
-            <em class="heading-row"><i>Estou interessado no seu imóvel.</i></em><em class="heading-row-2_">Quero
-                saber mais sobre ele!</em></h3>
-        <div id="formInteresse">
-            <div class="row-1">
-                <span class="text-form fleft">Assunto:&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                <input type="text" value="Estou interessado no seu imóvel!" name="Assunto" runat="server">
-            </div>
-            <br />
+            <em class="heading-row"><i>Está interessado neste imóvel?</i></em><em class="heading-row-2_">Converse com o responsável!</em></h3>
+        <div id="formInteresse" style="width: 440px;">
             <div class="row-1">
                 <span class="text-form fleft">Mensagem:</span>
-                <textarea>Mensagem *</textarea>
+                <textarea style="width: 420px;">Olá, Gostaria de ter mais informações sobre este imóvel. Aguardo seu retorno, obrigado.</textarea>
             </div>
             <div class="fright" style="margin-top: 15px;">
-                <asp:LinkButton CssClass="btn" ID="lnkPesquisarAvancado" runat="server">Enviar</asp:LinkButton>
+                <asp:LinkButton CssClass="btn" ID="lnkPesquisarAvancado" runat="server" 
+                    onclick="lnkPesquisarAvancado_Click">Enviar</asp:LinkButton>
             </div>
         </div>
     </div>

@@ -371,6 +371,7 @@
     <Property Type="Boolean" Name="ic_ativo" Nullable="false" />
     <Property Type="String" Name="ds_estado_conta" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_8" FromRole="usuario" ToRole="imovel" />
+    <Property Type="String" Name="id_facebook" Nullable="false" />
   </EntityType>
   <Association Name="imovel_ibfk_8">
     <End Type="imobappModel.usuario" Role="usuario" Multiplicity="1" />

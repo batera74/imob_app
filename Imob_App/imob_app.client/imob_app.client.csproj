@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CadastroImovel.aspx" />
+    <Content Include="CadastroUsuario.aspx" />
     <Content Include="Excluir.aspx" />
     <Content Include="MeusImoveis.aspx" />
     <Content Include="controls\css\repeater\dataList.css" />
@@ -238,6 +239,13 @@
     </Compile>
     <Compile Include="CadastroImovel.aspx.designer.cs">
       <DependentUpon>CadastroImovel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroUsuario.aspx.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CadastroUsuario.aspx.designer.cs">
+      <DependentUpon>CadastroUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Excluir.aspx.cs">
       <DependentUpon>Excluir.aspx</DependentUpon>
