@@ -133,19 +133,12 @@ namespace imob_app.business
                                      .Include("lazer")
                                      .Include("social")
                                      .Include("servico")
+                                     .Include("padrao")
+                                     .Include("garagem")
+                                     .Include("logradouro")
 
                         where imov.id_imovel == id
                         select imov).FirstOrDefault();
-
-            imovel.categoriaReference.Load();
-            imovel.bairroReference.Load();
-            imovel.bairro.municipioReference.Load();
-            imovel.categoriaReference.Load();
-            imovel.dormitorioReference.Load();
-            imovel.estadoimovelReference.Load();
-            imovel.finalidadeReference.Load();
-            imovel.posicaoimovelReference.Load();
-            imovel.usuarioReference.Load();
 
             return imovel;
         }        

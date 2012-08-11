@@ -31,6 +31,15 @@ namespace imob_app.client {
         protected global::System.Web.UI.WebControls.Label lblDetalhes;
         
         /// <summary>
+        /// lblId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblId;
+        
+        /// <summary>
         /// ddlCategoria control.
         /// </summary>
         /// <remarks>
@@ -58,13 +67,49 @@ namespace imob_app.client {
         protected global::System.Web.UI.WebControls.TextBox txtValor;
         
         /// <summary>
-        /// txtId control.
+        /// ddlTipoLogradouro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtId;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTipoLogradouro;
+        
+        /// <summary>
+        /// txtEndereco control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtEndereco;
+        
+        /// <summary>
+        /// txtNumero control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNumero;
+        
+        /// <summary>
+        /// txtComplemento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtComplemento;
+        
+        /// <summary>
+        /// txtCep control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCep;
         
         /// <summary>
         /// UpdatePanel1 control.
@@ -103,6 +148,24 @@ namespace imob_app.client {
         protected global::System.Web.UI.WebControls.DropDownList ddlBairro;
         
         /// <summary>
+        /// txtAreaTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAreaTotal;
+        
+        /// <summary>
+        /// txtAreaUtil control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAreaUtil;
+        
+        /// <summary>
         /// txtValorCondominio control.
         /// </summary>
         /// <remarks>
@@ -130,40 +193,103 @@ namespace imob_app.client {
         protected global::System.Web.UI.WebControls.TextBox txtBanheiros;
         
         /// <summary>
-        /// txtGaragem control.
+        /// txtSuites control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtGaragem;
+        protected global::System.Web.UI.WebControls.TextBox txtSuites;
         
         /// <summary>
-        /// ddlPortaria control.
+        /// ddlPadrao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPortaria;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPadrao;
         
         /// <summary>
-        /// ddlElevador control.
+        /// ddlEstadoImovel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlElevador;
+        protected global::System.Web.UI.WebControls.DropDownList ddlEstadoImovel;
         
         /// <summary>
-        /// ddlVazio control.
+        /// ddlPosicaoImovel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlVazio;
+        protected global::System.Web.UI.WebControls.DropDownList ddlPosicaoImovel;
+        
+        /// <summary>
+        /// ddlGaragem control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlGaragem;
+        
+        /// <summary>
+        /// chkPortaria control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkPortaria;
+        
+        /// <summary>
+        /// chkElevador control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkElevador;
+        
+        /// <summary>
+        /// chkVazio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkVazio;
+        
+        /// <summary>
+        /// chkFinanciamento control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkFinanciamento;
+        
+        /// <summary>
+        /// chkAtivo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkAtivo;
+        
+        /// <summary>
+        /// chkDestaque control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkDestaque;
         
         /// <summary>
         /// dtAcabamento control.

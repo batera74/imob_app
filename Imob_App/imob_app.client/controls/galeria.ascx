@@ -7,7 +7,7 @@
                     <td>
                         <a class="imovel-galeria" href="../Imagem.ashx?idFoto=<%# Eval("id_imagem") %>" rel="player=img">
                             <img Height="63px" Width="74px" src='<%# Eval("id_imagem", "../Imagem.ashx?idFoto={0}") %>' alt="<%# Eval("ds_imagem") %>"
-                                class="border_gal"></a>
+                                class="border_gal"></a>                        
                     </td>
                 </ItemTemplate>
             </asp:DataList>

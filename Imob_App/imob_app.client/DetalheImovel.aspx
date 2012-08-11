@@ -47,6 +47,12 @@
                             <h10>Localização: </h10>
                             <h11><asp:Label ID="lblCidade" runat="server"></asp:Label></h11>
                             <br />
+                            <h10>Posicação do Imóvel: </h10>
+                            <h11><asp:Label ID="lblPosicao" runat="server"></asp:Label></h11>
+                            <br />
+                            <h10>Padrão: </h10>
+                            <h11><asp:Label ID="lblPadrao" runat="server"></asp:Label></h11>
+                            <br />
                             <h10>Valor Condomínio: </h10>
                             <h11><asp:Label ID="lblCondominio" runat="server"></asp:Label></h11>
                             <br />
@@ -55,6 +61,12 @@
                             <br />
                             <h10>Banheiros: </h10>
                             <h11><asp:Label ID="lblBanheiro" runat="server"></asp:Label></h11>
+                            <br />
+                            <h10>Suítes: </h10>
+                            <h11><asp:Label ID="lblSuite" runat="server"></asp:Label></h11>
+                            <br />
+                            <h10>Área: </h10>
+                            <h11><asp:Label ID="lblArea" runat="server"></asp:Label></h11>
                             <br />
                             <h10>Garagem: </h10>
                             <h11><asp:Label ID="lblGaragem" runat="server"></asp:Label></h11>
@@ -67,6 +79,12 @@
                             <br />
                             <h10>Vazio: </h10>
                             <h11><asp:Label ID="lblVazio" runat="server"></asp:Label></h11>
+                            <br />
+                            <h10>Estado do Imóvel: </h10>
+                            <h11><asp:Label ID="lblEstadoImovel" runat="server"></asp:Label></h11>
+                            <br />
+                            <h10>Financiamento: </h10>
+                            <h11><asp:Label ID="lblFinanciamento" runat="server"></asp:Label></h11>
                         </div> 
                         <div id="conteudoDetalhes2">
                         <table>

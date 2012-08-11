@@ -1,10 +1,16 @@
 USE imobapp;
 
+INSERT INTO logradouro values (1,'Rua'),(2,'Avenida'),(3,'Alameda');
+
 INSERT INTO categoria (ds_item) values ('Apartamento'), ('Casa'), ('Casa Comercial'), ('Casa em Condomínio'), 
 ('Sobrado'), ('Cobertura'), ('Cobertura Duplex'), ('Flat'), ('Loft'), ('Duplex'),
 ('Sala Comercial'), ('Kit'), ('Sala Living'), ('Conjunto Comercial'), ('Terreno');
 
 INSERT INTO dormitorio (ds_item) values (1),(2),(3),(4);
+
+INSERT INTO garagem (ds_item) values ('Não Possui'),('Fechada'),('Demarcada'),('Coletiva');
+
+INSERT INTO padrao (ds_item) values ('Baixo'),('Médio'),('Alto');
 
 INSERT INTO acabamento (ds_item) VALUES ('Cerâmica'), ('Taco'), ('Porcelanato'), ('Carpete'), ('Piso Madeira'),
 							  ('Mámore'), ('Granito'), ('Rebaixado Gesso');

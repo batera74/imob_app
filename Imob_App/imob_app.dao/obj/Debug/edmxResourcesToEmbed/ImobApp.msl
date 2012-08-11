@@ -4,76 +4,97 @@
     <EntitySetMapping Name="acabamento">
       <EntityTypeMapping TypeName="imobappModel.acabamento">
         <MappingFragment StoreEntitySet="acabamento">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="armario">
       <EntityTypeMapping TypeName="imobappModel.armario">
         <MappingFragment StoreEntitySet="armario">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="bairro">
       <EntityTypeMapping TypeName="imobappModel.bairro">
         <MappingFragment StoreEntitySet="bairro">
-          <ScalarProperty Name="id_bairro" ColumnName="id_bairro" />
           <ScalarProperty Name="nm_bairro" ColumnName="nm_bairro" />
+          <ScalarProperty Name="id_bairro" ColumnName="id_bairro" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="categoria">
       <EntityTypeMapping TypeName="imobappModel.categoria">
         <MappingFragment StoreEntitySet="categoria">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="conversa">
+      <EntityTypeMapping TypeName="imobappModel.conversa">
+        <MappingFragment StoreEntitySet="conversa">
+          <ScalarProperty Name="ds_mensagem" ColumnName="ds_mensagem" />
+          <ScalarProperty Name="ds_assunto" ColumnName="ds_assunto" />
+          <ScalarProperty Name="ic_lida" ColumnName="ic_lida" />
+          <ScalarProperty Name="id_usuario_para" ColumnName="id_usuario_para" />
+          <ScalarProperty Name="id_usuario_de" ColumnName="id_usuario_de" />
+          <ScalarProperty Name="dt_mensagem" ColumnName="dt_mensagem" />
+          <ScalarProperty Name="id_conversa" ColumnName="id_conversa" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="dormitorio">
       <EntityTypeMapping TypeName="imobappModel.dormitorio">
         <MappingFragment StoreEntitySet="dormitorio">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="errolog">
       <EntityTypeMapping TypeName="imobappModel.errolog">
         <MappingFragment StoreEntitySet="errolog">
-          <ScalarProperty Name="id_erro" ColumnName="id_erro" />
-          <ScalarProperty Name="ds_erro" ColumnName="ds_erro" />
-          <ScalarProperty Name="dt_erro" ColumnName="dt_erro" />
-          <ScalarProperty Name="ds_stack" ColumnName="ds_stack" />
           <ScalarProperty Name="ds_metodo" ColumnName="ds_metodo" />
+          <ScalarProperty Name="ds_stack" ColumnName="ds_stack" />
+          <ScalarProperty Name="dt_erro" ColumnName="dt_erro" />
+          <ScalarProperty Name="ds_erro" ColumnName="ds_erro" />
+          <ScalarProperty Name="id_erro" ColumnName="id_erro" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="estado">
       <EntityTypeMapping TypeName="imobappModel.estado">
         <MappingFragment StoreEntitySet="estado">
-          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
-          <ScalarProperty Name="cd_estado" ColumnName="cd_estado" />
           <ScalarProperty Name="nm_estado" ColumnName="nm_estado" />
+          <ScalarProperty Name="cd_estado" ColumnName="cd_estado" />
+          <ScalarProperty Name="id_estado" ColumnName="id_estado" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="estadoimovel">
       <EntityTypeMapping TypeName="imobappModel.estadoimovel">
         <MappingFragment StoreEntitySet="estadoimovel">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="finalidade">
       <EntityTypeMapping TypeName="imobappModel.finalidade">
         <MappingFragment StoreEntitySet="finalidade">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="garagem">
+      <EntityTypeMapping TypeName="imobappModel.garagem">
+        <MappingFragment StoreEntitySet="garagem">
+          <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -81,243 +102,123 @@
       <EntityTypeMapping TypeName="imobappModel.imagem">
         <MappingFragment StoreEntitySet="imagem">
           <ScalarProperty Name="ic_principal" ColumnName="ic_principal" />
-          <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
-          <ScalarProperty Name="ds_imagem_cripto" ColumnName="ds_imagem_cripto" />
           <ScalarProperty Name="ds_imagem" ColumnName="ds_imagem" />
+          <ScalarProperty Name="ds_imagem_cripto" ColumnName="ds_imagem_cripto" />
+          <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="imovel">
       <EntityTypeMapping TypeName="imobappModel.imovel">
         <MappingFragment StoreEntitySet="imovel">
-          <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-          <ScalarProperty Name="ds_padrao" ColumnName="ds_padrao" />
-          <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
-          <ScalarProperty Name="ds_numero_endereco" ColumnName="ds_numero_endereco" />
+          <ScalarProperty Name="dt_post" ColumnName="dt_post" />
+          <ScalarProperty Name="ic_ativo" ColumnName="ic_ativo" />
+          <ScalarProperty Name="ic_destaque" ColumnName="ic_destaque" />
+          <ScalarProperty Name="ic_elevador" ColumnName="ic_elevador" />
+          <ScalarProperty Name="ic_documentacao" ColumnName="ic_documentacao" />
+          <ScalarProperty Name="ic_portaria" ColumnName="ic_portaria" />
+          <ScalarProperty Name="ic_vazio" ColumnName="ic_vazio" />
+          <ScalarProperty Name="ic_financiamento" ColumnName="ic_financiamento" />
+          <ScalarProperty Name="vl_area_total" ColumnName="vl_area_total" />
+          <ScalarProperty Name="vl_area_util" ColumnName="vl_area_util" />
+          <ScalarProperty Name="vl_condominio" ColumnName="vl_condominio" />
+          <ScalarProperty Name="vl_iptu" ColumnName="vl_iptu" />
+          <ScalarProperty Name="vl_imovel" ColumnName="vl_imovel" />
+          <ScalarProperty Name="qt_banheiro" ColumnName="qt_banheiro" />
+          <ScalarProperty Name="qt_suite" ColumnName="qt_suite" />
           <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
           <ScalarProperty Name="ds_complemento" ColumnName="ds_complemento" />
-          <ScalarProperty Name="ds_garagem" ColumnName="ds_garagem" />
-          <ScalarProperty Name="ds_portaria" ColumnName="ds_portaria" />
-          <ScalarProperty Name="ds_situacao" ColumnName="ds_situacao" />
-          <ScalarProperty Name="qt_suite" ColumnName="qt_suite" />
-          <ScalarProperty Name="ds_banheiro" ColumnName="ds_banheiro" />
+          <ScalarProperty Name="ds_numero_endereco" ColumnName="ds_numero_endereco" />
+          <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
           <ScalarProperty Name="nm_edificio" ColumnName="nm_edificio" />
-          <ScalarProperty Name="ic_financiamento" ColumnName="ic_financiamento" />
-          <ScalarProperty Name="vl_imovel" ColumnName="vl_imovel" />
-          <ScalarProperty Name="vl_sem_comissao" ColumnName="vl_sem_comissao" />
-          <ScalarProperty Name="vl_iptu" ColumnName="vl_iptu" />
-          <ScalarProperty Name="vl_condominio" ColumnName="vl_condominio" />
-          <ScalarProperty Name="ic_vazio" ColumnName="ic_vazio" />
-          <ScalarProperty Name="cd_registro" ColumnName="cd_registro" />
-          <ScalarProperty Name="ic_documentacao" ColumnName="ic_documentacao" />
-          <ScalarProperty Name="ic_elevador" ColumnName="ic_elevador" />
-          <ScalarProperty Name="ds_local_chaves" ColumnName="ds_local_chaves" />
-          <ScalarProperty Name="vl_area_util" ColumnName="vl_area_util" />
-          <ScalarProperty Name="vl_area_total" ColumnName="vl_area_total" />
-          <ScalarProperty Name="ic_destaque" ColumnName="ic_destaque" />
-          <ScalarProperty Name="ic_ativo" ColumnName="ic_ativo" />
-          <ScalarProperty Name="dt_post" ColumnName="dt_post" />
+          <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="intima">
       <EntityTypeMapping TypeName="imobappModel.intima">
         <MappingFragment StoreEntitySet="intima">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="lazer">
       <EntityTypeMapping TypeName="imobappModel.lazer">
         <MappingFragment StoreEntitySet="lazer">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="logradouro">
+      <EntityTypeMapping TypeName="imobappModel.logradouro">
+        <MappingFragment StoreEntitySet="logradouro">
+          <ScalarProperty Name="ds_logradouro" ColumnName="ds_logradouro" />
+          <ScalarProperty Name="id_logradouro" ColumnName="id_logradouro" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="municipio">
       <EntityTypeMapping TypeName="imobappModel.municipio">
         <MappingFragment StoreEntitySet="municipio">
-          <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
           <ScalarProperty Name="nm_municipio" ColumnName="nm_municipio" />
+          <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="padrao">
+      <EntityTypeMapping TypeName="imobappModel.padrao">
+        <MappingFragment StoreEntitySet="padrao">
+          <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="pais">
       <EntityTypeMapping TypeName="imobappModel.pais">
         <MappingFragment StoreEntitySet="pais">
-          <ScalarProperty Name="id_pais" ColumnName="id_pais" />
-          <ScalarProperty Name="cd_pais" ColumnName="cd_pais" />
           <ScalarProperty Name="nm_pais" ColumnName="nm_pais" />
+          <ScalarProperty Name="cd_pais" ColumnName="cd_pais" />
+          <ScalarProperty Name="id_pais" ColumnName="id_pais" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="posicaoimovel">
       <EntityTypeMapping TypeName="imobappModel.posicaoimovel">
         <MappingFragment StoreEntitySet="posicaoimovel">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="servico">
       <EntityTypeMapping TypeName="imobappModel.servico">
         <MappingFragment StoreEntitySet="servico">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="slider">
       <EntityTypeMapping TypeName="imobappModel.slider">
         <MappingFragment StoreEntitySet="slider">
-          <ScalarProperty Name="id_slider" ColumnName="id_slider" />
-          <ScalarProperty Name="ds_path_imagem" ColumnName="ds_path_imagem" />
-          <ScalarProperty Name="ds_texto1" ColumnName="ds_texto1" />
-          <ScalarProperty Name="ds_texto2" ColumnName="ds_texto2" />
           <ScalarProperty Name="ic_ativo" ColumnName="ic_ativo" />
+          <ScalarProperty Name="ds_texto2" ColumnName="ds_texto2" />
+          <ScalarProperty Name="ds_texto1" ColumnName="ds_texto1" />
+          <ScalarProperty Name="ds_path_imagem" ColumnName="ds_path_imagem" />
+          <ScalarProperty Name="id_slider" ColumnName="id_slider" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="social">
       <EntityTypeMapping TypeName="imobappModel.social">
         <MappingFragment StoreEntitySet="social">
-          <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="ds_item" ColumnName="ds_item" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="bairro_ibfk_1" TypeName="imobappModel.bairro_ibfk_1" StoreEntitySet="bairro">
-      <EndProperty Name="municipio">
-        <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
-      </EndProperty>
-      <EndProperty Name="bairro">
-        <ScalarProperty Name="id_bairro" ColumnName="id_bairro" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovel_ibfk_4" TypeName="imobappModel.imovel_ibfk_4" StoreEntitySet="imovel">
-      <EndProperty Name="bairro">
-        <ScalarProperty Name="id_bairro" ColumnName="id_bairro" />
-      </EndProperty>
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovel_ibfk_3" TypeName="imobappModel.imovel_ibfk_3" StoreEntitySet="imovel">
-      <EndProperty Name="categoria">
-        <ScalarProperty Name="id" ColumnName="id_categoria" />
-      </EndProperty>
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovel_ibfk_6" TypeName="imobappModel.imovel_ibfk_6" StoreEntitySet="imovel">
-      <EndProperty Name="dormitorio">
-        <ScalarProperty Name="id" ColumnName="id_dormitorio" />
-      </EndProperty>
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-      <Condition ColumnName="id_dormitorio" IsNull="false" />
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="estado_ibfk_1" TypeName="imobappModel.estado_ibfk_1" StoreEntitySet="estado">
-      <EndProperty Name="pais">
-        <ScalarProperty Name="id_pais" ColumnName="id_pais" />
-      </EndProperty>
-      <EndProperty Name="estado">
-        <ScalarProperty Name="id_estado" ColumnName="id_estado" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="municipio_ibfk_1" TypeName="imobappModel.municipio_ibfk_1" StoreEntitySet="municipio">
-      <EndProperty Name="estado">
-        <ScalarProperty Name="id_estado" ColumnName="id_estado" />
-      </EndProperty>
-      <EndProperty Name="municipio">
-        <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovel_ibfk_5" TypeName="imobappModel.imovel_ibfk_5" StoreEntitySet="imovel">
-      <EndProperty Name="estadoimovel">
-        <ScalarProperty Name="id" ColumnName="id_estado_imovel" />
-      </EndProperty>
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovel_ibfk_2" TypeName="imobappModel.imovel_ibfk_2" StoreEntitySet="imovel">
-      <EndProperty Name="finalidade">
-        <ScalarProperty Name="id" ColumnName="id_finalidade" />
-      </EndProperty>
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imagem_ibfk_1" TypeName="imobappModel.imagem_ibfk_1" StoreEntitySet="imagem">
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-      <EndProperty Name="imagem">
-        <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovel_ibfk_7" TypeName="imobappModel.imovel_ibfk_7" StoreEntitySet="imovel">
-      <EndProperty Name="posicaoimovel">
-        <ScalarProperty Name="id" ColumnName="id_posicao_imovel" />
-      </EndProperty>
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-      <Condition ColumnName="id_posicao_imovel" IsNull="false" />
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovelacabamento" TypeName="imobappModel.imovelacabamento" StoreEntitySet="imovelacabamento">
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-      <EndProperty Name="acabamento">
-        <ScalarProperty Name="id" ColumnName="id_acabamento" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovelarmario" TypeName="imobappModel.imovelarmario" StoreEntitySet="imovelarmario">
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-      <EndProperty Name="armario">
-        <ScalarProperty Name="id" ColumnName="id_armario" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovelintima" TypeName="imobappModel.imovelintima" StoreEntitySet="imovelintima">
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-      <EndProperty Name="intima">
-        <ScalarProperty Name="id" ColumnName="id_intima" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovellazer" TypeName="imobappModel.imovellazer" StoreEntitySet="imovellazer">
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-      <EndProperty Name="lazer">
-        <ScalarProperty Name="id" ColumnName="id_lazer" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovelservico" TypeName="imobappModel.imovelservico" StoreEntitySet="imovelservico">
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-      <EndProperty Name="servico">
-        <ScalarProperty Name="id" ColumnName="id_servico" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="imovelsocial" TypeName="imobappModel.imovelsocial" StoreEntitySet="imovelsocial">
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-      <EndProperty Name="social">
-        <ScalarProperty Name="id" ColumnName="id_social" />
-      </EndProperty>
-    </AssociationSetMapping>
     <EntitySetMapping Name="usuario">
       <EntityTypeMapping TypeName="imobappModel.usuario">
         <MappingFragment StoreEntitySet="usuario">
@@ -331,16 +232,198 @@
           <ScalarProperty Name="cd_creci" ColumnName="cd_creci" />
           <ScalarProperty Name="cd_cpf" ColumnName="cd_cpf" />
           <ScalarProperty Name="nm_usuario" ColumnName="nm_usuario" />
+          <ScalarProperty Name="id_facebook" ColumnName="id_facebook" />
           <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <AssociationSetMapping Name="bairro_ibfk_1" TypeName="imobappModel.bairro_ibfk_1" StoreEntitySet="bairro">
+      <EndProperty Name="bairro">
+        <ScalarProperty Name="id_bairro" ColumnName="id_bairro" />
+      </EndProperty>
+      <EndProperty Name="municipio">
+        <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovel_ibfk_7" TypeName="imobappModel.imovel_ibfk_7" StoreEntitySet="imovel">
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+      <EndProperty Name="bairro">
+        <ScalarProperty Name="id_bairro" ColumnName="id_bairro" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovel_ibfk_4" TypeName="imobappModel.imovel_ibfk_4" StoreEntitySet="imovel">
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+      <EndProperty Name="categoria">
+        <ScalarProperty Name="id" ColumnName="id_categoria" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="conversa_ibfk_1" TypeName="imobappModel.conversa_ibfk_1" StoreEntitySet="conversa">
+      <EndProperty Name="conversa">
+        <ScalarProperty Name="ds_mensagem" ColumnName="ds_mensagem" />
+        <ScalarProperty Name="ds_assunto" ColumnName="ds_assunto" />
+        <ScalarProperty Name="ic_lida" ColumnName="ic_lida" />
+        <ScalarProperty Name="id_usuario_para" ColumnName="id_usuario_para" />
+        <ScalarProperty Name="id_usuario_de" ColumnName="id_usuario_de" />
+        <ScalarProperty Name="dt_mensagem" ColumnName="dt_mensagem" />
+        <ScalarProperty Name="id_conversa" ColumnName="id_conversa" />
+      </EndProperty>
+      <EndProperty Name="usuario">
+        <ScalarProperty Name="id_usuario" ColumnName="id_usuario_de" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="conversa_ibfk_2" TypeName="imobappModel.conversa_ibfk_2" StoreEntitySet="conversa">
+      <EndProperty Name="conversa">
+        <ScalarProperty Name="ds_mensagem" ColumnName="ds_mensagem" />
+        <ScalarProperty Name="ds_assunto" ColumnName="ds_assunto" />
+        <ScalarProperty Name="ic_lida" ColumnName="ic_lida" />
+        <ScalarProperty Name="id_usuario_para" ColumnName="id_usuario_para" />
+        <ScalarProperty Name="id_usuario_de" ColumnName="id_usuario_de" />
+        <ScalarProperty Name="dt_mensagem" ColumnName="dt_mensagem" />
+        <ScalarProperty Name="id_conversa" ColumnName="id_conversa" />
+      </EndProperty>
+      <EndProperty Name="usuario">
+        <ScalarProperty Name="id_usuario" ColumnName="id_usuario_para" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovel_ibfk_3" TypeName="imobappModel.imovel_ibfk_3" StoreEntitySet="imovel">
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+      <EndProperty Name="dormitorio">
+        <ScalarProperty Name="id" ColumnName="id_dormitorio" />
+      </EndProperty>
+      <Condition ColumnName="id_dormitorio" IsNull="false" />
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="estado_ibfk_1" TypeName="imobappModel.estado_ibfk_1" StoreEntitySet="estado">
+      <EndProperty Name="estado">
+        <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+      </EndProperty>
+      <EndProperty Name="pais">
+        <ScalarProperty Name="id_pais" ColumnName="id_pais" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="municipio_ibfk_1" TypeName="imobappModel.municipio_ibfk_1" StoreEntitySet="municipio">
+      <EndProperty Name="municipio">
+        <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
+      </EndProperty>
+      <EndProperty Name="estado">
+        <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+      </EndProperty>
+    </AssociationSetMapping>
     <AssociationSetMapping Name="imovel_ibfk_8" TypeName="imobappModel.imovel_ibfk_8" StoreEntitySet="imovel">
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+      <EndProperty Name="estadoimovel">
+        <ScalarProperty Name="id" ColumnName="id_estado_imovel" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovel_ibfk_2" TypeName="imobappModel.imovel_ibfk_2" StoreEntitySet="imovel">
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+      <EndProperty Name="finalidade">
+        <ScalarProperty Name="id" ColumnName="id_finalidade" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovel_ibfk_5" TypeName="imobappModel.imovel_ibfk_5" StoreEntitySet="imovel">
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+      <EndProperty Name="garagem">
+        <ScalarProperty Name="id" ColumnName="id_garagem" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imagem_ibfk_1" TypeName="imobappModel.imagem_ibfk_1" StoreEntitySet="imagem">
+      <EndProperty Name="imagem">
+        <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
+      </EndProperty>
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovel_ibfk_1" TypeName="imobappModel.imovel_ibfk_1" StoreEntitySet="imovel">
       <EndProperty Name="imovel">
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
       </EndProperty>
       <EndProperty Name="usuario">
         <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovel_ibfk_10" TypeName="imobappModel.imovel_ibfk_10" StoreEntitySet="imovel">
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+      <EndProperty Name="logradouro">
+        <ScalarProperty Name="id_logradouro" ColumnName="id_logradouro" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovel_ibfk_6" TypeName="imobappModel.imovel_ibfk_6" StoreEntitySet="imovel">
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+      <EndProperty Name="padrao">
+        <ScalarProperty Name="id" ColumnName="id_padrao" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovel_ibfk_9" TypeName="imobappModel.imovel_ibfk_9" StoreEntitySet="imovel">
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+      <EndProperty Name="posicaoimovel">
+        <ScalarProperty Name="id" ColumnName="id_posicao_imovel" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovelacabamento" TypeName="imobappModel.imovelacabamento" StoreEntitySet="imovelacabamento">
+      <EndProperty Name="acabamento">
+        <ScalarProperty Name="id" ColumnName="id_acabamento" />
+      </EndProperty>
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovelarmario" TypeName="imobappModel.imovelarmario" StoreEntitySet="imovelarmario">
+      <EndProperty Name="armario">
+        <ScalarProperty Name="id" ColumnName="id_armario" />
+      </EndProperty>
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovelintima" TypeName="imobappModel.imovelintima" StoreEntitySet="imovelintima">
+      <EndProperty Name="intima">
+        <ScalarProperty Name="id" ColumnName="id_intima" />
+      </EndProperty>
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovellazer" TypeName="imobappModel.imovellazer" StoreEntitySet="imovellazer">
+      <EndProperty Name="lazer">
+        <ScalarProperty Name="id" ColumnName="id_lazer" />
+      </EndProperty>
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovelservico" TypeName="imobappModel.imovelservico" StoreEntitySet="imovelservico">
+      <EndProperty Name="servico">
+        <ScalarProperty Name="id" ColumnName="id_servico" />
+      </EndProperty>
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imovelsocial" TypeName="imobappModel.imovelsocial" StoreEntitySet="imovelsocial">
+      <EndProperty Name="social">
+        <ScalarProperty Name="id" ColumnName="id_social" />
+      </EndProperty>
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

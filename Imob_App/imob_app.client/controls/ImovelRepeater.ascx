@@ -72,6 +72,8 @@
                                     <br />
                                     <asp:Label ID="lblEstadoImovel" runat="server" Font-Size="Small" Text='<%# Eval("EstadoImovel", "Estado do Imóvel: {0}") %>'></asp:Label>
                                     <br />
+                                    <asp:Label ID="lblPadrao" runat="server" Font-Size="Small" Text='<%# Eval("EstadoImovel", "Estado do Imóvel: {0}") %>'></asp:Label>
+                                    <br />
                                     <div class="line">
                                     </div>
                                     <div class="valor">

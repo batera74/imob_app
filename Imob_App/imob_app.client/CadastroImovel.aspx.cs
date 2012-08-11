@@ -19,18 +19,24 @@ namespace imob_app.client
             idImovel = 1;
             business.Imovel imov = new business.Imovel();            
             dao.imovel imovel = imov.SelecionarImovel(Convert.ToInt32(1));
+            CarregarCombos();
             CarregarImagens(imovel);
             CarregarDetalhes(imovel);
             CarregarCaracteristicas(imovel);
         }
 
-        private void CarregarCombosPesquisa()
+        private void CarregarCombos()
         {
             business.Combo<dao.estado>.CarregarCombo(ref ddlUF, new business.Estado(), "cd_estado", "id_estado", "UF *");
             business.Combo<dao.municipio>.CarregarCombo(ref ddlMunicipio, new business.Municipio(), "nm_municipio", "id_municipio", "Município *");
             business.Combo<dao.bairro>.CarregarCombo(ref ddlBairro, new business.Bairro(), "nm_bairro", "id_bairro", "Bairro *");
             business.Combo<dao.dormitorio>.CarregarCombo(ref ddlDormitorios, new business.Dormitorio(), "ds_item", "id", "Dormitorios *");
             business.Combo<dao.categoria>.CarregarCombo(ref ddlCategoria, new business.Categoria(), "ds_item", "id", "Tipo *");
+            business.Combo<dao.logradouro>.CarregarCombo(ref ddlTipoLogradouro, new business.Logradouro(), "ds_logradouro", "id_logradouro", "Logradouro *");
+            business.Combo<dao.padrao>.CarregarCombo(ref ddlPadrao, new business.Padrao(), "ds_item", "id", "Padrão *");
+            business.Combo<dao.estadoimovel>.CarregarCombo(ref ddlEstadoImovel, new business.EstadoImovel(), "ds_item", "id", "Estado do Imóvel *");
+            business.Combo<dao.garagem>.CarregarCombo(ref ddlGaragem, new business.Garagem(), "ds_item", "id", "Garagem *");
+            business.Combo<dao.posicaoimovel>.CarregarCombo(ref ddlPosicaoImovel, new business.PosicaoImovel(), "ds_item", "id", "Posição do Imóvel *");
         }
 
         private void CarregarImagens(dao.imovel imovel)
@@ -54,16 +60,33 @@ namespace imob_app.client
                 ddlUF.SelectedValue = imovel.bairro.municipio.estado.id_estado.ToString();
                 ddlMunicipio.SelectedValue = imovel.bairro.municipio.id_municipio.ToString();
                 ddlBairro.SelectedValue = imovel.bairro.id_bairro.ToString();
+                ddlDormitorios.SelectedValue = imovel.dormitorio.id.ToString();
+                ddlTipoLogradouro.SelectedValue = imovel.logradouro.id_logradouro.ToString();
+                ddlPadrao.SelectedValue = imovel.padrao.id.ToString();
+                ddlEstadoImovel.SelectedValue = imovel.padrao.id.ToString();
+                ddlPosicaoImovel.SelectedValue = imovel.posicaoimovel.id.ToString();
+                ddlGaragem.SelectedValue = imovel.garagem.id.ToString();
                 txtValor.Text = imovel.vl_imovel.ToString();
                 txtValorCondominio.Text = imovel.vl_condominio.ToString();
                 txtValorIptu.Text = imovel.vl_iptu.ToString();
-                txtId.Text = imovel.id_imovel.ToString();
-                txtBanheiros.Text = imovel.ds_banheiro;
-                txtGaragem.Text = imovel.ds_garagem;
-                ddlPortaria.SelectedValue = Convert.ToInt32(imovel.ic_elevador).ToString();
-                ddlElevador.SelectedValue = Convert.ToInt32(imovel.ic_elevador).ToString();
-                ddlVazio.SelectedValue = Convert.ToInt32(imovel.ic_vazio).ToString();
+                lblId.Text = imovel.id_imovel.ToString();
+                txtBanheiros.Text = imovel.qt_banheiro.ToString();
+                ddlMunicipio.SelectedValue = imovel.garagem.ds_item;
+                chkPortaria.Checked = (bool)imovel.ic_portaria;
+                chkElevador.Checked = (bool)imovel.ic_elevador;
+                chkVazio.Checked = (bool)imovel.ic_vazio;
+                chkAtivo.Checked = (bool)imovel.ic_ativo;
+                chkDestaque.Checked = (bool)imovel.ic_destaque;
+                chkFinanciamento.Checked = (bool)imovel.ic_financiamento;
+                txtEndereco.Text = imovel.ds_endereco;
+                txtNumero.Text = imovel.ds_numero_endereco;
+                txtComplemento.Text = imovel.ds_complemento;
+                txtCep.Text = imovel.ds_cep;
+                txtAreaTotal.Text = imovel.vl_area_total.ToString();
+                txtAreaUtil.Text = imovel.vl_area_util.ToString();
+                txtSuites.Text = imovel.qt_suite.ToString();
             }
+                
         }
 
         private void CarregarCaracteristicas(dao.imovel imovel)
