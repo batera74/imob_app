@@ -1,7 +1,7 @@
-drop database if exists `imobapp`;
-create database if not exists `imobapp`;
+-- drop database if exists `imobapp`;
+-- create database if not exists `imobapp`;
 
-use `imobapp`;
+-- use `imobapp`;
 
 
 drop table if exists `usuario`;
@@ -189,8 +189,7 @@ create table if not exists `imagem` (
   `ds_imagem_cripto` longtext collate latin1_general_ci not null,
   `ds_imagem` varchar(150) not null,
   `id_imovel` smallint not null,  
-  `ic_principal` bit not null,
-  foreign key (id_imovel) references imovel(id_imovel)
+  `ic_principal` bit not null
 );
 
 drop table if exists `imovelsocial`;
