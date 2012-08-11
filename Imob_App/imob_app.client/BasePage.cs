@@ -102,7 +102,7 @@ namespace imob_app.client
                 {
                     string signedRequest;
                     // Gambi para debugarmos.....
-                    if (getPageUrl().ToLower().IndexOf("xlocalhost") > -1)
+                    if (getPageUrl().ToLower().IndexOf("localhost") > -1)
                     {
                         // Para obter seu token:
                         //https://www.facebook.com/dialog/oauth?client_id=YOUR_APP_ID&redirect_uri=https://www.facebook.com/connect/login_success.html&response_type=token
