@@ -12,7 +12,7 @@
     <meta name="keywords" content="Your keywords">
     <meta name="author" content="Your name">
     <link rel="stylesheet" href="css/style.css">
-    <link href="../controls/css/repeater/dataList.css" rel="stylesheet" type="text/css" />
+    <link href="controls/css/repeater/dataList.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/detalheImovel.css" />
     <script src="js/jquery-1.7.1.min.js"></script>
     <script src="js/cufon-yui.js"></script>
@@ -148,7 +148,8 @@
     <!-- Footer -->
     <footer>
 	<div class="fright">
-    	YourPlace  &copy; 2012 <a href="SignedRequest.aspx">Politca de Privacidade</a>
+    	YourPlace  &copy; <asp:LinkButton runat="server" ID="lkbSignedRequest" 
+            onclick="lkbSignedRequest_Click">2012</asp:LinkButton> <a href="SignedRequest.aspx">Politca de Privacidade</a>
         <div class="alignright">
         	<!-- {%FOOTER_LINK} -->
         </div>

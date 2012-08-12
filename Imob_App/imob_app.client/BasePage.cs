@@ -12,6 +12,7 @@ namespace imob_app.client
     {
         string ApplicationID = "467560186589271";
         string ApplicationSecret = "0c0022c39879ce73ca8992407c5c3d94";
+        int scriptId = 1;
 
         /// <summary>
         /// Gets the complete URL of the current page.
@@ -91,7 +92,7 @@ namespace imob_app.client
 
         public void Alert(string message)
         {
-            ClientScript.RegisterClientScriptBlock(this.GetType(), "PopupScript", "<script language=\"javascript\">alert('" + message + "');</script>");
+            ClientScript.RegisterClientScriptBlock(this.GetType(), "PopupScript" + scriptId++, "<script language=\"javascript\">alert('" + message + "');</script>");
         }
 
         private void BasePage_Load(object sender, EventArgs e)
@@ -101,40 +102,46 @@ namespace imob_app.client
                 if (!Page.IsPostBack)
                 {
                     string signedRequest;
-                    // Gambi para debugarmos.....
-                    if (getPageUrl().ToLower().IndexOf("localhost") > -1)
+                    if (Session["user"] == null)
                     {
-                        // Para obter seu token:
-                        //https://www.facebook.com/dialog/oauth?client_id=YOUR_APP_ID&redirect_uri=https://www.facebook.com/connect/login_success.html&response_type=token
-                        // YOUR_APP_ID se refere ao valor da variável ApplicationID lá em cima. ;-)
-                        // O token aparece na URL após o envio da chamada.
+                        Alert("getPageUrl().ToLower() = " + getPageUrl().ToLower());
+                        Alert("Request.Form['signed_request'] = " + Request.Form["signed_request"]);
+                        // Gambi para debugarmos.....
+                        if (getPageUrl().ToLower().IndexOf("localhost") > -1)
+                        {
+                            // Para obter seu token:
+                            //https://www.facebook.com/dialog/oauth?client_id=467560186589271&redirect_uri=https://www.facebook.com/connect/login_success.html&response_type=token
+                            // YOUR_APP_ID se refere ao valor da variável ApplicationID lá em cima. ;-)
+                            // O token aparece na URL após o envio da chamada.
 
 
-                        // Se o signedRequest abaixo não funfar, acesse http://apps.facebook.com/placetoyou e clique no link "Política de Privacidade". Pegue a linguiça e atribua à variável abaixo. ;-)
-                        //signedRequest = "jNT3nTbUXBzKUNfQb4aPH8LSA9AZpwhGKo99idDN8Ws.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzNDQzMTIwMDAsImlzc3VlZF9hdCI6MTM0NDMwNjEzNywib2F1dGhfdG9rZW4iOiJBQUFHcFBsYlZNRmNCQUM1SVdESkVYMzFMSXhqRDM0bmJOVWFyRDl6NDVBTVhUVlBNS1R3UDhmUEFCTFNDU2pISFg2OHdmbGRVRlhGcldSUUs4cmpoS0NxSTk2d01zcHB5NDIyOTFrVnlnNWN2cjBiSSIsInVzZXIiOnsiY291bnRyeSI6ImJyIiwibG9jYWxlIjoicHRfQlIiLCJhZ2UiOnsibWluIjoyMX19LCJ1c2VyX2lkIjoiMTAwMDAzNjk1NjYxMDc0In0";
-                        signedRequest = "rRgyo5v3X-98q0koYojqSKtWDh-FcjylrHujbUXwgu8.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzNDQzMTU2MDAsImlzc3VlZF9hdCI6MTM0NDMwODcwOSwib2F1dGhfdG9rZW4iOiJBQUFHcFBsYlZNRmNCQU1VN2VmdXk2TmplN0lBMWQ4WkFWY1duM0NtTnZMeVM2WkJtZWtZZlpDTE1vQm5nZWVRMTI2NWtwSmZ6Q1pCa2doTVhvbXZ1dUNLQVM0c1ZaQm1WTHRYR3RXNVpCT2hQNHp0SWRCWkFEbkUiLCJ1c2VyIjp7ImNvdW50cnkiOiJiciIsImxvY2FsZSI6InB0X0JSIiwiYWdlIjp7Im1pbiI6MjF9fSwidXNlcl9pZCI6IjEwMDAwMzY5NTY2MTA3NCJ9";
-                    }
-                    else
-                    {
-                        signedRequest = Request.Form["signed_request"];
-                    }
-                    var client = new FacebookClient();
-                    object result;
-                    if (client.TryParseSignedRequest(ApplicationSecret, signedRequest, out result))
-                    {
-                        var auth = result as IDictionary<string, object>;
-                        string token = (string)auth["oauth_token"];
-                        string userId = auth["user_id"].ToString();
+                            // Se o signedRequest abaixo não funfar, acesse http://apps.facebook.com/placetoyou e clique no link "Política de Privacidade". Pegue a linguiça e atribua à variável abaixo. ;-)
+                            //signedRequest = "jNT3nTbUXBzKUNfQb4aPH8LSA9AZpwhGKo99idDN8Ws.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzNDQzMTIwMDAsImlzc3VlZF9hdCI6MTM0NDMwNjEzNywib2F1dGhfdG9rZW4iOiJBQUFHcFBsYlZNRmNCQUM1SVdESkVYMzFMSXhqRDM0bmJOVWFyRDl6NDVBTVhUVlBNS1R3UDhmUEFCTFNDU2pISFg2OHdmbGRVRlhGcldSUUs4cmpoS0NxSTk2d01zcHB5NDIyOTFrVnlnNWN2cjBiSSIsInVzZXIiOnsiY291bnRyeSI6ImJyIiwibG9jYWxlIjoicHRfQlIiLCJhZ2UiOnsibWluIjoyMX19LCJ1c2VyX2lkIjoiMTAwMDAzNjk1NjYxMDc0In0";
+                            signedRequest = "WDgN_5u5i5fhkz4yGHMmGwSA2JlUvK_MEXChPAJnRUQ.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzNDQ4MDE2MDAsImlzc3VlZF9hdCI6MTM0NDc5NDcxMSwib2F1dGhfdG9rZW4iOiJBQUFHcFBsYlZNRmNCQUFqYk1qOWFyUE5RM1NLUEV2cEYwWHZUcjBpNEQwZHRqcGlXc2ZUSFpDM3QxN1FoWENyRlhDT1d2RlJEQVpCWVlKSVpCWWRCOUhyNk9VWFpCYlFlS2h4enZBOXdtTTFCYlE0WkNzYU1CIiwidXNlciI6eyJjb3VudHJ5IjoiYnIiLCJsb2NhbGUiOiJwdF9CUiIsImFnZSI6eyJtaW4iOjIxfX0sInVzZXJfaWQiOiIxMDAwMDAwNDcyOTY4ODQifQ";
+                        }
+                        else
+                        {
+                            signedRequest = Request.Form["signed_request"];
+                        }
+                        var client = new FacebookClient();
+                        object result;
+                        if (client.TryParseSignedRequest(ApplicationSecret, signedRequest, out result))
+                        {
+                            var auth = result as IDictionary<string, object>;
+                            string token = (string)auth["oauth_token"];
+                            string userId = auth["user_id"].ToString();
 
-                        //var user = new FacebookClient(token).Get("me") as IDictionary<string, object>;
-                        //Session["user"] = user;                        
+                            var user = new FacebookClient(token).Get("me") as IDictionary<string, object>;
+                            Session["user"] = user;
 
-                        //Alert(user.ToString());
-                    }
-                    else
-                    {
-                        Response.Redirect("https://www.facebook.com/pages/Place-2-You-O-lugar-perfeito-para-sua-fam%C3%ADlia-ou-seus-neg%C3%B3cios/251693864933782");
-                        Response.End();
+                            //Alert("SignedRequest = " + signedRequest);
+                            Session["signedRequest"] = signedRequest;
+                        }
+                        else
+                        {
+                            Response.Redirect("https://www.facebook.com/pages/Place-2-You-O-lugar-perfeito-para-sua-fam%C3%ADlia-ou-seus-neg%C3%B3cios/251693864933782");
+                            Response.End();
+                        }
                     }
                 }
             }
@@ -147,7 +154,7 @@ namespace imob_app.client
 
         private void BasePage_Error(object sender, EventArgs e)
         {
-            imob_app.business.Sistema sistema = new imob_app.business.Sistema(Session["UserId"].ToString());
+            imob_app.business.Sistema sistema = new imob_app.business.Sistema(((IDictionary<string, object>)Session["user"])["user_id"].ToString());
             string errorPage = ConfigurationManager.AppSettings["ErrorPage"];
             Exception ex = Server.GetLastError();
             string errorCode = sistema.RegistrarErro(ex);

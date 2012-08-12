@@ -67,6 +67,9 @@ namespace imob_app.business
             if (valorAte > 0)
                 query.Append(VerificaQuery(query.ToString()) + "it.vl_imovel <= " + valorAte);
 
+            if (query.Length == 0)
+                query.Append("1 == 1");
+
             var imoveis = _ctx.imovel.Where(query.ToString());
 
             return (from imov in imoveis

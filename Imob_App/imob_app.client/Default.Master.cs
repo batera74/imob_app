@@ -95,5 +95,13 @@ namespace imob_app.client
         {
             Response.Write("<script>alert('" + mensagem + "')</script>");
         }
+
+        protected void lkbSignedRequest_Click(object sender, EventArgs e)
+        {
+            if (Session["signedRequest"] != null)
+                Alert(Session["signedRequest"].ToString());
+            else
+                Alert("Usuário não carregado.");
+        }
     }
 }

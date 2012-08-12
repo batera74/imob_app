@@ -57,6 +57,9 @@
     <Content Include="CadastroImovel.aspx" />
     <Content Include="CadastroUsuario.aspx" />
     <Content Include="Excluir.aspx" />
+    <Content Include="images\handshake2.jpg" />
+    <Content Include="js\html5.js" />
+    <Content Include="js\jquery.maskMoney.js" />
     <Content Include="MeusImoveis.aspx" />
     <Content Include="controls\css\repeater\dataList.css" />
     <Content Include="controls\css\slider\flexslider.css" />

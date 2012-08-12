@@ -54,7 +54,7 @@
                                 <table class="sample">
                                     <tr>
                                         <td>
-                                            <a href="../DetalheImovel.aspx?Imovel=<%# Eval("Referencia") %>">
+                                            <a href="DetalheImovel.aspx?Imovel=<%# Eval("Referencia") %>">
                                                 <asp:Image Style="border: 0px;" ID="Image2" runat="server" Height="131px" Width="200px" /></a>
                                         </td>
                                     </tr>
@@ -82,7 +82,7 @@
                                     <div class="line">
                                     </div>
                                     <div class="ha_centro">
-                                        <a href="../DetalheImovel.aspx?Imovel=<%# Eval("Referencia") %>">
+                                        <a href="DetalheImovel.aspx?Imovel=<%# Eval("Referencia") %>">
                                             <asp:Label ID="lblDetalhes" runat="server" CssClass="button" Text='Detalhes >'></asp:Label></a>
                                         
                                         <asp:Literal ID="BtnsAdmin" runat="server"></asp:Literal>
