@@ -27,5 +27,11 @@ namespace imob_app.business
         {
             return (from d in _ctx.dormitorio where d.id == id select d).FirstOrDefault();
         }
+
+
+        public List<dormitorio> SelecionarExistentes()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

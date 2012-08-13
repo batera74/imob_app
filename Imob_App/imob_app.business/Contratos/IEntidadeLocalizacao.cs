@@ -12,5 +12,6 @@ namespace imob_app.business.Contratos
     public interface IEntidadeLocalizacao<T> : IEntidade<T>
     {
         List<T> SelecionarPorReferencia(int id);
+        List<T> SelecionarExistentesPorReferencia(int id);
     }
 }

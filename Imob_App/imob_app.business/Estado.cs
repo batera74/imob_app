@@ -20,7 +20,12 @@ namespace imob_app.business
 
         public List<dao.estado> SelecionarTodos()
         {
-            return (from e in _ctx.estado select e).ToList();            
+           return (from e in _ctx.estado select e).ToList();
+        }
+
+        public List<dao.estado> SelecionarExistentes()
+        {
+            return (from e in _ctx.imovel select e.bairro.municipio.estado).Distinct().ToList();
         }
 
         public dao.estado Selecionar(int id)
@@ -29,6 +34,12 @@ namespace imob_app.business
         }
 
         public List<dao.estado> SelecionarPorReferencia(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public List<estado> SelecionarExistentesPorReferencia(int id)
         {
             throw new NotImplementedException();
         }

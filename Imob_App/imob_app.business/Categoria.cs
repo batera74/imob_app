@@ -27,5 +27,11 @@ namespace imob_app.business
         {
             return (from c in _ctx.categoria where c.id == id select c).FirstOrDefault();
         }
+
+
+        public List<categoria> SelecionarExistentes()
+        {
+            return (from c in _ctx.imovel select c.categoria).Distinct().ToList();
+        }
     }
 }

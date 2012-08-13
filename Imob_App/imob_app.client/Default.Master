@@ -96,48 +96,49 @@
                 </div>
             </div>
             <div class="tab-content" style="height: 150px;">
-                <div id="form2">
-                    <div class="row-1">
-                        <span class="text-form fleft">Localização:</span>
-                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                            <ContentTemplate>
-                                <div id="local">
-                                    <asp:DropDownList ID="ddlUF" runat="server" Style="width: 50px" AutoPostBack="True"
-                                        CausesValidation="True" OnSelectedIndexChanged="ddlUF_SelectedIndexChanged">
-                                    </asp:DropDownList>
-                                    <asp:DropDownList ID="ddlMunicipio" runat="server" Style="width: 195px" AutoPostBack="True"
-                                        OnSelectedIndexChanged="ddlMunicipio_SelectedIndexChanged">
-                                    </asp:DropDownList>
-                                    <asp:DropDownList ID="ddlBairro" runat="server" Style="width: 170px" AutoPostBack="True">
-                                    </asp:DropDownList>
-                                </div>
-                            </ContentTemplate>
-                        </asp:UpdatePanel>
-                    </div>
-                    <br />
-                    <br />
-                    <div class="row-1">
-                        <span class="text-form fleft">Características:</span>
-                        <asp:DropDownList ID="ddlDormitorios" runat="server" Style="width: 130px">
-                        </asp:DropDownList>
-                        <asp:DropDownList ID="ddlCategoria" runat="server" Style="width: 170px">
-                        </asp:DropDownList>
-                    </div>
-                    <br />
-                    <br />
-                    <span class="text-form fleft">Valores:</span>
-                    <div class="row-1">
-                        <asp:TextBox ID="txtValorDe" runat="server" onblur="if(this.value==''){this.value='DE: Ex 150000 *'}"
-                            onfocus="if(this.value='DE: Ex 150000 *'){this.value=''}" value="DE: Ex 150000 *"
-                            name="valor1"></asp:TextBox>
-                        <asp:TextBox ID="txtValorAte" runat="server" onblur="if(this.value==''){this.value='ATÉ: Ex 250000 *'}"
-                            onfocus="if(this.value='ATÉ: Ex 250000 *'){this.value=''}" value="ATÉ: Ex 250000 *"
-                            name="valor2"></asp:TextBox>
-                    </div>
-                    <div class="fright" style="margin-top: 15px;">
-                        <asp:LinkButton CssClass="btn" ID="lnkPesquisarAvancado" runat="server" OnClick="lnkPesquisarAvancado_Click">Pesquisar</asp:LinkButton>
-                    </div>
-                </div>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <div id="form2">
+                            <div class="row-1">
+                                <span class="text-form fleft">Características:</span>
+                                <asp:DropDownList ID="ddlCategoria" runat="server" Style="width: 170px" AutoPostBack="True"
+                                    CausesValidation="True" OnSelectedIndexChanged="ddlCategoria_SelectedIndexChanged">
+                                </asp:DropDownList>
+                                <asp:DropDownList ID="ddlDormitorios" runat="server" Style="width: 130px" Visible="false">
+                                </asp:DropDownList>
+                            </div>
+                            <br />
+                            <br />
+                            <div class="row-1">
+                                <span class="text-form fleft">Localização:</span>
+                                    <div id="local">
+                                        <asp:DropDownList ID="ddlUF" runat="server" Style="width: 50px" AutoPostBack="True"
+                                            CausesValidation="True" OnSelectedIndexChanged="ddlUF_SelectedIndexChanged">
+                                        </asp:DropDownList>
+                                        <asp:DropDownList ID="ddlMunicipio" runat="server" Style="width: 195px" AutoPostBack="True"
+                                            OnSelectedIndexChanged="ddlMunicipio_SelectedIndexChanged">
+                                        </asp:DropDownList>
+                                        <asp:DropDownList ID="ddlBairro" runat="server" Style="width: 170px" AutoPostBack="True">
+                                        </asp:DropDownList>
+                                    </div>
+                            </div>
+                            <br />
+                            <br />
+                            <span class="text-form fleft">Valores:</span>
+                            <div class="row-1">
+                                <asp:TextBox ID="txtValorDe" runat="server" onblur="if(this.value==''){this.value='DE: Ex 150000 *'}"
+                                    onfocus="if(this.value='DE: Ex 150000 *'){this.value=''}" value="DE: Ex 150000 *"
+                                    name="valor1"></asp:TextBox>
+                                <asp:TextBox ID="txtValorAte" runat="server" onblur="if(this.value==''){this.value='ATÉ: Ex 250000 *'}"
+                                    onfocus="if(this.value='ATÉ: Ex 250000 *'){this.value=''}" value="ATÉ: Ex 250000 *"
+                                    name="valor2"></asp:TextBox>
+                            </div>
+                            <div class="fright" style="margin-top: 15px;">
+                                <asp:LinkButton CssClass="btn" ID="lnkPesquisarAvancado" runat="server" OnClick="lnkPesquisarAvancado_Click">Pesquisar</asp:LinkButton>
+                            </div>
+                        </div>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
             </div>
         </div>
     </div>

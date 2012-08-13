@@ -25,5 +25,11 @@ namespace imob_app.business
         {
             return (from g in _ctx.garagem where g.id == id select g).FirstOrDefault();
         }
+
+
+        public List<garagem> SelecionarExistentes()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

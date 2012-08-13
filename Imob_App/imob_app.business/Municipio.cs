@@ -32,5 +32,16 @@ namespace imob_app.business
         {
             return (from a in _ctx.municipio where a.estado.id_estado == id select a).ToList();            
         }
+
+        public List<dao.municipio> SelecionarExistentesPorReferencia(int id)
+        {
+            return (from a in _ctx.imovel where a.bairro.municipio.estado.id_estado == id select a.bairro.municipio).Distinct().ToList();
+        }
+
+
+        public List<municipio> SelecionarExistentes()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

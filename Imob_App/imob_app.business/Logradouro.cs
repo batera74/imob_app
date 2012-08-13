@@ -25,5 +25,11 @@ namespace imob_app.business
         {
             return (from l in _ctx.logradouro where l.id_logradouro == id select l).FirstOrDefault();
         }
+
+
+        public List<logradouro> SelecionarExistentes()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

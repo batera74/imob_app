@@ -27,16 +27,16 @@ namespace imob_app.client
 
         private void CarregarCombos()
         {
-            business.Combo<dao.estado>.CarregarCombo(ref ddlUF, new business.Estado(), "cd_estado", "id_estado", "UF *");
-            business.Combo<dao.municipio>.CarregarCombo(ref ddlMunicipio, new business.Municipio(), "nm_municipio", "id_municipio", "Município *");
-            business.Combo<dao.bairro>.CarregarCombo(ref ddlBairro, new business.Bairro(), "nm_bairro", "id_bairro", "Bairro *");
-            business.Combo<dao.dormitorio>.CarregarCombo(ref ddlDormitorios, new business.Dormitorio(), "ds_item", "id", "Dormitorios *");
-            business.Combo<dao.categoria>.CarregarCombo(ref ddlCategoria, new business.Categoria(), "ds_item", "id", "Tipo *");
-            business.Combo<dao.logradouro>.CarregarCombo(ref ddlTipoLogradouro, new business.Logradouro(), "ds_logradouro", "id_logradouro", "Logradouro *");
-            business.Combo<dao.padrao>.CarregarCombo(ref ddlPadrao, new business.Padrao(), "ds_item", "id", "Padrão *");
-            business.Combo<dao.estadoimovel>.CarregarCombo(ref ddlEstadoImovel, new business.EstadoImovel(), "ds_item", "id", "Estado do Imóvel *");
-            business.Combo<dao.garagem>.CarregarCombo(ref ddlGaragem, new business.Garagem(), "ds_item", "id", "Garagem *");
-            business.Combo<dao.posicaoimovel>.CarregarCombo(ref ddlPosicaoImovel, new business.PosicaoImovel(), "ds_item", "id", "Posição do Imóvel *");
+            business.Combo<dao.estado>.CarregarCombo(ref ddlUF, new business.Estado(), "cd_estado", "id_estado", "UF *", true);
+            business.Combo<dao.municipio>.CarregarCombo(ref ddlMunicipio, new business.Municipio(), "nm_municipio", "id_municipio", "Município *", true);
+            business.Combo<dao.bairro>.CarregarCombo(ref ddlBairro, new business.Bairro(), "nm_bairro", "id_bairro", "Bairro *", true);
+            business.Combo<dao.dormitorio>.CarregarCombo(ref ddlDormitorios, new business.Dormitorio(), "ds_item", "id", "Dormitorios *", true);
+            business.Combo<dao.categoria>.CarregarCombo(ref ddlCategoria, new business.Categoria(), "ds_item", "id", "Tipo *", true);
+            business.Combo<dao.logradouro>.CarregarCombo(ref ddlTipoLogradouro, new business.Logradouro(), "ds_logradouro", "id_logradouro", "Logradouro *", true);
+            business.Combo<dao.padrao>.CarregarCombo(ref ddlPadrao, new business.Padrao(), "ds_item", "id", "Padrão *", true);
+            business.Combo<dao.estadoimovel>.CarregarCombo(ref ddlEstadoImovel, new business.EstadoImovel(), "ds_item", "id", "Estado do Imóvel *", true);
+            business.Combo<dao.garagem>.CarregarCombo(ref ddlGaragem, new business.Garagem(), "ds_item", "id", "Garagem *", true);
+            business.Combo<dao.posicaoimovel>.CarregarCombo(ref ddlPosicaoImovel, new business.PosicaoImovel(), "ds_item", "id", "Posição do Imóvel *", true);
         }
 
         private void CarregarImagens(dao.imovel imovel)

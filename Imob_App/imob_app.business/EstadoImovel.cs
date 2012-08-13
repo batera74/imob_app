@@ -25,5 +25,11 @@ namespace imob_app.business
         {
             return (from e in _ctx.estadoimovel where e.id == id select e).FirstOrDefault();
         }
+
+
+        public List<estadoimovel> SelecionarExistentes()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

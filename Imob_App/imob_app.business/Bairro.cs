@@ -32,5 +32,17 @@ namespace imob_app.business
         {
             return (from b in _ctx.bairro where b.municipio.id_municipio == idMunicipio select b).ToList();            
         }
+
+
+        public List<bairro> SelecionarExistentes()
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public List<bairro> SelecionarExistentesPorReferencia(int idMunicipio)
+        {
+            return (from b in _ctx.imovel where b.bairro.municipio.id_municipio == idMunicipio select b.bairro).Distinct().ToList();            
+        }
     }
 }

@@ -194,5 +194,11 @@ namespace imob_app.business
 
             return query.FirstOrDefault();
         }
+
+
+        public List<ImovelResultado> SelecionarExistentes()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

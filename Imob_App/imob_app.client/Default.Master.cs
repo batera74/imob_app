@@ -24,24 +24,57 @@ namespace imob_app.client
         }
 
         private void CarregarCombosPesquisa()
-        {            
-            business.Combo<dao.estado>.CarregarCombo(ref ddlUF, new business.Estado(), "cd_estado", "id_estado", "UF *");
-            business.Combo<dao.municipio>.CarregarCombo(ref ddlMunicipio, new business.Municipio(), "nm_municipio", "id_municipio", "Município *");
-            business.Combo<dao.bairro>.CarregarCombo(ref ddlBairro, new business.Bairro(), "nm_bairro", "id_bairro", "Bairro *");
-            business.Combo<dao.dormitorio>.CarregarCombo(ref ddlDormitorios, new business.Dormitorio(), "ds_item", "id", "Dormitorios *");
-            business.Combo<dao.categoria>.CarregarCombo(ref ddlCategoria, new business.Categoria(), "ds_item", "id", "Tipo *");
+        {
+            business.Combo<dao.categoria>.CarregarCombo(ref ddlCategoria, new business.Categoria(), "ds_item", "id", "Tipo *", false);
+            business.Combo<dao.estado>.CarregarCombo(ref ddlUF, new business.Estado(), "cd_estado", "id_estado", "UF *", false);
+            ddlMunicipio.Items.Add("Região *");
+            ddlMunicipio.Enabled = false;
+            ddlBairro.Items.Add("Bairro *");
+            ddlBairro.Enabled = false;
+        }
+
+        protected void ddlCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlCategoria.SelectedIndex > 0)
+            {
+                business.Combo<dao.dormitorio>.CarregarCombo(ref ddlDormitorios, new business.Dormitorio(), "ds_item", "id", "Dormitorios *", true);
+                ddlDormitorios.Visible = true;
+            }
+            else
+            {
+                ddlDormitorios.Items.Clear();
+                ddlDormitorios.Visible = false;
+            }
         }
 
         protected void ddlUF_SelectedIndexChanged(object sender, EventArgs e)
-        {            
-            business.Combo<dao.municipio>.CarregarCombo(ref ddlMunicipio, new business.Municipio(),
-                "nm_municipio", "id_municipio", "Município *", Convert.ToInt16(ddlUF.SelectedValue));
+        {
+            if (ddlUF.SelectedIndex > 0)
+            {
+                business.Combo<dao.municipio>.CarregarCombo(ref ddlMunicipio, new business.Municipio(),
+                    "nm_municipio", "id_municipio", "Município *", Convert.ToInt16(ddlUF.SelectedValue), false);
+                ddlMunicipio.Enabled = true;
+            }
+            else
+            {
+                ddlMunicipio.Items.Add("Região *");
+                ddlMunicipio.Enabled = false;
+            }
         }
 
         protected void ddlMunicipio_SelectedIndexChanged(object sender, EventArgs e)
-        {            
+        {    
+            if (ddlMunicipio.SelectedIndex > 0)
+            {
             business.Combo<dao.bairro>.CarregarCombo(ref ddlBairro, new business.Bairro(),
-                "nm_bairro", "id_bairro", "Bairro *", Convert.ToInt16(ddlMunicipio.SelectedValue));
+                "nm_bairro", "id_bairro", "Bairro *", Convert.ToInt16(ddlMunicipio.SelectedValue), false);
+            ddlBairro.Enabled = true;
+            }
+            else
+            {
+                ddlBairro.Items.Add("Bairro *");
+                ddlBairro.Enabled = false;
+            }
         }
 
         protected void lnkPesquisarAvancado_Click(object sender, EventArgs e)
