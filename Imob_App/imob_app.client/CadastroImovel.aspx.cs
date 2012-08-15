@@ -12,6 +12,7 @@ namespace imob_app.client
     public partial class CadastroImovel : System.Web.UI.Page
     {
         private int idImovel;
+        private dao.imobappEntities _ctx;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -41,7 +42,7 @@ namespace imob_app.client
 
         private void CarregarImagens(dao.imovel imovel)
         {
-            dao.imobappEntities _ctx = new imobappEntities();
+            _ctx = new imobappEntities();
 
             if (imovel.imagem != null || imovel.imagem.Count > 0)
                 galeria.DataSource = imovel.imagem;
@@ -91,12 +92,31 @@ namespace imob_app.client
 
         private void CarregarCaracteristicas(dao.imovel imovel)
         {
-            CarregarDataListCaracteristicas(dtAcabamento, imovel.acabamento);
-            CarregarDataListCaracteristicas(dtArmarios, imovel.armario);
-            CarregarDataListCaracteristicas(dtIntima, imovel.intima);
-            CarregarDataListCaracteristicas(dtLazer, imovel.lazer);
-            CarregarDataListCaracteristicas(dtServicos, imovel.servico);
-            CarregarDataListCaracteristicas(dtSocial, imovel.social);
+            _ctx = new imobappEntities();
+            var acabamento = from a in _ctx.acabamento select a;
+            CarregarTodasCaracteristicas(dtAcabamento, acabamento);
+
+            var armario = from a in _ctx.armario select a;
+            CarregarTodasCaracteristicas(dtArmarios, armario);
+
+            var intima = from a in _ctx.intima select a;
+            CarregarTodasCaracteristicas(dtIntima, intima);
+
+            var lazer = from a in _ctx.lazer select a;
+            CarregarTodasCaracteristicas(dtLazer, lazer);
+
+            var servico = from a in _ctx.servico select a;
+            CarregarTodasCaracteristicas(dtServicos, servico);
+
+            var social = from a in _ctx.social select a;
+            CarregarTodasCaracteristicas(dtSocial, social);
+
+            //CarregarDataListCaracteristicas(dtAcabamento, imovel.acabamento);
+            //CarregarDataListCaracteristicas(dtArmarios, imovel.armario);
+            //CarregarDataListCaracteristicas(dtIntima, imovel.intima);
+            //CarregarDataListCaracteristicas(dtLazer, imovel.lazer);
+            //CarregarDataListCaracteristicas(dtServicos, imovel.servico);
+            //CarregarDataListCaracteristicas(dtSocial, imovel.social);
         }
 
         private void CarregarDataListCaracteristicas(DataList dataList, IEnumerable source)
@@ -110,5 +130,119 @@ namespace imob_app.client
 
             dataList.DataBind();
         }
+
+        private void CarregarTodasCaracteristicas(DataList dataList, IEnumerable source)
+        {
+            List<string> nInformado = new List<string>() { "Items não cadastrados" };
+
+            if (source != null)
+                dataList.DataSource = source;
+            else
+                dataList.DataSource = nInformado;
+
+            dataList.DataBind();
+        }
+
+        protected void dtAcabamento_ItemDataBound(object sender, DataListItemEventArgs e)
+        {            
+            _ctx = new imobappEntities();
+            CheckBox chk = (CheckBox)e.Item.FindControl("chk");
+            Label lbl = (Label)e.Item.FindControl("lbl");
+
+            var query = from i in _ctx.imovel select i.acabamento;
+            List<dao.acabamento> acabamentos = query.First().ToList();
+
+
+            foreach (var item in acabamentos)
+            {
+                if (lbl.Text.Equals(item.ds_item))
+                    chk.Checked = true;                    
+            }
+        }
+
+        protected void dtArmarios_ItemDataBound(object sender, DataListItemEventArgs e)
+        {
+            _ctx = new imobappEntities();
+            CheckBox chk = (CheckBox)e.Item.FindControl("chk");
+            Label lbl = (Label)e.Item.FindControl("lbl");
+
+            var query = from i in _ctx.imovel select i.armario;
+            List<dao.armario> armarios = query.First().ToList();
+
+
+            foreach (var item in armarios)
+            {
+                if (lbl.Text.Equals(item.ds_item))
+                    chk.Checked = true;
+            }
+        }
+
+        protected void dtIntima_ItemDataBound(object sender, DataListItemEventArgs e)
+        {
+            _ctx = new imobappEntities();
+            CheckBox chk = (CheckBox)e.Item.FindControl("chk");
+            Label lbl = (Label)e.Item.FindControl("lbl");
+
+            var query = from i in _ctx.imovel select i.intima;
+            List<dao.intima> intimas = query.First().ToList();
+
+
+            foreach (var item in intimas)
+            {
+                if (lbl.Text.Equals(item.ds_item))
+                    chk.Checked = true;
+            }
+        }
+
+        protected void dtLazer_ItemDataBound(object sender, DataListItemEventArgs e)
+        {
+            _ctx = new imobappEntities();
+            CheckBox chk = (CheckBox)e.Item.FindControl("chk");
+            Label lbl = (Label)e.Item.FindControl("lbl");
+
+            var query = from i in _ctx.imovel select i.lazer;
+            List<dao.lazer> lazeres = query.First().ToList();
+
+
+            foreach (var item in lazeres)
+            {
+                if (lbl.Text.Equals(item.ds_item))
+                    chk.Checked = true;
+            }
+        }
+
+        protected void dtServicos_ItemDataBound(object sender, DataListItemEventArgs e)
+        {
+            _ctx = new imobappEntities();
+            CheckBox chk = (CheckBox)e.Item.FindControl("chk");
+            Label lbl = (Label)e.Item.FindControl("lbl");
+
+            var query = from i in _ctx.imovel select i.servico;
+            List<dao.servico> servicos = query.First().ToList();
+
+
+            foreach (var item in servicos)
+            {
+                if (lbl.Text.Equals(item.ds_item))
+                    chk.Checked = true;
+            }
+        }
+
+        protected void dtSocial_ItemDataBound(object sender, DataListItemEventArgs e)
+        {
+            _ctx = new imobappEntities();
+            CheckBox chk = (CheckBox)e.Item.FindControl("chk");
+            Label lbl = (Label)e.Item.FindControl("lbl");
+
+            var query = from i in _ctx.imovel select i.social;
+            List<dao.social> sociais = query.First().ToList();
+
+
+            foreach (var item in sociais)
+            {
+                if (lbl.Text.Equals(item.ds_item))
+                    chk.Checked = true;
+            }
+        }        
     }
 }

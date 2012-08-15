@@ -20,6 +20,7 @@ namespace imob_app.entidades
         public decimal? AreaTotal { get; set; }
         public string EstadoImovel { get; set; }
         public decimal Valor { get; set; }
+        public string Padrao { get; set; }
         public EntityCollection<imagem> Imagens { get; set; }
         
         public ImovelResultado()
@@ -39,6 +40,7 @@ namespace imob_app.entidades
             AreaUtil = imov.vl_area_util;
             EstadoImovel = imov.estadoimovel.ds_item;
             Valor = imov.vl_imovel;
+            Padrao = imov.padrao.ds_item;
             Imagens = imov.imagem;
         }
 

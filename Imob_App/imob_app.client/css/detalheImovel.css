@@ -110,9 +110,17 @@ h11
 
 .caracteristicas
 {
-    width: 120px;
+    width: 133px;
     float: left;
     vertical-align: top;
+}
+
+.caracteristicas_cadastro
+{
+    width: 200px;
+    float: left;
+    vertical-align: top;
+    margin-bottom: 20px;
 }
 
 #caracteristicas2

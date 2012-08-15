@@ -1,529 +1,1124 @@
-input[type="text"],input[type=password],textarea{font-family:Arial, Helvetica, sans-serif;color:#000;font-size:1em;vertical-align:middle;font-weight:normal;padding:7px;margin:0;background:#fff;border:1px solid #ddd;outline:none;width:270px; overflow:hidden;}
+input[type="text"], input[type=password], textarea
+{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    font-size: 1em;
+    vertical-align: middle;
+    font-weight: normal;
+    padding: 7px;
+    margin: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    outline: none;
+    width: 270px;
+    overflow: hidden;
+}
 /* ------------------------------------------------ */
-	#accept-card-form label{ 
-		display: inline-block; 
-		position:relative; 
-		color:#818181;
-		margin:1px 0 0 0;
-		padding:0;
-	}
-	
-	#accept-card-form input[type="text"]
-	{ 
-	    border-radius:5px;
-		-moz-border-radius:5px; 
-		-webkit-border-radius:5px;  
-		width:220px; 
-		border:1px solid #efedee;
-		color:#818181;
-		font-size:12px;
-		padding:7px 10px;
-		height:15px;		
-	    box-shadow:inset 0 0 5px rgba(0,0,0,.1); 
-	}
-	
-	#rate-form input { 
-		border-radius:5px;
-		-moz-border-radius:5px; 
-		-webkit-border-radius:5px;  
-		width:248px; 
-		border:1px solid #efedee;
-		color:#818181;
-		font-size:12px;
-		padding:7px 10px;
-		height:15px;
-	}
-		#rate-form .row-3 input[type="text"] { 
-			width:128px;
-			margin:5px 0 0 0;
-		}
-	#rate-form {padding-top:6px;}
-	#rate-form textarea { 
-		border-radius:5px;
-		-moz-border-radius:5px; 
-		-webkit-border-radius:5px;  
-		width:248px; 
-		border:1px solid #efedee;
-		color:#818181;
-		font-size:12px;
-		padding:7px 10px;
-		height:165px;
-		overflow:auto;
-		resize:none;
-	}
-	#application-form input[type="text"] { 
-		border-radius:5px;
-		-moz-border-radius:5px; 
-		-webkit-border-radius:5px;  
-		width:248px; 
-		border:1px solid #efedee;
-		color:#818181;
-		font-size:12px;
-		padding:7px 10px;
-		height:15px;
-	}
-	#application-form input.type-2 {
-		width:568px;
-	}
-	#application-form input.type-3 {
-		width:128px;
-		margin:5px 0 24px 0;
-	}
-	#application-form textarea { 
-		border-radius:5px;
-		-moz-border-radius:5px; 
-		-webkit-border-radius:5px;  
-		width:568px; 
-		border:1px solid #efedee;
-		color:#818181;
-		font-size:12px;
-		padding:7px 10px;
-		height:180px;
-		overflow:auto;
-		resize:none;
-	}
-#search-alt input {
-	border-radius:5px;
-	-moz-border-radius:5px; 
-	-webkit-border-radius:5px;  
-	width:208px; 
-	border:1px solid #efedee;
-	color:#818181;
-	font-size:12px;
-	padding:7px 10px;
-	height:15px;
-	margin:0 0 20px 0;
+#accept-card-form label
+{
+    display: inline-block;
+    position: relative;
+    color: #818181;
+    margin: 1px 0 0 0;
+    padding: 0;
+}
+
+#accept-card-form input[type="text"]
+{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 220px;
+    border: 1px solid #efedee;
+    color: #818181;
+    font-size: 12px;
+    padding: 7px 10px;
+    height: 15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+
+#rate-form input
+{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 248px;
+    border: 1px solid #efedee;
+    color: #818181;
+    font-size: 12px;
+    padding: 7px 10px;
+    height: 15px;
+}
+#rate-form .row-3 input[type="text"]
+{
+    width: 128px;
+    margin: 5px 0 0 0;
+}
+#rate-form
+{
+    padding-top: 6px;
+}
+#rate-form textarea
+{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 248px;
+    border: 1px solid #efedee;
+    color: #818181;
+    font-size: 12px;
+    padding: 7px 10px;
+    height: 165px;
+    overflow: auto;
+    resize: none;
+}
+#application-form input[type="text"]
+{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 248px;
+    border: 1px solid #efedee;
+    color: #818181;
+    font-size: 12px;
+    padding: 7px 10px;
+    height: 15px;
+}
+#application-form input.type-2
+{
+    width: 568px;
+}
+#application-form input.type-3
+{
+    width: 128px;
+    margin: 5px 0 24px 0;
+}
+#application-form textarea
+{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 568px;
+    border: 1px solid #efedee;
+    color: #818181;
+    font-size: 12px;
+    padding: 7px 10px;
+    height: 180px;
+    overflow: auto;
+    resize: none;
+}
+#search-alt input
+{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 208px;
+    border: 1px solid #efedee;
+    color: #818181;
+    font-size: 12px;
+    padding: 7px 10px;
+    height: 15px;
+    margin: 0 0 20px 0;
 }
 /* ------------- * Selects * ------------- */
-#accept-card-form .jqTransformSelectWrapper {
-	position:relative; 
-	float:left; 
-	width:228px !important;
+#accept-card-form .jqTransformSelectWrapper
+{
+    position: relative;
+    float: left;
+    width: 228px !important;
 }
-#accept-card-form .jqTransformSelectWrapper div span{ 
-	display:block;
-	float: none; 
-	width:208px !important;
-	background:#fff;
-	position:relative;
-	white-space: nowrap;
-	overflow:hidden;
-	cursor:pointer;
-	border:1px solid #efedee;
-	padding:5px 10px 6px 10px;
-	border-radius:5px;
-	-moz-border-radius:5px; 
-	-webkit-border-radius:5px;  
-	
+#accept-card-form .jqTransformSelectWrapper div span
+{
+    display: block;
+    float: none;
+    width: 208px !important;
+    background: #fff;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #efedee;
+    padding: 5px 10px 6px 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
-#application-form .jqTransformSelectWrapper {
-	position:relative; 
-	float:left; 
-	width:268px !important;
+#application-form .jqTransformSelectWrapper
+{
+    position: relative;
+    float: left;
+    width: 268px !important;
 }
-#application-form .jqTransformSelectWrapper div span{ 
-	display:block;
-	float: none; 
-	width:248px !important;
-	background:#fff;
-	position:relative;
-	white-space: nowrap;
-	overflow:hidden;
-	cursor:pointer;
-	border:1px solid #efedee;
-	padding:5px 10px 6px 10px;
-	border-radius:5px;
-	-moz-border-radius:5px; 
-	-webkit-border-radius:5px;  
+#application-form .jqTransformSelectWrapper div span
+{
+    display: block;
+    float: none;
+    width: 248px !important;
+    background: #fff;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #efedee;
+    padding: 5px 10px 6px 10px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
-#accept-card-form .jqTransformSelectWrapper  a.jqTransformSelectOpen, #application-form .jqTransformSelectWrapper  a.jqTransformSelectOpen {
-	display: block;
-	position:absolute; 
-	right:2px;
-	top:4px;
-	width:23px;
-	height:23px;
-	background: url(../images/form-select.gif) no-repeat 0 0;
+#accept-card-form .jqTransformSelectWrapper a.jqTransformSelectOpen, #application-form .jqTransformSelectWrapper a.jqTransformSelectOpen
+{
+    display: block;
+    position: absolute;
+    right: 2px;
+    top: 4px;
+    width: 23px;
+    height: 23px;
+    background: url(../images/form-select.gif) no-repeat 0 0;
 }
-#accept-card-form .jqTransformSelectWrapper  a.jqTransformSelectOpen:hover, #application-form .jqTransformSelectWrapper  a.jqTransformSelectOpen:hover{ 
-	background-position:0 -23px;
+#accept-card-form .jqTransformSelectWrapper a.jqTransformSelectOpen:hover, #application-form .jqTransformSelectWrapper a.jqTransformSelectOpen:hover
+{
+    background-position: 0 -23px;
 }
-#accept-card-form .jqTransformSelectWrapper ul {
-	position: absolute;
-	top: 32px;
-	left: 0px;
-	background-color: #FFF;
-	display: none;
-	margin: 0px;
-	padding: 0px;
-	overflow: auto;
-	overflow-y: auto;
-	z-index:10;
-	border:1px solid #ddd;
-	width:228px !important;
-	border-radius:5px;}
-#application-form .jqTransformSelectWrapper ul {
-	position: absolute;
-	top: 32px;
-	left: 0px;
-	background-color: #FFF;
-	display: none;
-	margin: 0px;
-	padding: 0px;
-	overflow: auto;
-	overflow-y: auto;
-	z-index:10;
-	border:1px solid #ddd;
-	width:268px !important;
-	border-radius:5px;}
-#accept-card-form .jqTransformSelectWrapper ul a, #application-form .jqTransformSelectWrapper ul a {
-	display: block;
-	padding:5px;
-	color:#000;
-	font-size:12px;
-	padding-left:10px;
+#accept-card-form .jqTransformSelectWrapper ul
+{
+    position: absolute;
+    top: 32px;
+    left: 0px;
+    background-color: #FFF;
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    overflow-y: auto;
+    z-index: 10;
+    border: 1px solid #ddd;
+    width: 228px !important;
+    border-radius: 5px;
 }
-#accept-card-form .jqTransformSelectWrapper ul a.selected, #application-form .jqTransformSelectWrapper ul a.selected {
-	color: #B94A48;
+#application-form .jqTransformSelectWrapper ul
+{
+    position: absolute;
+    top: 32px;
+    left: 0px;
+    background-color: #FFF;
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    overflow-y: auto;
+    z-index: 10;
+    border: 1px solid #ddd;
+    width: 268px !important;
+    border-radius: 5px;
 }
-#accept-card-form .jqTransformSelectWrapper ul a:hover, 
-.jqTransformSelectWrapper ul a.selected:hover,
-#application-form .jqTransformSelectWrapper ul a:hover {
-		color: #fff; 
-		background:#ddd;
-		text-decoration:none;
-	}
+#accept-card-form .jqTransformSelectWrapper ul a, #application-form .jqTransformSelectWrapper ul a
+{
+    display: block;
+    padding: 5px;
+    color: #000;
+    font-size: 12px;
+    padding-left: 10px;
+}
+#accept-card-form .jqTransformSelectWrapper ul a.selected, #application-form .jqTransformSelectWrapper ul a.selected
+{
+    color: #B94A48;
+}
+#accept-card-form .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover, #application-form .jqTransformSelectWrapper ul a:hover
+{
+    color: #fff;
+    background: #ddd;
+    text-decoration: none;
+}
 /* ------------- * Radios * ------------- */
-#accept-card-form .jqTransformRadioWrapper {float: left;display:block; margin:5px 0 0;}
-#accept-card-form .jqTransformRadio {
-	background: transparent url(../images/form-radio.png) -13px 0 no-repeat;
-	vertical-align: middle;
-	height:13px;
-	width:13px;
-	margin:0 5px 0 0;
-	display:block;/*display: -moz-inline-block;*/
+#accept-card-form .jqTransformRadioWrapper
+{
+    float: left;
+    display: block;
+    margin: 5px 0 0;
+}
+#accept-card-form .jqTransformRadio
+{
+    background: transparent url(../images/form-radio.png) -13px 0 no-repeat;
+    vertical-align: middle;
+    height: 13px;
+    width: 13px;
+    margin: 0 5px 0 0;
+    display: block; /*display: -moz-inline-block;*/
 }
 /* ------------- * Checked - Radio * ------------- */
-#accept-card-form a.jqTransformChecked {background: transparent url(../images/form-radio.png) 0 0 no-repeat;}
+#accept-card-form a.jqTransformChecked
+{
+    background: transparent url(../images/form-radio.png) 0 0 no-repeat;
+}
 
 /* ------------- * Hidden - used to hide the original form elements * ------------- */
-#accept-card-form .jqTransformHidden, #application-form .jqTransformHidden {display: none;}
+#accept-card-form .jqTransformHidden, #application-form .jqTransformHidden
+{
+    display: none;
+}
 
 /* Main Contact form */
-#main-contact-form {
-	display:block; 
-	height:338px;
-	position:relative;
-	margin:0;
+#main-contact-form
+{
+    display: block;
+    height: 338px;
+    position: relative;
+    margin: 0;
 }
-#main-contact-form label {
-	display:block; 
-	height:41px;
-	position:relative;
-	overflow:hidden;
+#main-contact-form label
+{
+    display: block;
+    height: 41px;
+    position: relative;
+    overflow: hidden;
 }
-	#main-contact-form label.message {
-		height:auto;
-		position:relative;
-		overflow:visible;
-	}
-#main-contact-form span {
-	display:none;
-	color:#f00;
-	margin:0 0 0 5px;
-	font-size:10px;
-	line-height:14px;
-	text-align:right;
+#main-contact-form label.message
+{
+    height: auto;
+    position: relative;
+    overflow: visible;
 }
-#main-contact-form label span.errors {
-	display:block;
-	margin:0;
-	position:absolute;
-	right:8px;
-	top:0;
-	width:270px;
+#main-contact-form span
+{
+    display: none;
+    color: #f00;
+    margin: 0 0 0 5px;
+    font-size: 10px;
+    line-height: 14px;
+    text-align: right;
 }
-	#main-contact-form label.message span.errors {
-		display:block;
-		overflow:hidden;
-		clear:both;
-		width:auto;
-		position:relative;
-	}
-		#main-contact-form label.message span.errors span {text-align:left;}
-#main-contact-form input {
-	border-radius:5px;
-	-moz-border-radius:5px; 
-	-webkit-border-radius:5px;  
-	width:248px; 
-	border:1px solid #efedee;
-	color:#818181;
-	font-size:12px;
-	padding:7px 10px;
-	height:15px;
-	box-shadow:none !important;
-	font-family:Arial, Helvetica, sans-serif !important;
+#main-contact-form label span.errors
+{
+    display: block;
+    margin: 0;
+    position: absolute;
+    right: 8px;
+    top: 0;
+    width: 270px;
 }
-#main-contact-form textarea {
-	border-radius:5px;
-	-moz-border-radius:5px; 
-	-webkit-border-radius:5px;  
-	width:248px; 
-	border:1px solid #efedee;
-	color:#818181;
-	font-size:12px;
-	padding:7px 10px;
-	height:145px;
-	box-shadow:none !important;
-	overflow:auto;
-	resize:none;
+#main-contact-form label.message span.errors
+{
+    display: block;
+    overflow: hidden;
+    clear: both;
+    width: auto;
+    position: relative;
 }
-#main-contact-form .btns {
-	padding:0;
-	position:absolute;
-	bottom:0;
-	left:-15px;
-	height:auto;
-	width:auto;
-	overflow:hidden;
+#main-contact-form label.message span.errors span
+{
+    text-align: left;
 }
-	#main-contact-form .btns a {
-		margin:0 0 0 15px;
-	}
-#main-contact-form .success {
-	display:none;
-	font-size:13px;
-	line-height:18px;
-	padding:0;
-	top:-18px;
-	left:0;
-	right:0;
-	text-align:center;
-	position:absolute;
-	word-spacing:-1px;
-	color:#818181;
-	background:none;
-	box-shadow:none;
+#main-contact-form input
+{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 248px;
+    border: 1px solid #efedee;
+    color: #818181;
+    font-size: 12px;
+    padding: 7px 10px;
+    height: 15px;
+    box-shadow: none !important;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+#main-contact-form textarea
+{
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    width: 248px;
+    border: 1px solid #efedee;
+    color: #818181;
+    font-size: 12px;
+    padding: 7px 10px;
+    height: 145px;
+    box-shadow: none !important;
+    overflow: auto;
+    resize: none;
+}
+#main-contact-form .btns
+{
+    padding: 0;
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    height: auto;
+    width: auto;
+    overflow: hidden;
+}
+#main-contact-form .btns a
+{
+    margin: 0 0 0 15px;
+}
+#main-contact-form .success
+{
+    display: none;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0;
+    top: -18px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    position: absolute;
+    word-spacing: -1px;
+    color: #818181;
+    background: none;
+    box-shadow: none;
 }
 
 /* Typography Page Forms */
-#contact-form{}
-	#contact-form label{ min-height:40px; display:block;}
-	#contact-form input,#contact-form  textarea{ border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
-	#contact-form  textarea{ resize:none; height:170px; overflow:auto;}
-#contact-form .buttons{ position:relative; padding:20px 0  0 0; text-align:right;}
-	#contact-form .buttons span{ display:inline-block; margin-right:15px;}
-#contact-form .success,#contact-form .error,#contact-form .empty{display:none; text-align:left;}
-#contact-form .error,#contact-form .empty{position:relative; color:red; font-size:11px; top:0px; left:10px;}
-#contact-form .success,#contact-form .success strong{ color:#000; background:none; box-shadow:none;}
-#contact-form .success{ padding-bottom:5px;-pie-background:none;}
+#contact-form
+{
+}
+#contact-form label
+{
+    min-height: 40px;
+    display: block;
+}
+#contact-form input, #contact-form textarea
+{
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+#contact-form textarea
+{
+    resize: none;
+    height: 170px;
+    overflow: auto;
+}
+#contact-form .buttons
+{
+    position: relative;
+    padding: 20px 0 0 0;
+    text-align: right;
+}
+#contact-form .buttons span
+{
+    display: inline-block;
+    margin-right: 15px;
+}
+#contact-form .success, #contact-form .error, #contact-form .empty
+{
+    display: none;
+    text-align: left;
+}
+#contact-form .error, #contact-form .empty
+{
+    position: relative;
+    color: red;
+    font-size: 11px;
+    top: 0px;
+    left: 10px;
+}
+#contact-form .success, #contact-form .success strong
+{
+    color: #000;
+    background: none;
+    box-shadow: none;
+}
+#contact-form .success
+{
+    padding-bottom: 5px;
+    -pie-background: none;
+}
 /* ------------------------------------------------ */
-#form1{}
-	#form1 label{ display:block; position:relative; min-height:40px;}
-	#form1 input[type="text"]{ border-radius:3px; width:180px;}
-	#form1 input[type="radio"]{ margin:5px 0 0;}
-	#form1 input[type="checkbox"]{ margin:10px 0 0;}
-	#form1 textarea{ resize:none;border-radius:3px; height:120px;}
-	#form1 select{ width:195px; border:1px solid #ddd; padding:5px; border-radius:3px;}
-	#form1 span.text-form{ display:inline-block; padding:5px 0 0; min-width:80px;}
-	#form1 div.text-form{ padding:5px 0 10px 0;}
-	#form1 .text-form2{ margin:2px 10px 0 8px; display:inline-block;}
-	#form1 .text-form3{ margin:7px 0px 0 8px; display:inline-block;}
-	#form1 .btns{ padding:10px 0 0 0;}
+#form1
+{
+}
+#form1 label
+{
+    display: block;
+    position: relative;
+    min-height: 40px;
+}
+#form1 input[type="text"]
+{
+    border-radius: 3px;
+    width: 180px;
+}
+#form1 input[type="radio"]
+{
+    margin: 5px 0 0;
+}
+#form1 input[type="checkbox"]
+{
+    margin: 10px 0 0;
+}
+#form1 textarea
+{
+    resize: none;
+    border-radius: 3px;
+    height: 120px;
+}
+#form1 select
+{
+    width: 195px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 3px;
+}
+#form1 span.text-form
+{
+    display: inline-block;
+    padding: 5px 0 0;
+    min-width: 80px;
+}
+#form1 div.text-form
+{
+    padding: 5px 0 10px 0;
+}
+#form1 .text-form2
+{
+    margin: 2px 10px 0 8px;
+    display: inline-block;
+}
+#form1 .text-form3
+{
+    margin: 7px 0px 0 8px;
+    display: inline-block;
+}
+#form1 .btns
+{
+    padding: 10px 0 0 0;
+}
 /* ------------------------------------------------ */
-#form2{}
-	#form2 label{ display:block; position:relative; min-height:40px;}
-	#form2 input[type="text"]{ border-radius:3px; width:180px; box-shadow:inset 0 0 5px rgba(0,0,0,.1); color: #8a8a8a;}
-	#form2 textarea{ resize:none;border-radius:3px; height:120px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
-	#form2 span.text-form{ display:inline-block; padding:5px 6px 0;}
-	#form2 div.text-form{ padding:5px 0 10px 0; min-width:90px;}
-	#form2 .text-form2{ margin:3px 0 0 5px;}
-	#form2 .text-form3{ padding:8px 0px 5px 5px;}
-	#form2 .btns{ padding:10px 0 0 0;}	
-.pad-form{ padding-top:5px;}
-.pad-form2{ padding-top:25px;}
+#form2
+{
+}
+#form2 label
+{
+    display: block;
+    position: relative;
+    min-height: 40px;
+}
+#form2 input[type="text"]
+{
+    border-radius: 3px;
+    width: 180px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+    color: #8a8a8a;
+}
+#form2 textarea
+{
+    resize: none;
+    border-radius: 3px;
+    height: 120px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+#form2 span.text-form
+{
+    display: inline-block;
+    padding: 5px 6px 0;
+}
+#form2 div.text-form
+{
+    padding: 5px 0 10px 0;
+    min-width: 90px;
+}
+#form2 .text-form2
+{
+    margin: 3px 0 0 5px;
+}
+#form2 .text-form3
+{
+    padding: 8px 0px 5px 5px;
+}
+#form2 .btns
+{
+    padding: 10px 0 0 0;
+}
+.pad-form
+{
+    padding-top: 5px;
+}
+.pad-form2
+{
+    padding-top: 25px;
+}
 /* ------------- * Selects * ------------- */
-#form2 .jqTransformSelectWrapper {position:relative; float:left;}
-#form2 .jqTransformSelectWrapper div span{ display:block;float: none; min-width:30px !important;background:#fff;position:relative;white-space: nowrap;overflow:hidden;cursor:pointer;border:1px solid #ddd;padding:5px; border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
-#form2 .jqTransformSelectWrapper  a.jqTransformSelectOpen {display: block;position:absolute; right:14px;top:4px;width:22px;height:21px;background: url(../images/form-select.gif) no-repeat  0 0;}
-#form2 .jqTransformSelectWrapper  a.jqTransformSelectOpen:hover{ background-position:0 -21px;}
+#form2 .jqTransformSelectWrapper
+{
+    position: relative;
+    float: left;
+}
+#form2 .jqTransformSelectWrapper div span
+{
+    display: block;
+    float: none;
+    min-width: 30px !important;
+    background: #fff;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+#form2 .jqTransformSelectWrapper a.jqTransformSelectOpen
+{
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 4px;
+    width: 22px;
+    height: 21px;
+    background: url(../images/form-select.gif) no-repeat 0 0;
+}
+#form2 .jqTransformSelectWrapper a.jqTransformSelectOpen:hover
+{
+    background-position: 0 -21px;
+}
 /*#form2 .jqTransformSelectWrapper li { height: 10px;}*/
-#form2 .jqTransformSelectWrapper ul {	
-	max-height: 90px;
-	position: absolute;
-	left: 0px;
-	background-color: #FFF;
-	display: none;
-	margin: 0px;
-	padding: 0px;
-	overflow: auto;
-	overflow-y: auto;
-	z-index:10;
-	border:1px solid #ddd;
-	/*width:194px !important;*/
-	border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
-#form2 .jqTransformSelectWrapper ul a {display: block;padding:2px;color:#000;font-size:12px;padding-left:12px;}
-#form2 .jqTransformSelectWrapper ul a.selected {color: #B94A48;}
-#form2 .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {color: #fff; background:#ddd;text-decoration:none;}
+#form2 .jqTransformSelectWrapper ul
+{
+    max-height: 90px;
+    position: absolute;
+    left: 0px;
+    background-color: #FFF;
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    overflow-y: auto;
+    z-index: 10;
+    border: 1px solid #ddd; /*width:194px !important;*/
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+#form2 .jqTransformSelectWrapper ul a
+{
+    display: block;
+    padding: 2px;
+    color: #000;
+    font-size: 12px;
+    padding-left: 12px;
+}
+#form2 .jqTransformSelectWrapper ul a.selected
+{
+    color: #B94A48;
+}
+#form2 .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover
+{
+    color: #fff;
+    background: #ddd;
+    text-decoration: none;
+}
 /* ------------- * Radios * ------------- */
-#form2 .jqTransformRadioWrapper {float: left;display:block; margin:5px 0 0;}
-#form2 .jqTransformRadio {
-	background: transparent url(../images/radio.png) 0 0px no-repeat;
-	vertical-align: middle;
-	height:16px;
-	width:16px;
-	display:block;/*display: -moz-inline-block;*/
+#form2 .jqTransformRadioWrapper
+{
+    float: left;
+    display: block;
+    margin: 5px 0 0;
+}
+#form2 .jqTransformRadio
+{
+    background: transparent url(../images/radio.png) 0 0px no-repeat;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    display: block; /*display: -moz-inline-block;*/
 }
 /* ------------- * Checked - Radio * ------------- */
-#form2 a.jqTransformChecked {background: transparent url(../images/radio.png) 0 -17px no-repeat;}
+#form2 a.jqTransformChecked
+{
+    background: transparent url(../images/radio.png) 0 -17px no-repeat;
+}
 /* -- * Checkboxes * -- */
-#form2 span.jqTransformCheckboxWrapper{display:block;float:left; padding:10px 0 0 0;}
-#form2 a.jqTransformCheckbox {background: transparent url(../images/checkbox.png) 0 0px no-repeat;vertical-align: middle;height:15px;width:15px;display:block;/*display: -moz-inline-block;*/}
+#form2 span.jqTransformCheckboxWrapper
+{
+    display: block;
+    float: left;
+    padding: 10px 0 0 0;
+}
+#form2 a.jqTransformCheckbox
+{
+    background: transparent url(../images/checkbox.png) 0 0px no-repeat;
+    vertical-align: middle;
+    height: 15px;
+    width: 15px;
+    display: block; /*display: -moz-inline-block;*/
+}
 /* -- * Checked * -- */
-#form2 .jqTransformCheckboxWrapper a.jqTransformChecked {background: transparent url(../images/checkbox.png) 0 -16px no-repeat;}
+#form2 .jqTransformCheckboxWrapper a.jqTransformChecked
+{
+    background: transparent url(../images/checkbox.png) 0 -16px no-repeat;
+}
 /* ------------- * Hidden - used to hide the original form elements * ------------- */
-#form2 .jqTransformHidden {display: none;}
+#form2 .jqTransformHidden
+{
+    display: none;
+}
 
 
 /*********** Cadastro Imóvel **************/
-#formImovel{ width: 100%; }
-	#formImovel label{ display:block; position:relative; min-height:40px;}
-	#formImovel input[type="text"]{ border-radius:3px; width:270px; box-shadow:inset 0 0 5px rgba(0,0,0,.1); color: #8a8a8a;
+#formImovel
+{
+    width: 100%;
+}
+#formImovel label
+{
+    display: block;
+    position: relative;
+    min-height: 40px;
+}
+#formImovel input[type="text"]
+{
+    border-radius: 3px;
+    width: 270px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+    color: #8a8a8a;
     top: 0px;
     left: 1px;
 }
-	#formImovel textarea{ resize:none;border-radius:3px; height:120px; box-shadow:inset 0 0 5px rgba(0,0,0,.1); color: #8a8a8a;}
-	#formImovel span.text-form{ display:inline-block; padding:5px 6px 0;  font-size: 13px; color:#1a171b; }
-	#formImovel div.text-form{ padding:5px 0 0 0; min-width:90px;}
-	#formImovel .text-formInteresse{ margin:3px 0 0 5px;}
-	#formImovel .text-form3{ padding:8px 0px 5px 5px;}
-	#formImovel .btns{ padding:10px 0 0 0;}	
-.pad-form{ padding-top:5px;}
-.pad-formInteresse{ padding-top:25px;}
+#formImovel textarea
+{
+    resize: none;
+    border-radius: 3px;
+    height: 120px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+    color: #8a8a8a;
+}
+
+#formImovel label
+{ 
+    padding: 10px 0 0 0;
+    font-size: 11px;
+}
+
+#formImovel span.text-form
+{
+    display: inline-block;
+    padding: 5px 6px 0;
+    font-size: 13px;
+    color: #1a171b;
+}
+#formImovel div.text-form
+{
+    padding: 5px 0 0 0;
+    min-width: 90px;
+}
+#formImovel .text-formInteresse
+{
+    margin: 3px 0 0 5px;
+}
+#formImovel .text-form3
+{
+    padding: 8px 0px 5px 5px;
+}
+#formImovel .btns
+{
+    padding: 10px 0 0 0;
+}
+.pad-form
+{
+    padding-top: 5px;
+}
+.pad-formInteresse
+{
+    padding-top: 25px;
+}
 /* ------------- * Selects * ------------- */
-#formImovel .jqTransformSelectWrapper {position:relative; float:left;}
-#formImovel .jqTransformSelectWrapper div span{ display:block;float: none; min-width:30px !important;background:#fff;position:relative;white-space: nowrap;overflow:hidden;cursor:pointer;border:1px solid #ddd;padding:5px; border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
-#formImovel .jqTransformSelectWrapper  a.jqTransformSelectOpen {display: block;position:absolute; right:14px;top:4px;width:22px;height:21px;background: url(../images/form-select.gif) no-repeat  0 0;}
-#formImovel .jqTransformSelectWrapper  a.jqTransformSelectOpen:hover{ background-position:0 -21px;}
+#formImovel .jqTransformSelectWrapper
+{
+    position: relative;
+    float: left;
+}
+#formImovel .jqTransformSelectWrapper div span
+{
+    display: block;
+    float: none;
+    min-width: 30px !important;
+    background: #fff;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+#formImovel .jqTransformSelectWrapper a.jqTransformSelectOpen
+{
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 4px;
+    width: 22px;
+    height: 21px;
+    background: url(../images/form-select.gif) no-repeat 0 0;
+}
+#formImovel .jqTransformSelectWrapper a.jqTransformSelectOpen:hover
+{
+    background-position: 0 -21px;
+}
 /*#formImovel .jqTransformSelectWrapper li { height: 10px;}*/
-#formImovel .jqTransformSelectWrapper ul {	
-	max-height: 90px;
-	position: absolute;
-	left: 0px;
-	background-color: #FFF;
-	display: none;
-	margin: 0px;
-	padding: 0px;
-	overflow: auto;
-	overflow-y: auto;
-	z-index:10;
-	border:1px solid #ddd;
-	/*width:194px !important;*/
-	border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
-#formImovel .jqTransformSelectWrapper ul a {display: block;padding:2px;color:#000;font-size:12px;padding-left:12px;}
-#formImovel .jqTransformSelectWrapper ul a.selected {color: #B94A48;}
-#formImovel .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {color: #fff; background:#ddd;text-decoration:none;}
+#formImovel .jqTransformSelectWrapper ul
+{
+    max-height: 90px;
+    position: absolute;
+    left: 0px;
+    background-color: #FFF;
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    overflow-y: auto;
+    z-index: 10;
+    border: 1px solid #ddd; /*width:194px !important;*/
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+#formImovel .jqTransformSelectWrapper ul a
+{
+    display: block;
+    padding: 2px;
+    color: #000;
+    font-size: 12px;
+    padding-left: 12px;
+}
+#formImovel .jqTransformSelectWrapper ul a.selected
+{
+    color: #B94A48;
+}
+#formImovel .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover
+{
+    color: #fff;
+    background: #ddd;
+    text-decoration: none;
+}
 /* ------------- * Radios * ------------- */
-#formImovel .jqTransformRadioWrapper {float: left;display:block; margin:5px 0 0;}
-#formImovel .jqTransformRadio {
-	background: transparent url(../images/radio.png) 0 0px no-repeat;
-	vertical-align: middle;
-	height:16px;
-	width:16px;
-	display:block;/*display: -moz-inline-block;*/
+#formImovel .jqTransformRadioWrapper
+{
+    float: left;
+    display: block;
+    margin: 5px 0 0;
+}
+#formImovel .jqTransformRadio
+{
+    background: transparent url(../images/radio.png) 0 0px no-repeat;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    display: block; /*display: -moz-inline-block;*/
 }
 /* ------------- * Checked - Radio * ------------- */
-#formImovel a.jqTransformChecked {background: transparent url(../images/radio.png) 0 -17px no-repeat;}
+#formImovel a.jqTransformChecked
+{
+    background: transparent url(../images/radio.png) 0 -17px no-repeat;
+}
 /* -- * Checkboxes * -- */
-#formImovel span.jqTransformCheckboxWrapper{display:block;float:left; padding:10px 0 0 0;}
-#formImovel a.jqTransformCheckbox {background: transparent url(../images/checkbox.png) 0 0px no-repeat;vertical-align: middle;height:15px;width:15px;display:block;/*display: -moz-inline-block;*/}
+#formImovel span.jqTransformCheckboxWrapper
+{
+    display: block;
+    float: left;
+    padding: 10px 0 0 0;
+}
+#formImovel a.jqTransformCheckbox
+{
+    background: transparent url(../images/checkbox.png) 0 0px no-repeat;
+    vertical-align: middle;
+    height: 15px;
+    width: 15px;
+    display: block; /*display: -moz-inline-block;*/
+}
 /* -- * Checked * -- */
-#formImovel .jqTransformCheckboxWrapper a.jqTransformChecked {background: transparent url(../images/checkbox.png) 0 -16px no-repeat;}
+#formImovel .jqTransformCheckboxWrapper a.jqTransformChecked
+{
+    background: transparent url(../images/checkbox.png) 0 -16px no-repeat;
+}
 /* ------------- * Hidden - used to hide the original form elements * ------------- */
-#formImovel .jqTransformHidden {display: none;}
+#formImovel .jqTransformHidden
+{
+    display: none;
+}
 
 
 
 
 /********** Estou Interessado ***************/
-#formInteresse{ width: 360px; height: 240px; }
-	#formInteresse label{ display:block; position:relative; min-height:40px;}
-	#formInteresse input[type="text"]{ border-radius:3px; width:270px; box-shadow:inset 0 0 5px rgba(0,0,0,.1); color: #8a8a8a;}
-	#formInteresse textarea{ resize:none;border-radius:3px; height:120px; box-shadow:inset 0 0 5px rgba(0,0,0,.1); color: #8a8a8a;}
-	#formInteresse span.text-form{ display:inline-block; padding:5px 6px 0;}
-	#formInteresse div.text-form{ padding:5px 0 10px 0; min-width:90px;}
-	#formInteresse .text-formInteresse{ margin:3px 0 0 5px;}
-	#formInteresse .text-form3{ padding:8px 0px 5px 5px;}
-	#formInteresse .btns{ padding:10px 0 0 0;}	
-.pad-form{ padding-top:5px;}
-.pad-formInteresse{ padding-top:25px;}
+#formInteresse
+{
+    width: 360px;
+    height: 240px;
+}
+#formInteresse label
+{
+    display: block;
+    position: relative;
+    min-height: 40px;
+}
+#formInteresse input[type="text"]
+{
+    border-radius: 3px;
+    width: 270px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+    color: #8a8a8a;
+}
+#formInteresse textarea
+{
+    resize: none;
+    border-radius: 3px;
+    height: 120px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+    color: #8a8a8a;
+}
+#formInteresse span.text-form
+{
+    display: inline-block;
+    padding: 5px 6px 0;
+}
+#formInteresse div.text-form
+{
+    padding: 5px 0 10px 0;
+    min-width: 90px;
+}
+#formInteresse .text-formInteresse
+{
+    margin: 3px 0 0 5px;
+}
+#formInteresse .text-form3
+{
+    padding: 8px 0px 5px 5px;
+}
+#formInteresse .btns
+{
+    padding: 10px 0 0 0;
+}
+.pad-form
+{
+    padding-top: 5px;
+}
+.pad-formInteresse
+{
+    padding-top: 25px;
+}
 /* ------------- * Selects * ------------- */
-#formInteresse .jqTransformSelectWrapper {position:relative; float:left;}
-#formInteresse .jqTransformSelectWrapper div span{ display:block;float: none; min-width:30px !important;background:#fff;position:relative;white-space: nowrap;overflow:hidden;cursor:pointer;border:1px solid #ddd;padding:5px; border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
-#formInteresse .jqTransformSelectWrapper  a.jqTransformSelectOpen {display: block;position:absolute; right:14px;top:4px;width:22px;height:21px;background: url(../images/form-select.gif) no-repeat  0 0;}
-#formInteresse .jqTransformSelectWrapper  a.jqTransformSelectOpen:hover{ background-position:0 -21px;}
+#formInteresse .jqTransformSelectWrapper
+{
+    position: relative;
+    float: left;
+}
+#formInteresse .jqTransformSelectWrapper div span
+{
+    display: block;
+    float: none;
+    min-width: 30px !important;
+    background: #fff;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+#formInteresse .jqTransformSelectWrapper a.jqTransformSelectOpen
+{
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 4px;
+    width: 22px;
+    height: 21px;
+    background: url(../images/form-select.gif) no-repeat 0 0;
+}
+#formInteresse .jqTransformSelectWrapper a.jqTransformSelectOpen:hover
+{
+    background-position: 0 -21px;
+}
 /*#formInteresse .jqTransformSelectWrapper li { height: 10px;}*/
-#formInteresse .jqTransformSelectWrapper ul {	
-	max-height: 90px;
-	position: absolute;
-	left: 0px;
-	background-color: #FFF;
-	display: none;
-	margin: 0px;
-	padding: 0px;
-	overflow: auto;
-	overflow-y: auto;
-	z-index:10;
-	border:1px solid #ddd;
-	/*width:194px !important;*/
-	border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
-#formInteresse .jqTransformSelectWrapper ul a {display: block;padding:2px;color:#000;font-size:12px;padding-left:12px;}
-#formInteresse .jqTransformSelectWrapper ul a.selected {color: #B94A48;}
-#formInteresse .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {color: #fff; background:#ddd;text-decoration:none;}
+#formInteresse .jqTransformSelectWrapper ul
+{
+    max-height: 90px;
+    position: absolute;
+    left: 0px;
+    background-color: #FFF;
+    display: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    overflow-y: auto;
+    z-index: 10;
+    border: 1px solid #ddd; /*width:194px !important;*/
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+#formInteresse .jqTransformSelectWrapper ul a
+{
+    display: block;
+    padding: 2px;
+    color: #000;
+    font-size: 12px;
+    padding-left: 12px;
+}
+#formInteresse .jqTransformSelectWrapper ul a.selected
+{
+    color: #B94A48;
+}
+#formInteresse .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover
+{
+    color: #fff;
+    background: #ddd;
+    text-decoration: none;
+}
 /* ------------- * Radios * ------------- */
-#formInteresse .jqTransformRadioWrapper {float: left;display:block; margin:5px 0 0;}
-#formInteresse .jqTransformRadio {
-	background: transparent url(../images/radio.png) 0 0px no-repeat;
-	vertical-align: middle;
-	height:16px;
-	width:16px;
-	display:block;/*display: -moz-inline-block;*/
+#formInteresse .jqTransformRadioWrapper
+{
+    float: left;
+    display: block;
+    margin: 5px 0 0;
+}
+#formInteresse .jqTransformRadio
+{
+    background: transparent url(../images/radio.png) 0 0px no-repeat;
+    vertical-align: middle;
+    height: 16px;
+    width: 16px;
+    display: block; /*display: -moz-inline-block;*/
 }
 /* ------------- * Checked - Radio * ------------- */
-#formInteresse a.jqTransformChecked {background: transparent url(../images/radio.png) 0 -17px no-repeat;}
+#formInteresse a.jqTransformChecked
+{
+    background: transparent url(../images/radio.png) 0 -17px no-repeat;
+}
 /* -- * Checkboxes * -- */
-#formInteresse span.jqTransformCheckboxWrapper{display:block;float:left; padding:10px 0 0 0;}
-#formInteresse a.jqTransformCheckbox {background: transparent url(../images/checkbox.png) 0 0px no-repeat;vertical-align: middle;height:15px;width:15px;display:block;/*display: -moz-inline-block;*/}
+#formInteresse span.jqTransformCheckboxWrapper
+{
+    display: block;
+    float: left;
+    padding: 10px 0 0 0;
+}
+#formInteresse a.jqTransformCheckbox
+{
+    background: transparent url(../images/checkbox.png) 0 0px no-repeat;
+    vertical-align: middle;
+    height: 15px;
+    width: 15px;
+    display: block; /*display: -moz-inline-block;*/
+}
 /* -- * Checked * -- */
-#formInteresse .jqTransformCheckboxWrapper a.jqTransformChecked {background: transparent url(../images/checkbox.png) 0 -16px no-repeat;}
+#formInteresse .jqTransformCheckboxWrapper a.jqTransformChecked
+{
+    background: transparent url(../images/checkbox.png) 0 -16px no-repeat;
+}
 /* ------------- * Hidden - used to hide the original form elements * ------------- */
-#formInteresse .jqTransformHidden {display: none;}
+#formInteresse .jqTransformHidden
+{
+    display: none;
+}
 
 
 
 /* ------------------------------------------------ */
-#search,#subscribe{ vertical-align:middle;}
-	#search input,#subscribe input{ width:180px; border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
-	#search .btn,#subscribe .btn{ padding:7px 10px; margin-top:-1px;}
-#search2{ vertical-align:middle;}
-	#search2 input{ width:600px; border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1); color: #8a8a8a;}
-	#search2 .btn{ padding:7px 10px; margin-top:-1px;}
+#search, #subscribe
+{
+    vertical-align: middle;
+}
+#search input, #subscribe input
+{
+    width: 180px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+#search .btn, #subscribe .btn
+{
+    padding: 7px 10px;
+    margin-top: -1px;
+}
+#search2
+{
+    vertical-align: middle;
+}
+#search2 input
+{
+    width: 600px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+    color: #8a8a8a;
+}
+#search2 .btn
+{
+    padding: 7px 10px;
+    margin-top: -1px;
+}
 /* ------------------------------------------------ */
-#log_in{ vertical-align:middle}
-	#log_in input{ width:90px; border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
-	#log_in .btn{ padding:7px 10px; margin-top:-1px;}
+#log_in
+{
+    vertical-align: middle;
+}
+#log_in input
+{
+    width: 90px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+#log_in .btn
+{
+    padding: 7px 10px;
+    margin-top: -1px;
+}
 /* ------------------------------------------------ */
-#log_in2{ vertical-align:middle; padding:10px 0 0 0; width:274px;}
-	#log_in2 label{ display:block; min-height:40px;}
-	#log_in2 input{ width:258px; border-radius:3px; box-shadow:inset 0 0 5px rgba(0,0,0,.1);}
-	#log_in2 .btn{ padding:7px 10px;}
-	#log_in2 .buttons{ text-align:right; padding:5px 0;}
+#log_in2
+{
+    vertical-align: middle;
+    padding: 10px 0 0 0;
+    width: 274px;
+}
+#log_in2 label
+{
+    display: block;
+    min-height: 40px;
+}
+#log_in2 input
+{
+    width: 258px;
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.1);
+}
+#log_in2 .btn
+{
+    padding: 7px 10px;
+}
+#log_in2 .buttons
+{
+    text-align: right;
+    padding: 5px 0;
+}
 /* ------------------------------------------------ */
-#newsletter{vertical-align:middle; padding:30px 0 0 0;}
-#newsletter input{ width:376px; border-radius:2px 0 0 2px; color:#8b8b8b; background:#eeeeee; border:1px solid #cdcdcd; border-right:none;padding:9px;}
-#newsletter .btn{ padding:9px 15px 10px; margin-top:0; margin-left:0; box-shadow:none; border-radius:0 2px 2px 0; border:1px solid #cdcdcd;}
-#newsletter .btn:hover{
-	background: -webkit-linear-gradient(top, #E0E0E0, white);
-	background:    -moz-linear-gradient(top, #E0E0E0, white);
-	background:     -ms-linear-gradient(top, #E0E0E0, white);
-	background:      -o-linear-gradient(top, #E0E0E0, white);}
+#newsletter
+{
+    vertical-align: middle;
+    padding: 30px 0 0 0;
+}
+#newsletter input
+{
+    width: 376px;
+    border-radius: 2px 0 0 2px;
+    color: #8b8b8b;
+    background: #eeeeee;
+    border: 1px solid #cdcdcd;
+    border-right: none;
+    padding: 9px;
+}
+#newsletter .btn
+{
+    padding: 9px 15px 10px;
+    margin-top: 0;
+    margin-left: 0;
+    box-shadow: none;
+    border-radius: 0 2px 2px 0;
+    border: 1px solid #cdcdcd;
+}
+#newsletter .btn:hover
+{
+    background: -webkit-linear-gradient(top, #E0E0E0, white);
+    background: -moz-linear-gradient(top, #E0E0E0, white);
+    background: -ms-linear-gradient(top, #E0E0E0, white);
+    background: -o-linear-gradient(top, #E0E0E0, white);
+}

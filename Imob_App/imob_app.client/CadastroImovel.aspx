@@ -163,53 +163,62 @@
                         <div id="conteudoDetalhes2">
                             <table>
                                 <tr>
-                                    <td class="caracteristicas">
-                                        <h10>Acabamento:</h10><asp:DataList ID="dtAcabamento" runat="server">
+                                    <td class="caracteristicas_cadastro">
+                                        <h10>Acabamento:</h10><asp:DataList ID="dtAcabamento" runat="server" 
+                                            onitemdatabound="dtAcabamento_ItemDataBound">
                                             <ItemTemplate>
-                                                <img alt="" src="images/link-marker.gif" class="itemCaracteristica"/>
-                                                <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
+                                                <asp:CheckBox ID="chk" runat="server" ></asp:CheckBox>
+                                                <span class="text-form fleft"><asp:Label ID="lbl" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></span>
                                             </ItemTemplate>
                                         </asp:DataList>
                                     </td>
-                                    <td class="caracteristicas">
-                                        <h10>Armários:</h10><asp:DataList ID="dtArmarios" runat="server">
+                                    <td class="caracteristicas_cadastro">
+                                        <h10>Armários:</h10><asp:DataList ID="dtArmarios" runat="server" 
+                                            onitemdatabound="dtArmarios_ItemDataBound">
                                             <ItemTemplate>
-                                                <img alt="" src="images/link-marker.gif" class="itemCaracteristica"/>
-                                                <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
-                                            </ItemTemplate>
-                                        </asp:DataList>
-                                    </td>
-                                    <td class="caracteristicas">
-                                        <h10>Íntima:</h10><asp:DataList ID="dtIntima" runat="server">
-                                            <ItemTemplate>
-                                                    <img alt="" src="images/link-marker.gif" class="itemCaracteristica"/>
-                                                    <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
+                                                <asp:CheckBox ID="chk" runat="server" ></asp:CheckBox>
+                                                <span class="text-form fleft"><asp:Label ID="lbl" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></span>
                                             </ItemTemplate>
                                         </asp:DataList>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="caracteristicas1">
-                                        <h10>Lazer:</h10><asp:DataList ID="dtLazer" runat="server">
+                                    <td class="caracteristicas_cadastro">
+                                            <h10>Íntima:</h10><asp:DataList ID="dtIntima" runat="server" 
+                                                onitemdatabound="dtIntima_ItemDataBound">
+                                                <ItemTemplate>
+                                                    <asp:CheckBox ID="chk" runat="server" ></asp:CheckBox>
+                                                    <span class="text-form fleft"><asp:Label ID="lbl" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></span>
+                                                </ItemTemplate>
+                                            </asp:DataList>
+                                    </td>
+                                    <td class="caracteristicas_cadastro">
+                                            <h10>Lazer:</h10><asp:DataList ID="dtLazer" runat="server" 
+                                                onitemdatabound="dtLazer_ItemDataBound">
+                                                <ItemTemplate>
+                                                    <asp:CheckBox ID="chk" runat="server" ></asp:CheckBox>
+                                                    <span class="text-form fleft"><asp:Label ID="lbl" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></span>
+                                                </ItemTemplate>
+                                            </asp:DataList>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="caracteristicas_cadastro">
+                                        <h10>Serviços:</h10>
+                                        <asp:DataList ID="dtServicos" runat="server" 
+                                            onitemdatabound="dtServicos_ItemDataBound">
                                             <ItemTemplate>
-                                                <img alt="" src="Images/link-marker.gif" class="itemCaracteristica"/>
-                                                <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
+                                                <asp:CheckBox ID="chk" runat="server" ></asp:CheckBox>
+                                                <span class="text-form fleft"><asp:Label ID="lbl" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></span>
                                             </ItemTemplate>
                                         </asp:DataList>
                                     </td>
-                                    <td class="caracteristicas1">
-                                        <h10>Serviços:</h10><asp:DataList ID="dtServicos" runat="server">
+                                    <td class="caracteristicas_cadastro">   
+                                        <h10>Social:</h10><asp:DataList ID="dtSocial" runat="server" 
+                                            onitemdatabound="dtSocial_ItemDataBound">
                                             <ItemTemplate>
-                                                <img alt="" src="Images/link-marker.gif" class="itemCaracteristica"/>
-                                                <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
-                                            </ItemTemplate>
-                                        </asp:DataList>
-                                    </td>
-                                    <td class="caracteristicas1">
-                                        <h10>Social:</h10><asp:DataList ID="dtSocial" runat="server">
-                                            <ItemTemplate>
-                                                <img alt="" src="Images/link-marker.gif" class="itemCaracteristica" />
-                                                <h11><asp:Label ID="Label1" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></h11>
+                                                <asp:CheckBox ID="chk" runat="server" ></asp:CheckBox>
+                                                <span class="text-form fleft"><asp:Label ID="lbl" runat="server" Text='<%# Eval("ds_item") %>'></asp:Label></span>
                                             </ItemTemplate>
                                         </asp:DataList>
                                     </td>

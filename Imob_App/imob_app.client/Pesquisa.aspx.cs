@@ -11,12 +11,11 @@ namespace imob_app.client
 {
     public partial class Pesquisa : BasePage
     {
-        private List<ImovelResultado> dataSource;
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            int result;
+            List<entidades.ImovelResultado> dataSource = (List<entidades.ImovelResultado>)Session["dataSource"];
 
+            int result;            
             int estado = (Int32.TryParse(Request.QueryString["estado"], out result)?result:0);
             int municipio = (Int32.TryParse(Request.QueryString["municipio"], out result) ? result : 0);
             int bairro = (Int32.TryParse(Request.QueryString["bairro"], out result) ? result : 0);
@@ -34,8 +33,9 @@ namespace imob_app.client
 
             if (!IsPostBack)
             {
-                dataSource = Carregar(estado, municipio, bairro, dormitorio, categoria, valorDe, valorAte);
-                imoveis.DataSource = dataSource;
+                Session["dataSource"] = Carregar(estado, municipio, bairro, dormitorio, categoria, valorDe, valorAte);
+                dataSource = (List<entidades.ImovelResultado>)Session["dataSource"];
+                imoveis.DataSource = (List<entidades.ImovelResultado>)Session["dataSource"];
                 imoveis.Admin = false;
             }
             else

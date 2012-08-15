@@ -39,6 +39,7 @@ namespace imob_app.business
                                   AreaUtil = imov.vl_area_util,
                                   EstadoImovel = imov.estadoimovel.ds_item,
                                   Valor = imov.vl_imovel,
+                                  Padrao = imov.padrao.ds_item,
                                   Imagens = imov.imagem
                               };
             return imoveis.OrderByDescending(o => o.Referencia).ToList();
@@ -86,6 +87,7 @@ namespace imob_app.business
                         AreaUtil = imov.vl_area_util,
                         EstadoImovel = imov.estadoimovel.ds_item,
                         Valor = imov.vl_imovel,
+                        Padrao = imov.padrao.ds_item,
                         Imagens = imov.imagem
                     }).ToList();
 
@@ -109,6 +111,7 @@ namespace imob_app.business
                              AreaUtil = imov.vl_area_util,
                              EstadoImovel = imov.estadoimovel.ds_item,
                              Valor = imov.vl_imovel,
+                             Padrao = imov.padrao.ds_item,
                              Imagens = imov.imagem
                          });
 
@@ -189,6 +192,7 @@ namespace imob_app.business
                              AreaUtil = imov.vl_area_util,
                              EstadoImovel = imov.estadoimovel.ds_item,
                              Valor = imov.vl_imovel,
+                             Padrao = imov.padrao.ds_item,
                              Imagens = imov.imagem
                          };
 
