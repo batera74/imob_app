@@ -8,7 +8,7 @@ using imob_app.entidades;
 
 namespace imob_app.client
 {
-    public partial class MeusImoveis : System.Web.UI.Page
+    public partial class MeusImoveis : BasePage
     {
         private int idUsuario;        
 

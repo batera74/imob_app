@@ -59,14 +59,5 @@ namespace imob_app.client.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to C:\\Users\\GUILHERME\\Documents\\GitHub\\imob_app\\Imob_App\\Imagens_Temp\\.
-        /// </summary>
-        internal static string TempPathGui {
-            get {
-                return ResourceManager.GetString("TempPathGui", resourceCulture);
-            }
-        }
     }
 }

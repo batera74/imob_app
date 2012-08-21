@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Collections;
@@ -13,7 +14,7 @@ namespace imob_app.client.controls
 {
     public partial class galeria : System.Web.UI.UserControl
     {
-        private const string Temp = @"C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\Imagens_Temp\";
+        private static string Temp = ConfigurationManager.AppSettings["ImagesTempDir"];
 
         protected void Page_Load(object sender, EventArgs e)
         {

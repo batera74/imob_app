@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace imob_app.client
 {
-    public partial class CadastroUsuario : System.Web.UI.Page
+    public partial class CadastroUsuario : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

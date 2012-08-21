@@ -11,11 +11,11 @@ using System.IO;
 
 namespace imob_app.client
 {
-    public partial class CadastroImovel : System.Web.UI.Page
+    public partial class CadastroImovel : BasePage
     {
         private int idImovel;
 
-        private const string Temp = @"C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\Imagens_Temp";
+        private string Temp = ConfigurationManager.AppSettings["ImagesTempDir"];
 
         protected void Page_Load(object sender, EventArgs e)
         {

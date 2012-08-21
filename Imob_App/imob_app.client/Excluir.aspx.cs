@@ -8,7 +8,7 @@ using imob_app.business;
 
 namespace imob_app.client
 {
-    public partial class Excluir : System.Web.UI.Page
+    public partial class Excluir : BasePage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
