@@ -9,7 +9,7 @@ using imob_app.business.Contratos;
 
 namespace imob_app.business
 {
-    public class Dormitorio : IEntidade<dao.dormitorio>
+    public class Dormitorio : IExistente<dao.dormitorio>
     {
         private imobappEntities _ctx;
 
@@ -28,10 +28,14 @@ namespace imob_app.business
             return (from d in _ctx.dormitorio where d.id == id select d).FirstOrDefault();
         }
 
+        public dao.dormitorio Selecionar(int id, imobappEntities _ctx)
+        {
+            return (from d in _ctx.dormitorio where d.id == id select d).FirstOrDefault();
+        }
 
         public List<dormitorio> SelecionarExistentes()
         {
-            throw new NotImplementedException();
+            return (from c in _ctx.imovel select c.dormitorio).Distinct().ToList();
         }
     }
 }

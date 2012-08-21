@@ -26,10 +26,9 @@ namespace imob_app.business
             return (from l in _ctx.logradouro where l.id_logradouro == id select l).FirstOrDefault();
         }
 
-
-        public List<logradouro> SelecionarExistentes()
+        public dao.logradouro Selecionar(int id, imobappEntities _ctx)
         {
-            throw new NotImplementedException();
+            return (from l in _ctx.logradouro where l.id_logradouro == id select l).FirstOrDefault();
         }
     }
 }

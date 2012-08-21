@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Acabamento.cs" />
+    <Compile Include="Armario.cs" />
     <Compile Include="Bairro.cs" />
     <Compile Include="Combo.cs" />
+    <Compile Include="Contratos\IExistente.cs" />
     <Compile Include="Dormitorio.cs" />
     <Compile Include="Dynamic.cs" />
     <Compile Include="Estado.cs" />
@@ -54,14 +57,19 @@
     <Compile Include="Contratos\IEntidade.cs" />
     <Compile Include="Contratos\IEntidadeLocalizacao.cs" />
     <Compile Include="Garagem.cs" />
+    <Compile Include="Imagem.cs" />
     <Compile Include="Imovel.cs" />
+    <Compile Include="Intima.cs" />
+    <Compile Include="Lazer.cs" />
     <Compile Include="Logradouro.cs" />
     <Compile Include="Municipio.cs" />
     <Compile Include="Padrao.cs" />
     <Compile Include="PosicaoImovel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="Servico.cs" />
     <Compile Include="Sistema.cs" />
+    <Compile Include="Social.cs" />
     <Compile Include="Usuario.cs" />
   </ItemGroup>
   <ItemGroup>

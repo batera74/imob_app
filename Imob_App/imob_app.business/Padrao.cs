@@ -26,10 +26,9 @@ namespace imob_app.business
             return (from p in _ctx.padrao where p.id == id select p).FirstOrDefault();
         }
 
-
-        public List<padrao> SelecionarExistentes()
+        public dao.padrao Selecionar(int id, imobappEntities _ctx)
         {
-            throw new NotImplementedException();
+            return (from p in _ctx.padrao where p.id == id select p).FirstOrDefault();
         }
     }
 }

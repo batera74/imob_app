@@ -15,7 +15,7 @@ namespace imob_app.business
             ddl.Items.Clear();
             ddl.Items.Add(new ListItem(primeiroItem, ""));
             ddl.AppendDataBoundItems = true;
-            ddl.DataSource = (todos ? _entidade.SelecionarTodos() : _entidade.SelecionarExistentes());
+            ddl.DataSource = (todos ? _entidade.SelecionarTodos() : ((IExistente<T>)_entidade).SelecionarExistentes());
             ddl.DataTextField = textField;
             ddl.DataValueField = valueField;
             ddl.DataBind();

@@ -9,10 +9,11 @@ using imob_app.entidades;
 using imob_app.business.Contratos;
 using System.Data.Objects;
 using System.Linq.Dynamic;
+using System.Data.Objects.DataClasses;
 
 namespace imob_app.business
 {
-    public class Imovel : IEntidade<entidades.ImovelResultado>
+    public class Imovel : IExistente<entidades.ImovelResultado>
     {
         private imobappEntities _ctx;
 
@@ -91,7 +92,7 @@ namespace imob_app.business
                         Imagens = imov.imagem
                     }).ToList();
 
-        }        
+        }
 
         //Seleciona imóveis de acordo com o Id do Usuário
         public List<entidades.ImovelResultado> SelecionarPorUsuario(int idUsuario)
@@ -143,11 +144,44 @@ namespace imob_app.business
                                      .Include("garagem")
                                      .Include("logradouro")
 
-                        where imov.id_imovel == id
-                        select imov).FirstOrDefault();
+                                 where imov.id_imovel == id
+                                 select imov).FirstOrDefault();
+
 
             return imovel;
-        }        
+        }
+
+        //Seleciona imóvel pelo Id
+        public dao.imovel SelecionarImovel(int id, imobappEntities _ctx)
+        {
+            dao.imovel imovel = (from imov in _ctx.imovel
+                                     .Include("categoria")
+                                     .Include("bairro")
+                                     .Include("bairro.municipio")
+                                     .Include("bairro.municipio.estado")
+                                     .Include("categoria")
+                                     .Include("dormitorio")
+                                     .Include("estadoimovel")
+                                     .Include("finalidade")
+                                     .Include("posicaoimovel")
+                                     .Include("usuario")
+                                     .Include("imagem")
+                                     .Include("armario")
+                                     .Include("acabamento")
+                                     .Include("intima")
+                                     .Include("lazer")
+                                     .Include("social")
+                                     .Include("servico")
+                                     .Include("padrao")
+                                     .Include("garagem")
+                                     .Include("logradouro")
+
+                                 where imov.id_imovel == id
+                                 select imov).FirstOrDefault();
+
+
+            return imovel;
+        }
 
         //Remove o imóvel da base de dados de acordo com o Id
         public bool Excluir(int id)
@@ -159,7 +193,7 @@ namespace imob_app.business
                 _ctx.SaveChanges();
                 return true;
             }
-            catch 
+            catch
             {
                 return false;
             }
@@ -174,7 +208,7 @@ namespace imob_app.business
                 return "";
         }
 
-
+        //Seleciona imóvel pelo Id
         public entidades.ImovelResultado Selecionar(int id)
         {
             var query = from imov in _ctx.imovel
@@ -199,10 +233,72 @@ namespace imob_app.business
             return query.FirstOrDefault();
         }
 
-
+        //Seleciona imóveis existentes
         public List<ImovelResultado> SelecionarExistentes()
         {
             throw new NotImplementedException();
         }
+                
+        //Adiciona imagem ao imovel
+        public bool AdicionarImagem(dao.imagem img, int idImovel)
+        {
+            try
+            {
+                //Imóvel que será salvo as imagens
+                dao.imovel imov;
+
+                //Instância classe de negócio do Imóvel
+                business.Imovel imovBiz = new business.Imovel();
+
+                //imov = _ctx.imovel.FirstOrDefault(i => i.id_imovel == idImovel);
+                imov = this.SelecionarImovel(idImovel);
+
+                imov.imagem.Add(img);
+                _ctx.SaveChanges();
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        //Seleciona Acabamentos
+        public List<dao.acabamento> SelecionarAcabamento()
+        {
+            return (from i in _ctx.imovel select i.acabamento).First().ToList();
+        }
+
+        //Seleciona Armarios
+        public List<dao.armario> SelecionarArmario()
+        {
+            return (from i in _ctx.imovel select i.armario).First().ToList();
+        }
+
+        //Seleciona Lazer
+        public List<dao.lazer> SelecionarLazer()
+        {
+            return (from i in _ctx.imovel select i.lazer).First().ToList();
+        }
+
+        //Seleciona Serviço
+        public List<dao.servico> SelecionarServico()
+        {
+            return (from i in _ctx.imovel select i.servico).First().ToList();
+        }
+
+        //Seleciona Íntima
+        public List<dao.intima> SelecionarIntima()
+        {
+            return (from i in _ctx.imovel select i.intima).First().ToList();
+        }
+
+        //Seleciona Social
+        public List<dao.social> SelecionarSocial()
+        {
+            return (from i in _ctx.imovel select i.social).First().ToList();
+        }
+
     }
 }

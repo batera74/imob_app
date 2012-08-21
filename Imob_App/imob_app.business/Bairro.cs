@@ -28,17 +28,15 @@ namespace imob_app.business
             return (from b in _ctx.bairro where b.id_bairro == id select b).FirstOrDefault();
         }
 
+        public dao.bairro Selecionar(int id, imobappEntities _ctx)
+        {
+            return (from b in _ctx.bairro where b.id_bairro == id select b).FirstOrDefault();
+        }
+
         public List<dao.bairro> SelecionarPorReferencia(int idMunicipio)
         {
             return (from b in _ctx.bairro where b.municipio.id_municipio == idMunicipio select b).ToList();            
         }
-
-
-        public List<bairro> SelecionarExistentes()
-        {
-            throw new NotImplementedException();
-        }
-
 
         public List<bairro> SelecionarExistentesPorReferencia(int idMunicipio)
         {

@@ -26,9 +26,13 @@
                     <br />
                     <br />
                     
-                    <galeria:Galeria runat="server" ID="galeria" />
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <galeria:Galeria runat="server" ID="galeria" Admin="false"/>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
                     
-                    <div style="text-align: center;">
+                    <div style="text-align: left;">
                         <br />
                         <a href="EstouInteressado.aspx" rel="shadowbox;width=500;height=370">
                         <asp:Label ID="lblDetalhes" runat="server" CssClass="button" Text='Estou interessado $'></asp:Label></a>

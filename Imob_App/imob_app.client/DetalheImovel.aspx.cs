@@ -16,11 +16,11 @@ namespace imob_app.client
         {
             business.Imovel imov = new business.Imovel();
             dao.imovel imovel = imov.SelecionarImovel(Convert.ToInt32(Request.QueryString["Imovel"]));
-            CarregarImagens(imovel);
+            //CarregarImagens(imovel);
             CarregarDetalhes(imovel);
             CarregarCaracteristicas(imovel);
         }
-
+        /*
         private void CarregarImagens(dao.imovel imovel)
         {
             dao.imobappEntities _ctx = new imobappEntities();
@@ -29,10 +29,13 @@ namespace imob_app.client
                 galeria.DataSource = imovel.imagem;
             else
             {
-                var query = from i in _ctx.imagem where i.id_imagem == 1 select i;
-                galeria.DataSource = query;
+                dao.imagem img = new imagem();
+                img.ds_imagem = "Sem imagem";
+                img.id_imagem = 0;
+
+                galeria.DataSource = new List<dao.imagem>() { img };
             }
-        }
+        }*/
 
         private void CarregarDetalhes(dao.imovel imovel)
         {

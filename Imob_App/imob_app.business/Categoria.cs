@@ -6,10 +6,11 @@ using System.Data.Entity;
 using imob_app.dao;
 using System.Collections;
 using imob_app.business.Contratos;
+using System.Data.Objects;
 
 namespace imob_app.business
 {
-    public class Categoria : IEntidade<dao.categoria>
+    public class Categoria : IExistente<dao.categoria>
     {
         private imobappEntities _ctx;
         
@@ -28,6 +29,10 @@ namespace imob_app.business
             return (from c in _ctx.categoria where c.id == id select c).FirstOrDefault();
         }
 
+        public dao.categoria Selecionar(int id, imobappEntities _ctx)
+        {
+            return (from c in _ctx.categoria where c.id == id select c).FirstOrDefault();
+        }
 
         public List<categoria> SelecionarExistentes()
         {

@@ -247,7 +247,11 @@ namespace imob_app.client.controls
         {
             Image img = (Image)e.Item.FindControl("Image2");
             dao.imagem imagem = ((ImovelResultado)e.Item.DataItem).Imagens.FirstOrDefault(i => i.ic_principal == true);
-            img.ImageUrl = "../Imagem.ashx?idFoto=" + (imagem != null ? imagem.id_imagem : 1);
+
+            if (imagem != null)
+                img.ImageUrl = "../Imagem.ashx?idFoto=" + imagem.id_imagem;
+            else
+                img.ImageUrl = "/images/sem_imagem.gif";
 
             if (Admin)
             {

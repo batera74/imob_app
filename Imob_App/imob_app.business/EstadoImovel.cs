@@ -26,10 +26,10 @@ namespace imob_app.business
             return (from e in _ctx.estadoimovel where e.id == id select e).FirstOrDefault();
         }
 
-
-        public List<estadoimovel> SelecionarExistentes()
+        public dao.estadoimovel Selecionar(int id, imobappEntities _ctx)
         {
-            throw new NotImplementedException();
+            return (from e in _ctx.estadoimovel where e.id == id select e).FirstOrDefault();
         }
+        
     }
 }

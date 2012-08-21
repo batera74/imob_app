@@ -21,15 +21,14 @@ namespace imob_app.business
             return (from g in _ctx.garagem select g).ToList(); 
         }
 
-        public garagem Selecionar(int id)
+        public dao.garagem Selecionar(int id)
         {
             return (from g in _ctx.garagem where g.id == id select g).FirstOrDefault();
         }
 
-
-        public List<garagem> SelecionarExistentes()
+        public dao.garagem Selecionar(int id, imobappEntities _ctx)
         {
-            throw new NotImplementedException();
+            return (from g in _ctx.garagem where g.id == id select g).FirstOrDefault();
         }
     }
 }

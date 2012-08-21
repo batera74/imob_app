@@ -96,7 +96,7 @@ namespace imob_app.client
         }
 
         private void BasePage_Load(object sender, EventArgs e)
-        {
+        {/*
             try
             {
                 if (!Page.IsPostBack)
@@ -149,7 +149,7 @@ namespace imob_app.client
             {
                 Alert("Erro ao tentar conectar ao Facebook: " + ex.Message);
                 Alert("Mais detalhes: " + ex.StackTrace);
-            }
+            }*/
         }
 
         private void BasePage_Error(object sender, EventArgs e)

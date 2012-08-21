@@ -9,7 +9,7 @@ using imob_app.business.Contratos;
 
 namespace imob_app.business
 {
-    public class Estado : IEntidadeLocalizacao<dao.estado>
+    public class Estado : IExistente<dao.estado>
     {
         private imobappEntities _ctx;
 
@@ -23,25 +23,14 @@ namespace imob_app.business
            return (from e in _ctx.estado select e).ToList();
         }
 
-        public List<dao.estado> SelecionarExistentes()
-        {
-            return (from e in _ctx.imovel select e.bairro.municipio.estado).Distinct().ToList();
-        }
-
         public dao.estado Selecionar(int id)
         {
             return (from e in _ctx.estado where e.id_estado == id select e).FirstOrDefault();
         }
 
-        public List<dao.estado> SelecionarPorReferencia(int id)
+        public List<dao.estado> SelecionarExistentes()
         {
-            throw new NotImplementedException();
-        }
-
-
-        public List<estado> SelecionarExistentesPorReferencia(int id)
-        {
-            throw new NotImplementedException();
-        }
+            return (from e in _ctx.imovel select e.bairro.municipio.estado).Distinct().ToList();
+        }        
     }
 }

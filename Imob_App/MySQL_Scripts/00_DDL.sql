@@ -188,7 +188,7 @@ create table if not exists `imagem` (
   `id_imagem` smallint not null auto_increment primary key,
   `ds_imagem_cripto` longtext collate latin1_general_ci not null,
   `ds_imagem` varchar(150) not null,
-  `id_imovel` smallint not null,  
+  `id_imovel` smallint null,  
   `ic_principal` bit not null
 );
 
