@@ -35,7 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AjaxControlToolkit">
-      <HintPath>..\..\..\..\..\..\..\AjaxControlToolkit\3.5\AjaxControlToolkit.dll</HintPath>
+      <HintPath>..\AjaxControlToolkit.Binary.NET35\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Facebook">
       <HintPath>..\Facebook-net35-client\Facebook.dll</HintPath>
