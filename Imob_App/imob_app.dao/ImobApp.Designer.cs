@@ -33,7 +33,7 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imagem_ibfk_1", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(imob_app.dao.imovel), "imagem", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imagem))]
 
 // Original file name:
-// Generation date: 8/22/2012 12:29:44 AM
+// Generation date: 8/22/2012 9:31:19 AM
 namespace imob_app.dao
 {
     
@@ -4858,16 +4858,18 @@ namespace imob_app.dao
         /// </summary>
         /// <param name="id_imagem">Initial value of id_imagem.</param>
         /// <param name="ds_imagem_cripto">Initial value of ds_imagem_cripto.</param>
-        /// <param name="ds_imagem">Initial value of ds_imagem.</param>
         /// <param name="ic_principal">Initial value of ic_principal.</param>
+        /// <param name="id_sessao">Initial value of id_sessao.</param>
+        /// <param name="dt_post">Initial value of dt_post.</param>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static imagem Createimagem(short id_imagem, string ds_imagem_cripto, string ds_imagem, bool ic_principal)
+        public static imagem Createimagem(short id_imagem, string ds_imagem_cripto, bool ic_principal, int id_sessao, global::System.DateTime dt_post)
         {
             imagem imagem = new imagem();
             imagem.id_imagem = id_imagem;
             imagem.ds_imagem_cripto = ds_imagem_cripto;
-            imagem.ds_imagem = ds_imagem;
             imagem.ic_principal = ic_principal;
+            imagem.id_sessao = id_sessao;
+            imagem.dt_post = dt_post;
             return imagem;
         }
         /// <summary>
@@ -4925,33 +4927,6 @@ namespace imob_app.dao
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         partial void Onds_imagem_criptoChanged();
         /// <summary>
-        /// There are no comments for property ds_imagem in the schema.
-        /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public string ds_imagem
-        {
-            get
-            {
-                return this._ds_imagem;
-            }
-            set
-            {
-                this.Onds_imagemChanging(value);
-                this.ReportPropertyChanging("ds_imagem");
-                this._ds_imagem = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, false);
-                this.ReportPropertyChanged("ds_imagem");
-                this.Onds_imagemChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private string _ds_imagem;
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onds_imagemChanging(string value);
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onds_imagemChanged();
-        /// <summary>
         /// There are no comments for property ic_principal in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
@@ -4978,6 +4953,60 @@ namespace imob_app.dao
         partial void Onic_principalChanging(bool value);
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         partial void Onic_principalChanged();
+        /// <summary>
+        /// There are no comments for property id_sessao in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public int id_sessao
+        {
+            get
+            {
+                return this._id_sessao;
+            }
+            set
+            {
+                this.Onid_sessaoChanging(value);
+                this.ReportPropertyChanging("id_sessao");
+                this._id_sessao = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id_sessao");
+                this.Onid_sessaoChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        private int _id_sessao;
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onid_sessaoChanging(int value);
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onid_sessaoChanged();
+        /// <summary>
+        /// There are no comments for property dt_post in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public global::System.DateTime dt_post
+        {
+            get
+            {
+                return this._dt_post;
+            }
+            set
+            {
+                this.Ondt_postChanging(value);
+                this.ReportPropertyChanging("dt_post");
+                this._dt_post = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("dt_post");
+                this.Ondt_postChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        private global::System.DateTime _dt_post;
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Ondt_postChanging(global::System.DateTime value);
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Ondt_postChanged();
         /// <summary>
         /// There are no comments for imovel in the schema.
         /// </summary>

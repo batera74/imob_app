@@ -411,8 +411,9 @@
     <EntitySetMapping Name="imagem">
       <EntityTypeMapping TypeName="imobappModel.imagem">
         <MappingFragment StoreEntitySet="imagem">
+          <ScalarProperty Name="dt_post" ColumnName="dt_post" />
+          <ScalarProperty Name="id_sessao" ColumnName="id_sessao" />
           <ScalarProperty Name="ic_principal" ColumnName="ic_principal" />
-          <ScalarProperty Name="ds_imagem" ColumnName="ds_imagem" />
           <ScalarProperty Name="ds_imagem_cripto" ColumnName="ds_imagem_cripto" />
           <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
         </MappingFragment>

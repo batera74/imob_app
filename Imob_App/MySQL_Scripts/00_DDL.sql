@@ -186,10 +186,12 @@ create table if not exists `imovel` (
 drop table if exists `imagem`;
 create table if not exists `imagem` (
   `id_imagem` smallint not null auto_increment primary key,
-  `ds_imagem_cripto` longtext collate latin1_general_ci not null,
-  `ds_imagem` varchar(150) not null,
+  `ds_imagem_cripto` longtext collate latin1_general_ci not null,  
   `id_imovel` smallint null,  
-  `ic_principal` bit not null
+  `ic_principal` bit not null,
+  `id_sessao` int not null,
+  `dt_post` datetime not null,
+   foreign key (id_imovel) references imovel(id_imovel)
 );
 
 drop table if exists `imovelsocial`;

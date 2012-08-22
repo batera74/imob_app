@@ -8,25 +8,45 @@ using System.Collections;
 using imob_app.dao;
 using System.Configuration;
 using System.IO;
+using Facebook;
 
 namespace imob_app.client
 {
     public partial class CadastroImovel : BasePage
     {
+        #region Atributos
+
         private int idImovel;
-
         private string Temp = ConfigurationManager.AppSettings["ImagesTempDir"];
+        private int idSessao;
+        private int idUsuario;
 
+        #endregion
+
+        #region Eventos da Página
+        
         protected void Page_Load(object sender, EventArgs e)
         {
+            //TODO: Pegar id do usuário da Session
+            idUsuario = 123456;   
+         
+            if(Session["idSessao"] != null)
+                idSessao = Convert.ToInt32(Session["idSessao"]);
+
             if (!IsPostBack)
             {
-                dao.imovel imov;
                 business.Imovel imovBiz = new business.Imovel();
                 business.Imagem imgBiz = new business.Imagem();
-                idImovel = Convert.ToInt32(Request.QueryString["Imovel"]);
 
                 imgBiz.DeletarImagensNaoAssociadas();
+                imgBiz.LimparTemp();
+                
+                Session["idSessao"] = new Random().Next(0, 10000);
+                idSessao = Convert.ToInt32(Session["idSessao"]);                
+         
+                dao.imovel imov;                                
+                idImovel = Convert.ToInt32(Request.QueryString["Imovel"]);
+                
                 CarregarCombos();
                 CarregarCaracteristicas();
 
@@ -40,8 +60,12 @@ namespace imob_app.client
                 {
                     Session["idImovel"] = 0;
                 }
-            }
-        }
+            }            
+        }        
+
+        #endregion
+
+        #region Carregar Conteúdo do Página
 
         private void CarregarCombos()
         {
@@ -113,6 +137,10 @@ namespace imob_app.client
 
             dataList.DataBind();
         }
+
+        #endregion
+
+        #region DataBound da Características
 
         protected void dtAcabamento_ItemDataBound(object sender, DataListItemEventArgs e)
         {
@@ -198,10 +226,14 @@ namespace imob_app.client
             }
         }
 
+        #endregion
+
         protected void FileUpload1_UploadedComplete(object sender, AjaxControlToolkit.AsyncFileUploadEventArgs e)
         {
             Session["imgPersiste"] = FileUpload1;
         }
+
+        #region Salvar Imóvel
 
         protected void lnkSalvar_Click(object sender, EventArgs e)
         {
@@ -243,17 +275,13 @@ namespace imob_app.client
             imov.ic_vazio = chkVazio.Checked;
             imov.ic_financiamento = chkFinanciamento.Checked;
             imov.ic_ativo = chkAtivo.Checked;
-            imov.ic_destaque = chkDestaque.Checked;
-            //TODO
-            imov.finalidade = (from f in _ctx.finalidade select f).FirstOrDefault();
-            imov.usuario = (from u in _ctx.usuario select u).FirstOrDefault();
+            imov.ic_destaque = chkDestaque.Checked;          
+  
+            //TODO: Alterar caso tiver outras finalidades
+            imov.finalidade = (from f in _ctx.finalidade where f.ds_item.Equals("Venda") select f).FirstOrDefault();
+            imov.usuario = (from u in _ctx.usuario where u.id_usuario == idUsuario select u).FirstOrDefault();
             SalvarCaracteristicas(imov, _ctx);
-
-            if (imov.id_imovel == 0)
-            {
-                //AssociarImagens
-                //Criar coluna na tabela de imagens para associar imagem ao usuario
-            }
+            SalvarImagens(imov, _ctx);
 
             _ctx.SaveChanges();
 
@@ -366,5 +394,18 @@ namespace imob_app.client
                 }
             }
         }
+
+        private void SalvarImagens(dao.imovel imov, imobappEntities _ctx)
+        {
+            var imagens = from i in _ctx.imagem where i.id_sessao == idSessao select i;
+
+            foreach (var item in imagens)
+            {
+                item.imovel = imov;
+                imov.imagem.Add(item);
+            }
+        }
+
+        #endregion
     }
 }

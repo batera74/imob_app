@@ -472,8 +472,9 @@
     </Key>
     <Property Type="Int16" Name="id_imagem" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
     <Property Type="String" Name="ds_imagem_cripto" Nullable="false" />
-    <Property Type="String" Name="ds_imagem" Nullable="false" />
     <Property Type="Boolean" Name="ic_principal" Nullable="false" />
+    <Property Type="Int32" Name="id_sessao" Nullable="false" />
+    <Property Type="DateTime" Name="dt_post" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imagem_ibfk_1" FromRole="imagem" ToRole="imovel" />
   </EntityType>
   <Association Name="imagem_ibfk_1">

@@ -27,7 +27,6 @@ namespace imob_app.client
             dao.imagem img = new dao.imagem();
             dao.imovel imov = ctx.imovel.FirstOrDefault(i => i.id_imovel == id);            
             img.ic_principal = true;
-            img.ds_imagem = txtFoto.Text;
             img.ds_imagem_cripto = ToString(file);
             imov.imagem.Add(img);            
             ctx.SaveChanges();

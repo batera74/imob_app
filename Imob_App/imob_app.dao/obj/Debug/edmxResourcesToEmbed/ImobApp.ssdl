@@ -257,9 +257,10 @@
     </Key>
     <Property Name="id_imagem" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_imagem_cripto" Type="longtext" Nullable="false" />
-    <Property Name="ds_imagem" Type="varchar" Nullable="false" MaxLength="150" />
     <Property Name="id_imovel" Type="smallint" />
     <Property Name="ic_principal" Type="bit" Nullable="false" />
+    <Property Name="id_sessao" Type="int" Nullable="false" />
+    <Property Name="dt_post" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityType Name="imovel">
     <Key>

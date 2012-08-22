@@ -18,6 +18,8 @@ namespace imob_app.client.controls
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            idSessao = Convert.ToInt32(Session["idSessao"]);
+
             if (!IsPostBack)
                 CarregarImagens();
             else if (Session["imgPersiste"] != null)
@@ -31,6 +33,8 @@ namespace imob_app.client.controls
             get;
             set;
         }
+
+        private int idSessao;
 
         public bool Admin
         {
@@ -57,8 +61,7 @@ namespace imob_app.client.controls
                 img.ImageUrl = "/Imagem.ashx?idFoto=" + dataImg.id_imagem;
                 hlk.NavigateUrl = "/Imagem.ashx?idFoto=" + dataImg.id_imagem;
                 lnk.Attributes.Add("idImagem", dataImg.id_imagem.ToString());
-                lnk.CommandArgument = dataImg.id_imagem.ToString();
-                img.AlternateText = dataImg.ds_imagem;
+                lnk.CommandArgument = dataImg.id_imagem.ToString();                
                 chk.Checked = dataImg.ic_principal;
                 chk.Enabled = !dataImg.ic_principal;
                 chk.Attributes.Add("idImagem", dataImg.id_imagem.ToString());
@@ -83,8 +86,7 @@ namespace imob_app.client.controls
                     this.DataSource = imov.imagem;
                 else
                 {
-                    dao.imagem img = new imagem();
-                    img.ds_imagem = "Sem imagem";
+                    dao.imagem img = new imagem();                    
                     img.id_imagem = 0;
 
                     this.DataSource = new List<dao.imagem>() { img };
@@ -95,7 +97,7 @@ namespace imob_app.client.controls
             }
             else
             {
-                this.DataSource = new business.Imagem().SelecionarImagensNaoAssociadas();
+                this.DataSource = new business.Imagem().SelecionarImagensDaSessao(idSessao);
                 dtlMini.DataSource = DataSource;
                 dtlMini.DataBind();                
             }
@@ -148,9 +150,6 @@ namespace imob_app.client.controls
 
         protected void SalvarImagem()
         {
-            //Limpa diretório temporário de imagens
-            LimparTemp();
-
             //Instância nova imagem
             dao.imagem img = new dao.imagem();
 
@@ -161,12 +160,13 @@ namespace imob_app.client.controls
             string file = UploadPhoto(fileUpload);
 
             //Limpa a Session
-            Session["imgPersiste"] = null;
+            Session["imgPersiste"] = null;            
 
             //Set das propriedades da nova imagem
             img.ic_principal = false;
-            img.ds_imagem = "Texto";
             img.ds_imagem_cripto = ToString(file);
+            img.dt_post = DateTime.Now;
+            img.id_sessao = idSessao;
 
             if (Request.QueryString["Imovel"] != null)
             {
@@ -252,13 +252,6 @@ namespace imob_app.client.controls
             byte[] array = ms.ToArray();
             ms.Close();
             return Convert.ToBase64String(array);
-        }
-
-        public static void LimparTemp()
-        {
-            string[] filePaths = Directory.GetFiles(Temp);
-            foreach (string filePath in filePaths)
-                File.Delete(filePath);
-        }
+        }        
     }
 }

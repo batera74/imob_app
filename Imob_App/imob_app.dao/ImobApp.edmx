@@ -262,9 +262,10 @@
           </Key>
           <Property Name="id_imagem" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="ds_imagem_cripto" Type="longtext" Nullable="false" />
-          <Property Name="ds_imagem" Type="varchar" Nullable="false" MaxLength="150" />
           <Property Name="id_imovel" Type="smallint" />
           <Property Name="ic_principal" Type="bit" Nullable="false" />
+          <Property Name="id_sessao" Type="int" Nullable="false" />
+          <Property Name="dt_post" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="imovel">
           <Key>
@@ -1256,8 +1257,9 @@
           </Key>
           <Property Type="Int16" Name="id_imagem" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
           <Property Type="String" Name="ds_imagem_cripto" Nullable="false" />
-          <Property Type="String" Name="ds_imagem" Nullable="false" />
           <Property Type="Boolean" Name="ic_principal" Nullable="false" />
+          <Property Type="Int32" Name="id_sessao" Nullable="false" />
+          <Property Type="DateTime" Name="dt_post" Nullable="false" />
           <NavigationProperty Name="imovel" Relationship="imobappModel.imagem_ibfk_1" FromRole="imagem" ToRole="imovel" />
         </EntityType>
         <Association Name="imagem_ibfk_1">
@@ -1680,8 +1682,9 @@
           <EntitySetMapping Name="imagem">
             <EntityTypeMapping TypeName="imobappModel.imagem">
               <MappingFragment StoreEntitySet="imagem">
+                <ScalarProperty Name="dt_post" ColumnName="dt_post" />
+                <ScalarProperty Name="id_sessao" ColumnName="id_sessao" />
                 <ScalarProperty Name="ic_principal" ColumnName="ic_principal" />
-                <ScalarProperty Name="ds_imagem" ColumnName="ds_imagem" />
                 <ScalarProperty Name="ds_imagem_cripto" ColumnName="ds_imagem_cripto" />
                 <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
               </MappingFragment>
@@ -1750,8 +1753,8 @@
           <ConnectorPoint PointX="7.40625" PointY="7.375" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovel_ibfk_4" >
-          <ConnectorPoint PointX="5.25" PointY="4.81323848724365" />
-          <ConnectorPoint PointX="6.6718725" PointY="4.81323848724365" />
+          <ConnectorPoint PointX="5.25" PointY="4.8137869118154022" />
+          <ConnectorPoint PointX="6.6718725" PointY="4.8137869118154022" />
           <ConnectorPoint PointX="6.6718725" PointY="7.375" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.conversa_ibfk_1" >
@@ -1827,10 +1830,10 @@
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovelacabamento" >
           <ConnectorPoint PointX="7.03906125" PointY="7.375" />
-          <ConnectorPoint PointX="7.03906125" PointY="4.156619243621825" />
-          <ConnectorPoint PointX="7.322916666666667" PointY="4.1566192436218241" />
-          <ConnectorPoint PointX="7.489583333333333" PointY="4.156619243621825" />
-          <ConnectorPoint PointX="8.25" PointY="4.156619243621825" />
+          <ConnectorPoint PointX="7.03906125" PointY="4.1568934559077011" />
+          <ConnectorPoint PointX="7.322916666666667" PointY="4.1568934559077" />
+          <ConnectorPoint PointX="7.489583333333333" PointY="4.1568934559077011" />
+          <ConnectorPoint PointX="8.25" PointY="4.1568934559077011" />
         </AssociationConnector>
         <AssociationConnector Association="imobappModel.imovelarmario" >
           <ConnectorPoint PointX="6.3046837500000006" PointY="7.375" />
@@ -1867,7 +1870,7 @@
           <ConnectorPoint PointX="7.5442752083333326" PointY="18.797841796874998" />
           <ConnectorPoint PointX="8.25" PointY="18.797841796874998" />
         </AssociationConnector>
-        <EntityTypeShape EntityType="imobappModel.imagem" Width="1.5" PointX="8.25" PointY="20.5" Height="1.9802864583333246" />
+        <EntityTypeShape EntityType="imobappModel.imagem" Width="1.5" PointX="8.25" PointY="20.5" Height="2.172587890624996" />
         <AssociationConnector Association="imobappModel.imagem_ibfk_1" >
           <ConnectorPoint PointX="7.460941875" PointY="15.701233723958334" />
           <ConnectorPoint PointX="7.460941875" PointY="21.4614208984375" />
