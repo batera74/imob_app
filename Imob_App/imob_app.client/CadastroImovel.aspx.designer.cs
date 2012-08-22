@@ -67,13 +67,13 @@ namespace imob_app.client {
         protected global::System.Web.UI.WebControls.LinkButton lnkSalvar;
         
         /// <summary>
-        /// UpdatePanel1 control.
+        /// UpdatePanel2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.UpdatePanel UpdatePanel2;
         
         /// <summary>
         /// lblId control.
@@ -184,15 +184,6 @@ namespace imob_app.client {
         protected global::System.Web.UI.WebControls.DropDownList ddlBairro;
         
         /// <summary>
-        /// ddlPadrao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlPadrao;
-        
-        /// <summary>
         /// ddlEstadoImovel control.
         /// </summary>
         /// <remarks>
@@ -200,6 +191,15 @@ namespace imob_app.client {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlEstadoImovel;
+        
+        /// <summary>
+        /// ddlPadrao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlPadrao;
         
         /// <summary>
         /// ddlPosicaoImovel control.

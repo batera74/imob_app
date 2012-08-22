@@ -9,6 +9,7 @@
     <script src="js/demo.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/shadowbox/shadowbox.css" media="screen" />
     <script type="text/javascript">
+        
         Shadowbox.init({
             overlayOpacity: 0.8
         }, setupDemos);
@@ -16,10 +17,48 @@
         function raiseAsyncPostback() {
             __doPostBack("<%= this.updGaleria.UniqueID %>", "");
         }
-
+        
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="conteudo" runat="server">
+    <script type="text/javascript">
+        // Get the instance of PageRequestManager.
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        // Add initializeRequest and endRequest
+        prm.add_initializeRequest(prm_InitializeRequest);
+        prm.add_endRequest(prm_EndRequest);
+
+        // Called when async postback begins
+        function prm_InitializeRequest(sender, args) {
+            // get the divImage and set it to visible
+            var panelProg = $get('divImage');
+
+            if (args.get_postBackElement().id == "ctl00_conteudo_updGaleria" ||
+            args.get_postBackElement().id.substring(37, 47) == "lnkExcluir") {
+                panelProg.style.display = '';
+            }
+        }
+
+        // Called when async postback ends
+        function prm_EndRequest(sender, args) {
+            // get the divImage and hide it again
+            var panelProg = $get('divImage');
+            panelProg.style.display = 'none';
+
+            $(function () {                
+                $('formImovel').jqTransform({ imgPath: 'images/' });                
+            });
+        }
+
+        function pageLoad(sender, args) {
+            Cufon.refresh();
+                        
+            if (args.get_isPartialLoad()) {
+               // fix_select($('#conteudoDetalhes'));
+            }            
+        }
+ 
+    </script>    
     <section id="content">
 	    <div class="container_24">
             <div class="wrapper">
@@ -59,131 +98,131 @@
                 <div id="detalhesPai">
                     <div id="formImovel">                                            
                         <h8 class="head-1"><strong>Características do Imóvel</strong></h8>     
-                         <div id="conteudoDetalhes"> 
-                             <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-                             <ContentTemplate>                       
-                             <div class="row-1">                                
-                                 <span class="text-form fleft">Referência: <asp:Label ID="lblId" runat="server"></asp:Label></span>                                
-                             </div>
-                             <div class="row-1">
-                                 <span class="text-form fleft">Categoria:</span>
-                                 <asp:DropDownList ID="ddlCategoria" runat="server" Style="width: 195px" AutoPostBack="True">
-                                 </asp:DropDownList>                    
-                             </div>
-                             <div class="row-1">
-                                 <span class="text-form fleft">Dormitórios:</span>
-                                 <asp:DropDownList ID="ddlDormitorios" runat="server" Style="width: 195px" AutoPostBack="True">
-                                 </asp:DropDownList>                    
-                             </div>
-                             <div class="row-1">
-                                 <span class="text-form fleft">Valor do Imóvel:</span>
-                                 <asp:TextBox ID="txtValor" runat="server" Width="110"></asp:TextBox>                            
-                             </div>
-                             <div class="row-1">
-                                 <span class="text-form fleft">Logradouro:</span>
-                                 <asp:DropDownList ID="ddlTipoLogradouro" runat="server" Style="width: 95px" AutoPostBack="True" CausesValidation="True">
-                                 </asp:DropDownList>
-                                 <asp:TextBox ID="txtEndereco" runat="server" Width="190"></asp:TextBox>
-                             </div>
-                             <div class="row-1">                                
-                                 <span class="text-form fleft">Número:</span>
-                                 <asp:TextBox ID="txtNumero" runat="server" Width="40"></asp:TextBox>
-                             </div>
-                             <div class="row-1">                                
-                                 <span class="text-form fleft">Complemento:</span>
-                                 <asp:TextBox ID="txtComplemento" runat="server" Width="40"></asp:TextBox>
-                             </div>
-                             <div class="row-1">                                
-                                 <span class="text-form fleft">CEP:</span>
-                                 <asp:TextBox ID="txtCep" runat="server" Width="80"></asp:TextBox>
-                             </div>
-                             
-                                 <div class="row-1">   
-                                     <span class="text-form fleft">UF:</span>
-                                     <asp:DropDownList ID="ddlUF" runat="server" Style="width: 45px;" AutoPostBack="True"
-                                         CausesValidation="True">
-                                     </asp:DropDownList>                                    
-                                 </div>
-                                 <div class="row-1"> 
-                                     <span class="text-form fleft">Município:</span>
-                                     <asp:DropDownList ID="ddlMunicipio" runat="server" Style="width: 195px" AutoPostBack="True">                                        
-                                     </asp:DropDownList>
-                                 </div>
-                                 <div class="row-1"> 
-                                     <span class="text-form fleft">Bairro:</span>
-                                     <asp:DropDownList ID="ddlBairro" runat="server" Style="width: 195px" AutoPostBack="True">
-                                     </asp:DropDownList>
-                                 </div>
-                                 <div class="row-1">
-                                    <span class="text-form fleft">Padrão:</span>
-                                    <asp:DropDownList ID="ddlPadrao" runat="server" Style="width: 90px" AutoPostBack="True" CausesValidation="True">
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="row-1">
-                                    <span class="text-form fleft">Estado do Imóvel:</span>
-                                    <asp:DropDownList ID="ddlEstadoImovel" runat="server" Style="width: 150px;" AutoPostBack="True" CausesValidation="True">
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="row-1">
-                                    <span class="text-form fleft">Posição do Imóvel:</span>
-                                    <asp:DropDownList ID="ddlPosicaoImovel" runat="server" Style="width: 155px" AutoPostBack="True" CausesValidation="True">
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="row-1">
-                                    <span class="text-form fleft">Garagem:</span>
-                                    <asp:DropDownList ID="ddlGaragem" runat="server" Style="width: 90px" AutoPostBack="True" CausesValidation="True">
-                                    </asp:DropDownList>
-                                </div>
-                                <div class="row-1">
-                                    <span class="text-form fleft">Área Total:</span>
-                                    <asp:TextBox ID="txtAreaTotal" runat="server" Width="70"></asp:TextBox>                            
-                                </div>
-                                <div class="row-1">
-                                    <span class="text-form fleft">Área Útil:</span>
-                                    <asp:TextBox ID="txtAreaUtil" runat="server" Width="70"></asp:TextBox>                            
-                                </div>                
-                                <div class="row-1">                                
-                                    <span class="text-form fleft">Valor Condomínio:</span>
-                                    <asp:TextBox ID="txtValorCondominio" runat="server" Width="70"></asp:TextBox>                            
-                                </div>
-                                <div class="row-1">                                
-                                    <span class="text-form fleft">Valor IPTU:</span>
-                                    <asp:TextBox ID="txtValorIptu" runat="server" Width="70"></asp:TextBox>
-                                </div>
-                                <div class="row-1">
-                                    <span class="text-form fleft">Banheiros:</span>
-                                    <asp:TextBox ID="txtBanheiros" runat="server" Width="50"></asp:TextBox>
-                                </div>
-                                <div class="row-1">
-                                    <span class="text-form fleft">Suítes:</span>
-                                    <asp:TextBox ID="txtSuites" runat="server" Width="50"></asp:TextBox>
-                                </div>                                
-                                <div class="row-1">
-                                    <span class="text-form fleft">Portaria:</span>
-                                    <asp:CheckBox ID="chkPortaria" runat="server"></asp:CheckBox>
-                                </div>
-                                <div class="row-1">
-                                    <span class="text-form fleft">Elevador:</span>
-                                    <asp:CheckBox ID="chkElevador" runat="server"></asp:CheckBox>
-                                </div>
-                                <div class="row-1">
-                                    <span class="text-form fleft">Vazio:</span>
-                                    <asp:CheckBox ID="chkVazio" runat="server"></asp:CheckBox>                           
-                                </div>                           
-                                <div class="row-1">
-                                    <span class="text-form fleft">Financiamento:</span>
-                                    <asp:CheckBox ID="chkFinanciamento" runat="server"></asp:CheckBox>                           
-                                </div>                           
-                                <div class="row-1">
-                                    <span class="text-form fleft">Ativo:</span>
-                                    <asp:CheckBox ID="chkAtivo" runat="server"></asp:CheckBox>                           
-                                </div>                           
-                                <div class="row-1">
-                                    <span class="text-form fleft">Destaque:</span>
-                                    <asp:CheckBox ID="chkDestaque" runat="server"></asp:CheckBox>                           
-                                </div>                                 
-                             </ContentTemplate>
-                             </asp:UpdatePanel>
+                         <div id="conteudoDetalhes">     
+                            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                                <ContentTemplate>                                               
+                                    <div class="row-1">                                
+                                        <span class="text-form fleft">Referência: <asp:Label ID="lblId" runat="server"></asp:Label></span>                                
+                                    </div>
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Categoria:</span>
+                                        <asp:DropDownList ID="ddlCategoria" runat="server" Style="width: 195px" AutoPostBack="True">
+                                        </asp:DropDownList>                    
+                                    </div>                                                                                                                      
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Dormitórios:</span>
+                                        <asp:DropDownList ID="ddlDormitorios" runat="server" Style="width: 195px" AutoPostBack="True">
+                                        </asp:DropDownList>                    
+                                    </div>         
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Valor do Imóvel:</span>
+                                        <asp:TextBox ID="txtValor" runat="server" Width="110"></asp:TextBox>                            
+                                    </div>
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Logradouro:</span>
+                                        <asp:DropDownList ID="ddlTipoLogradouro" runat="server" Style="width: 95px" AutoPostBack="True" CausesValidation="True">
+                                        </asp:DropDownList>
+                                        <asp:TextBox ID="txtEndereco" runat="server" Width="190"></asp:TextBox>
+                                    </div>
+                                    <div class="row-1">                                
+                                        <span class="text-form fleft">Número:</span>
+                                        <asp:TextBox ID="txtNumero" runat="server" Width="40"></asp:TextBox>
+                                    </div>
+                                    <div class="row-1">                                
+                                        <span class="text-form fleft">Complemento:</span>
+                                        <asp:TextBox ID="txtComplemento" runat="server" Width="40"></asp:TextBox>
+                                    </div>
+                                    <div class="row-1">                                
+                                        <span class="text-form fleft">CEP:</span>
+                                        <asp:TextBox ID="txtCep" runat="server" Width="80"></asp:TextBox>
+                                    </div>
+                                    
+                                    <div class="row-1">   
+                                        <span class="text-form fleft">UF:</span>
+                                        <asp:DropDownList ID="ddlUF" runat="server" Style="width: 45px;" AutoPostBack="True"
+                                            CausesValidation="True">
+                                        </asp:DropDownList>                                    
+                                    </div>
+                                    <div class="row-1"> 
+                                        <span class="text-form fleft">Município:</span>
+                                        <asp:DropDownList ID="ddlMunicipio" runat="server" Style="width: 195px" AutoPostBack="True">                                        
+                                        </asp:DropDownList>
+                                    </div>
+                                    <div class="row-1"> 
+                                        <span class="text-form fleft">Bairro:</span>
+                                        <asp:DropDownList ID="ddlBairro" runat="server" Style="width: 195px" AutoPostBack="True">
+                                        </asp:DropDownList>
+                                    </div>                                                 
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Estado do Imóvel:</span>
+                                        <asp:DropDownList ID="ddlEstadoImovel" runat="server" Style="width: 150px;" AutoPostBack="True">
+                                        </asp:DropDownList>
+                                    </div>
+                                     <div class="row-1">
+                                        <span class="text-form fleft">Padrão:</span>
+                                        <asp:DropDownList ID="ddlPadrao" runat="server" Style="width: 90px" AutoPostBack="True">
+                                        </asp:DropDownList>
+                                    </div>                                                         
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Posição do Imóvel:</span>
+                                        <asp:DropDownList ID="ddlPosicaoImovel" runat="server" Style="width: 155px;" AutoPostBack="True">
+                                        </asp:DropDownList>
+                                    </div>                                                         
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Garagem:</span>
+                                        <asp:DropDownList ID="ddlGaragem" runat="server" Style="width: 90px" AutoPostBack="True">
+                                        </asp:DropDownList>
+                                    </div>
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Área Total:</span>
+                                        <asp:TextBox ID="txtAreaTotal" runat="server" Width="70"></asp:TextBox>                            
+                                    </div>
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Área Útil:</span>
+                                        <asp:TextBox ID="txtAreaUtil" runat="server" Width="70"></asp:TextBox>                            
+                                    </div>                
+                                    <div class="row-1">                                
+                                        <span class="text-form fleft">Valor Condomínio:</span>
+                                        <asp:TextBox ID="txtValorCondominio" runat="server" Width="70"></asp:TextBox>                            
+                                    </div>
+                                    <div class="row-1">                                
+                                        <span class="text-form fleft">Valor IPTU:</span>
+                                        <asp:TextBox ID="txtValorIptu" runat="server" Width="70"></asp:TextBox>
+                                    </div>
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Banheiros:</span>
+                                        <asp:TextBox ID="txtBanheiros" runat="server" Width="50"></asp:TextBox>
+                                    </div>
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Suítes:</span>
+                                        <asp:TextBox ID="txtSuites" runat="server" Width="50"></asp:TextBox>
+                                    </div>                                
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Portaria:</span>
+                                        <asp:CheckBox ID="chkPortaria" runat="server"></asp:CheckBox>
+                                    </div>
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Elevador:</span>
+                                        <asp:CheckBox ID="chkElevador" runat="server"></asp:CheckBox>
+                                    </div>
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Vazio:</span>
+                                        <asp:CheckBox ID="chkVazio" runat="server"></asp:CheckBox>                           
+                                    </div>                           
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Financiamento:</span>
+                                        <asp:CheckBox ID="chkFinanciamento" runat="server"></asp:CheckBox>                           
+                                    </div>                           
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Ativo:</span>
+                                        <asp:CheckBox ID="chkAtivo" runat="server"></asp:CheckBox>                           
+                                    </div>                           
+                                    <div class="row-1">
+                                        <span class="text-form fleft">Destaque:</span>
+                                        <asp:CheckBox ID="chkDestaque" runat="server"></asp:CheckBox>                           
+                                    </div>                                                                                                                                                                          
+                                </ContentTemplate>
+                            </asp:UpdatePanel>     
                         </div>
                         <div id="conteudoDetalhes2">
                             <table>

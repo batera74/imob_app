@@ -265,39 +265,63 @@ namespace imob_app.business
         }
 
         //Seleciona Acabamentos
-        public List<dao.acabamento> SelecionarAcabamento()
+        public List<dao.acabamento> SelecionarAcabamento(int idImovel)
         {
-            return (from i in _ctx.imovel select i.acabamento).First().ToList();
+            var query = from i in _ctx.imovel where i.id_imovel == idImovel select i.acabamento;
+            if(query.Count() > 0)
+                return query.FirstOrDefault().ToList();
+
+            return new List<acabamento>();
         }
 
         //Seleciona Armarios
-        public List<dao.armario> SelecionarArmario()
+        public List<dao.armario> SelecionarArmario(int idImovel)
         {
-            return (from i in _ctx.imovel select i.armario).First().ToList();
+            var query = from i in _ctx.imovel where i.id_imovel == idImovel select i.armario;
+            if (query.Count() > 0)
+                return query.FirstOrDefault().ToList();
+
+            return new List<armario>();            
         }
 
         //Seleciona Lazer
-        public List<dao.lazer> SelecionarLazer()
+        public List<dao.lazer> SelecionarLazer(int idImovel)
         {
-            return (from i in _ctx.imovel select i.lazer).First().ToList();
+            var query = from i in _ctx.imovel where i.id_imovel == idImovel select i.lazer;
+            if (query.Count() > 0)
+                return query.FirstOrDefault().ToList();
+
+            return new List<lazer>();            
         }
 
         //Seleciona Serviço
-        public List<dao.servico> SelecionarServico()
+        public List<dao.servico> SelecionarServico(int idImovel)
         {
-            return (from i in _ctx.imovel select i.servico).First().ToList();
+            var query = from i in _ctx.imovel where i.id_imovel == idImovel select i.servico;
+            if (query.Count() > 0)
+                return query.FirstOrDefault().ToList();
+
+            return new List<servico>();  
         }
 
         //Seleciona Íntima
-        public List<dao.intima> SelecionarIntima()
+        public List<dao.intima> SelecionarIntima(int idImovel)
         {
-            return (from i in _ctx.imovel select i.intima).First().ToList();
+            var query = from i in _ctx.imovel where i.id_imovel == idImovel select i.intima;
+            if (query.Count() > 0)
+                return query.FirstOrDefault().ToList();
+
+            return new List<intima>();  
         }
 
         //Seleciona Social
-        public List<dao.social> SelecionarSocial()
+        public List<dao.social> SelecionarSocial(int idImovel)
         {
-            return (from i in _ctx.imovel select i.social).First().ToList();
+            var query = from i in _ctx.imovel where i.id_imovel == idImovel select i.social;
+            if (query.Count() > 0)
+                return query.FirstOrDefault().ToList();
+
+            return new List<social>();  
         }
 
     }

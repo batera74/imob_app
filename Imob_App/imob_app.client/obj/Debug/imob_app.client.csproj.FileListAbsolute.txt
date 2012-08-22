@@ -53,7 +53,6 @@ C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\obj\Debug\
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\obj\Debug\ResGen.read.1.tlog
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\obj\Debug\ResGen.write.1.tlog
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\AjaxControlToolkit.dll
-C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\AjaxControlToolkit.pdb
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\ar\AjaxControlToolkit.resources.dll
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\cs\AjaxControlToolkit.resources.dll
 C:\Users\GUILHERME\Documents\GitHub\imob_app\Imob_App\imob_app.client\bin\de\AjaxControlToolkit.resources.dll

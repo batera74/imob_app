@@ -26,6 +26,11 @@ namespace imob_app.business
             return (from i in _ctx.imagem where i.id_imagem == id select i).FirstOrDefault();
         }
 
+        public List<dao.imagem> SelecionarImagensNaoAssociadas()
+        {
+            return (from i in _ctx.imagem where i.imovel == null select i).ToList();
+        }
+
         public bool Deletar(int id)
         {
             dao.imagem img = (from i in _ctx.imagem where i.id_imagem == id select i).FirstOrDefault();
@@ -61,8 +66,6 @@ namespace imob_app.business
         {
             try
             {
-                dao.imovel imov = new dao.imovel();
-                imov.id_imovel = 0;
                 _ctx.AddToimagem(img);
                 _ctx.SaveChanges();
                 return true;
@@ -79,8 +82,10 @@ namespace imob_app.business
 
             foreach (var item in query)
             {
-                _ctx.DeleteObject(item);
+                _ctx.DeleteObject(item);                
             }
+
+            _ctx.SaveChanges();
         }
     }
 }

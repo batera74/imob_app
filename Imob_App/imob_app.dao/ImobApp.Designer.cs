@@ -20,7 +20,6 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_8", "estadoimovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.estadoimovel), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_2", "finalidade", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.finalidade), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_5", "garagem", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.garagem), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
-[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imagem_ibfk_1", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.imovel), "imagem", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imagem))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_1", "usuario", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.usuario), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_10", "logradouro", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.logradouro), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovel_ibfk_6", "padrao", global::System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(imob_app.dao.padrao), "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel))]
@@ -31,9 +30,10 @@
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovellazer", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel), "lazer", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.lazer))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovelservico", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel), "servico", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.servico))]
 [assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imovelsocial", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imovel), "social", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.social))]
+[assembly: global::System.Data.Objects.DataClasses.EdmRelationshipAttribute("imobappModel", "imagem_ibfk_1", "imovel", global::System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(imob_app.dao.imovel), "imagem", global::System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(imob_app.dao.imagem))]
 
 // Original file name:
-// Generation date: 8/11/2012 12:39:12 AM
+// Generation date: 8/22/2012 12:29:44 AM
 namespace imob_app.dao
 {
     
@@ -255,23 +255,6 @@ namespace imob_app.dao
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         private global::System.Data.Objects.ObjectQuery<garagem> _garagem;
         /// <summary>
-        /// There are no comments for imagem in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public global::System.Data.Objects.ObjectQuery<imagem> imagem
-        {
-            get
-            {
-                if ((this._imagem == null))
-                {
-                    this._imagem = base.CreateQuery<imagem>("[imagem]");
-                }
-                return this._imagem;
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private global::System.Data.Objects.ObjectQuery<imagem> _imagem;
-        /// <summary>
         /// There are no comments for imovel in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
@@ -476,6 +459,23 @@ namespace imob_app.dao
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
         private global::System.Data.Objects.ObjectQuery<usuario> _usuario;
         /// <summary>
+        /// There are no comments for imagem in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public global::System.Data.Objects.ObjectQuery<imagem> imagem
+        {
+            get
+            {
+                if ((this._imagem == null))
+                {
+                    this._imagem = base.CreateQuery<imagem>("[imagem]");
+                }
+                return this._imagem;
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        private global::System.Data.Objects.ObjectQuery<imagem> _imagem;
+        /// <summary>
         /// There are no comments for acabamento in the schema.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
@@ -562,14 +562,6 @@ namespace imob_app.dao
         public void AddTogaragem(garagem garagem)
         {
             base.AddObject("garagem", garagem);
-        }
-        /// <summary>
-        /// There are no comments for imagem in the schema.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public void AddToimagem(imagem imagem)
-        {
-            base.AddObject("imagem", imagem);
         }
         /// <summary>
         /// There are no comments for imovel in the schema.
@@ -666,6 +658,14 @@ namespace imob_app.dao
         public void AddTousuario(usuario usuario)
         {
             base.AddObject("usuario", usuario);
+        }
+        /// <summary>
+        /// There are no comments for imagem in the schema.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public void AddToimagem(imagem imagem)
+        {
+            base.AddObject("imagem", imagem);
         }
     }
     /// <summary>
@@ -2147,182 +2147,6 @@ namespace imob_app.dao
         }
     }
     /// <summary>
-    /// There are no comments for imobappModel.imagem in the schema.
-    /// </summary>
-    /// <KeyProperties>
-    /// id_imagem
-    /// </KeyProperties>
-    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="imagem")]
-    [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
-    [global::System.Serializable()]
-    public partial class imagem : global::System.Data.Objects.DataClasses.EntityObject
-    {
-        /// <summary>
-        /// Create a new imagem object.
-        /// </summary>
-        /// <param name="id_imagem">Initial value of id_imagem.</param>
-        /// <param name="ds_imagem_cripto">Initial value of ds_imagem_cripto.</param>
-        /// <param name="ds_imagem">Initial value of ds_imagem.</param>
-        /// <param name="ic_principal">Initial value of ic_principal.</param>
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public static imagem Createimagem(short id_imagem, string ds_imagem_cripto, string ds_imagem, bool ic_principal)
-        {
-            imagem imagem = new imagem();
-            imagem.id_imagem = id_imagem;
-            imagem.ds_imagem_cripto = ds_imagem_cripto;
-            imagem.ds_imagem = ds_imagem;
-            imagem.ic_principal = ic_principal;
-            return imagem;
-        }
-        /// <summary>
-        /// There are no comments for property id_imagem in the schema.
-        /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public short id_imagem
-        {
-            get
-            {
-                return this._id_imagem;
-            }
-            set
-            {
-                this.Onid_imagemChanging(value);
-                this.ReportPropertyChanging("id_imagem");
-                this._id_imagem = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("id_imagem");
-                this.Onid_imagemChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private short _id_imagem;
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_imagemChanging(short value);
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onid_imagemChanged();
-        /// <summary>
-        /// There are no comments for property ds_imagem_cripto in the schema.
-        /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public string ds_imagem_cripto
-        {
-            get
-            {
-                return this._ds_imagem_cripto;
-            }
-            set
-            {
-                this.Onds_imagem_criptoChanging(value);
-                this.ReportPropertyChanging("ds_imagem_cripto");
-                this._ds_imagem_cripto = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, false);
-                this.ReportPropertyChanged("ds_imagem_cripto");
-                this.Onds_imagem_criptoChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private string _ds_imagem_cripto;
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onds_imagem_criptoChanging(string value);
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onds_imagem_criptoChanged();
-        /// <summary>
-        /// There are no comments for property ds_imagem in the schema.
-        /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public string ds_imagem
-        {
-            get
-            {
-                return this._ds_imagem;
-            }
-            set
-            {
-                this.Onds_imagemChanging(value);
-                this.ReportPropertyChanging("ds_imagem");
-                this._ds_imagem = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, false);
-                this.ReportPropertyChanged("ds_imagem");
-                this.Onds_imagemChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private string _ds_imagem;
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onds_imagemChanging(string value);
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onds_imagemChanged();
-        /// <summary>
-        /// There are no comments for property ic_principal in the schema.
-        /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        public bool ic_principal
-        {
-            get
-            {
-                return this._ic_principal;
-            }
-            set
-            {
-                this.Onic_principalChanging(value);
-                this.ReportPropertyChanging("ic_principal");
-                this._ic_principal = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
-                this.ReportPropertyChanged("ic_principal");
-                this.Onic_principalChanged();
-            }
-        }
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        private bool _ic_principal;
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onic_principalChanging(bool value);
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        partial void Onic_principalChanged();
-        /// <summary>
-        /// There are no comments for imovel in the schema.
-        /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("imobappModel", "imagem_ibfk_1", "imovel")]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        [global::System.Xml.Serialization.XmlIgnoreAttribute()]
-        [global::System.Xml.Serialization.SoapIgnoreAttribute()]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        public imovel imovel
-        {
-            get
-            {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<imovel>("imobappModel.imagem_ibfk_1", "imovel").Value;
-            }
-            set
-            {
-                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<imovel>("imobappModel.imagem_ibfk_1", "imovel").Value = value;
-            }
-        }
-        /// <summary>
-        /// There are no comments for imovel in the schema.
-        /// </summary>
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        public global::System.Data.Objects.DataClasses.EntityReference<imovel> imovelReference
-        {
-            get
-            {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<imovel>("imobappModel.imagem_ibfk_1", "imovel");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<imovel>("imobappModel.imagem_ibfk_1", "imovel", value);
-                }
-            }
-        }
-    }
-    /// <summary>
     /// There are no comments for imobappModel.imovel in the schema.
     /// </summary>
     /// <KeyProperties>
@@ -3156,28 +2980,6 @@ namespace imob_app.dao
             }
         }
         /// <summary>
-        /// There are no comments for imagem in the schema.
-        /// </summary>
-        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("imobappModel", "imagem_ibfk_1", "imagem")]
-        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
-        [global::System.Xml.Serialization.XmlIgnoreAttribute()]
-        [global::System.Xml.Serialization.SoapIgnoreAttribute()]
-        [global::System.Runtime.Serialization.DataMemberAttribute()]
-        public global::System.Data.Objects.DataClasses.EntityCollection<imagem> imagem
-        {
-            get
-            {
-                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedCollection<imagem>("imobappModel.imagem_ibfk_1", "imagem");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<imagem>("imobappModel.imagem_ibfk_1", "imagem", value);
-                }
-            }
-        }
-        /// <summary>
         /// There are no comments for usuario in the schema.
         /// </summary>
         [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("imobappModel", "imovel_ibfk_1", "usuario")]
@@ -3462,6 +3264,28 @@ namespace imob_app.dao
                 if ((value != null))
                 {
                     ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<social>("imobappModel.imovelsocial", "social", value);
+                }
+            }
+        }
+        /// <summary>
+        /// There are no comments for imagem in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("imobappModel", "imagem_ibfk_1", "imagem")]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        [global::System.Xml.Serialization.XmlIgnoreAttribute()]
+        [global::System.Xml.Serialization.SoapIgnoreAttribute()]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public global::System.Data.Objects.DataClasses.EntityCollection<imagem> imagem
+        {
+            get
+            {
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedCollection<imagem>("imobappModel.imagem_ibfk_1", "imagem");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<imagem>("imobappModel.imagem_ibfk_1", "imagem", value);
                 }
             }
         }
@@ -5014,6 +4838,182 @@ namespace imob_app.dao
                 if ((value != null))
                 {
                     ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedCollection<imovel>("imobappModel.imovel_ibfk_1", "imovel", value);
+                }
+            }
+        }
+    }
+    /// <summary>
+    /// There are no comments for imobappModel.imagem in the schema.
+    /// </summary>
+    /// <KeyProperties>
+    /// id_imagem
+    /// </KeyProperties>
+    [global::System.Data.Objects.DataClasses.EdmEntityTypeAttribute(NamespaceName="imobappModel", Name="imagem")]
+    [global::System.Runtime.Serialization.DataContractAttribute(IsReference=true)]
+    [global::System.Serializable()]
+    public partial class imagem : global::System.Data.Objects.DataClasses.EntityObject
+    {
+        /// <summary>
+        /// Create a new imagem object.
+        /// </summary>
+        /// <param name="id_imagem">Initial value of id_imagem.</param>
+        /// <param name="ds_imagem_cripto">Initial value of ds_imagem_cripto.</param>
+        /// <param name="ds_imagem">Initial value of ds_imagem.</param>
+        /// <param name="ic_principal">Initial value of ic_principal.</param>
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public static imagem Createimagem(short id_imagem, string ds_imagem_cripto, string ds_imagem, bool ic_principal)
+        {
+            imagem imagem = new imagem();
+            imagem.id_imagem = id_imagem;
+            imagem.ds_imagem_cripto = ds_imagem_cripto;
+            imagem.ds_imagem = ds_imagem;
+            imagem.ic_principal = ic_principal;
+            return imagem;
+        }
+        /// <summary>
+        /// There are no comments for property id_imagem in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public short id_imagem
+        {
+            get
+            {
+                return this._id_imagem;
+            }
+            set
+            {
+                this.Onid_imagemChanging(value);
+                this.ReportPropertyChanging("id_imagem");
+                this._id_imagem = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("id_imagem");
+                this.Onid_imagemChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        private short _id_imagem;
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onid_imagemChanging(short value);
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onid_imagemChanged();
+        /// <summary>
+        /// There are no comments for property ds_imagem_cripto in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public string ds_imagem_cripto
+        {
+            get
+            {
+                return this._ds_imagem_cripto;
+            }
+            set
+            {
+                this.Onds_imagem_criptoChanging(value);
+                this.ReportPropertyChanging("ds_imagem_cripto");
+                this._ds_imagem_cripto = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, false);
+                this.ReportPropertyChanged("ds_imagem_cripto");
+                this.Onds_imagem_criptoChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        private string _ds_imagem_cripto;
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onds_imagem_criptoChanging(string value);
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onds_imagem_criptoChanged();
+        /// <summary>
+        /// There are no comments for property ds_imagem in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public string ds_imagem
+        {
+            get
+            {
+                return this._ds_imagem;
+            }
+            set
+            {
+                this.Onds_imagemChanging(value);
+                this.ReportPropertyChanging("ds_imagem");
+                this._ds_imagem = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value, false);
+                this.ReportPropertyChanged("ds_imagem");
+                this.Onds_imagemChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        private string _ds_imagem;
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onds_imagemChanging(string value);
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onds_imagemChanged();
+        /// <summary>
+        /// There are no comments for property ic_principal in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmScalarPropertyAttribute(IsNullable=false)]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        public bool ic_principal
+        {
+            get
+            {
+                return this._ic_principal;
+            }
+            set
+            {
+                this.Onic_principalChanging(value);
+                this.ReportPropertyChanging("ic_principal");
+                this._ic_principal = global::System.Data.Objects.DataClasses.StructuralObject.SetValidValue(value);
+                this.ReportPropertyChanged("ic_principal");
+                this.Onic_principalChanged();
+            }
+        }
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        private bool _ic_principal;
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onic_principalChanging(bool value);
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        partial void Onic_principalChanged();
+        /// <summary>
+        /// There are no comments for imovel in the schema.
+        /// </summary>
+        [global::System.Data.Objects.DataClasses.EdmRelationshipNavigationPropertyAttribute("imobappModel", "imagem_ibfk_1", "imovel")]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        [global::System.Xml.Serialization.XmlIgnoreAttribute()]
+        [global::System.Xml.Serialization.SoapIgnoreAttribute()]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public imovel imovel
+        {
+            get
+            {
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<imovel>("imobappModel.imagem_ibfk_1", "imovel").Value;
+            }
+            set
+            {
+                ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<imovel>("imobappModel.imagem_ibfk_1", "imovel").Value = value;
+            }
+        }
+        /// <summary>
+        /// There are no comments for imovel in the schema.
+        /// </summary>
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        [global::System.CodeDom.Compiler.GeneratedCode("System.Data.Entity.Design.EntityClassGenerator", "4.0.0.0")]
+        [global::System.Runtime.Serialization.DataMemberAttribute()]
+        public global::System.Data.Objects.DataClasses.EntityReference<imovel> imovelReference
+        {
+            get
+            {
+                return ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.GetRelatedReference<imovel>("imobappModel.imagem_ibfk_1", "imovel");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((global::System.Data.Objects.DataClasses.IEntityWithRelationships)(this)).RelationshipManager.InitializeRelatedReference<imovel>("imobappModel.imagem_ibfk_1", "imovel", value);
                 }
             }
         }

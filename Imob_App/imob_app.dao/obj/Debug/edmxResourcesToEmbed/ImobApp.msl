@@ -98,16 +98,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="imagem">
-      <EntityTypeMapping TypeName="imobappModel.imagem">
-        <MappingFragment StoreEntitySet="imagem">
-          <ScalarProperty Name="ic_principal" ColumnName="ic_principal" />
-          <ScalarProperty Name="ds_imagem" ColumnName="ds_imagem" />
-          <ScalarProperty Name="ds_imagem_cripto" ColumnName="ds_imagem_cripto" />
-          <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="imovel">
       <EntityTypeMapping TypeName="imobappModel.imovel">
         <MappingFragment StoreEntitySet="imovel">
@@ -338,14 +328,6 @@
         <ScalarProperty Name="id" ColumnName="id_garagem" />
       </EndProperty>
     </AssociationSetMapping>
-    <AssociationSetMapping Name="imagem_ibfk_1" TypeName="imobappModel.imagem_ibfk_1" StoreEntitySet="imagem">
-      <EndProperty Name="imagem">
-        <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
-      </EndProperty>
-      <EndProperty Name="imovel">
-        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="imovel_ibfk_1" TypeName="imobappModel.imovel_ibfk_1" StoreEntitySet="imovel">
       <EndProperty Name="imovel">
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
@@ -425,6 +407,25 @@
       <EndProperty Name="imovel">
         <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
       </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="imagem">
+      <EntityTypeMapping TypeName="imobappModel.imagem">
+        <MappingFragment StoreEntitySet="imagem">
+          <ScalarProperty Name="ic_principal" ColumnName="ic_principal" />
+          <ScalarProperty Name="ds_imagem" ColumnName="ds_imagem" />
+          <ScalarProperty Name="ds_imagem_cripto" ColumnName="ds_imagem_cripto" />
+          <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="imagem_ibfk_1" TypeName="imobappModel.imagem_ibfk_1" StoreEntitySet="imagem">
+      <EndProperty Name="imagem">
+        <ScalarProperty Name="id_imagem" ColumnName="id_imagem" />
+      </EndProperty>
+      <EndProperty Name="imovel">
+        <ScalarProperty Name="id_imovel" ColumnName="id_imovel" />
+      </EndProperty>
+      <Condition ColumnName="id_imovel" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>

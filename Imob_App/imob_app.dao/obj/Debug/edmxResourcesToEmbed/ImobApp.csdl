@@ -12,7 +12,6 @@
     <EntitySet Name="estadoimovel" EntityType="imobappModel.estadoimovel" />
     <EntitySet Name="finalidade" EntityType="imobappModel.finalidade" />
     <EntitySet Name="garagem" EntityType="imobappModel.garagem" />
-    <EntitySet Name="imagem" EntityType="imobappModel.imagem" />
     <EntitySet Name="imovel" EntityType="imobappModel.imovel" />
     <EntitySet Name="intima" EntityType="imobappModel.intima" />
     <EntitySet Name="lazer" EntityType="imobappModel.lazer" />
@@ -69,10 +68,6 @@
       <End Role="garagem" EntitySet="garagem" />
       <End Role="imovel" EntitySet="imovel" />
     </AssociationSet>
-    <AssociationSet Name="imagem_ibfk_1" Association="imobappModel.imagem_ibfk_1">
-      <End Role="imovel" EntitySet="imovel" />
-      <End Role="imagem" EntitySet="imagem" />
-    </AssociationSet>
     <AssociationSet Name="imovel_ibfk_1" Association="imobappModel.imovel_ibfk_1">
       <End Role="usuario" EntitySet="usuario" />
       <End Role="imovel" EntitySet="imovel" />
@@ -112,6 +107,11 @@
     <AssociationSet Name="imovelsocial" Association="imobappModel.imovelsocial">
       <End Role="imovel" EntitySet="imovel" />
       <End Role="social" EntitySet="social" />
+    </AssociationSet>
+    <EntitySet Name="imagem" EntityType="imobappModel.imagem" />
+    <AssociationSet Name="imagem_ibfk_1" Association="imobappModel.imagem_ibfk_1">
+      <End Role="imovel" EntitySet="imovel" />
+      <End Role="imagem" EntitySet="imagem" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="acabamento">
@@ -219,16 +219,6 @@
     <Property Type="String" Name="ds_item" Nullable="false" />
     <NavigationProperty Name="imovel" Relationship="imobappModel.imovel_ibfk_5" FromRole="garagem" ToRole="imovel" />
   </EntityType>
-  <EntityType Name="imagem">
-    <Key>
-      <PropertyRef Name="id_imagem" />
-    </Key>
-    <Property Type="Int16" Name="id_imagem" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
-    <Property Type="String" Name="ds_imagem_cripto" Nullable="false" />
-    <Property Type="String" Name="ds_imagem" Nullable="false" />
-    <Property Type="Boolean" Name="ic_principal" Nullable="false" />
-    <NavigationProperty Name="imovel" Relationship="imobappModel.imagem_ibfk_1" FromRole="imagem" ToRole="imovel" />
-  </EntityType>
   <EntityType Name="imovel">
     <Key>
       <PropertyRef Name="id_imovel" />
@@ -260,7 +250,6 @@
     <NavigationProperty Name="estadoimovel" Relationship="imobappModel.imovel_ibfk_8" FromRole="imovel" ToRole="estadoimovel" />
     <NavigationProperty Name="finalidade" Relationship="imobappModel.imovel_ibfk_2" FromRole="imovel" ToRole="finalidade" />
     <NavigationProperty Name="garagem" Relationship="imobappModel.imovel_ibfk_5" FromRole="imovel" ToRole="garagem" />
-    <NavigationProperty Name="imagem" Relationship="imobappModel.imagem_ibfk_1" FromRole="imovel" ToRole="imagem" />
     <NavigationProperty Name="usuario" Relationship="imobappModel.imovel_ibfk_1" FromRole="imovel" ToRole="usuario" />
     <NavigationProperty Name="logradouro" Relationship="imobappModel.imovel_ibfk_10" FromRole="imovel" ToRole="logradouro" />
     <NavigationProperty Name="padrao" Relationship="imobappModel.imovel_ibfk_6" FromRole="imovel" ToRole="padrao" />
@@ -271,6 +260,7 @@
     <NavigationProperty Name="lazer" Relationship="imobappModel.imovellazer" FromRole="imovel" ToRole="lazer" />
     <NavigationProperty Name="servico" Relationship="imobappModel.imovelservico" FromRole="imovel" ToRole="servico" />
     <NavigationProperty Name="social" Relationship="imobappModel.imovelsocial" FromRole="imovel" ToRole="social" />
+    <NavigationProperty Name="imagem" Relationship="imobappModel.imagem_ibfk_1" FromRole="imovel" ToRole="imagem" />
   </EntityType>
   <EntityType Name="intima">
     <Key>
@@ -436,10 +426,6 @@
     <End Type="imobappModel.garagem" Role="garagem" Multiplicity="1" />
     <End Type="imobappModel.imovel" Role="imovel" Multiplicity="*" />
   </Association>
-  <Association Name="imagem_ibfk_1">
-    <End Type="imobappModel.imovel" Role="imovel" Multiplicity="1" />
-    <End Type="imobappModel.imagem" Role="imagem" Multiplicity="*" />
-  </Association>
   <Association Name="imovel_ibfk_1">
     <End Type="imobappModel.usuario" Role="usuario" Multiplicity="1" />
     <End Type="imobappModel.imovel" Role="imovel" Multiplicity="*" />
@@ -479,5 +465,19 @@
   <Association Name="imovelsocial">
     <End Type="imobappModel.imovel" Role="imovel" Multiplicity="*" />
     <End Type="imobappModel.social" Role="social" Multiplicity="*" />
+  </Association>
+  <EntityType Name="imagem">
+    <Key>
+      <PropertyRef Name="id_imagem" />
+    </Key>
+    <Property Type="Int16" Name="id_imagem" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="ds_imagem_cripto" Nullable="false" />
+    <Property Type="String" Name="ds_imagem" Nullable="false" />
+    <Property Type="Boolean" Name="ic_principal" Nullable="false" />
+    <NavigationProperty Name="imovel" Relationship="imobappModel.imagem_ibfk_1" FromRole="imagem" ToRole="imovel" />
+  </EntityType>
+  <Association Name="imagem_ibfk_1">
+    <End Type="imobappModel.imovel" Role="imovel" Multiplicity="0..1" />
+    <End Type="imobappModel.imagem" Role="imagem" Multiplicity="*" />
   </Association>
 </Schema>

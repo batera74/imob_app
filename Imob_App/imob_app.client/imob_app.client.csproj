@@ -241,29 +241,35 @@
   <ItemGroup>
     <Compile Include="CadastroImovel.aspx.cs">
       <DependentUpon>CadastroImovel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CadastroImovel.aspx.designer.cs">
       <DependentUpon>CadastroImovel.aspx</DependentUpon>
     </Compile>
     <Compile Include="CadastroUsuario.aspx.cs">
       <DependentUpon>CadastroUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CadastroUsuario.aspx.designer.cs">
       <DependentUpon>CadastroUsuario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Excluir.aspx.cs">
       <DependentUpon>Excluir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Excluir.aspx.designer.cs">
       <DependentUpon>Excluir.aspx</DependentUpon>
     </Compile>
     <Compile Include="MeusImoveis.aspx.cs">
       <DependentUpon>MeusImoveis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MeusImoveis.aspx.designer.cs">
       <DependentUpon>MeusImoveis.aspx</DependentUpon>
     </Compile>
-    <Compile Include="BasePage.cs" />
+    <Compile Include="BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="controls\galeria.ascx.cs">
       <DependentUpon>galeria.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -315,6 +321,7 @@
     </Compile>
     <Compile Include="EstouInteressado.aspx.cs">
       <DependentUpon>EstouInteressado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="EstouInteressado.aspx.designer.cs">
       <DependentUpon>EstouInteressado.aspx</DependentUpon>

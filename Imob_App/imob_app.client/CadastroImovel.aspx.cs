@@ -118,7 +118,8 @@ namespace imob_app.client
         {
             CheckBox chk = (CheckBox)e.Item.FindControl("chk");
             Label lbl = (Label)e.Item.FindControl("lbl");
-            List<dao.acabamento> acabamentos = new business.Imovel().SelecionarAcabamento();
+            idImovel = Convert.ToInt32(Request.QueryString["Imovel"]);
+            List<dao.acabamento> acabamentos = new business.Imovel().SelecionarAcabamento(idImovel);
 
             foreach (var item in acabamentos)
             {
@@ -131,8 +132,8 @@ namespace imob_app.client
         {
             CheckBox chk = (CheckBox)e.Item.FindControl("chk");
             Label lbl = (Label)e.Item.FindControl("lbl");
-
-            List<dao.armario> armarios = new business.Imovel().SelecionarArmario();
+            idImovel = Convert.ToInt32(Request.QueryString["Imovel"]);
+            List<dao.armario> armarios = new business.Imovel().SelecionarArmario(idImovel);
 
             foreach (var item in armarios)
             {
@@ -145,7 +146,8 @@ namespace imob_app.client
         {
             CheckBox chk = (CheckBox)e.Item.FindControl("chk");
             Label lbl = (Label)e.Item.FindControl("lbl");
-            List<dao.intima> intimas = new business.Imovel().SelecionarIntima();
+            idImovel = Convert.ToInt32(Request.QueryString["Imovel"]);
+            List<dao.intima> intimas = new business.Imovel().SelecionarIntima(idImovel);
 
             foreach (var item in intimas)
             {
@@ -158,7 +160,8 @@ namespace imob_app.client
         {
             CheckBox chk = (CheckBox)e.Item.FindControl("chk");
             Label lbl = (Label)e.Item.FindControl("lbl");
-            List<dao.lazer> lazeres = new business.Imovel().SelecionarLazer();
+            idImovel = Convert.ToInt32(Request.QueryString["Imovel"]);
+            List<dao.lazer> lazeres = new business.Imovel().SelecionarLazer(idImovel);
 
             foreach (var item in lazeres)
             {
@@ -171,7 +174,8 @@ namespace imob_app.client
         {
             CheckBox chk = (CheckBox)e.Item.FindControl("chk");
             Label lbl = (Label)e.Item.FindControl("lbl");
-            List<dao.servico> servicos = new business.Imovel().SelecionarServico();
+            idImovel = Convert.ToInt32(Request.QueryString["Imovel"]);
+            List<dao.servico> servicos = new business.Imovel().SelecionarServico(idImovel);
 
             foreach (var item in servicos)
             {
@@ -184,7 +188,8 @@ namespace imob_app.client
         {
             CheckBox chk = (CheckBox)e.Item.FindControl("chk");
             Label lbl = (Label)e.Item.FindControl("lbl");
-            List<dao.social> sociais = new business.Imovel().SelecionarSocial();
+            idImovel = Convert.ToInt32(Request.QueryString["Imovel"]);
+            List<dao.social> sociais = new business.Imovel().SelecionarSocial(idImovel);
 
             foreach (var item in sociais)
             {
@@ -239,9 +244,20 @@ namespace imob_app.client
             imov.ic_financiamento = chkFinanciamento.Checked;
             imov.ic_ativo = chkAtivo.Checked;
             imov.ic_destaque = chkDestaque.Checked;
+            //TODO
+            imov.finalidade = (from f in _ctx.finalidade select f).FirstOrDefault();
+            imov.usuario = (from u in _ctx.usuario select u).FirstOrDefault();
             SalvarCaracteristicas(imov, _ctx);
 
+            if (imov.id_imovel == 0)
+            {
+                //AssociarImagens
+                //Criar coluna na tabela de imagens para associar imagem ao usuario
+            }
+
             _ctx.SaveChanges();
+
+            Response.Redirect("/CadastroImovel.aspx?Imovel=" + imov.id_imovel);
         }        
 
         private void SalvarCaracteristicas(dao.imovel imov, imobappEntities _ctx)
@@ -306,14 +322,15 @@ namespace imob_app.client
         {
             imov.servico.Clear();
 
-            foreach (DataListItem item in dtSocial.Items)
+            foreach (DataListItem item in dtServicos.Items)
             {
                 CheckBox chk = (CheckBox)item.FindControl("chk");
 
                 if (chk.Checked)
                 {
                     Label lbl = (Label)item.FindControl("lbl");
-                    imov.servico.Add(new business.Servico().Selecionar(lbl.Text, _ctx));
+                    dao.servico ser = new business.Servico().Selecionar(lbl.Text, _ctx);
+                    imov.servico.Add(ser);
                 }
             }
         }
@@ -322,7 +339,7 @@ namespace imob_app.client
         {
             imov.intima.Clear();
 
-            foreach (DataListItem item in dtSocial.Items)
+            foreach (DataListItem item in dtIntima.Items)
             {
                 CheckBox chk = (CheckBox)item.FindControl("chk");
 
@@ -338,7 +355,7 @@ namespace imob_app.client
         {
             imov.lazer.Clear();
 
-            foreach (DataListItem item in dtSocial.Items)
+            foreach (DataListItem item in dtLazer.Items)
             {
                 CheckBox chk = (CheckBox)item.FindControl("chk");
 

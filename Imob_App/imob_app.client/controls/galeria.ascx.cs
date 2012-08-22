@@ -76,9 +76,7 @@ namespace imob_app.client.controls
 
             if (idImovel > 0)
             {
-
                 business.Imovel imovBiz = new business.Imovel();
-
                 dao.imovel imov = imovBiz.SelecionarImovel(idImovel);
 
                 if (imov.imagem != null && imov.imagem.Count > 0)
@@ -94,6 +92,12 @@ namespace imob_app.client.controls
 
                 dtlMini.DataSource = DataSource;
                 dtlMini.DataBind();
+            }
+            else
+            {
+                this.DataSource = new business.Imagem().SelecionarImagensNaoAssociadas();
+                dtlMini.DataSource = DataSource;
+                dtlMini.DataBind();                
             }
         }
 
@@ -170,15 +174,16 @@ namespace imob_app.client.controls
                 imov.AdicionarImagem(img, Convert.ToInt32(Request.QueryString["Imovel"]));
             }
             else
-                AssociarImagemAImovelNovo(img);
+                SalvarImagemSemImovel(img);
 
             CarregarImagens();
         }
 
-        private void AssociarImagemAImovelNovo(dao.imagem img)
+        private void SalvarImagemSemImovel(dao.imagem img)
         {
             business.Imagem imgBiz = new business.Imagem();
             imgBiz.Adicionar(img);
+            CarregarImagens();
         }
 
         private string UploadPhoto(AjaxControlToolkit.AsyncFileUpload file)

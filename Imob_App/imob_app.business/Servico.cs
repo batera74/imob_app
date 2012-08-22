@@ -28,6 +28,7 @@ namespace imob_app.business
 
         public dao.servico Selecionar(string descricao, imobappEntities _ctx)
         {
+            var query = from a in _ctx.servico select a;
             return (from a in _ctx.servico where a.ds_item == descricao select a).FirstOrDefault();
         }
     }

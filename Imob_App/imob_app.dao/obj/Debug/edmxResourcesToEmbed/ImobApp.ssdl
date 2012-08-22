@@ -258,7 +258,7 @@
     <Property Name="id_imagem" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="ds_imagem_cripto" Type="longtext" Nullable="false" />
     <Property Name="ds_imagem" Type="varchar" Nullable="false" MaxLength="150" />
-    <Property Name="id_imovel" Type="smallint" Nullable="false" />
+    <Property Name="id_imovel" Type="smallint" />
     <Property Name="ic_principal" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="imovel">
@@ -486,7 +486,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="imagem_ibfk_1">
-    <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="1" />
+    <End Role="imovel" Type="imobappModel.Store.imovel" Multiplicity="0..1" />
     <End Role="imagem" Type="imobappModel.Store.imagem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="imovel">
