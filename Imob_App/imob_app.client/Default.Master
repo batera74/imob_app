@@ -6,7 +6,7 @@
 <head>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <title>YourPlace - O jeito mais fácil de achar seu imóvel!</title>
+    <title>Praça do Imóvel - O jeito mais fácil de achar seu imóvel!</title>
     <meta charset="utf-8">
     <meta name="description" content="Your description">
     <meta name="keywords" content="Your keywords">
@@ -56,12 +56,12 @@
                 	Olá, <b><asp:Label runat="server" ID="lblFirstName"></asp:Label></b>!
                 </div>
             </div>
-        	<a href="Default.aspx" class="logo">YourPlace</a>
+        	<a href="Default.aspx" class="logo">Praça do Imóvel</a>
         </div>
         <nav>
         	<ul class="sf-menu">
             	<li class="current"><a href="Default.aspx">Home</a></li>
-                <li><a href="#">YourPlace</a>
+                <li><a href="#">Praça do Imóvel</a>
                 	<ul>
                     	<li><a href="#">Link 1</a></li>
                         <li><a href="#">Link 2</a></li>
@@ -148,7 +148,7 @@
     <!-- Footer -->
     <footer>
 	<div class="fright">
-    	YourPlace  &copy; <asp:LinkButton runat="server" ID="lkbSignedRequest" 
+    	Praça do Imóvel  &copy; <asp:LinkButton runat="server" ID="lkbSignedRequest" 
             onclick="lkbSignedRequest_Click">2012</asp:LinkButton> <a href="SignedRequest.aspx">Politca de Privacidade</a>
         <div class="alignright">
         	<!-- {%FOOTER_LINK} -->
@@ -156,7 +156,7 @@
     </div>
     <ul class="footer-nav">
     	<li><a class="current" href="index.html">Home</a></li>
-        <li><a href="index-1.html">YourPlace</a></li>     
+        <li><a href="index-1.html">Praça do Imóvel</a></li>     
         <li><a href="index-2.html">Meus Imóveis</a></li>     
         <li><a href="index-3.html">Notícias</a></li>   
         <li><a href="index-4.html">Salão Virtual</a></li>   
