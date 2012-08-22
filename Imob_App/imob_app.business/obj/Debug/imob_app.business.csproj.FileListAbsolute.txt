@@ -34,3 +34,4 @@ D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.business\bin\Debu
 D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.business\obj\Debug\ResolveAssemblyReference.cache
 D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.business\obj\Debug\imob_app.business.dll
 D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.business\obj\Debug\imob_app.business.pdb
+D:\BKP_ITG\Projetos\Microgen\Github\imob_app\Imob_App\imob_app.business\bin\Debug\MySql.Data.dll
