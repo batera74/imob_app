@@ -100,30 +100,35 @@
                         <h8 class="head-1"><strong>Características do Imóvel</strong></h8>     
                          <div id="conteudoDetalhes">     
                             <asp:UpdatePanel ID="UpdatePanel2" runat="server">
-                                <ContentTemplate>                                               
-                                    <div class="row-1">                                
-                                        <span class="text-form fleft">Referência: <asp:Label ID="lblId" runat="server"></asp:Label></span>                                
-                                    </div>
-                                    <div class="row-1">
-                                        <span class="text-form fleft">Categoria:</span>
-                                        <asp:DropDownList ID="ddlCategoria" runat="server" Style="width: 195px" AutoPostBack="True">
-                                        </asp:DropDownList>                    
-                                    </div>                                                                                                                      
-                                    <div class="row-1">
-                                        <span class="text-form fleft">Dormitórios:</span>
-                                        <asp:DropDownList ID="ddlDormitorios" runat="server" Style="width: 195px" AutoPostBack="True">
-                                        </asp:DropDownList>                    
-                                    </div>         
-                                    <div class="row-1">
-                                        <span class="text-form fleft">Valor do Imóvel:</span>
-                                        <asp:TextBox ID="txtValor" runat="server" Width="110"></asp:TextBox>                            
-                                    </div>
-                                    <div class="row-1">
-                                        <span class="text-form fleft">Logradouro:</span>
-                                        <asp:DropDownList ID="ddlTipoLogradouro" runat="server" Style="width: 95px" AutoPostBack="True" CausesValidation="True">
-                                        </asp:DropDownList>
-                                        <asp:TextBox ID="txtEndereco" runat="server" Width="190"></asp:TextBox>
-                                    </div>
+                                <ContentTemplate>  
+                                    <table style="width: 100%;" border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td style="width: 30%; vertical-align: middle;">Referência:</td>
+                                            <td style="width: 70%; vertical-align: middle;"><asp:Label ID="lblId" runat="server"></asp:Label></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="vertical-align: middle;">Categoria:</td>
+                                            <td style="vertical-align: middle;"><asp:DropDownList ID="ddlCategoria" runat="server" Style="width: 195px" AutoPostBack="True"></asp:DropDownList></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-form">Dormitórios:</td>
+                                            <td class="text-form"><asp:DropDownList ID="ddlDormitorios" runat="server" Style="width: 195px" AutoPostBack="True"></asp:DropDownList></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valor do Imóvel:</td>
+                                            <td><asp:TextBox ID="txtValor" runat="server" Width="110"></asp:TextBox></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Logradouro:</td>
+                                            <td><asp:DropDownList ID="ddlTipoLogradouro" runat="server" Style="width: 95px" AutoPostBack="True" CausesValidation="True"></asp:DropDownList>
+                                            <asp:TextBox ID="txtEndereco" runat="server" Width="190"></asp:TextBox></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                            
                                     <div class="row-1">                                
                                         <span class="text-form fleft">Número:</span>
                                         <asp:TextBox ID="txtNumero" runat="server" Width="40"></asp:TextBox>

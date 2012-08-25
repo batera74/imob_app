@@ -50,7 +50,7 @@
     	<div class="inner">
         	<div class="fright">
             	<strong class="header-text">
-                	Meus Imóveis | 0 Mensagem(s) | Painel de Controle
+                	<a href="MeusImoveis.aspx">Meus Imóveis</a> | <a href="Mensagens.aspx">0 Mensagem(s)</a> | <a href="#">Painel de Controle</a>
                 </strong>
                 <div class="header-phone">
                 	Olá, <b><asp:Label runat="server" ID="lblFirstName"></asp:Label></b>!
@@ -68,7 +68,7 @@
                         <li><a href="#">Linke 3</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Meus Imóveis</a></li>
+                <li><a href="MeusImoveis.aspx">Meus Imóveis</a></li>
                 <li><a href="#">Notícias</a></li>
                 <li><a href="#">Salão Virtual</a></li>
                 <li><a href="#">Galeria</a></li>

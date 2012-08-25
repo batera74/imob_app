@@ -364,6 +364,14 @@ header{
 	padding:12px 0 0 0;
 }
 
+.header-text a {
+	color:#8a8a8a;
+}
+
+.header-text a:hover {
+	color:#f45c40;
+}
+
 .header-phone {
 	text-align:right;
 	color:#f45c40;

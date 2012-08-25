@@ -463,11 +463,17 @@ input[type="text"], input[type=password], textarea
 {
     display: inline-block;
     padding: 5px 0 0;
-    min-width: 80px;
+    min-width: 120px;
+    float: left;
 }
 #form1 div.text-form
 {
     padding: 5px 0 10px 0;
+}
+#form1 td.text-form
+{
+    height: 20px;
+    vertical-align: middle;
 }
 #form1 .text-form2
 {
