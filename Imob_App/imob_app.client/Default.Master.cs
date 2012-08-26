@@ -16,7 +16,7 @@ namespace imob_app.client
             if (!IsPostBack)
             {
                 if (Session["user"] != null)
-                    lblFirstName.Text = ((IDictionary<string, object>)Session["user"])["first_name"].ToString();
+                    lblFirstName.Text = ((IDictionary<string, object>)((business.Sessao)Session["user"]).usuarioFb)["first_name"].ToString();
                 else
                     lblFirstName.Text = "Fiote";
                 CarregarCombosPesquisa();

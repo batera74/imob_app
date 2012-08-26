@@ -96,7 +96,7 @@ namespace imob_app.client
         }
 
         private void BasePage_Load(object sender, EventArgs e)
-        {/*
+        {
             try
             {
                 if (!Page.IsPostBack)
@@ -115,9 +115,10 @@ namespace imob_app.client
                             // O token aparece na URL após o envio da chamada.
 
 
-                            // Se o signedRequest abaixo não funfar, acesse http://apps.facebook.com/placetoyou e clique no link "Política de Privacidade". Pegue a linguiça e atribua à variável abaixo. ;-)
+                            // Se o signedRequest abaixo não funfar, acesse http://apps.facebook.com/pracadoimovel e clique no link "2012", ao lado de "Política de Privacidade". Pegue a linguiça e atribua à variável abaixo. ;-)
                             //signedRequest = "jNT3nTbUXBzKUNfQb4aPH8LSA9AZpwhGKo99idDN8Ws.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzNDQzMTIwMDAsImlzc3VlZF9hdCI6MTM0NDMwNjEzNywib2F1dGhfdG9rZW4iOiJBQUFHcFBsYlZNRmNCQUM1SVdESkVYMzFMSXhqRDM0bmJOVWFyRDl6NDVBTVhUVlBNS1R3UDhmUEFCTFNDU2pISFg2OHdmbGRVRlhGcldSUUs4cmpoS0NxSTk2d01zcHB5NDIyOTFrVnlnNWN2cjBiSSIsInVzZXIiOnsiY291bnRyeSI6ImJyIiwibG9jYWxlIjoicHRfQlIiLCJhZ2UiOnsibWluIjoyMX19LCJ1c2VyX2lkIjoiMTAwMDAzNjk1NjYxMDc0In0";
-                            signedRequest = "WDgN_5u5i5fhkz4yGHMmGwSA2JlUvK_MEXChPAJnRUQ.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzNDQ4MDE2MDAsImlzc3VlZF9hdCI6MTM0NDc5NDcxMSwib2F1dGhfdG9rZW4iOiJBQUFHcFBsYlZNRmNCQUFqYk1qOWFyUE5RM1NLUEV2cEYwWHZUcjBpNEQwZHRqcGlXc2ZUSFpDM3QxN1FoWENyRlhDT1d2RlJEQVpCWVlKSVpCWWRCOUhyNk9VWFpCYlFlS2h4enZBOXdtTTFCYlE0WkNzYU1CIiwidXNlciI6eyJjb3VudHJ5IjoiYnIiLCJsb2NhbGUiOiJwdF9CUiIsImFnZSI6eyJtaW4iOjIxfX0sInVzZXJfaWQiOiIxMDAwMDAwNDcyOTY4ODQifQ";
+                            // Olha a zabumba!
+                            signedRequest = "R7ta4HJ5NKBsovVq4TcsM7bBO9kgC7NbyjIRpSkaivc.eyJhbGdvcml0aG0iOiJITUFDLVNIQTI1NiIsImV4cGlyZXMiOjEzNDU5NTM2MDAsImlzc3VlZF9hdCI6MTM0NTk0OTU3Mywib2F1dGhfdG9rZW4iOiJBQUFHcFBsYlZNRmNCQUV3TW5IbGNrZHZKVE9VakRWWTZlNm41WkNMc2F2dVpDY0Jyek1aQWpFWFV3ZWVaQ0JGZVpBcW9nUFdmeWRiSHY4UERqRk9xZDRMQldSN0tYZ3BLa0g4WkJNWTlEVTVPTlBiaWllQjZSdiIsInVzZXIiOnsiY291bnRyeSI6ImJyIiwibG9jYWxlIjoicHRfQlIiLCJhZ2UiOnsibWluIjoyMX19LCJ1c2VyX2lkIjoiMTAwMDAwMDQ3Mjk2ODg0In0";
                         }
                         else
                         {
@@ -131,8 +132,9 @@ namespace imob_app.client
                             string token = (string)auth["oauth_token"];
                             string userId = auth["user_id"].ToString();
 
-                            var user = new FacebookClient(token).Get("me") as IDictionary<string, object>;
-                            Session["user"] = user;
+                            var usuarioFb = new FacebookClient(token).Get("me") as IDictionary<string, object>;
+                            dao.usuario usuarioDb = new business.Usuario().Selecionar(userId);
+                            Session["user"] = new Sessao(usuarioDb, usuarioFb);
 
                             //Alert("SignedRequest = " + signedRequest);
                             Session["signedRequest"] = signedRequest;
@@ -149,12 +151,12 @@ namespace imob_app.client
             {
                 Alert("Erro ao tentar conectar ao Facebook: " + ex.Message);
                 Alert("Mais detalhes: " + ex.StackTrace);
-            }*/
+            }
         }
 
         private void BasePage_Error(object sender, EventArgs e)
         {
-            imob_app.business.Sistema sistema = new imob_app.business.Sistema(((IDictionary<string, object>)Session["user"])["user_id"].ToString());
+            imob_app.business.Sistema sistema = new imob_app.business.Sistema(((IDictionary<string, object>)((Sessao)Session["user"]).usuarioFb)["user_id"].ToString());
             string errorPage = ConfigurationManager.AppSettings["ErrorPage"];
             Exception ex = Server.GetLastError();
             string errorCode = sistema.RegistrarErro(ex);

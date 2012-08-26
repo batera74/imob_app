@@ -28,10 +28,13 @@ namespace imob_app.client
         protected void Page_Load(object sender, EventArgs e)
         {
             //TODO: Pegar id do usuário da Session
-            idUsuario = 1;   
-         
-            if(Session["idSessao"] != null)
+            idUsuario = ((business.Sessao)Session["user"]).usuarioDb.id_usuario;
+            //idUsuario = 1;
+
+            if (Session["idSessao"] != null)
+            {
                 idSessao = Convert.ToInt32(Session["idSessao"]);
+            }
 
             if (!IsPostBack)
             {

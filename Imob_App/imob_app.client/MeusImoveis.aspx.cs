@@ -16,9 +16,10 @@ namespace imob_app.client
         {
             List<entidades.ImovelResultado> dataSource = (List<entidades.ImovelResultado>)Session["dataSource"];
 
+            idUsuario = ((business.Sessao)Session["user"]).usuarioDb.id_usuario;
+            //idUsuario = 123456;
+
             business.Imovel imov = new business.Imovel();
-            //idUsuario = (int)Session["user"];
-            idUsuario = 123456;
 
             if (!IsPostBack)
             {

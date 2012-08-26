@@ -58,8 +58,11 @@ namespace imob_app.business
 
         public void SetPrincipal(int id, int idImovel)
         {
-            dao.imagem img = (from i in _ctx.imagem where i.imovel.id_imovel == idImovel && i.ic_principal == true select i).First();
-            img.ic_principal = false;
+            List<dao.imagem> imgs = (from i in _ctx.imagem where i.imovel.id_imovel == idImovel && i.ic_principal == true select i).ToList();
+            foreach (dao.imagem img in imgs)
+            {
+                img.ic_principal = false;
+            }
 
             dao.imagem img2 = (from i in _ctx.imagem where i.id_imagem == id select i).First();
             img2.ic_principal = true;
